@@ -26,15 +26,13 @@
 #include <QDBusObjectPath>
 
 #include "enum.h"
-
-#include <memory>
-#include <functional>
+#include "kbolt_export.h"
 
 class OrgFreedesktopBolt1DeviceInterface;
 namespace Bolt {
 
 class Domain;
-class Device : public QObject
+class KBOLT_EXPORT Device : public QObject
 {
     Q_OBJECT
 
@@ -54,14 +52,6 @@ class Device : public QObject
     Q_PROPERTY(QDateTime storeTime READ storeTime CONSTANT STORED false)
     Q_PROPERTY(QString label READ label CONSTANT STORED false)
 
-    Q_ENUM(Status)
-    Q_ENUM(Auth)
-    Q_ENUM(KeyState)
-    Q_ENUM(Security)
-    Q_ENUM(Policy)
-    Q_ENUM(Type)
-    Q_ENUM(AuthMode)
-    Q_FLAGS(AuthFlags)
 public:
     explicit Device(const QDBusObjectPath &path, QObject *parent = nullptr);
     explicit Device(QObject *parent = nullptr);
@@ -86,14 +76,14 @@ public:
     QDBusObjectPath dbusPath() const;
 
 public Q_SLOTS:
-    void authorize();
+    void authorize(AuthFlags authFlags);
 
 Q_SIGNALS:
     void statusChanged(Status);
 
 private:
     QScopedPointer<OrgFreedesktopBolt1DeviceInterface> mInterface;
-    QDBusObjectPath mDbusPath;
+    QDBusObjectPath mDBusPath;
 };
 
 } // namespace

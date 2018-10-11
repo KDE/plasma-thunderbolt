@@ -18,6 +18,11 @@
 */
 
 #include "enum.h"
+#include "libkbolt_debug.h"
+
+#include <QStringList>
+#include <QVector>
+#include <QStringRef>
 
 Bolt::Status Bolt::statusFromString(const QString &str)
 {
@@ -36,6 +41,7 @@ Bolt::Status Bolt::statusFromString(const QString &str)
     } else if (str == QLatin1Literal("autherror")) {
         return Bolt::Status::AuthError;
     } else {
+        qCCritical(log_libkbolt, "Unknown Status enum value '%s'", qUtf8Printable(str));
         Q_ASSERT(false);
         return Bolt::Status::Unknown;
     }
@@ -43,10 +49,49 @@ Bolt::Status Bolt::statusFromString(const QString &str)
 
 Bolt::AuthFlags Bolt::authFlagsFromString(const QString &str)
 {
-    if (str == QLatin1Literal("none")) {
-        return Bolt::Auth::None;
+    const auto splitRef = str.splitRef(QLatin1Literal("|"));
+    Bolt::AuthFlags outFlags = Bolt::Auth::None;
+    for (const auto &flag : splitRef) {
+        const auto f = flag.trimmed();
+        if (f == QLatin1Literal("none")) {
+            outFlags |= Bolt::Auth::None;
+        } else if (f == QLatin1Literal("nopcie")) {
+            outFlags |= Bolt::Auth::NoPCIE;
+        } else if (f == QLatin1Literal("secure")) {
+            outFlags |= Bolt::Auth::Secure;
+        } else if (f == QLatin1Literal("nokey")) {
+            outFlags |= Bolt::Auth::NoKey;
+        } else if (f == QLatin1Literal("boot")) {
+            outFlags |= Bolt::Auth::Boot;
+        } else {
+            qCCritical(log_libkbolt, "Unknown AuthFlags enum value '%s'", qUtf8Printable(str));
+            Q_ASSERT(false);
+            return Bolt::Auth::None;
+        }
     }
-    // TODO
+    return outFlags;
+}
+
+QString Bolt::authFlagsToString(AuthFlags flags)
+{
+    QStringList str;
+    if (flags & Bolt::Auth::None) {
+        str.push_back(QLatin1Literal("none"));
+    }
+    if (flags & Bolt::Auth::NoPCIE) {
+        str.push_back(QLatin1Literal("nopcie"));
+    }
+    if (flags & Bolt::Auth::Secure) {
+        str.push_back(QLatin1Literal("secure"));
+    }
+    if (flags & Bolt::Auth::NoKey) {
+        str.push_back(QLatin1Literal("nokey"));
+    }
+    if (flags & Bolt::Auth::Boot) {
+        str.push_back(QLatin1Literal("boot"));
+    }
+
+    return str.join(QLatin1Literal(" | "));
 }
 
 
@@ -61,6 +106,7 @@ Bolt::KeyState Bolt::keyStateFromString(const QString &str)
     } else if (str == QLatin1Literal("new")) {
         return Bolt::KeyState::New;
     } else {
+        qCCritical(log_libkbolt, "Unknown KeyState enum value '%s'", qUtf8Printable(str));
         Q_ASSERT(false);
         return Bolt::KeyState::Unknown;
     }
@@ -77,6 +123,7 @@ Bolt::Policy Bolt::policyFromString(const QString &str)
     } else if (str == QLatin1Literal("auto")) {
         return Bolt::Policy::Auto;
     } else {
+        qCCritical(log_libkbolt, "Unknown Policy enum value '%s'", qUtf8Printable(str));
         Q_ASSERT(false);
         return Bolt::Policy::Unknown;
     }
@@ -91,6 +138,7 @@ Bolt::Type Bolt::typeFromString(const QString &str)
     } else if (str == QLatin1Literal("peripheral")) {
         return Bolt::Type::Peripheral;
     } else {
+        qCCritical(log_libkbolt, "Unknown Type enum value '%s'", qUtf8Printable(str));
         Q_ASSERT(false);
         return Bolt::Type::Unknown;
     }
@@ -103,6 +151,7 @@ Bolt::AuthMode Bolt::authModeFromString(const QString &str)
     } else if (str == QLatin1Literal("enabled")) {
         return Bolt::AuthMode::Enabled;
     } else {
+        qCCritical(log_libkbolt, "Unknown AuthMode enum value '%s'", qUtf8Printable(str));
         Q_ASSERT(false);
         return Bolt::AuthMode::Disabled;
     }
@@ -123,7 +172,9 @@ Bolt::Security Bolt::securityFromString(const QString &str)
     } else if (str == QLatin1Literal("usbonly")) {
         return Bolt::Security::USBOnly;
     } else {
+        qCCritical(log_libkbolt, "Unknown Security enum value '%s'", qUtf8Printable(str));
         Q_ASSERT(false);
         return Bolt::Security::Unknown;
     }
 }
+

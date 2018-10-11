@@ -22,16 +22,20 @@
 
 #include <QAbstractListModel>
 
+#include "manager.h"
+#include "kbolt_export.h"
+
 namespace Bolt
 {
 
-class DeviceModel : public QAbstractListModel
+class Device;
+class KBOLT_EXPORT DeviceModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    enum class Role {
-        Device = Qt::UserRole
-    }
+    enum Role {
+        DeviceRole = Qt::UserRole
+    };
 
     explicit DeviceModel(QObject *parent = nullptr);
     ~DeviceModel() override = default;
@@ -41,6 +45,8 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
 
 private:
+    Manager mManager;
+    QList<Device *> mDevices;
 };
 
 } // namespace Bolt

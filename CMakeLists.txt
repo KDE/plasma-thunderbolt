@@ -14,6 +14,19 @@ option(BUILD_TESTING "Build autotests" ON)
 set(QT5_VERSION "5.10")
 set(KF5_VERSION "5.40")
 
+find_package(ECM ${KF5_VERSION} REQUIRED)
+
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_MODULE_PATH})
+
+include(KDECompilerSettings)
+include(ECMQtDeclareLoggingCategory)
+include(GenerateExportHeader)
+
+kde_enable_exceptions()
+
+#################################################
+# Dependencies
+
 find_package(Qt5Core ${QT_VERSION} REQUIRED)
 find_package(Qt5Quick ${QT_VERSION} REQUIRED)
 find_package(Qt5DBus ${QT_VERSION} REQUIRED)

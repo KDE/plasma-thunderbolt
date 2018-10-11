@@ -18,17 +18,22 @@
 */
 
 #include "devicemodel.h"
+#include "device.h"
+
+using namespace Bolt;
+
+Q_DECLARE_METATYPE(Bolt::Device*)
 
 DeviceModel::DeviceModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    connect(&mClient, &Client::deviceAdded,
+    connect(&mManager, &Manager::deviceAdded,
             this, [this](Device *device) {
                 beginInsertRows({}, mDevices.count(), mDevices.count());
                 mDevices.push_back(device);
                 endInsertRows();
             });
-    connect(&mClient, &Client::deviceRemoved,
+    connect(&mManager, &Manager::deviceRemoved,
             this, [this](Device *device) {
                 const int idx = mDevices.indexOf(device);
                 if (idx == -1) {
@@ -42,7 +47,9 @@ DeviceModel::DeviceModel(QObject *parent)
 
 QHash<int, QByteArray> DeviceModel::roleNames() const
 {
-    return { {Role::Device, "device"} };
+    auto roles = QAbstractListModel::roleNames();
+    roles[DeviceRole] = "device";
+    return roles;
 }
 
 int DeviceModel::rowCount(const QModelIndex &parent) const
@@ -51,25 +58,25 @@ int DeviceModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return mClient.devices().count();
+    return mManager.devices().count();
 }
 
-QVariant DeviceModel(const QModelIndex &index, int role) const
+QVariant DeviceModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
         return {};
     }
 
-    const auto devices = mClient.devices();
+    const auto devices = mManager.devices();
     if (index.row() >= devices.size()) {
         return {};
     }
 
-    if (role == Role::Device) {
-        return devices.at(index.row());
+    if (role == DeviceRole) {
+        return QVariant::fromValue(mDevices.at(index.row()));
     }
 
-    return QAbstractListModel::data(index, role);
+    return {};
 }
 
 

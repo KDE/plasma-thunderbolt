@@ -27,13 +27,14 @@
 #include <memory>
 
 #include "enum.h"
+#include "kbolt_export.h"
 
 class OrgFreedesktopBolt1ManagerInterface;
 namespace Bolt
 {
 
 class Device;
-class Manager : public QObject
+class KBOLT_EXPORT Manager : public QObject
 {
     Q_OBJECT
 

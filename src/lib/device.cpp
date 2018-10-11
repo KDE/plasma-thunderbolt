@@ -36,7 +36,7 @@ Device::Device(const QDBusObjectPath &path, QObject *parent)
     : QObject(parent)
     , mInterface(new DeviceInterface(
         DBusHelper::serviceName(), path.path(), DBusHelper::connection()))
-    , mDbusPath(path)
+    , mDBusPath(path)
 {
     if (!mInterface->isValid()) {
         throw DBusException(QStringLiteral("Failed to obtain DBus interface for device %1: %2")
@@ -47,6 +47,10 @@ Device::Device(const QDBusObjectPath &path, QObject *parent)
 Device::~Device()
 {}
 
+QDBusObjectPath Device::dbusPath() const
+{
+    return mDBusPath;
+}
 
 QString Device::uid() const
 {
@@ -123,4 +127,8 @@ QString Device::label() const
     return mInterface ? mInterface->label() : QString();
 }
 
+void Device::authorize(AuthFlags authFlags)
+{
+    mInterface->Authorize(authFlagsToString(authFlags));
+}
 

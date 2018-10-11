@@ -48,6 +48,7 @@ enum class Auth {
 Q_DECLARE_FLAGS(AuthFlags, Auth)
 
 AuthFlags authFlagsFromString(const QString &str);
+QString authFlagsToString(AuthFlags flags);
 
 enum class KeyState {
     Unknown = -1,
