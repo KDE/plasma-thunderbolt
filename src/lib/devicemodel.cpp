@@ -20,6 +20,8 @@
 
 #include "devicemodel.h"
 #include "device.h"
+#include "manager.h"
+#include "exceptions.h"
 
 using namespace Bolt;
 
@@ -28,13 +30,19 @@ Q_DECLARE_METATYPE(Bolt::Device*)
 DeviceModel::DeviceModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    connect(&mManager, &Manager::deviceAdded,
+    try {
+        mManager.reset(new Manager);
+    } catch (const DBusException &) {
+        return;
+    }
+
+    connect(mManager.get(), &Manager::deviceAdded,
             this, [this](Device *device) {
                 beginInsertRows({}, mDevices.count(), mDevices.count());
                 mDevices.push_back(device);
                 endInsertRows();
             });
-    connect(&mManager, &Manager::deviceRemoved,
+    connect(mManager.get(), &Manager::deviceRemoved,
             this, [this](Device *device) {
                 const int idx = mDevices.indexOf(device);
                 if (idx == -1) {
@@ -44,6 +52,17 @@ DeviceModel::DeviceModel(QObject *parent)
                 mDevices.removeAt(idx);
                 endRemoveRows();
             });
+
+    mDevices = mManager->devices();
+}
+
+DeviceModel::~DeviceModel()
+{
+}
+
+bool DeviceModel::isAvailable() const
+{
+    return mManager;
 }
 
 QHash<int, QByteArray> DeviceModel::roleNames() const
@@ -59,7 +78,7 @@ int DeviceModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return mManager.devices().count();
+    return mDevices.count();
 }
 
 QVariant DeviceModel::data(const QModelIndex &index, int role) const
@@ -68,8 +87,7 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
         return {};
     }
 
-    const auto devices = mManager.devices();
-    if (index.row() >= devices.size()) {
+    if (index.row() >= mDevices.size()) {
         return {};
     }
 

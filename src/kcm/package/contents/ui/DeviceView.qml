@@ -18,41 +18,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef DEVICEMODEL_H_
-#define DEVICEMODEL_H_
+import QtQuick 2.7
 
-#include <QAbstractListModel>
-
-#include "kbolt_export.h"
-
-namespace Bolt
-{
-
-class Manager;
-class Device;
-class KBOLT_EXPORT DeviceModel : public QAbstractListModel
-{
-    Q_OBJECT
-    Q_PROPERTY(bool isAvailable READ isAvailable CONSTANT)
-public:
-    enum Role {
-        DeviceRole = Qt::UserRole
-    };
-
-    explicit DeviceModel(QObject *parent = nullptr);
-    ~DeviceModel() override;
-
-    bool isAvailable() const;
-
-    QHash<int, QByteArray> roleNames() const override;
-    int rowCount(const QModelIndex &parent) const override;
-    QVariant data(const QModelIndex &index, int role) const override;
-
-private:
-    QScopedPointer<Manager> mManager;
-    QList<Device *> mDevices;
-};
-
-} // namespace Bolt
-
-#endif
+Item {}

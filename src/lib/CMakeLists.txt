@@ -31,5 +31,10 @@ target_link_libraries(kbolt
     stdc++
 )
 
+target_include_directories(kbolt PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
+)
+
 
 install(TARGETS kbolt DESTINATION ${KDE_INSTALL_LIBDIR})

@@ -1,12 +1,14 @@
-[Desktop entry]
+[Desktop Entry]
 Icon=
 Exec=kcmshell5 kcm_bolt
 Type=Service
-X-KDE-ServiceType=KCModule
+X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_bolt
 X-KDE-ParentApp=kcontrol
+
 X-KDE-System-Settings-Parent-Category=Hardware
 X-KDE-Weight=120
+
 Name=Thunderbolt
 Comment=Thunderbolt Device Management
 X-KDE-Keywords=thunderbolt,hardware,device

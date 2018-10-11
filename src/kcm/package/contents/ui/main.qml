@@ -18,41 +18,33 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef DEVICEMODEL_H_
-#define DEVICEMODEL_H_
+import QtQuick 2.7
+import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.3
 
-#include <QAbstractListModel>
+import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
+import org.kde.kcm 1.2 as KCM
+import org.kde.bolt 0.1 as Bolt
 
-#include "kbolt_export.h"
+KCM.ScrollViewKCM {
+    KCM.ConfigModule.quickHelp: i18n("This module allows you to manage Thunderbolt devices connected to your computer.");
 
-namespace Bolt
-{
+    Bolt.DeviceModel {
+        id: deviceModel
+    }
 
-class Manager;
-class Device;
-class KBOLT_EXPORT DeviceModel : public QAbstractListModel
-{
-    Q_OBJECT
-    Q_PROPERTY(bool isAvailable READ isAvailable CONSTANT)
-public:
-    enum Role {
-        DeviceRole = Qt::UserRole
-    };
+    view: ListView {
+        model: deviceModel
+        width: parent.width
 
-    explicit DeviceModel(QObject *parent = nullptr);
-    ~DeviceModel() override;
+        delegate: Kirigami.BasicListItem {
+            width: view.width
+            label: model.device.label
+        }
+    }
 
-    bool isAvailable() const;
-
-    QHash<int, QByteArray> roleNames() const override;
-    int rowCount(const QModelIndex &parent) const override;
-    QVariant data(const QModelIndex &index, int role) const override;
-
-private:
-    QScopedPointer<Manager> mManager;
-    QList<Device *> mDevices;
-};
-
-} // namespace Bolt
-
-#endif
+    footer: DeviceView {
+        id: deviceView
+    }
+}
