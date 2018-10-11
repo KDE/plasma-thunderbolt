@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=Thunderbolt
+Comment=Thunderbolt Device Management
+Icon=
+Keywords=
+Type=Service
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Daniel Vrátil
+X-KDE-PluginInfo-Email=dvratil@kde.org
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kcm_bolt
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=
+X-KDE-ServiceTypes=Plasma/Generic
+

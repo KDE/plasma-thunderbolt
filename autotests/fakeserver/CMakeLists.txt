@@ -22,4 +22,4 @@ qt5_add_dbus_adaptor(
 )
 
 add_executable(fakeserver ${fakeserver_SRCS})
-target_link_libraries(fakeserver Qt5::Core Qt5::DBus)
+target_link_libraries(fakeserver Qt5::Core Qt5::DBus stdc++)
