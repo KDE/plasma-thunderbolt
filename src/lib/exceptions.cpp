@@ -20,6 +20,8 @@
 
 #include "exceptions.h"
 
+using namespace Bolt;
+
 DBusException::DBusException(const QString &msg)
     : mWhat(msg)
 {}

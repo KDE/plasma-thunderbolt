@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Thunderbolt Device Monitor
+Comment=Thunderbolt Device Monitor
+
+Type=Service
+Icon=
+X-KDE-ServiceTypes=KDEDModule
+X-KDE-Library=kded_bolt
+X-KDE-Kded-autoload=true
+X-KDE-Kded-load-on-demand=false
+X-KDE-Kded-phase=1
+
+X-KDE-PluginInfo-Author=Daniel Vrátil
+X-KDE-PluginInfo-Email=dvratil@kde.org
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=kded_bolt
+X-KDE-PluginInfo-Version=0.1
+

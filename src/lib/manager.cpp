@@ -106,3 +106,13 @@ QList<Device *> Manager::devices() const
 {
     return mDevices;
 }
+
+void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlags)
+{
+    mInterface->EnrollDevice(uid, policyToString(policy), authFlagsToString(authFlags));
+}
+
+void Manager::forgetDevice(const QString &uid)
+{
+    mInterface->ForgetDevice(uid);
+}

@@ -25,7 +25,12 @@
 
 #include <QString>
 
-class DBusException : public std::exception
+#include "kbolt_export.h"
+
+namespace Bolt
+{
+
+class KBOLT_EXPORT DBusException : public std::exception
 {
 public:
     DBusException(const QString &msg);
@@ -35,6 +40,8 @@ public:
 private:
     QString mWhat;
 };
+
+} // namespace Bolt
 
 #endif
 

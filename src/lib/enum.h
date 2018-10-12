@@ -68,6 +68,7 @@ enum class Policy {
 };
 
 Policy policyFromString(const QString &str);
+QString policyToString(Policy policy);
 
 enum class Type {
     Unknown = -1,

@@ -35,6 +35,8 @@ find_package(KF5CoreAddons ${KF5_VERSION} REQUIRED)
 find_package(KF5KCMUtils ${KF5_VERSION} REQUIRED)
 find_package(KF5Declarative ${KF5_VERSION} REQUIRED)
 find_package(KF5I18n ${KF5_VERSION} REQUIRED)
+find_package(KF5DBusAddons ${KF5_VERSION} REQUIRED)
+find_package(KF5Notifications ${KF5_VERSION} REQUIRED)
 
 #################################################
 

@@ -130,6 +130,23 @@ Bolt::Policy Bolt::policyFromString(const QString &str)
     }
 }
 
+QString Bolt::policyToString(Bolt::Policy policy)
+{
+    switch (policy) {
+    case Policy::Unknown:
+        return QLatin1Literal("unknown");
+    case Policy::Auto:
+        return QLatin1Literal("auto");
+    case Policy::Default:
+        return QLatin1Literal("default");
+    case Policy::Manual:
+        return QLatin1Literal("manual");
+    }
+
+    Q_UNREACHABLE();
+    return {};
+}
+
 Bolt::Type Bolt::typeFromString(const QString &str)
 {
     if (str == QLatin1Literal("unknown")) {

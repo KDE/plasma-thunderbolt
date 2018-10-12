@@ -59,6 +59,9 @@ public Q_SLOTS:
     Device *device(const QString &uid) const;
     QList<Device *> devices() const;
 
+    void enrollDevice(const QString &uid, Policy policy, AuthFlags flags);
+    void forgetDevice(const QString &uid);
+
 Q_SIGNALS:
     void deviceAdded(Device *);
     void deviceRemoved(Device *);

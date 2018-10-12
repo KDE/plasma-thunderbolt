@@ -23,8 +23,8 @@
 #include <KAboutData>
 #include <KLocalizedString>
 
-#include "device.h"
-#include "devicemodel.h"
+#include "lib/device.h"
+#include "lib/devicemodel.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMBoltFactory, "kcm_bolt.json", registerPlugin<KCMBolt>();)
 
