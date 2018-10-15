@@ -51,9 +51,42 @@ FakeManager::FakeManager(const QJsonObject &json, QObject *parent)
     }
 }
 
+FakeManager::FakeManager(QObject *parent)
+    : QObject(parent)
+{
+    new FakeManagerAdaptor(this);
+    if (!QDBusConnection::sessionBus().registerObject(kManagerDBusPath, this)) {
+        throw DBusException(QStringLiteral("Failed to register FakeManager to DBus: %1")
+                .arg(QDBusConnection::sessionBus().lastError().message()));
+    }
+}
+
 FakeManager::~FakeManager()
 {
     QDBusConnection::sessionBus().unregisterObject(kManagerDBusPath);
+}
+
+void FakeManager::addDevice(FakeDevice *device)
+{
+    mDevices.insert(device->uid(), device);
+    Q_EMIT DeviceAdded(device->dbusPath());
+}
+
+void FakeManager::removeDevice(const QString &uid)
+{
+    auto device = mDevices.find(uid);
+    if (device == mDevices.end()) {
+        return;
+    }
+
+    mDevices.erase(device);
+    Q_EMIT DeviceRemoved((*device)->dbusPath());
+    delete *device;
+}
+
+QList<FakeDevice*> FakeManager::devices() const
+{
+    return mDevices.values();
 }
 
 unsigned int FakeManager::version() const

@@ -3,23 +3,33 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-set(fakeserver_SRCS
+set(libfakeserver_SRCS
     exceptions.cpp
     fakedevice.cpp
     fakemanager.cpp
-    main.cpp
+    fakeserver.cpp
 )
 
 qt5_add_dbus_adaptor(
-    fakeserver_SRCS
+    libfakeserver_SRCS
     ${CMAKE_SOURCE_DIR}/src/interfaces/org.freedesktop.bolt1.device.xml
     fakedevice.h FakeDevice fakedeviceadaptor FakeDeviceAdaptor
 )
 qt5_add_dbus_adaptor(
-    fakeserver_SRCS
+    libfakeserver_SRCS
     ${CMAKE_SOURCE_DIR}/src/interfaces/org.freedesktop.bolt1.manager.xml
     fakemanager.h FakeManager fakemanageradaptor FakeManagerAdaptor
 )
 
+add_library(libfakeserver STATIC ${libfakeserver_SRCS})
+target_link_libraries(libfakeserver Qt5::Core Qt5::DBus Qt5::Test)
+set_target_properties(libfakeserver PROPERTIES OUTPUT_NAME fakeserver)
+
+#######################################################################
+
+set(fakeserver_SRCS
+    main.cpp
+)
+
 add_executable(fakeserver ${fakeserver_SRCS})
-target_link_libraries(fakeserver Qt5::Core Qt5::DBus stdc++)
+target_link_libraries(fakeserver libfakeserver Qt5::Core Qt5::DBus)

@@ -28,7 +28,7 @@
 
 #include <iostream>
 
-#include "fakemanager.h"
+#include "fakeserver.h"
 #include "exceptions.h"
 
 int main(int argc, char **argv)
@@ -50,25 +50,6 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    const QString filename = parser.value(cfgOption);
-    QFile jsonFile(filename);
-    if (!jsonFile.open(QIODevice::ReadOnly)) {
-        std::cerr << "Failed to open file " << filename.toStdString()
-            << ": " << jsonFile.errorString().toStdString() << std::endl;
-        return -1;
-    }
-    const auto doc = QJsonDocument::fromJson(jsonFile.readAll());
-
-    if (!QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.fakebolt"))) {
-        std::cerr << "Failed to register org.kde.fakebolt service" << std::endl;
-        app.exit(-1);
-    }
-
-    try {
-        FakeManager manager(doc.object());
-        return app.exec();
-    } catch (const DBusException &e) {
-        std::cerr << "DBus error: " << e.what();
-        return -1;
-    }
+    FakeServer server(parser.value(cfgOption));
+    return app.exec();
 }

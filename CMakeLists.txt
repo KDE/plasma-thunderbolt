@@ -30,6 +30,7 @@ kde_enable_exceptions()
 find_package(Qt5Core ${QT_VERSION} REQUIRED)
 find_package(Qt5Quick ${QT_VERSION} REQUIRED)
 find_package(Qt5DBus ${QT_VERSION} REQUIRED)
+find_package(Qt5Test ${QT_VERSION} REQUIRED)
 
 find_package(KF5CoreAddons ${KF5_VERSION} REQUIRED)
 find_package(KF5KCMUtils ${KF5_VERSION} REQUIRED)

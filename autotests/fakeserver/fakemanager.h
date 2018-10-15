@@ -40,6 +40,7 @@ class FakeManager : public QObject
     Q_PROPERTY(QString AuthMode READ authMode WRITE setAuthMode)
 public:
     explicit FakeManager(const QJsonObject &json, QObject *parent = nullptr);
+    explicit FakeManager(QObject *parent = nullptr);
     ~FakeManager() override;
 
     unsigned int version() const;
@@ -48,6 +49,10 @@ public:
     QString securityLevel() const;
     QString authMode() const;
     void setAuthMode(const QString &authMode);
+
+    void addDevice(FakeDevice *device);
+    void removeDevice(const QString &uid);
+    QList<FakeDevice *> devices() const;
 
 public Q_SLOTS:
     QList<QDBusObjectPath> ListDevices() const;
