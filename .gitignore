@@ -1,0 +1,7 @@
+build
+*.kdev4
+.kdev4
+.*.swp
+~
+*~
+.ycm_extra_conf.py
