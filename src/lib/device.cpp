@@ -43,6 +43,10 @@ Device::Device(const QDBusObjectPath &path, QObject *parent)
         throw DBusException(QStringLiteral("Failed to obtain DBus interface for device %1: %2")
                 .arg(path.path(), DBusHelper::connection().lastError().message()));
     }
+
+    // cache UID in case the we still need to identify the device, even if it's
+    // gone on DBus
+    mUid = mInterface->uid();
 }
 
 Device::~Device()
@@ -55,7 +59,7 @@ QDBusObjectPath Device::dbusPath() const
 
 QString Device::uid() const
 {
-    return mInterface ? mInterface->uid() : QString();
+    return mUid;
 }
 
 QString Device::name() const

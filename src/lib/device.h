@@ -37,7 +37,7 @@ class KBOLT_EXPORT Device : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString uid READ uid CONSTANT STORED false)
+    Q_PROPERTY(QString uid READ uid CONSTANT)
     Q_PROPERTY(QString name READ name CONSTANT STORED false)
     Q_PROPERTY(QString vendor READ vendor CONSTANT STORED false)
     Q_PROPERTY(Type type READ type CONSTANT STORED false)
@@ -85,6 +85,7 @@ Q_SIGNALS:
 private:
     QScopedPointer<OrgFreedesktopBolt1DeviceInterface> mInterface;
     QDBusObjectPath mDBusPath;
+    QString mUid;
 };
 
 } // namespace
