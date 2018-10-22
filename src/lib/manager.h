@@ -43,9 +43,9 @@ class KBOLT_EXPORT Manager : public QObject
 
     Q_PROPERTY(uint version READ version CONSTANT STORED false)
     Q_PROPERTY(bool isProbing READ isProbing CONSTANT STORED false)
-    Q_PROPERTY(Policy defaultPolicy READ defaultPolicy CONSTANT STORED false)
-    Q_PROPERTY(Security securityLevel READ securityLevel CONSTANT STORED false)
-    Q_PROPERTY(AuthMode authMode READ authMode CONSTANT STORED false)
+    Q_PROPERTY(Bolt::Policy defaultPolicy READ defaultPolicy CONSTANT STORED false)
+    Q_PROPERTY(Bolt::Security securityLevel READ securityLevel CONSTANT STORED false)
+    Q_PROPERTY(Bolt::AuthMode authMode READ authMode CONSTANT STORED false)
 
 public:
     explicit Manager(QObject *parent = nullptr);
