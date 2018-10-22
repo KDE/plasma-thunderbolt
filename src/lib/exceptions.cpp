@@ -23,15 +23,20 @@
 using namespace Bolt;
 
 DBusException::DBusException(const QString &msg)
-    : mWhat(msg)
+    : mWhat(strdup(msg.toUtf8().constData()))
 {}
 
 DBusException::DBusException(const char *msg)
-    : mWhat(QString::fromUtf8(msg))
+    : mWhat(strdup(msg))
 {}
+
+DBusException::~DBusException()
+{
+    free(mWhat);
+    mWhat = nullptr;
+}
 
 const char *DBusException::what() const noexcept
 {
-    // FIXME: Returns pointer to temporary, this is WRONG!
-    return mWhat.toUtf8().constData();
+    return mWhat;
 }

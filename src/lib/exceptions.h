@@ -35,10 +35,11 @@ class KBOLT_EXPORT DBusException : public std::exception
 public:
     DBusException(const QString &msg);
     DBusException(const char *what);
+    ~DBusException();
     const char *what() const noexcept override;
 
 private:
-    QString mWhat;
+    char *mWhat;
 };
 
 } // namespace Bolt
