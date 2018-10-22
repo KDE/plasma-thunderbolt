@@ -21,8 +21,9 @@
 #ifndef MANAGER_H_
 #define MANAGER_H_
 
-#include <QScopedPointer>
 #include <QObject>
+#include <QScopedPointer>
+#include <QSharedPointer>
 
 #include <functional>
 #include <memory>
@@ -30,6 +31,7 @@
 #include "enum.h"
 #include "kbolt_export.h"
 
+class QDBusObjectPath;
 class OrgFreedesktopBolt1ManagerInterface;
 namespace Bolt
 {
@@ -56,17 +58,19 @@ public:
     AuthMode authMode() const;
 
 public Q_SLOTS:
-    Device *device(const QString &uid) const;
-    QList<Device *> devices() const;
+    QSharedPointer<Bolt::Device> device(const QString &uid) const;
+    QSharedPointer<Bolt::Device> device(const QDBusObjectPath &path) const;
+    QList<QSharedPointer<Bolt::Device>> devices() const;
 
-    void enrollDevice(const QString &uid, Policy policy, AuthFlags flags);
+    void enrollDevice(const QString &uid, Bolt::Policy policy, Bolt::AuthFlags flags);
     void forgetDevice(const QString &uid);
 
 Q_SIGNALS:
-    void deviceAdded(Device *);
-    void deviceRemoved(Device *);
+    void deviceAdded(const QSharedPointer<Bolt::Device> &device);
+    void deviceRemoved(const QSharedPointer<Bolt::Device> &device);
 
 private:
+    QSharedPointer<Device> device(std::function<bool(const QSharedPointer<Device> &)> &&match) const;
     QScopedPointer<OrgFreedesktopBolt1ManagerInterface> mInterface;
 
     uint mVersion = 0;
@@ -75,7 +79,7 @@ private:
     AuthMode mAuthMode = AuthMode::Disabled;
     bool mIsProbing = false;
 
-    QList<Device *> mDevices;
+    QList<QSharedPointer<Device>> mDevices;
 };
 
 } // namespace

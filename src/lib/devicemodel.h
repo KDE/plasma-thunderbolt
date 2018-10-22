@@ -50,7 +50,7 @@ public:
 
 private:
     QScopedPointer<Manager> mManager;
-    QList<Device *> mDevices;
+    QList<QSharedPointer<Device>> mDevices;
 };
 
 } // namespace Bolt

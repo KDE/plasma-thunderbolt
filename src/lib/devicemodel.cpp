@@ -25,7 +25,7 @@
 
 using namespace Bolt;
 
-Q_DECLARE_METATYPE(Bolt::Device*)
+Q_DECLARE_METATYPE(QSharedPointer<Bolt::Device>)
 
 DeviceModel::DeviceModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -37,13 +37,13 @@ DeviceModel::DeviceModel(QObject *parent)
     }
 
     connect(mManager.get(), &Manager::deviceAdded,
-            this, [this](Device *device) {
+            this, [this](const QSharedPointer<Device> &device) {
                 beginInsertRows({}, mDevices.count(), mDevices.count());
                 mDevices.push_back(device);
                 endInsertRows();
             });
     connect(mManager.get(), &Manager::deviceRemoved,
-            this, [this](Device *device) {
+            this, [this](const QSharedPointer<Device> &device) {
                 const int idx = mDevices.indexOf(device);
                 if (idx == -1) {
                     return;

@@ -21,7 +21,7 @@ KDEDBolt::KDEDBolt(QObject *parent, const QVariantList &)
     }
 
     connect(mManager.get(), &Bolt::Manager::deviceAdded,
-            this, [this](Bolt::Device *device) {
+            this, [this](const QSharedPointer<Bolt::Device> &device) {
         // Already authorized, nothing else to do here
         if (device->status() == Bolt::Status::Authorized) {
             return;
@@ -38,13 +38,11 @@ KDEDBolt::KDEDBolt(QObject *parent, const QVariantList &)
         });
         ntf->setTitle(i18n("New Thunderbolt Device Detected"));
         connect(ntf, &KNotification::action1Activated,
-                this, [this, dev = QPointer<Bolt::Device>(device)]() {
-            if (!dev) {
-                return;
+                this, [this, dev = device.toWeakRef()]() {
+            if (auto device = dev.toStrongRef()) {
+                mManager->enrollDevice(device->uid(), Bolt::Policy::Auto,
+                        Bolt::Auth::Secure | Bolt::Auth::Boot);
             }
-
-            mManager->enrollDevice(dev->uid(), Bolt::Policy::Auto,
-                    Bolt::Auth::Secure | Bolt::Auth::Boot);
         });
     });
 }

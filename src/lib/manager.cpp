@@ -41,25 +41,21 @@ Manager::Manager(QObject *parent)
 
     connect(mInterface.get(), &ManagerInterface::DeviceAdded,
             this, [this](const QDBusObjectPath &path) {
-                auto device = new Device(path, this);
+                auto device = QSharedPointer<Device>::create(path, this);
                 mDevices.push_back(device);
                 Q_EMIT deviceAdded(device);
             });
     connect(mInterface.get(), &ManagerInterface::DeviceRemoved,
             this, [this](const QDBusObjectPath &path) {
-                auto device = std::find_if(
-                    mDevices.begin(), mDevices.end(),
-                    [path](Device *device) { return device->dbusPath() == path; });
-                if (device != mDevices.end()) {
-                    mDevices.erase(device);
-                    Q_EMIT deviceRemoved(*device);
-                    delete *device;
+                if (auto device = this->device(path)) {
+                    mDevices.removeOne(device);
+                    Q_EMIT deviceRemoved(device);
                 }
             });
 
     const auto devicePaths = mInterface->ListDevices().argumentAt<0>();
     for (const auto &devicePath : devicePaths) {
-        mDevices.push_back(new Device(devicePath, this));
+        mDevices.push_back(QSharedPointer<Device>::create(devicePath, this));
     }
 }
 
@@ -92,17 +88,27 @@ AuthMode Manager::authMode() const
     return authModeFromString(mInterface->authMode());
 }
 
-Device *Manager::device(const QString &uid) const
+QSharedPointer<Device> Manager::device(std::function<bool(const QSharedPointer<Device> &)> &&match) const
 {
-    auto device = std::find_if(mDevices.cbegin(), mDevices.cend(),
-            [uid](Device *device) { return device->uid() == uid; });
-    if (device == mDevices.cend()) {
-        return nullptr;
-    }
-    return *device;
+    auto device = std::find_if(mDevices.cbegin(), mDevices.cend(), std::move(match));
+    return device == mDevices.cend() ? QSharedPointer<Device>() : *device;
 }
 
-QList<Device *> Manager::devices() const
+QSharedPointer<Device> Manager::device(const QString &uid) const
+{
+    return device([uid](const QSharedPointer<Device> &device) {
+        return device->uid() == uid;
+    });
+}
+
+QSharedPointer<Device> Manager::device(const QDBusObjectPath &path) const
+{
+    return device([path](const QSharedPointer<Device> &device) {
+        return device->dbusPath() == path;
+    });
+}
+
+QList<QSharedPointer<Device>> Manager::devices() const
 {
     return mDevices;
 }
