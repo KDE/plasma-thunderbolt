@@ -24,6 +24,7 @@ qt5_add_dbus_adaptor(
 add_library(libfakeserver STATIC ${libfakeserver_SRCS})
 target_link_libraries(libfakeserver Qt5::Core Qt5::DBus Qt5::Test)
 set_target_properties(libfakeserver PROPERTIES OUTPUT_NAME fakeserver)
+target_include_directories(libfakeserver PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>;$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>")
 
 #######################################################################
 

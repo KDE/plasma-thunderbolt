@@ -64,6 +64,7 @@ FakeManager::FakeManager(QObject *parent)
 FakeManager::~FakeManager()
 {
     QDBusConnection::sessionBus().unregisterObject(kManagerDBusPath);
+    qDeleteAll(mDevices);
 }
 
 void FakeManager::addDevice(FakeDevice *device)
@@ -74,14 +75,14 @@ void FakeManager::addDevice(FakeDevice *device)
 
 void FakeManager::removeDevice(const QString &uid)
 {
-    auto device = mDevices.find(uid);
-    if (device == mDevices.end()) {
+    auto deviceIt = mDevices.find(uid);
+    if (deviceIt == mDevices.end()) {
         return;
     }
-
-    mDevices.erase(device);
-    Q_EMIT DeviceRemoved((*device)->dbusPath());
-    delete *device;
+    auto device = *deviceIt;
+    mDevices.erase(deviceIt);
+    Q_EMIT DeviceRemoved(device->dbusPath());
+    device->deleteLater();
 }
 
 QList<FakeDevice*> FakeManager::devices() const

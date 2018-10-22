@@ -12,6 +12,8 @@ public:
     explicit FakeServer();
     ~FakeServer();
 
+    bool wait() const;
+
     FakeManager *manager() const;
 private:
     QScopedPointer<FakeManager> mManager;

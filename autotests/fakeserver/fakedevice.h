@@ -46,6 +46,7 @@ class FakeDevice : public QObject
     Q_PROPERTY(quint64 AuthorizeTime READ authorizeTime CONSTANT)
     Q_PROPERTY(quint64 StoreTime READ storeTime CONSTANT)
 public:
+    explicit FakeDevice(const QString &uid, QObject *parent = nullptr);
     explicit FakeDevice(const QJsonObject &json, QObject *parent = nullptr);
     ~FakeDevice() override;
 
@@ -53,20 +54,33 @@ public:
 
     QString uid() const;
     QString name() const;
+    void setName(const QString &name);
     QString vendor() const;
+    void setVendor(const QString &vendor);
     QString type() const;
+    void setType(const QString &type);
     QString status() const;
+    void setStatus(const QString &status);
     QString authFlags() const;
+    void setAuthFlags(const QString &authFlags);
     QString parent() const;
+    void setParent(const QString &parent);
     QString sysfsPath() const;
+    void setSysfsPath(const QString &sysfsPath);
     bool stored() const;
+    void setStored(bool stored);
     QString policy() const;
+    void setPolicy(const QString &policy);
     QString key() const;
+    void setKey(const QString &key);
     QString label() const;
     void setLabel(const QString &label);
     quint64 connectTime() const;
+    void setConnectTime(quint64 connectTime);
     quint64 authorizeTime() const;
+    void setAuthorizeTime(quint64 authorizeTime);
     quint64 storeTime() const;
+    void setStoreTime(quint64 storeTime);
 
 public Q_SLOTS:
     void Authorize(const QString &flags);
