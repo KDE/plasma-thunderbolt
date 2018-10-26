@@ -14,7 +14,6 @@ KCM
 TESTS:
  * LIBS
     - check reading all properties works
-    - check signals from daemon work
     - check all calls from lib to daemon work
 
  * KDED
