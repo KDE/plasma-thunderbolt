@@ -27,22 +27,33 @@ using namespace Bolt;
 
 Q_DECLARE_METATYPE(QSharedPointer<Bolt::Device>)
 
-DeviceModel::DeviceModel(QObject *parent)
-    : QAbstractListModel(parent)
+void DeviceModel::setManager(Manager *manager)
 {
-    try {
-        mManager.reset(new Manager);
-    } catch (const DBusException &) {
+    if (mManager == manager) {
         return;
     }
 
-    connect(mManager.get(), &Manager::deviceAdded,
+    if (mManager) {
+        mManager->disconnect(this);
+    }
+
+    beginResetModel();
+    mManager = manager;
+    mDevices.clear();
+    if (!mManager) {
+        endResetModel();
+        return;
+    }
+
+    connect(mManager, &Manager::deviceAdded,
             this, [this](const QSharedPointer<Device> &device) {
-                beginInsertRows({}, mDevices.count(), mDevices.count());
-                mDevices.push_back(device);
-                endInsertRows();
+                if (mShowHosts || device->type() == Type::Peripheral) {
+                    beginInsertRows({}, mDevices.count(), mDevices.count());
+                    mDevices.push_back(device);
+                    endInsertRows();
+                }
             });
-    connect(mManager.get(), &Manager::deviceRemoved,
+    connect(mManager, &Manager::deviceRemoved,
             this, [this](const QSharedPointer<Device> &device) {
                 const int idx = mDevices.indexOf(device);
                 if (idx == -1) {
@@ -53,16 +64,33 @@ DeviceModel::DeviceModel(QObject *parent)
                 endRemoveRows();
             });
 
-    mDevices = mManager->devices();
+    populateWithoutReset();
+    endResetModel();
+
+    Q_EMIT managerChanged(mManager);
 }
 
-DeviceModel::~DeviceModel()
-{
-}
-
-bool DeviceModel::isAvailable() const
+Manager *DeviceModel::manager() const
 {
     return mManager;
+}
+
+bool DeviceModel::showHosts() const
+{
+    return mShowHosts;
+}
+
+void DeviceModel::setShowHosts(bool showHosts)
+{
+    if (mShowHosts != showHosts) {
+        mShowHosts = showHosts;
+        Q_EMIT showHostsChanged(mShowHosts);
+        if (mManager) {
+            beginResetModel();
+            populateWithoutReset();
+            endResetModel();
+        }
+    }
 }
 
 QHash<int, QByteArray> DeviceModel::roleNames() const
@@ -92,10 +120,20 @@ QVariant DeviceModel::data(const QModelIndex &index, int role) const
     }
 
     if (role == DeviceRole) {
-        return QVariant::fromValue(mDevices.at(index.row()));
+        return QVariant::fromValue(mDevices.at(index.row()).data());
     }
 
     return {};
 }
 
+void DeviceModel::populateWithoutReset()
+{
+    Q_ASSERT(mManager);
 
+    mDevices.clear();
+    const auto all = mManager->devices();
+    std::copy_if(all.cbegin(), all.cend(), std::back_inserter(mDevices),
+            [this](const QSharedPointer<Device> &device) {
+                return mShowHosts || device->type() == Type::Peripheral;
+            });
+}

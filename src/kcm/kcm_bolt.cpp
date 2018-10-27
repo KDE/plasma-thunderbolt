@@ -25,6 +25,10 @@
 
 #include "lib/device.h"
 #include "lib/devicemodel.h"
+#include "lib/manager.h"
+#include "lib/enum.h"
+
+#include <QDebug>
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMBoltFactory, "kcm_bolt.json", registerPlugin<KCMBolt>();)
 
@@ -32,8 +36,11 @@ KCMBolt::KCMBolt(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
     qmlRegisterType<Bolt::DeviceModel>("org.kde.bolt", 0, 1, "DeviceModel");
-    qmlRegisterUncreatableType<Bolt::Device>("org.kde.bolt", 0, 1, "Device", QStringLiteral("Use DeviceModel"));
-
+    qmlRegisterType<Bolt::Manager>("org.kde.bolt", 0, 1, "Manager");
+    qmlRegisterUncreatableType<Bolt::Device>("org.kde.bolt", 0, 1, "Device",
+            QStringLiteral("Use DeviceModel"));
+    qmlRegisterUncreatableMetaObject(Bolt::staticMetaObject, "org.kde.bolt", 0, 1, "Bolt",
+            QStringLiteral("For enums and flags only"));
 
     auto about = new KAboutData(QStringLiteral("kcm_bolt"),
             i18n("Thunderbolt Device Management"),

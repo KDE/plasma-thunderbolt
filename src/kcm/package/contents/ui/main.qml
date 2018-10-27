@@ -26,25 +26,43 @@ import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.kcm 1.2 as KCM
 import org.kde.bolt 0.1 as Bolt
+import "utils.js" as Utils
 
-KCM.ScrollViewKCM {
+Kirigami.Page {
     KCM.ConfigModule.quickHelp: i18n("This module allows you to manage Thunderbolt devices connected to your computer.");
+    id: root
 
-    Bolt.DeviceModel {
-        id: deviceModel
+    title: kcm.name
+    implicitWidth: Kirigami.Units.gridUnit * 20
+    implicitHeight: pageRow.contentHeight > 0 ? Math.min(pageRow.contentHeight, Kirigami.Units.gridUnit * 20)
+                                              : Kirigami.Units.gridUnit * 20
+
+    Kirigami.PageRow {
+        id: pageRow
+
+        anchors.fill: parent
+
+        initialPage: deviceList
     }
 
-    view: ListView {
-        model: deviceModel
-        width: parent.width
+    Component {
+        id: deviceList
+        DeviceList {
+            deviceModel: Bolt.DeviceModel {
+                manager: Bolt.Manager {}
+                showHosts: false
+            }
 
-        delegate: Kirigami.BasicListItem {
-            width: view.width
-            label: model.device.label
+            anchors.fill: parent
+
+            onClicked: {
+                pageRow.push(deviceView, { device: device })
+            }
         }
     }
 
-    footer: DeviceView {
+    Component {
         id: deviceView
+        DeviceView {}
     }
 }

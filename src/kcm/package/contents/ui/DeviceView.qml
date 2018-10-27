@@ -19,5 +19,73 @@
  */
 
 import QtQuick 2.7
+import QtQuick.Layouts 1.1
+import QtQuick.Controls 2.3
 
-Item {}
+import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
+import org.kde.bolt 0.1 as Bolt
+import "utils.js" as Utils
+
+Kirigami.Page {
+
+    property Bolt.Device device: null
+
+    QtObject {
+        id: d
+        property var locale: Qt.locale()
+    }
+
+    ColumnLayout {
+
+        spacing: Kirigami.Units.smallSpacing * 5
+
+        Kirigami.Heading {
+            level: 2
+            text: device ? device.name : ""
+        }
+
+        Kirigami.FormLayout {
+            Label {
+                text: device ? device.vendor : ""
+                Kirigami.FormData.label: i18n("Vendor:")
+            }
+            Label {
+                text: device ? device.uid : ""
+                Kirigami.FormData.label: i18n("UID:")
+            }
+            Label {
+                text: device ? Utils.deviceStatus(device) : ""
+                Kirigami.FormData.label: i18n("Status:")
+            }
+            Label {
+                visible: device && device.status == Bolt.Bolt.Status.Authorized
+                text: device ? Date.fromLocaleString(d.locale, device.authorizeTime) : ""
+                Kirigami.FormData.label: i18n("Authorized at:")
+            }
+            Label {
+                visible: device && device.status == Bolt.Bolt.Status.Connected
+                text: device ? Date.fromLocaleString(d.locale, device.connectTime) : ""
+                Kirigami.FormData.label: i18n("Connected at:")
+            }
+            Label {
+                visible: device && device.status == Bolt.Bolt.Status.Disconnected
+                text: device ? Date.fromLocaleString(d.locale, device.storeTime) : ""
+                Kirigami.FormData.label: i18n("Enrolled at:")
+            }
+        }
+
+        RowLayout {
+            Button {
+                id: connectBtn
+                text: i18n("Authorize")
+                visible: device && device.status == Bolt.Bolt.Status.Connected
+            }
+            Button {
+                id: forgetBtn
+                text: i18n("Forget Device")
+                visible: device && device.stored
+            }
+        }
+    }
+}

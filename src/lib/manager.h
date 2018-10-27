@@ -45,7 +45,7 @@ class KBOLT_EXPORT Manager : public QObject
     Q_PROPERTY(bool isProbing READ isProbing CONSTANT STORED false)
     Q_PROPERTY(Bolt::Policy defaultPolicy READ defaultPolicy CONSTANT STORED false)
     Q_PROPERTY(Bolt::Security securityLevel READ securityLevel CONSTANT STORED false)
-    Q_PROPERTY(Bolt::AuthMode authMode READ authMode CONSTANT STORED false)
+    Q_PROPERTY(Bolt::AuthMode authMode READ authMode WRITE setAuthMode STORED false)
 
 public:
     explicit Manager(QObject *parent = nullptr);
@@ -56,6 +56,7 @@ public:
     Policy defaultPolicy() const;
     Security securityLevel() const;
     AuthMode authMode() const;
+    void setAuthMode(AuthMode mode);
 
 public Q_SLOTS:
     QSharedPointer<Bolt::Device> device(const QString &uid) const;

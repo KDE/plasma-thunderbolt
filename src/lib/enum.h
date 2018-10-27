@@ -21,11 +21,18 @@
 #ifndef BOLT_ENUM_H_
 #define BOLT_ENUM_H_
 
+#include "kbolt_export.h"
+
 #include <QMetaType>
+#include <QMetaObject>
 #include <QString>
 
 namespace Bolt
 {
+// NOTE: Keep this split over two lines otherwise MOC may fail to see
+// the Q_NAMESPACE macro if KBOLT_EXPORT is not expanded correctly.
+KBOLT_EXPORT
+Q_NAMESPACE
 
 enum class Status {
     Unknown = -1,
@@ -37,6 +44,8 @@ enum class Status {
     Authorized
 };
 
+Q_ENUM_NS(Status)
+
 Status statusFromString(const QString &str);
 
 enum class Auth {
@@ -46,6 +55,7 @@ enum class Auth {
     NoKey  = 1 << 2,
     Boot   = 1 << 3
 };
+Q_ENUM_NS(Auth)
 Q_DECLARE_FLAGS(AuthFlags, Auth)
 
 AuthFlags authFlagsFromString(const QString &str);
@@ -57,6 +67,7 @@ enum class KeyState {
     Have,
     New
 };
+Q_ENUM_NS(KeyState)
 
 KeyState keyStateFromString(const QString &str);
 
@@ -66,6 +77,7 @@ enum class Policy {
     Manual,
     Auto
 };
+Q_ENUM_NS(Policy)
 
 Policy policyFromString(const QString &str);
 QString policyToString(Policy policy);
@@ -75,6 +87,7 @@ enum class Type {
     Host,
     Peripheral
 };
+Q_ENUM_NS(Type)
 
 Type typeFromString(const QString &str);
 
@@ -83,8 +96,10 @@ enum class AuthMode {
     Disabled = 0,
     Enabled
 };
+Q_ENUM_NS(AuthMode)
 
 AuthMode authModeFromString(const QString &str);
+QString authModeToString(AuthMode authMode);
 
 enum class Security {
     Unknown = -1,
@@ -94,6 +109,7 @@ enum class Security {
     Secure = '2',
     USBOnly = 4
 };
+Q_ENUM_NS(Security)
 
 Security securityFromString(const QString &str);
 
@@ -106,7 +122,6 @@ Q_DECLARE_METATYPE(Bolt::Policy)
 Q_DECLARE_METATYPE(Bolt::Type)
 Q_DECLARE_METATYPE(Bolt::AuthMode)
 Q_DECLARE_METATYPE(Bolt::Security)
-
 Q_DECLARE_OPERATORS_FOR_FLAGS(Bolt::AuthFlags)
 
 

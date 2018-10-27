@@ -88,6 +88,11 @@ AuthMode Manager::authMode() const
     return authModeFromString(mInterface->authMode());
 }
 
+void Manager::setAuthMode(AuthMode mode)
+{
+    mInterface->setAuthMode(authModeToString(mode));
+}
+
 QSharedPointer<Device> Manager::device(std::function<bool(const QSharedPointer<Device> &)> &&match) const
 {
     auto device = std::find_if(mDevices.cbegin(), mDevices.cend(), std::move(match));

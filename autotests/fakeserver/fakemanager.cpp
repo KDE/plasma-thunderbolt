@@ -27,6 +27,8 @@
 #include <QDBusError>
 #include <QJsonArray>
 
+#include <QDebug>
+
 namespace {
 static const QString kManagerDBusPath = QStringLiteral("/org/freedesktop/bolt");
 }
@@ -119,6 +121,7 @@ QString FakeManager::authMode() const
 
 void FakeManager::setAuthMode(const QString &authMode)
 {
+    qDebug("Manager: authMode changed to %s", qUtf8Printable(authMode));
     mAuthMode = authMode;
 }
 

@@ -175,6 +175,19 @@ Bolt::AuthMode Bolt::authModeFromString(const QString &str)
     }
 }
 
+QString Bolt::authModeToString(Bolt::AuthMode authMode)
+{
+    switch (authMode) {
+    case Bolt::AuthMode::Enabled:
+        return QStringLiteral("enabled");
+    case Bolt::AuthMode::Disabled:
+        return QStringLiteral("disabled");
+    }
+
+    Q_UNREACHABLE();
+    return {};
+}
+
 Bolt::Security Bolt::securityFromString(const QString &str)
 {
     if (str == QLatin1Literal("unknown")) {

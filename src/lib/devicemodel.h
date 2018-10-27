@@ -33,24 +33,38 @@ class Device;
 class KBOLT_EXPORT DeviceModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(bool isAvailable READ isAvailable CONSTANT)
+    Q_PROPERTY(Bolt::Manager *manager READ manager WRITE setManager NOTIFY managerChanged)
+
+    /** Whether to show only peripherals or display hosts as well */
+    Q_PROPERTY(bool showHosts READ showHosts WRITE setShowHosts NOTIFY showHostsChanged)
 public:
     enum Role {
         DeviceRole = Qt::UserRole
     };
 
-    explicit DeviceModel(QObject *parent = nullptr);
-    ~DeviceModel() override;
+    using QAbstractListModel::QAbstractListModel;
+    ~DeviceModel() override = default;
 
-    bool isAvailable() const;
+    Manager *manager() const;
+    void setManager(Manager *manager);
+
+    bool showHosts() const;
+    void setShowHosts(bool showHosts);
 
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
 
+Q_SIGNALS:
+    void managerChanged(Bolt::Manager *manager);
+    void showHostsChanged(bool showHosts);
+
 private:
-    QScopedPointer<Manager> mManager;
+    void populateWithoutReset();
+
+    Manager *mManager = nullptr;
     QList<QSharedPointer<Device>> mDevices;
+    bool mShowHosts = true;
 };
 
 } // namespace Bolt
