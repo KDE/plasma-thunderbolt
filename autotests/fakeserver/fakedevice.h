@@ -92,11 +92,11 @@ private:
     QString mName;
     QString mVendor;
     QString mType;
-    QString mStatus;
-    QString mAuthFlags;
+    QString mStatus = QStringLiteral("unknown");
+    QString mAuthFlags = QStringLiteral("none");
     QString mParent;
     QString mSysfsPath;
-    QString mPolicy;
+    QString mPolicy = QStringLiteral("unknown");
     QString mKey;
     QString mLabel;
     quint64 mConnectTime = 0;

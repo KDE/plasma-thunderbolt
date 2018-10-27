@@ -27,6 +27,8 @@
 #include <QString>
 #include <QJsonObject>
 
+#include <memory>
+
 class FakeDevice;
 class FakeManager : public QObject
 {
@@ -50,7 +52,7 @@ public:
     QString authMode() const;
     void setAuthMode(const QString &authMode);
 
-    void addDevice(FakeDevice *device);
+    FakeDevice *addDevice(std::unique_ptr<FakeDevice> device);
     void removeDevice(const QString &uid);
     QList<FakeDevice *> devices() const;
 

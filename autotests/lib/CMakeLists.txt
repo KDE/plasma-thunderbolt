@@ -6,6 +6,7 @@ ecm_add_test(
     NAME_PREFIX lib-
 )
 
+
 ecm_add_test(
     devicetest.cpp
     LINK_LIBRARIES kbolt libfakeserver Qt5::Test Qt5::Core Qt5::DBus

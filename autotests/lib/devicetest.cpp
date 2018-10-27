@@ -10,6 +10,8 @@
 #include "manager.h"
 #include "exceptions.h"
 
+#include <memory>
+
 class DeviceTest : public QObject
 {
     Q_OBJECT
@@ -34,8 +36,9 @@ private Q_SLOTS:
         }
 
         auto fakeManager = fakeServer->manager();
-        auto fakeDevice = new FakeDevice(QStringLiteral("Device1"));
-        fakeManager->addDevice(fakeDevice);
+        auto fakeDevice = fakeManager->addDevice(
+                std::make_unique<FakeDevice>(QStringLiteral("Device1")));
+        fakeDevice->setAuthFlags(QStringLiteral("none"));
 
         QScopedPointer<Bolt::Manager> manager;
         try {
@@ -45,7 +48,12 @@ private Q_SLOTS:
             QFAIL("Failed to connect to DBus server");
         }
 
+        auto device = manager->device(fakeDevice->uid());
+        QVERIFY(device);
+        QCOMPARE(device->authFlags(), Bolt::Auth::None);
+        device->authorize(Bolt::Auth::NoKey | Bolt::Auth::Boot);
 
+        QTRY_COMPARE(fakeDevice->authFlags(), QStringLiteral("nokey | boot"));
     }
 };
 

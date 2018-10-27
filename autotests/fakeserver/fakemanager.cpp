@@ -67,10 +67,12 @@ FakeManager::~FakeManager()
     qDeleteAll(mDevices);
 }
 
-void FakeManager::addDevice(FakeDevice *device)
+FakeDevice *FakeManager::addDevice(std::unique_ptr<FakeDevice> device)
 {
-    mDevices.insert(device->uid(), device);
-    Q_EMIT DeviceAdded(device->dbusPath());
+    auto ptr = device.release();
+    mDevices.insert(ptr->uid(), ptr);
+    Q_EMIT DeviceAdded(ptr->dbusPath());
+    return ptr;
 }
 
 void FakeManager::removeDevice(const QString &uid)

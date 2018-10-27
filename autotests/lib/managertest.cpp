@@ -39,8 +39,6 @@ private Q_SLOTS:
 
         auto fakeManager = server->manager();
 
-        FakeDevice *fakeDevice = new FakeDevice(QStringLiteral("device1"));
-
         QScopedPointer<Bolt::Manager> manager;
         try {
             manager.reset(new Bolt::Manager);
@@ -51,7 +49,8 @@ private Q_SLOTS:
         QSignalSpy addSpy(manager.get(), &Bolt::Manager::deviceAdded);
         QVERIFY(addSpy.isValid());
 
-        fakeManager->addDevice(fakeDevice);
+        auto fakeDevice = fakeManager->addDevice(
+                std::make_unique<FakeDevice>(QStringLiteral("device1")));
         QTRY_COMPARE(addSpy.size(), 1);
         auto device = addSpy.first().first().value<QSharedPointer<Bolt::Device>>();
         QCOMPARE(device->uid(), fakeDevice->uid());
