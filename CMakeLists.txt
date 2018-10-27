@@ -21,6 +21,11 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_MODULE_PATH})
 include(KDECompilerSettings)
 include(ECMQtDeclareLoggingCategory)
 include(GenerateExportHeader)
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
+include(CheckIncludeFiles)
+include(CheckSymbolExists)
 
 kde_enable_exceptions()
 
