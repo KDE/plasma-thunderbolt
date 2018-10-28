@@ -51,9 +51,9 @@ int main(int argc, char **argv)
 
     try {
         FakeServer server(parser.value(cfgOption));
+        return app.exec();
     } catch (const FakeServerException &e) {
         std::cerr << e.what() << std::endl;
         return -1;
     }
-    return app.exec();
 }
