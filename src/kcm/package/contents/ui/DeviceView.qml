@@ -62,17 +62,17 @@ Kirigami.Page {
             }
             Label {
                 visible: device && device.status == Bolt.Bolt.Status.Authorized
-                text: device ? Date.fromLocaleString(d.locale, device.authorizeTime) : ""
+                text: device ? Qt.formatDateTime(device.authorizeTime) : ""
                 Kirigami.FormData.label: i18n("Authorized at:")
             }
             Label {
                 visible: device && device.status == Bolt.Bolt.Status.Connected
-                text: device ? Date.fromLocaleString(d.locale, device.connectTime) : ""
+                text: device ? Qt.formatDateTime(device.connectTime) : ""
                 Kirigami.FormData.label: i18n("Connected at:")
             }
             Label {
                 visible: device && device.status == Bolt.Bolt.Status.Disconnected
-                text: device ? Date.fromLocaleString(d.locale, device.storeTime) : ""
+                text: device ? Qt.formatDateTime(device.storeTime) : ""
                 Kirigami.FormData.label: i18n("Enrolled at:")
             }
         }
