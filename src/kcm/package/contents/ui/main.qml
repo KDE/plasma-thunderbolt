@@ -37,19 +37,43 @@ Kirigami.Page {
     implicitHeight: pageRow.contentHeight > 0 ? Math.min(pageRow.contentHeight, Kirigami.Units.gridUnit * 20)
                                               : Kirigami.Units.gridUnit * 20
 
+    Bolt.Manager {
+        id: boltManager
+    }
+
     Kirigami.PageRow {
         id: pageRow
 
         anchors.fill: parent
 
-        initialPage: deviceList
+        Component.onCompleted: {
+            if (boltManager.isAvailable) {
+                pageRow.push(deviceList, { manager: boltManager })
+            } else {
+                pageRow.push(noBoltPage)
+            }
+        }
+    }
+
+    Component {
+        id: noBoltPage
+        Kirigami.Page {
+            Label {
+                text: i18n("The Thunderbolt deamon (boltd) is not available.")
+
+                anchors.fill: parent
+                verticalAlignment: Qt.AlignVCenter
+                horizontalAlignment: Qt.AlignHCenter
+            }
+        }
     }
 
     Component {
         id: deviceList
         DeviceList {
+            property alias manager: model.manager
             deviceModel: Bolt.DeviceModel {
-                manager: Bolt.Manager {}
+                id: model
                 showHosts: false
             }
 
