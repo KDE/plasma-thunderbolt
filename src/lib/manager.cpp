@@ -42,8 +42,7 @@ Manager::Manager(QObject *parent)
 
     connect(mInterface.get(), &ManagerInterface::DeviceAdded,
             this, [this](const QDBusObjectPath &path) {
-                auto device = Device::create(path, this);
-                if (device) {
+                if (auto device = Device::create(path, this)) {
                     mDevices.push_back(device);
                     qCDebug(log_libkbolt, "New device %s (%s) added",
                             qUtf8Printable(device->uid()), qUtf8Printable(device->name()));
@@ -62,8 +61,8 @@ Manager::Manager(QObject *parent)
 
     const auto devicePaths = mInterface->ListDevices().argumentAt<0>();
     for (const auto &devicePath : devicePaths) {
-        auto device = Device::create(devicePath, this);
-        if (device) {
+        qCDebug(log_libkbolt, "Discovered device %s", qUtf8Printable(devicePath.path()));
+        if (auto device = Device::create(devicePath, this)) {
             mDevices.push_back(device);
         }
     }
