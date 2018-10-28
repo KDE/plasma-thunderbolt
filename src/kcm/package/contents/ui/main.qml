@@ -48,9 +48,14 @@ Kirigami.Page {
 
         Component.onCompleted: {
             if (boltManager.isAvailable) {
-                pageRow.push(deviceList, { manager: boltManager })
+                if (boltManager.securityLevel == Bolt.Bolt.Security.DPOnly
+                        || boltManager.securityLevel == Bolt.Bolt.Security.USBOnly) {
+                    pageRow.push(noBoltPage, { text: i18n("Thunderbolt support has been disabled in BIOS") })
+                } else {
+                    pageRow.push(deviceList, { manager: boltManager })
+                }
             } else {
-                pageRow.push(noBoltPage)
+                pageRow.push(noBoltPage, { text: i18n("Thunderbolt subsystem is not available") })
             }
         }
     }
@@ -58,8 +63,9 @@ Kirigami.Page {
     Component {
         id: noBoltPage
         Kirigami.Page {
+            property alias text: label.text
             Label {
-                text: i18n("The Thunderbolt deamon (boltd) is not available.")
+                id: label
 
                 anchors.fill: parent
                 verticalAlignment: Qt.AlignVCenter
