@@ -41,6 +41,8 @@ Kirigami.Page {
             id: view
             model: deviceModel
 
+            enabled: enableBox.checked
+
             Layout.fillWidth: true
             Layout.fillHeight: true
 
