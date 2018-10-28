@@ -7,7 +7,6 @@
 #include "fakedevice.h"
 
 #include "lib/device.h"
-#include "lib/exceptions.h"
 
 #include "kded_bolt.h"
 
@@ -47,10 +46,9 @@ private Q_SLOTS:
         QScopedPointer<FakeServer> fakeServer;
         try {
             fakeServer.reset(new FakeServer);
-            QVERIFY(fakeServer->wait());
-        } catch (const Bolt::DBusException &e) {
-            qCritical("DBus error: %s", e.what());
-            QFAIL("Caught exception");
+        } catch (const FakeServerException &e) {
+            qWarning("Fake server exception: %s", e.what());
+           QFAIL("Caught server exception");
         }
 
         TestableKDEDBolt kded(nullptr, {});
@@ -59,7 +57,7 @@ private Q_SLOTS:
 
         // Add unauthorized device
         auto fakeManager = fakeServer->manager();
-        {
+        try {
             auto fakeDevice = std::make_unique<FakeDevice>(QStringLiteral("Device1"));
             fakeDevice->setStatus(QStringLiteral("connected"));
             fakeDevice->setAuthFlags(QStringLiteral("none"));
@@ -70,11 +68,14 @@ private Q_SLOTS:
             QCOMPARE(device->uid(), QStringLiteral("Device1"));
             QCOMPARE(device->authFlags(), Bolt::Auth::None);
             QCOMPARE(device->status(), Bolt::Status::Connected);
+        } catch (const FakeDeviceException &e) {
+            qWarning("Fake device exception: %s", e.what());
+            QFAIL("Caught device exception");
         }
 
         // Add authorized device
         notifySpy.clear();
-        {
+        try {
             auto fakeDevice = std::make_unique<FakeDevice>(QStringLiteral("Device2"));
             fakeDevice->setStatus(QStringLiteral("authorized"));
             fakeDevice->setAuthFlags(QStringLiteral("nokey | boot"));
@@ -82,6 +83,9 @@ private Q_SLOTS:
 
             QTest::qWait(200);
             QVERIFY(notifySpy.empty());
+        } catch (const FakeDeviceException &e) {
+            qWarning("Fake device exception: %s", e.what());
+            QFAIL("Caught device exception");
         }
     }
 };

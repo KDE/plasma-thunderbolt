@@ -4,7 +4,6 @@ include_directories(
 )
 
 set(libfakeserver_SRCS
-    exceptions.cpp
     fakedevice.cpp
     fakemanager.cpp
     fakeserver.cpp

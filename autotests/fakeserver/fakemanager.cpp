@@ -21,7 +21,6 @@
 #include "fakemanager.h"
 #include "fakemanageradaptor.h"
 #include "fakedevice.h"
-#include "exceptions.h"
 
 #include <QDBusConnection>
 #include <QDBusError>
@@ -42,8 +41,8 @@ FakeManager::FakeManager(const QJsonObject &json, QObject *parent)
 {
     new FakeManagerAdaptor(this);
     if (!QDBusConnection::sessionBus().registerObject(kManagerDBusPath, this)) {
-        throw DBusException(QStringLiteral("Failed to register FakeManager to DBus: %1")
-                .arg(QDBusConnection::sessionBus().lastError().message()));
+        throw FakeManagerException(QStringLiteral("Failed to register FakeManager to DBus: %1")
+                    .arg(QDBusConnection::sessionBus().lastError().message()));
     }
 
     const auto jsonDevices = json[QStringLiteral("Devices")].toArray();
@@ -58,7 +57,7 @@ FakeManager::FakeManager(QObject *parent)
 {
     new FakeManagerAdaptor(this);
     if (!QDBusConnection::sessionBus().registerObject(kManagerDBusPath, this)) {
-        throw DBusException(QStringLiteral("Failed to register FakeManager to DBus: %1")
+        throw FakeManagerException(QStringLiteral("Failed to register FakeManager to DBus: %1")
                 .arg(QDBusConnection::sessionBus().lastError().message()));
     }
 }

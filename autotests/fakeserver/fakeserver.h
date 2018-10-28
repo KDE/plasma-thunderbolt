@@ -4,6 +4,15 @@
 #include <QString>
 #include <QScopedPointer>
 
+class FakeServerException : public std::runtime_error
+{
+public:
+    FakeServerException(const char *what)
+        : std::runtime_error(what) {}
+    FakeServerException(const QString &what)
+        : std::runtime_error(what.toStdString()) {}
+};
+
 class FakeManager;
 class FakeServer
 {
@@ -13,8 +22,6 @@ public:
     ~FakeServer();
 
     static void enableFakeEnv();
-
-    bool wait() const;
 
     FakeManager *manager() const;
 private:

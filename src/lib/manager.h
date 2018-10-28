@@ -41,6 +41,7 @@ class KBOLT_EXPORT Manager : public QObject
 {
     Q_OBJECT
 
+    Q_PROPERTY(bool isAvailable READ isAvailable CONSTANT)
     Q_PROPERTY(uint version READ version CONSTANT STORED false)
     Q_PROPERTY(bool isProbing READ isProbing CONSTANT STORED false)
     Q_PROPERTY(Bolt::Policy defaultPolicy READ defaultPolicy CONSTANT STORED false)
@@ -50,6 +51,8 @@ class KBOLT_EXPORT Manager : public QObject
 public:
     explicit Manager(QObject *parent = nullptr);
     ~Manager() override;
+
+    bool isAvailable() const;
 
     uint version() const;
     bool isProbing() const;

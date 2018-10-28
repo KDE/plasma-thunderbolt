@@ -21,13 +21,22 @@
 #include "device.h"
 #include "deviceinterface.h"
 #include "dbushelper.h"
-#include "exceptions.h"
+#include "libkbolt_debug.h"
 
 #include <QDBusObjectPath>
+
+#include <stdexcept>
 
 using namespace Bolt;
 
 using DeviceInterface = org::freedesktop::bolt1::Device;
+
+class DBusException : public std::runtime_error
+{
+public:
+    DBusException(const QString &what)
+        : std::runtime_error(what.toStdString()) {}
+};
 
 Device::Device(QObject *parent)
     : QObject(parent)
@@ -41,7 +50,7 @@ Device::Device(const QDBusObjectPath &path, QObject *parent)
 {
     if (!mInterface->isValid()) {
         throw DBusException(QStringLiteral("Failed to obtain DBus interface for device %1: %2")
-                .arg(path.path(), DBusHelper::connection().lastError().message()));
+                            .arg(path.path(), mInterface->lastError().message()));
     }
 
     // cache UID in case the we still need to identify the device, even if it's
@@ -51,6 +60,16 @@ Device::Device(const QDBusObjectPath &path, QObject *parent)
 
 Device::~Device()
 {}
+
+QSharedPointer<Device> Device::create(const QDBusObjectPath &path, QObject *parent)
+{
+    try {
+        return QSharedPointer<Device>(new Device(path, parent));
+    } catch (const DBusException &e) {
+        qCWarning(log_libkbolt, "%s", e.what());
+        return {};
+    }
+}
 
 QDBusObjectPath Device::dbusPath() const
 {
@@ -64,47 +83,52 @@ QString Device::uid() const
 
 QString Device::name() const
 {
-    return mInterface ? mInterface->name() : QString();
+    return mInterface->name();
 }
 
 QString Device::vendor() const
 {
-    return mInterface ? mInterface->vendor() : QString();
+    return mInterface->vendor();
 }
 
 Type Device::type() const
 {
-    return mInterface ? typeFromString(mInterface->type()) : Type::Unknown;
+    const auto val = mInterface->type();
+    return val.isEmpty() ? Type::Unknown : typeFromString(val);
 }
 
 Status Device::status() const
 {
-    return mInterface ? statusFromString(mInterface->status()) : Status::Unknown;
+    const auto val = mInterface->status();
+    return val.isEmpty() ? Status::Unknown : statusFromString(val);
 }
 
 AuthFlags Device::authFlags() const
 {
-    return mInterface ? authFlagsFromString(mInterface->authFlags()) : Auth::None;
+    const auto val = mInterface->authFlags();
+    return val.isEmpty() ? Auth::None : authFlagsFromString(val);
 }
 
 QString Device::parent() const
 {
-    return mInterface ? mInterface->parentUid() : QString();
+    return mInterface->parentUid();
 }
 
 QString Device::sysfsPath() const
 {
-    return mInterface ? mInterface->sysfsPath() : QString();
+    return mInterface->sysfsPath();
 }
 
 QDateTime Device::connectTime() const
 {
-    return mInterface ? QDateTime::fromTime_t(mInterface->connectTime()) : QDateTime();
+    const auto val = mInterface->connectTime();
+    return val == 0 ? QDateTime() : QDateTime::fromTime_t(val);
 }
 
 QDateTime Device::authorizeTime() const
 {
-    return mInterface ? QDateTime::fromTime_t(mInterface->authorizeTime()) : QDateTime();
+    const auto val = mInterface->authorizeTime();
+    return val == 0 ? QDateTime() : QDateTime::fromTime_t(val);
 }
 
 bool Device::stored() const
@@ -114,22 +138,25 @@ bool Device::stored() const
 
 Policy Device::policy() const
 {
-    return mInterface ? policyFromString(mInterface->policy()) : Policy::Unknown;
+    const auto val = mInterface->policy();
+    return val.isEmpty() ? Policy::Unknown : policyFromString(val);
 }
 
 KeyState Device::keyState() const
 {
-    return mInterface ? keyStateFromString(mInterface->key()) : KeyState::Unknown;
+    const auto val = mInterface->key();
+    return val.isEmpty() ? KeyState::Unknown : keyStateFromString(val);
 }
 
 QDateTime Device::storeTime() const
 {
-    return mInterface ? QDateTime::fromTime_t(mInterface->storeTime()) : QDateTime();
+    const auto val = mInterface->storeTime();
+    return val == 0 ? QDateTime() : QDateTime::fromTime_t(val);
 }
 
 QString Device::label() const
 {
-    return mInterface ? mInterface->label() : QString();
+    return mInterface->label();
 }
 
 void Device::authorize(AuthFlags authFlags)

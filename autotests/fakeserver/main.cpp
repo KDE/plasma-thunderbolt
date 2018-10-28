@@ -29,7 +29,6 @@
 #include <iostream>
 
 #include "fakeserver.h"
-#include "exceptions.h"
 
 int main(int argc, char **argv)
 {
@@ -50,6 +49,11 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    FakeServer server(parser.value(cfgOption));
+    try {
+        FakeServer server(parser.value(cfgOption));
+    } catch (const FakeServerException &e) {
+        std::cerr << e.what() << std::endl;
+        return -1;
+    }
     return app.exec();
 }

@@ -5,7 +5,6 @@ set(LIBKBOLT_SRCS
     device.cpp
     devicemodel.cpp
     enum.cpp
-    exceptions.cpp
     manager.cpp
 )
 

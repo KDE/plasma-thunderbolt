@@ -29,6 +29,14 @@
 
 #include <memory>
 
+class FakeManagerException : public std::runtime_error
+{
+public:
+    FakeManagerException(const QString &what)
+        : std::runtime_error(what.toStdString())
+    {}
+};
+
 class FakeDevice;
 class FakeManager : public QObject
 {

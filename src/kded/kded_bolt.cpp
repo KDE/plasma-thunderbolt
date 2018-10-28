@@ -3,7 +3,6 @@
 
 #include "lib/manager.h"
 #include "lib/device.h"
-#include "lib/exceptions.h"
 
 #include <QPointer>
 
@@ -12,11 +11,10 @@
 
 KDEDBolt::KDEDBolt(QObject *parent, const QVariantList &)
     : KDEDModule(parent)
+    , mManager(new Bolt::Manager)
 {
-    try {
-        mManager.reset(new Bolt::Manager);
-    } catch (const Bolt::DBusException &e) {
-        qCInfo(log_kded_bolt, "Couldn't connect to Bolt DBus daemon: %s", e.what());
+    if (!mManager->isAvailable()) {
+        qCInfo(log_kded_bolt, "Couldn't connect to Bolt DBus daemon");
         return;
     }
 

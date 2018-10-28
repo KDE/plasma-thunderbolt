@@ -54,7 +54,8 @@ class KBOLT_EXPORT Device : public QObject
     Q_PROPERTY(QString label READ label CONSTANT STORED false)
 
 public:
-    explicit Device(const QDBusObjectPath &path, QObject *parent = nullptr);
+    static QSharedPointer<Device> create(const QDBusObjectPath &path,
+                                         QObject *parent = nullptr);
     explicit Device(QObject *parent = nullptr);
     ~Device() override;
 
@@ -83,6 +84,8 @@ Q_SIGNALS:
     void statusChanged(Bolt::Status);
 
 private:
+    Device(const QDBusObjectPath &path, QObject *parent = nullptr);
+
     QScopedPointer<OrgFreedesktopBolt1DeviceInterface> mInterface;
     QDBusObjectPath mDBusPath;
     QString mUid;

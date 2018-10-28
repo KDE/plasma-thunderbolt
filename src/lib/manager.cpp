@@ -22,7 +22,7 @@
 #include "device.h"
 #include "managerinterface.h"
 #include "dbushelper.h"
-#include "exceptions.h"
+#include "libkbolt_debug.h"
 
 using namespace Bolt;
 
@@ -35,32 +35,47 @@ Manager::Manager(QObject *parent)
         DBusHelper::connection()))
 {
     if (!mInterface->isValid()) {
-        throw DBusException(QStringLiteral("Failed to create Manager DBus interface: %1")
-                .arg(DBusHelper::connection().lastError().message()));
+        qCWarning(log_libkbolt, "Failed to connect to Bolt manager DBus interface: %s",
+                    qUtf8Printable(mInterface->lastError().message()));
+        return;
     }
 
     connect(mInterface.get(), &ManagerInterface::DeviceAdded,
             this, [this](const QDBusObjectPath &path) {
-                auto device = QSharedPointer<Device>::create(path, this);
-                mDevices.push_back(device);
-                Q_EMIT deviceAdded(device);
+                auto device = Device::create(path, this);
+                if (device) {
+                    mDevices.push_back(device);
+                    qCDebug(log_libkbolt, "New device %s (%s) added",
+                            qUtf8Printable(device->uid()), qUtf8Printable(device->name()));
+                    Q_EMIT deviceAdded(device);
+                }
             });
     connect(mInterface.get(), &ManagerInterface::DeviceRemoved,
             this, [this](const QDBusObjectPath &path) {
                 if (auto device = this->device(path)) {
                     mDevices.removeOne(device);
+                    qCDebug(log_libkbolt, "Device %s (%s) removed",
+                            qUtf8Printable(device->uid()), qUtf8Printable(device->name()));
                     Q_EMIT deviceRemoved(device);
                 }
             });
 
     const auto devicePaths = mInterface->ListDevices().argumentAt<0>();
     for (const auto &devicePath : devicePaths) {
-        mDevices.push_back(QSharedPointer<Device>::create(devicePath, this));
+        auto device = Device::create(devicePath, this);
+        if (device) {
+            mDevices.push_back(device);
+        }
     }
 }
 
 Manager::~Manager()
 {
+}
+
+bool Manager::isAvailable() const
+{
+    return mInterface.get() && mInterface->isValid();
 }
 
 uint Manager::version() const
@@ -75,17 +90,29 @@ bool Manager::isProbing() const
 
 Policy Manager::defaultPolicy() const
 {
-    return policyFromString(mInterface->defaultPolicy());
+    const auto policy = mInterface->defaultPolicy();
+    if (!mInterface->isValid() || policy.isEmpty()) {
+        return Policy::Unknown;
+    }
+    return policyFromString(policy);
 }
 
 Security Manager::securityLevel() const
 {
-    return securityFromString(mInterface->securityLevel());
+    const auto level = mInterface->securityLevel();
+    if (!mInterface->isValid() || level.isEmpty()) {
+        return Security::Unknown;
+    }
+    return securityFromString(level);
 }
 
 AuthMode Manager::authMode() const
 {
-    return authModeFromString(mInterface->authMode());
+    const auto mode = mInterface->authMode();
+    if (!mInterface->isValid() || mode.isEmpty()) {
+        return AuthMode::Disabled;
+    }
+    return authModeFromString(mode);
 }
 
 void Manager::setAuthMode(AuthMode mode)
@@ -120,10 +147,15 @@ QList<QSharedPointer<Device>> Manager::devices() const
 
 void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlags)
 {
+    qCDebug(log_libkbolt, "Enrolling device %s with policy %s and flags %s",
+            qUtf8Printable(uid), qUtf8Printable(policyToString(policy)),
+            qUtf8Printable(authFlagsToString(authFlags)));
+
     mInterface->EnrollDevice(uid, policyToString(policy), authFlagsToString(authFlags));
 }
 
 void Manager::forgetDevice(const QString &uid)
 {
+    qCDebug(log_libkbolt, "Forgetting device %s", qUtf8Printable(uid));
     mInterface->ForgetDevice(uid);
 }

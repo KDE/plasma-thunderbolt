@@ -21,7 +21,6 @@
 #include "devicemodel.h"
 #include "device.h"
 #include "manager.h"
-#include "exceptions.h"
 
 using namespace Bolt;
 

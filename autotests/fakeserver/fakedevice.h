@@ -25,6 +25,13 @@
 #include <QDBusObjectPath>
 #include <QJsonObject>
 
+class FakeDeviceException : public std::runtime_error
+{
+public:
+    FakeDeviceException(const QString &what)
+        : std::runtime_error(what.toStdString()) {}
+};
+
 class FakeDevice : public QObject
 {
     Q_OBJECT

@@ -8,7 +8,6 @@
 
 #include "lib/manager.h"
 #include "lib/device.h"
-#include "lib/exceptions.h"
 
 #include <QDebug>
 
@@ -31,31 +30,32 @@ private Q_SLOTS:
         QScopedPointer<FakeServer> server;
         try {
             server.reset(new FakeServer);
-        } catch (const Bolt::DBusException &e) {
-            qCritical("DBus error: %s", e.what());
-            QFAIL("Failed to register on DBus");
+        } catch (const FakeServerException &e) {
+            qWarning("Fake server exception: %s", e.what());
+            QFAIL("Exception server caught");
         }
-        QVERIFY(server->wait());
 
         auto fakeManager = server->manager();
 
-        QScopedPointer<Bolt::Manager> manager;
-        try {
-            manager.reset(new Bolt::Manager);
-        } catch (Bolt::DBusException &e) {
-            qCritical("DBus error: %s", e.what());
-            QFAIL("Failed to connect to DBus server");
-        }
-        QSignalSpy addSpy(manager.get(), &Bolt::Manager::deviceAdded);
+        Bolt::Manager manager;
+        QVERIFY(manager.isAvailable());
+
+        QSignalSpy addSpy(&manager, &Bolt::Manager::deviceAdded);
         QVERIFY(addSpy.isValid());
 
-        auto fakeDevice = fakeManager->addDevice(
+        FakeDevice *fakeDevice = nullptr;
+        try {
+            fakeDevice = fakeManager->addDevice(
                 std::make_unique<FakeDevice>(QStringLiteral("device1")));
+        } catch (const FakeDeviceException &e) {
+            qWarning("Fake device exception: %s", e.what());
+            QFAIL("Caught device exception");
+        }
         QTRY_COMPARE(addSpy.size(), 1);
         auto device = addSpy.first().first().value<QSharedPointer<Bolt::Device>>();
         QCOMPARE(device->uid(), fakeDevice->uid());
 
-        QSignalSpy removeSpy(manager.get(), &Bolt::Manager::deviceRemoved);
+        QSignalSpy removeSpy(&manager, &Bolt::Manager::deviceRemoved);
         QVERIFY(removeSpy.isValid());
         fakeManager->removeDevice(fakeDevice->uid());
         QTRY_COMPARE(removeSpy.size(), 1);

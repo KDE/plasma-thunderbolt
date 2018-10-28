@@ -8,7 +8,6 @@
 
 #include "device.h"
 #include "manager.h"
-#include "exceptions.h"
 
 #include <memory>
 
@@ -29,26 +28,26 @@ private Q_SLOTS:
         QScopedPointer<FakeServer> fakeServer;
         try {
             fakeServer.reset(new FakeServer);
-            QVERIFY(fakeServer->wait());
-        } catch (const Bolt::DBusException &e) {
-            qCritical("DBus error: %s", e.what());
-            QFAIL("Caught exception");
+        } catch (const FakeServerException &e) {
+            qWarning("Fake server exception: %s", e.what());
+            QFAIL("Caught server exception");
         }
 
         auto fakeManager = fakeServer->manager();
-        auto fakeDevice = fakeManager->addDevice(
+        FakeDevice *fakeDevice = nullptr;
+        try {
+            fakeDevice = fakeManager->addDevice(
                 std::make_unique<FakeDevice>(QStringLiteral("Device1")));
+        } catch (const FakeDeviceException &e) {
+            qWarning("Fake device exception: %s", e.what());
+            QFAIL("Caught device exception");
+        }
         fakeDevice->setAuthFlags(QStringLiteral("none"));
 
-        QScopedPointer<Bolt::Manager> manager;
-        try {
-            manager.reset(new Bolt::Manager);
-        } catch (const Bolt::DBusException &e) {
-            qCritical("DBus error: %s", e.what());
-            QFAIL("Failed to connect to DBus server");
-        }
+        Bolt::Manager manager;
+        QVERIFY(manager.isAvailable());
 
-        auto device = manager->device(fakeDevice->uid());
+        auto device = manager.device(fakeDevice->uid());
         QVERIFY(device);
         QCOMPARE(device->authFlags(), Bolt::Auth::None);
         device->authorize(Bolt::Auth::NoKey | Bolt::Auth::Boot);

@@ -21,7 +21,6 @@
 
 #include "fakedevice.h"
 #include "fakedeviceadaptor.h"
-#include "exceptions.h"
 
 #include <QDBusConnection>
 #include <QDBusError>
@@ -33,7 +32,7 @@ FakeDevice::FakeDevice(const QString &uid, QObject *parent)
     new FakeDeviceAdaptor(this);
     auto bus = QDBusConnection::sessionBus();
     if (!bus.registerObject(dbusPath().path(), this)) {
-        throw DBusException(QStringLiteral("Failed to register device %1 to DBus: %2")
+        throw FakeDeviceException(QStringLiteral("Failed to register device %1 to DBus: %2")
                 .arg(mUid, bus.lastError().message()));
     }
 }
@@ -59,7 +58,7 @@ FakeDevice::FakeDevice(const QJsonObject &json, QObject *parent)
     new FakeDeviceAdaptor(this);
     auto bus = QDBusConnection::sessionBus();
     if (!bus.registerObject(dbusPath().path(), this)) {
-        throw DBusException(QStringLiteral("Failed to register device %1 to DBus: %2")
+        throw FakeDeviceException(QStringLiteral("Failed to register device %1 to DBus: %2")
                 .arg(mUid, bus.lastError().message()));
     }
 }
