@@ -31,18 +31,20 @@ Kirigami.Page {
 
     property Bolt.Device device: null
 
-    QtObject {
-        id: d
-        property var locale: Qt.locale()
-    }
-
     ColumnLayout {
-
         spacing: Kirigami.Units.smallSpacing * 5
 
-        Kirigami.Heading {
-            level: 2
-            text: device ? device.name : ""
+        RowLayout {
+            ToolButton {
+                icon.name: "draw-arrow-back"
+                visible: !pageRow.wideMode
+                onClicked: pageRow.pop()
+            }
+
+            Kirigami.Heading {
+                level: 2
+                text: device ? device.name : ""
+            }
         }
 
         Kirigami.FormLayout {
