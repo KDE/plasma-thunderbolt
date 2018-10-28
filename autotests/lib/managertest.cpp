@@ -21,7 +21,7 @@ public:
     ManagerTest()
         : QObject()
     {
-        qputenv("BOLT_DEBUG", "1");
+        FakeServer::enableFakeEnv();
         qRegisterMetaType<QSharedPointer<Bolt::Device>>();
     }
 

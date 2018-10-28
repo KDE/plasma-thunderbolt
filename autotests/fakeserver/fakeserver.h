@@ -12,6 +12,8 @@ public:
     explicit FakeServer();
     ~FakeServer();
 
+    static void enableFakeEnv();
+
     bool wait() const;
 
     FakeManager *manager() const;

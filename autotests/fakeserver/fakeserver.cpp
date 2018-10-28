@@ -55,6 +55,11 @@ FakeServer::~FakeServer()
 {
 }
 
+void FakeServer::enableFakeEnv()
+{
+    qputenv("KBOLT_FAKE", "1");
+}
+
 bool FakeServer::wait() const
 {
     auto bus = QDBusConnection::sessionBus();

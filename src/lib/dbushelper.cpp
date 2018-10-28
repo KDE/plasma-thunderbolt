@@ -24,16 +24,16 @@
 
 namespace {
 
-bool isDebugEnv()
+bool isFakeEnv()
 {
-    return qEnvironmentVariableIsSet("BOLT_DEBUG");
+    return qEnvironmentVariableIsSet("KBOLT_FAKE");
 }
 
 } // namespace
 
 QDBusConnection DBusHelper::connection()
 {
-    if (isDebugEnv()) {
+    if (isFakeEnv()) {
         return QDBusConnection::sessionBus();
     } else {
         return QDBusConnection::systemBus();
@@ -42,7 +42,7 @@ QDBusConnection DBusHelper::connection()
 
 QString DBusHelper::serviceName()
 {
-    if (isDebugEnv()) {
+    if (isFakeEnv()) {
         return QStringLiteral("org.kde.fakebolt");
     } else {
         return QStringLiteral("org.freedesktop.bolt");
