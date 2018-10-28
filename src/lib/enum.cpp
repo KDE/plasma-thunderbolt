@@ -76,8 +76,8 @@ Bolt::AuthFlags Bolt::authFlagsFromString(const QString &str)
 QString Bolt::authFlagsToString(AuthFlags flags)
 {
     QStringList str;
-    if (flags & Bolt::Auth::None) {
-        str.push_back(QLatin1Literal("none"));
+    if (flags == AuthFlags(Bolt::Auth::None)) {
+        return QLatin1Literal("none");
     }
     if (flags & Bolt::Auth::NoPCIE) {
         str.push_back(QLatin1Literal("nopcie"));

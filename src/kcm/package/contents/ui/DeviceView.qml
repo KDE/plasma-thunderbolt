@@ -28,7 +28,9 @@ import org.kde.bolt 0.1 as Bolt
 import "utils.js" as Utils
 
 Kirigami.Page {
+    id: page
 
+    property Bolt.Manager manager: null
     property Bolt.Device device: null
 
     ColumnLayout {
@@ -79,14 +81,24 @@ Kirigami.Page {
 
         RowLayout {
             Button {
-                id: connectBtn
+                id: authorizeBtn
                 text: i18n("Authorize")
                 visible: device && device.status == Bolt.Bolt.Status.Connected
+                onClicked: {
+                    if (device.stored) {
+                        device.authorize(Bolt.Bolt.Auth.None);
+                    } else {
+                        manager.enrollDevice(device.uid, Bolt.Bolt.Policy.Default, Bolt.Bolt.Auth.None);
+                    }
+                }
             }
             Button {
                 id: forgetBtn
                 text: i18n("Forget Device")
                 visible: device && device.stored
+                onClicked: {
+                    manager.forgetDevice(device.uid)
+                }
             }
         }
     }

@@ -144,20 +144,23 @@ QDBusObjectPath FakeManager::EnrollDevice(const QString &uid,
                                           const QString &policy,
                                           const QString &flags)
 {
-    Q_UNUSED(uid);
-    Q_UNUSED(policy);
-    Q_UNUSED(flags);
-    // TODO
-    return {};
+    auto device = mDevices.value(uid);
+    if (policy == QLatin1Literal("default")) {
+        device->setPolicy(defaultPolicy());
+    } else {
+        device->setPolicy(policy);
+    }
+    device->setAuthFlags(flags);
+    device->setStored(true);
+    device->setStatus(QLatin1Literal("authorized"));
+
+    return device->dbusPath();
 }
 
 void FakeManager::ForgetDevice(const QString &uid)
 {
-    // TODO? I don't think this is correct...
-    auto device = mDevices.find(uid);
-    if (device != mDevices.end()) {
-        mDevices.erase(device);
-        delete *device;
-    }
+    auto device = mDevices.value(uid);
+    device->setStored(false);
+    device->setStatus(QLatin1Literal("connected"));
 }
 

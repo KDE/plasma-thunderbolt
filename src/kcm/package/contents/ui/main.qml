@@ -86,7 +86,7 @@ Kirigami.Page {
             anchors.fill: parent
 
             onClicked: {
-                pageRow.push(deviceView, { device: device })
+                pageRow.push(deviceView, { manager: manager, device: device })
             }
         }
     }
