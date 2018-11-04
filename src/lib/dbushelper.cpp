@@ -21,6 +21,9 @@
 #include "dbushelper.h"
 
 #include <QDBusConnection>
+#include <QDBusPendingReply>
+#include <QDBusPendingCallWatcher>
+#include <QDBusError>
 
 namespace {
 
@@ -47,4 +50,23 @@ QString DBusHelper::serviceName()
     } else {
         return QStringLiteral("org.freedesktop.bolt");
     }
+}
+
+void DBusHelper::handleCall(QDBusPendingCall call, CallOkCallback &&okCb,
+                            CallErrorCallback &&errCb, QObject *parent)
+{
+    auto watcher = new QDBusPendingCallWatcher(call);
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished,
+                     parent, [okCb = std::move(okCb), errCb = std::move(errCb)]
+                         (QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+        const QDBusPendingReply<void> reply(*watcher);
+        if (reply.isError()) {
+            if (errCb) {
+                errCb(reply.error().message());
+            }
+        } else if (okCb) {
+            okCb();
+        }
+    });
 }

@@ -32,7 +32,7 @@
 class OrgFreedesktopBolt1DeviceInterface;
 namespace Bolt {
 
-class Domain;
+class Manager;
 class KBOLT_EXPORT Device : public QObject
 {
     Q_OBJECT
@@ -42,17 +42,18 @@ class KBOLT_EXPORT Device : public QObject
     Q_PROPERTY(QString vendor READ vendor CONSTANT STORED false)
     Q_PROPERTY(Bolt::Type type READ type CONSTANT STORED false)
     Q_PROPERTY(Bolt::Status status READ status NOTIFY statusChanged STORED false)
-    Q_PROPERTY(Bolt::AuthFlags authFlags READ authFlags CONSTANT STORED false)
+    Q_PROPERTY(Bolt::AuthFlags authFlags READ authFlags NOTIFY authFlagsChanged STORED false)
     Q_PROPERTY(QString parent READ parent CONSTANT STORED false)
     Q_PROPERTY(QString sysfsPath READ sysfsPath CONSTANT STORED false)
     Q_PROPERTY(QDateTime connectTime READ connectTime CONSTANT STORED false)
     Q_PROPERTY(QDateTime authorizeTime READ authorizeTime CONSTANT STORED false)
-    Q_PROPERTY(bool stored READ stored CONSTANT STORED false)
-    Q_PROPERTY(Bolt::Policy policy READ policy CONSTANT STORED false)
+    Q_PROPERTY(bool stored READ stored NOTIFY storedChanged STORED false)
+    Q_PROPERTY(Bolt::Policy policy READ policy NOTIFY policyChanged STORED false)
     Q_PROPERTY(Bolt::KeyState keyState READ keyState CONSTANT STORED false)
     Q_PROPERTY(QDateTime storeTime READ storeTime CONSTANT STORED false)
     Q_PROPERTY(QString label READ label CONSTANT STORED false)
 
+    friend class Manager;
 public:
     static QSharedPointer<Device> create(const QDBusObjectPath &path,
                                          QObject *parent = nullptr);
@@ -82,6 +83,9 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void statusChanged(Bolt::Status);
+    void storedChanged(bool stored);
+    void policyChanged(Bolt::Policy policy);
+    void authFlagsChanged(Bolt::AuthFlags authFlags);
 
 private:
     Device(const QDBusObjectPath &path, QObject *parent = nullptr);

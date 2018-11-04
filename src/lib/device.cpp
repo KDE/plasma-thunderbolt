@@ -161,6 +161,22 @@ QString Device::label() const
 
 void Device::authorize(AuthFlags authFlags)
 {
-    mInterface->Authorize(authFlagsToString(authFlags));
+    qCDebug(log_libkbolt, "Authorizing device %s with auth flags %s",
+            qUtf8Printable(mUid), qUtf8Printable(authFlagsToString(authFlags)));
+
+    Q_EMIT statusChanged(Status::Authorizing);
+    DBusHelper::call<QString>(mInterface.get(), QLatin1Literal("Authorize"),
+            authFlagsToString(authFlags),
+            [this]() {
+                qCDebug(log_libkbolt, "Device %s was successfully authorized",
+                        qUtf8Printable(mUid));
+                Q_EMIT statusChanged(Status::AuthError);
+            },
+            [this](const QString &error) {
+                qCWarning(log_libkbolt, "Failed to authorize device %s: %s",
+                          qUtf8Printable(mUid), qUtf8Printable(error));
+                Q_EMIT statusChanged(Status::Authorized);
+            },
+            this);
 }
 

@@ -150,11 +150,54 @@ void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlag
             qUtf8Printable(uid), qUtf8Printable(policyToString(policy)),
             qUtf8Printable(authFlagsToString(authFlags)));
 
-    mInterface->EnrollDevice(uid, policyToString(policy), authFlagsToString(authFlags));
+    auto device = this->device(uid);
+    if (device) {
+        Q_EMIT device->statusChanged(Status::Authorizing);
+    }
+
+    DBusHelper::call<QString, QString, QString>(mInterface.get(),
+            QLatin1Literal("EnrollDevice"), uid,
+            policyToString(policy), authFlagsToString(authFlags),
+            [&]() {
+                qCDebug(log_libkbolt, "Device %s was successfully enrolled", qUtf8Printable(uid));
+                if (device) {
+                    Q_EMIT device->statusChanged(Status::Authorized);
+                    Q_EMIT device->storedChanged(true);
+                    Q_EMIT device->policyChanged(policy);
+                    Q_EMIT device->authFlagsChanged(authFlags);
+                }
+            },
+            [this, uid, device](const QString &error) {
+                qCWarning(log_libkbolt, "Failed to enroll device %s: %s",
+                          qUtf8Printable(uid), qUtf8Printable(error));
+                if (device) {
+                    Q_EMIT device->statusChanged(Status::AuthError);
+                }
+            },
+            this);
 }
 
 void Manager::forgetDevice(const QString &uid)
 {
     qCDebug(log_libkbolt, "Forgetting device %s", qUtf8Printable(uid));
-    mInterface->ForgetDevice(uid);
+
+    DBusHelper::call<QString>(mInterface.get(),
+            QLatin1Literal("ForgetDevice"), uid,
+            [&]() {
+                qCDebug(log_libkbolt, "Device %s was successfully forgotten", qUtf8Printable(uid));
+                if (auto device = this->device(uid)) {
+                    Q_EMIT device->statusChanged(Status::Connected);
+                    Q_EMIT device->storedChanged(false);
+                    Q_EMIT device->authFlagsChanged(Auth::None);
+                    Q_EMIT device->policyChanged(Policy::Auto);
+                }
+            },
+            [&](const QString &error) {
+                qCWarning(log_libkbolt, "Failed to forget device %s: %s",
+                          qUtf8Printable(uid), qUtf8Printable(error));
+                if (auto device = this->device(uid)) {
+                    Q_EMIT device->statusChanged(Status::AuthError);
+                }
+            },
+            this);
 }
