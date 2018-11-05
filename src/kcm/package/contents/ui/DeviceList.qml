@@ -29,7 +29,7 @@ Kirigami.Page {
                 onCheckedChanged: function() {
                     deviceModel.manager.authMode = enableBox.checked
                         ? Bolt.Bolt.AuthMode.Enabled
-                        : Bolt.Bolt.AuthMode.Disabled;
+                        : Bolt.Bolt.AuthMode.Disabled
                 }
 
                 Component.onCompleted: checked = (deviceModel.manager.authMode == Bolt.Bolt.AuthMode.Enabled)
@@ -46,25 +46,42 @@ Kirigami.Page {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
-            delegate: Kirigami.BasicListItem {
+            delegate: Kirigami.AbstractListItem {
+                id: item
                 width: view.width
-                icon: {
-                    if (model.device.status == Bolt.Bolt.Status.Authorized) {
-                        return "emblem-checked";
-                    } else if (model.device.status == Bolt.Bolt.Status.Connected) {
-                        return "emblem-remove";
-                    } else {
-                       return "emblem-unavailable";
-                   }
-                }
-                label: model.device.label
 
-                Label {
-                    id: statusLabel
+                RowLayout {
+                    id: layout
+                    spacing: Kirigami.Units.smallSpacing * 2
+                    property bool indicateActiveFocus: item.pressed || Kirigami.Settings.tabletMode || item.activeFocus || (item.ListView.view ? item.ListView.view.activeFocus : false)
 
-                    Layout.alignment: Qt.AlignRight
+                    BusyIndicator {
+                        id: busyIndicator
+                        visible: model.device.status == Bolt.Bolt.Status.Authorizing
+                        running: visible
+                        Layout.minimumHeight: Kirigami.Units.iconSizes.smallMedium
+                        Layout.maximumHeight: Layout.minimumHeight
+                        Layout.minimumWidth: height
+                    }
 
-                    text: Utils.deviceStatus(model.device)
+                    Label {
+                        id: label
+                        text: model.device.label
+                        Layout.fillWidth: true
+                        Layout.topMargin: Kirigami.Units.smallSpacing
+                        Layout.bottomMargin: Kirigami.Units.smallSpacing
+                        color: parent.indicateActiveFocus && (item.highlighted || item.checked || item.pressed) ? item.activeTextColor : item.textColor
+                        elide: Text.ElideRight
+                        font: item.fonta
+                    }
+
+                    Label {
+                        id: statusLabel
+
+                        Layout.alignment: Qt.AlignRight
+
+                        text: Utils.deviceStatus(model.device)
+                    }
                 }
 
                 onClicked: {

@@ -82,7 +82,8 @@ Kirigami.Page {
         RowLayout {
             Button {
                 id: authorizeBtn
-                text: i18n("Authorize")
+                text: device && device.status == Bolt.Bolt.Status.Connected ? i18n("Authorize") : i18n("Authorizing")
+                enabled: device.status != Bolt.Bolt.Status.Authorizing
                 visible: device && device.status == Bolt.Bolt.Status.Connected
                 onClicked: {
                     if (device.stored) {

@@ -28,6 +28,10 @@
 
 #include <QDebug>
 
+#include <chrono>
+
+using namespace std::chrono_literals;
+
 namespace {
 static const QString kManagerDBusPath = QStringLiteral("/org/freedesktop/bolt");
 }
@@ -144,6 +148,8 @@ QDBusObjectPath FakeManager::EnrollDevice(const QString &uid,
                                           const QString &policy,
                                           const QString &flags)
 {
+    std::this_thread::sleep_for(1s); // simulate this operation taking time
+
     auto device = mDevices.value(uid);
     if (policy == QLatin1Literal("default")) {
         device->setPolicy(defaultPolicy());
@@ -159,6 +165,8 @@ QDBusObjectPath FakeManager::EnrollDevice(const QString &uid,
 
 void FakeManager::ForgetDevice(const QString &uid)
 {
+    std::this_thread::sleep_for(1s); // simulate this operation taking time
+
     auto device = mDevices.value(uid);
     device->setStored(false);
     device->setStatus(QLatin1Literal("connected"));

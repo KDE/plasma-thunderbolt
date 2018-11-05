@@ -25,6 +25,10 @@
 #include <QDBusConnection>
 #include <QDBusError>
 
+#include <chrono>
+
+using namespace std::chrono_literals;
+
 FakeDevice::FakeDevice(const QString &uid, QObject *parent)
     : QObject(parent)
     , mUid(uid)
@@ -221,5 +225,7 @@ void FakeDevice::setStoreTime(quint64 storeTime)
 
 void FakeDevice::Authorize(const QString &flags)
 {
+    std::this_thread::sleep_for(1s); // simulate this operation taking time
     mAuthFlags = flags;
+    mStatus = QLatin1Literal("authorized");
 }

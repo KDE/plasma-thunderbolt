@@ -93,6 +93,8 @@ Kirigami.Page {
 
     Component {
         id: deviceView
-        DeviceView {}
+        DeviceView {
+            anchors.fill: parent
+        }
     }
 }

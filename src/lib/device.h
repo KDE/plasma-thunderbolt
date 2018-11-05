@@ -90,9 +90,13 @@ Q_SIGNALS:
 private:
     Device(const QDBusObjectPath &path, QObject *parent = nullptr);
 
+    void setStatusOverride(Status status);
+    void clearStatusOverride();
+
     QScopedPointer<OrgFreedesktopBolt1DeviceInterface> mInterface;
     QDBusObjectPath mDBusPath;
     QString mUid;
+    Status mStatusOverride = Status::Unknown;
 };
 
 } // namespace

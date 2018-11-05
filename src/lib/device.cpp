@@ -99,8 +99,25 @@ Type Device::type() const
 
 Status Device::status() const
 {
-    const auto val = mInterface->status();
-    return val.isEmpty() ? Status::Unknown : statusFromString(val);
+    if (mStatusOverride == Status::Unknown) {
+        const auto val = mInterface->status();
+        return val.isEmpty() ? Status::Unknown : statusFromString(val);
+    } else {
+        return mStatusOverride;
+    }
+}
+
+void Device::setStatusOverride(Status status)
+{
+    if (mStatusOverride != status) {
+        mStatusOverride = status;
+        Q_EMIT statusChanged(status);
+    }
+}
+
+void Device::clearStatusOverride()
+{
+    setStatusOverride(Status::Unknown);
 }
 
 AuthFlags Device::authFlags() const
@@ -164,18 +181,18 @@ void Device::authorize(AuthFlags authFlags)
     qCDebug(log_libkbolt, "Authorizing device %s with auth flags %s",
             qUtf8Printable(mUid), qUtf8Printable(authFlagsToString(authFlags)));
 
-    Q_EMIT statusChanged(Status::Authorizing);
+    setStatusOverride(Status::Authorizing);
     DBusHelper::call<QString>(mInterface.get(), QLatin1Literal("Authorize"),
             authFlagsToString(authFlags),
             [this]() {
                 qCDebug(log_libkbolt, "Device %s was successfully authorized",
                         qUtf8Printable(mUid));
-                Q_EMIT statusChanged(Status::AuthError);
+                setStatusOverride(Status::AuthError);
             },
             [this](const QString &error) {
                 qCWarning(log_libkbolt, "Failed to authorize device %s: %s",
                           qUtf8Printable(mUid), qUtf8Printable(error));
-                Q_EMIT statusChanged(Status::Authorized);
+                clearStatusOverride();
             },
             this);
 }
