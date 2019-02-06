@@ -39,7 +39,7 @@ Bolt::Status Bolt::statusFromString(const QString &str)
         return Bolt::Status::Authorizing;
     } else if (str == QLatin1Literal("authorized")) {
         return Bolt::Status::Authorized;
-    } else if (str == QLatin1Literal("autherror")) {
+    } else if (str == QLatin1Literal("auth-error")) {
         return Bolt::Status::AuthError;
     } else {
         qCCritical(log_libkbolt, "Unknown Status enum value '%s'", qUtf8Printable(str));
