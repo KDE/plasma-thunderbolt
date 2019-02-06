@@ -1,4 +1,4 @@
-function deviceStatus(device)
+function deviceStatus(device, withStored)
 {
     var status = device.status;
     var str = "";
@@ -19,7 +19,7 @@ function deviceStatus(device)
             str = i18n("Connected & Authorized");
         }
     }
-    if (device.stored) {
+    if (withStored && device.stored) {
         if (str != "") {
             str += ", ";
         }

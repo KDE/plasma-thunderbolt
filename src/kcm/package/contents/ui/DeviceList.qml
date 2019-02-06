@@ -46,6 +46,15 @@ Kirigami.Page {
             Layout.fillWidth: true
             Layout.fillHeight: true
 
+            property int _evalTrigger: 0
+
+            Timer {
+                interval: 2000
+                running: view.visible
+                repeat: true
+                onTriggered: view._evalTrigger++;
+            }
+
             delegate: Kirigami.AbstractListItem {
                 id: item
                 width: view.width
@@ -80,7 +89,7 @@ Kirigami.Page {
 
                         Layout.alignment: Qt.AlignRight
 
-                        text: Utils.deviceStatus(model.device)
+                        text: view._evalTrigger, Utils.deviceStatus(model.device, true) 
                     }
                 }
 

@@ -33,6 +33,15 @@ Kirigami.Page {
     property Bolt.Manager manager: null
     property Bolt.Device device: null
 
+    property int _evalTrigger: 0
+
+    Timer {
+        interval: 2000
+        running: device != null
+        repeat: true
+        onTriggered: page._evalTrigger++;
+    }
+
     ColumnLayout {
         spacing: Kirigami.Units.smallSpacing * 5
         anchors.fill: parent
@@ -46,7 +55,7 @@ Kirigami.Page {
 
             Kirigami.Heading {
                 level: 2
-                text: device ? device.name : ""
+                text: _evalTrigger, device ? device.name : ""
             }
         }
 
@@ -66,35 +75,35 @@ Kirigami.Page {
 
         Kirigami.FormLayout {
             Label {
-                text: device ? device.vendor : ""
+                text: _evalTrigger, device ? device.vendor : ""
                 Kirigami.FormData.label: i18n("Vendor:")
             }
             Label {
-                text: device ? device.uid : ""
+                text: _evalTrigger, device ? device.uid : ""
                 Kirigami.FormData.label: i18n("UID:")
             }
             Label {
-                text: device ? Utils.deviceStatus(device) : ""
+                text: _evalTrigger, device ? Utils.deviceStatus(device, false) : ""
                 Kirigami.FormData.label: i18n("Status:")
             }
             Label {
                 visible: device && device.status == Bolt.Bolt.Status.Authorized
-                text: device ? Qt.formatDateTime(device.authorizeTime) : ""
+                text: _evalTrigger, device ? Qt.formatDateTime(device.authorizeTime) : ""
                 Kirigami.FormData.label: i18n("Authorized at:")
             }
             Label {
                 visible: device && device.status == Bolt.Bolt.Status.Connected
-                text: device ? Qt.formatDateTime(device.connectTime) : ""
+                text: _evalTrigger, device ? Qt.formatDateTime(device.connectTime) : ""
                 Kirigami.FormData.label: i18n("Connected at:")
             }
             Label {
                 visible: device && device.status == Bolt.Bolt.Status.Disconnected
-                text: device ? Qt.formatDateTime(device.storeTime) : ""
+                text: _evalTrigger, device ? Qt.formatDateTime(device.storeTime) : ""
                 Kirigami.FormData.label: i18n("Enrolled at:")
             }
             Label {
                 visible: device && (device.status == Bolt.Bolt.Status.Authorized || device.status == Bolt.Bolt.Status.Disconnected)
-                text: device && device.stored ? i18n("Yes") : i18n("No")
+                text: _evalTrigger, device && device.stored ? i18n("Yes") : i18n("No")
                 Kirigami.FormData.label: i18n("Stored:")
             }
         }
