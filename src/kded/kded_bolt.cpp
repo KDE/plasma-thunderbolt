@@ -8,6 +8,9 @@
 
 #include <KNotification>
 #include <KLocalizedString>
+#include <KPluginFactory>
+
+K_PLUGIN_CLASS_WITH_JSON(KDEDBolt, "kded_bolt.json")
 
 KDEDBolt::KDEDBolt(QObject *parent, const QVariantList &)
     : KDEDModule(parent)
@@ -53,3 +56,5 @@ void KDEDBolt::notify(const QSharedPointer<Bolt::Device> &device)
         }
     });
 }
+
+#include "kded_bolt.moc"

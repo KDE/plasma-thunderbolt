@@ -20,6 +20,7 @@ target_link_libraries(kded_bolt
     KF5::DBusAddons
     KF5::I18n
     KF5::Notifications
+    KF5::CoreAddons
     kbolt
 )
 
