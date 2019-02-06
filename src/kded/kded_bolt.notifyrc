@@ -1,0 +1,15 @@
+[Global]
+IconName=device-notifier
+Name=Thunderbolt Device Monitor
+Comment=Thunderbolt Device Monitor
+
+[Context/warningnot]
+Name=Warning
+Comment=Used for warning notifications
+
+
+[Event/unauthorizedDeviceConnected]
+Name=Unauthorized device is plugged in
+Comment=An unauthorized Thunderbolt device has been plugged into the computer
+Contexts=warningnot
+Action=Popup

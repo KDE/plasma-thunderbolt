@@ -25,3 +25,4 @@ target_link_libraries(kded_bolt
 )
 
 install(TARGETS kded_bolt DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)
+install(FILES kded_bolt.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
