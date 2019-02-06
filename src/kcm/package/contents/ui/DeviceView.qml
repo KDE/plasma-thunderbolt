@@ -35,6 +35,7 @@ Kirigami.Page {
 
     ColumnLayout {
         spacing: Kirigami.Units.smallSpacing * 5
+        anchors.fill: parent
 
         RowLayout {
             ToolButton {
