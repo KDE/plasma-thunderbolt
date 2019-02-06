@@ -5,6 +5,8 @@
 
 #include <QScopedPointer>
 #include <QSharedPointer>
+#include <QVector>
+#include <QTimer>
 
 namespace Bolt {
 class Manager;
@@ -20,10 +22,18 @@ public:
     ~KDEDBolt() override;
 
 protected:
-    virtual void notify(const QSharedPointer<Bolt::Device> &device);
+    virtual void notify();
+
+    QVector<QSharedPointer<Bolt::Device>> sortDevices(const QVector<QSharedPointer<Bolt::Device>> &devices);
 
 private:
+    void authorizeDevices(QVector<QSharedPointer<Bolt::Device>> devices);
+    void blockDevices(QVector<QSharedPointer<Bolt::Device>> devices);
+
+protected:
     QScopedPointer<Bolt::Manager> mManager;
+    QVector<QSharedPointer<Bolt::Device>> mPendingDevices;
+    QTimer mPendingDeviceTimer;
 };
 
 #endif // KDED_BOLT_H

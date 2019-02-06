@@ -176,7 +176,9 @@ QString Device::label() const
     return mInterface->label();
 }
 
-void Device::authorize(AuthFlags authFlags)
+void Device::authorize(AuthFlags authFlags,
+                       std::function<void()> successCb,
+                       std::function<void(const QString &)> errorCb)
 {
     qCDebug(log_libkbolt, "Authorizing device %s with auth flags %s",
             qUtf8Printable(mUid), qUtf8Printable(authFlagsToString(authFlags)));
@@ -184,15 +186,21 @@ void Device::authorize(AuthFlags authFlags)
     setStatusOverride(Status::Authorizing);
     DBusHelper::call<QString>(mInterface.get(), QLatin1Literal("Authorize"),
             authFlagsToString(authFlags),
-            [this]() {
+            [this, cb = std::move(successCb)]() {
                 qCDebug(log_libkbolt, "Device %s was successfully authorized",
                         qUtf8Printable(mUid));
-                setStatusOverride(Status::AuthError);
+                clearStatusOverride();
+                if (cb) {
+                    cb();
+                }
             },
-            [this](const QString &error) {
+            [this, cb = std::move(errorCb)](const QString &error) {
                 qCWarning(log_libkbolt, "Failed to authorize device %s: %s",
                           qUtf8Printable(mUid), qUtf8Printable(error));
-                clearStatusOverride();
+                setStatusOverride(Status::AuthError);
+                if (cb) {
+                    cb(error);
+                }
             },
             this);
 }

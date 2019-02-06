@@ -144,7 +144,9 @@ QList<QSharedPointer<Device>> Manager::devices() const
     return mDevices;
 }
 
-void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlags)
+void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlags,
+                           std::function<void()> successCallback,
+                           std::function<void(const QString &)> errorCallback)
 {
     qCDebug(log_libkbolt, "Enrolling device %s with policy %s and flags %s",
             qUtf8Printable(uid), qUtf8Printable(policyToString(policy)),
@@ -161,7 +163,7 @@ void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlag
     DBusHelper::call<QString, QString, QString>(mInterface.get(),
             QLatin1Literal("EnrollDevice"), uid,
             policyToString(policy), authFlagsToString(authFlags),
-            [=]() {
+            [uid, device, policy, authFlags, cb = std::move(successCallback)]() {
                 qCDebug(log_libkbolt, "Device %s was successfully enrolled", qUtf8Printable(uid));
                 if (device) {
                     device->clearStatusOverride();
@@ -169,24 +171,32 @@ void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlag
                     Q_EMIT device->policyChanged(policy);
                     Q_EMIT device->authFlagsChanged(authFlags);
                 }
+                if (cb) {
+                    cb();
+                }
             },
-            [this, uid, device](const QString &error) {
+            [this, uid, device, cb = std::move(errorCallback)](const QString &error) {
                 qCWarning(log_libkbolt, "Failed to enroll device %s: %s",
                           qUtf8Printable(uid), qUtf8Printable(error));
                 if (device) {
                     device->setStatusOverride(Status::AuthError);
                 }
+                if (cb) {
+                    cb(error);
+                }
             },
             this);
 }
 
-void Manager::forgetDevice(const QString &uid)
+void Manager::forgetDevice(const QString &uid,
+                           std::function<void()> successCallback,
+                           std::function<void(const QString &)> errorCallback)
 {
     qCDebug(log_libkbolt, "Forgetting device %s", qUtf8Printable(uid));
 
     DBusHelper::call<QString>(mInterface.get(),
             QLatin1Literal("ForgetDevice"), uid,
-            [=]() {
+            [this, uid, cb = std::move(successCallback)]() {
                 qCDebug(log_libkbolt, "Device %s was successfully forgotten", qUtf8Printable(uid));
                 if (auto device = this->device(uid)) {
                     device->clearStatusOverride();
@@ -194,12 +204,18 @@ void Manager::forgetDevice(const QString &uid)
                     Q_EMIT device->authFlagsChanged(Auth::None);
                     Q_EMIT device->policyChanged(Policy::Auto);
                 }
+                if (cb) {
+                    cb();
+                }
             },
-            [=](const QString &error) {
+            [this, uid, cb = std::move(errorCallback)](const QString &error) {
                 qCWarning(log_libkbolt, "Failed to forget device %s: %s",
                           qUtf8Printable(uid), qUtf8Printable(error));
                 if (auto device = this->device(uid)) {
                     device->setStatusOverride(Status::AuthError);
+                }
+                if (cb) {
+                    cb(error);
                 }
             },
             this);

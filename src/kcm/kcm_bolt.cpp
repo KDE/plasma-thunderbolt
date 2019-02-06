@@ -32,6 +32,42 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMBoltFactory, "kcm_bolt.json", registerPlugin<KCMBolt>();)
 
+class QMLHelper : public QObject
+{
+    Q_OBJECT
+public:
+    QMLHelper(QObject *parent = nullptr): QObject(parent) {}
+
+public Q_SLOTS:
+    void authorizeDevice(Bolt::Device *device, Bolt::AuthFlags authFlags,
+                         QJSValue successCb = {}, QJSValue errorCb = {})
+    {
+        device->authorize(authFlags, invoke(successCb), invoke<QString>(errorCb));
+    }
+
+    void enrollDevice(Bolt::Manager *manager, const QString &uid, Bolt::Policy policy,
+                      Bolt::AuthFlags authFlags, QJSValue successCb = {}, QJSValue errorCb = {})
+    {
+        manager->enrollDevice(uid, policy, authFlags, invoke(successCb), invoke<QString>(errorCb));
+    }
+
+    void forgetDevice(Bolt::Manager *manager, const QString &uid, QJSValue successCb, QJSValue errorCb)
+    {
+        manager->forgetDevice(uid, invoke(successCb), invoke<QString>(errorCb));
+    }
+
+private:
+    template<typename ... Args>
+    std::function<void(Args ...)> invoke(QJSValue cb_)
+    {
+        return [cb = std::move(cb_)](const Args & ... args) mutable {
+            if (cb.isCallable()) {
+                cb.call({args ...});
+            }
+        };
+    }
+};
+
 KCMBolt::KCMBolt(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
@@ -41,6 +77,8 @@ KCMBolt::KCMBolt(QObject *parent, const QVariantList &args)
             QStringLiteral("Use DeviceModel"));
     qmlRegisterUncreatableMetaObject(Bolt::staticMetaObject, "org.kde.bolt", 0, 1, "Bolt",
             QStringLiteral("For enums and flags only"));
+    qmlRegisterSingletonType<QMLHelper>("org.kde.bolt", 0, 1, "QMLHelper",
+            [](auto, auto) -> QObject* { return new QMLHelper(); });
 
     auto about = new KAboutData(QStringLiteral("kcm_bolt"),
             i18n("Thunderbolt Device Management"),

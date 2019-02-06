@@ -56,13 +56,25 @@ public:
     AuthMode authMode() const;
     void setAuthMode(AuthMode mode);
 
+    /**
+     * Updates device authorization and stores it persistently.
+     */
+    void enrollDevice(const QString &uid, Bolt::Policy policy, Bolt::AuthFlags flags,
+                      std::function<void()> successCallback = {},
+                      std::function<void(const QString &)> errorCallback = {});
+    /**
+     * Keeps device authorized but removes it from persistent store.
+     *
+     * Next time the device is plugged in, it will not be authorized.
+     */
+    void forgetDevice(const QString &uid,
+                      std::function<void()> successCallback = {},
+                      std::function<void(const QString &)> errorCallback = {});
+
 public Q_SLOTS:
     QSharedPointer<Bolt::Device> device(const QString &uid) const;
     QSharedPointer<Bolt::Device> device(const QDBusObjectPath &path) const;
     QList<QSharedPointer<Bolt::Device>> devices() const;
-
-    void enrollDevice(const QString &uid, Bolt::Policy policy, Bolt::AuthFlags flags);
-    void forgetDevice(const QString &uid);
 
 Q_SIGNALS:
     void deviceAdded(const QSharedPointer<Bolt::Device> &device);

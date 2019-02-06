@@ -7,9 +7,19 @@ Comment=Thunderbolt Device Monitor
 Name=Warning
 Comment=Used for warning notifications
 
+[Content/errornot]
+Name=Error
+Comment=Used for error notifications
+
 
 [Event/unauthorizedDeviceConnected]
 Name=Unauthorized device is plugged in
 Comment=An unauthorized Thunderbolt device has been plugged into the computer
 Contexts=warningnot
+Action=Popup
+
+[Event/deviceAuthError]
+Name=Error during device authorization
+Comment=An error occured while authorizing or blocking a Thunderbolt device
+Contexts=errornot
 Action=Popup

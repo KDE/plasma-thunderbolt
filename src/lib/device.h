@@ -78,8 +78,9 @@ public:
 
     QDBusObjectPath dbusPath() const;
 
-public Q_SLOTS:
-    void authorize(Bolt::AuthFlags authFlags);
+    void authorize(Bolt::AuthFlags authFlags,
+                   std::function<void()> successCb = {},
+                   std::function<void(const QString &)> errorCb = {});
 
 Q_SIGNALS:
     void statusChanged(Bolt::Status);

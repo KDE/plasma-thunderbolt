@@ -50,6 +50,20 @@ Kirigami.Page {
             }
         }
 
+        Kirigami.InlineMessage {
+            id: errorMessage
+
+            Layout.fillWidth: true
+
+            type: Kirigami.MessageType.Error
+            showCloseButton: true
+
+            function show(msg) {
+                text = msg;
+                visible = true;
+            }
+        }
+
         Kirigami.FormLayout {
             Label {
                 text: device ? device.vendor : ""
@@ -78,20 +92,50 @@ Kirigami.Page {
                 text: device ? Qt.formatDateTime(device.storeTime) : ""
                 Kirigami.FormData.label: i18n("Enrolled at:")
             }
+            Label {
+                visible: device && (device.status == Bolt.Bolt.Status.Authorized || device.status == Bolt.Bolt.Status.Disconnected)
+                text: device && device.stored ? i18n("Yes") : i18n("No")
+                Kirigami.FormData.label: i18n("Stored:")
+            }
         }
 
         RowLayout {
             Button {
                 id: authorizeBtn
-                text: device && device.status == Bolt.Bolt.Status.Connected ? i18n("Authorize") : i18n("Authorizing")
-                enabled: device.status != Bolt.Bolt.Status.Authorizing
-                visible: device && device.status == Bolt.Bolt.Status.Connected
+                text: device && device.status == Bolt.Bolt.Status.Authorizing ? i18n("Authorizing...") : i18n("Authorize")
+                enabled: device && device.status != Bolt.Bolt.Status.Authorizing
+                visible: device && (device.status == Bolt.Bolt.Status.Connected || device.status == Bolt.Bolt.Status.AuthError)
                 onClicked: {
-                    if (device.stored) {
-                        device.authorize(Bolt.Bolt.Auth.None);
-                    } else {
-                        manager.enrollDevice(device.uid, Bolt.Bolt.Policy.Default, Bolt.Bolt.Auth.None);
-                    }
+                    Bolt.QMLHelper.enrollDevice(
+                        manager, device.uid, Bolt.Bolt.Policy.Default,
+                        Bolt.Bolt.Auth.Boot | Bolt.Bolt.Auth.NoKey,
+                        function() {
+                            console.log("Device " + device.uid + " enrolled successfuly");
+                        },
+                        function(error) {
+                            errorMessage.show(i18n("Failed to enroll device <b>%1</b>: %2", device.name, error));
+                        }
+                    );
+                }
+            }
+            Button {
+                id: storeBtn
+                text: i18n("Store Device")
+                visible: device && device.status == Bolt.Bolt.Status.Authorized && device.stored == false
+                onClicked: {
+                    enabled = false;
+                    Bolt.QMLHelper.enrollDevice(
+                        manager, device.uid, Bolt.Bolt.Policy.Default,
+                        Bolt.Bolt.Auth.Boot | Bolt.Bolt.Auth.NoKey,
+                        function() {
+                            enabled = true;
+                            console.log("Device " + device.uid + " enrolled successfuly");
+                        },
+                        function(error) {
+                            enabled = true;
+                            errorMessage.show(i18n("Failed to enroll device <b>%1</b>: %2", device.name, error));
+                        }
+                    );
                 }
             }
             Button {
@@ -99,7 +143,23 @@ Kirigami.Page {
                 text: i18n("Forget Device")
                 visible: device && device.stored
                 onClicked: {
-                    manager.forgetDevice(device.uid)
+                    enabled = false
+                    Bolt.QMLHelper.forgetDevice(
+                        manager, device.uid,
+                        function() {
+                            enabled = true;
+                            console.log("Device " + device.uid + " successfully forgotten.");
+                        },
+                        function(error) {
+                            enabled = true;
+                            errorMessage.show(i18n("Error forgetting device <b>%1</b>: %2", device.name, error));
+                        }
+                    );
+                    // If the device is not connected it will cease to exist
+                    // once forgotten, so we should pop this view
+                    if (device.status == Bolt.Bolt.Status.Disconnected) {
+                        pageRow.pop();
+                    }
                 }
             }
         }
