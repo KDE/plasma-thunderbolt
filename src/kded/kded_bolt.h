@@ -27,8 +27,11 @@ protected:
     QVector<QSharedPointer<Bolt::Device>> sortDevices(const QVector<QSharedPointer<Bolt::Device>> &devices);
 
 private:
-    void authorizeDevices(QVector<QSharedPointer<Bolt::Device>> devices);
-    void blockDevices(QVector<QSharedPointer<Bolt::Device>> devices);
+    enum AuthMode {
+        Enroll,
+        Authorize
+    };
+    void authorizeDevices(QVector<QSharedPointer<Bolt::Device>> devices, AuthMode mode);
 
 protected:
     QScopedPointer<Bolt::Manager> mManager;

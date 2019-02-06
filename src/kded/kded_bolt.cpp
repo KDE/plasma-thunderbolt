@@ -59,16 +59,16 @@ void KDEDBolt::notify()
             KNotification::Persistent,
             QStringLiteral("kded_bolt"));
     ntf->setActions({
-            i18n("Authorize"),
-            i18n("Block")
+            i18n("Authorize Now"),
+            i18n("Authorize Permanently")
     });
     connect(ntf, &KNotification::action1Activated,
             this, [this, devices = mPendingDevices]() {
-                authorizeDevices(sortDevices(devices));
+                authorizeDevices(sortDevices(devices), Authorize);
             });
    connect(ntf, &KNotification::action2Activated,
             this, [this, devices = mPendingDevices]() {
-                blockDevices(sortDevices(devices));
+                authorizeDevices(sortDevices(devices), Enroll);
             });
 
     mPendingDevices.clear();
@@ -91,48 +91,32 @@ QVector<QSharedPointer<Bolt::Device>> KDEDBolt::sortDevices(const QVector<QShare
     return sorted;
 }
 
-void KDEDBolt::authorizeDevices(QVector<QSharedPointer<Bolt::Device>> devices)
+void KDEDBolt::authorizeDevices(QVector<QSharedPointer<Bolt::Device>> devices, AuthMode mode)
 {
     if (devices.empty()) {
         return;
     }
 
-    const auto device = devices.takeFirst();;
-    mManager->enrollDevice(device->uid(), Bolt::Policy::Auto, Bolt::Auth::Boot | Bolt::Auth::NoKey,
-            [this, devices]() {
-                authorizeDevices(std::move(devices));
-            },
-            [device](const QString &error) {
-                KNotification::event(
-                    QStringLiteral("deviceAuthError"),
-                    i18n("Thunderbolt Device Authorization Error"),
-                    i18n("Failed to authorize Thunderbolt device <b>%1</b>: %2", device->name(), error),
-                    /* icon */ QPixmap{}, /* parent */ nullptr,
-                    KNotification::CloseOnTimeout,
-                    QStringLiteral("kded_bolt"));
-            });
-}
+    const auto device = devices.takeFirst();
 
-void KDEDBolt::blockDevices(QVector<QSharedPointer<Bolt::Device>> devices)
-{
-    if (devices.empty()) {
-        return;
+    const auto okCb = [this, devices, mode]() {
+        authorizeDevices(std::move(devices), mode);
+    };
+    const auto errCb = [device](const QString &error) {
+       KNotification::event(
+                QStringLiteral("deviceAuthError"),
+                i18n("Thunderbolt Device Authorization Error"),
+                i18n("Failed to authorize Thunderbolt device <b>%1</b>: %2", device->name(), error),
+                /* icon */ QPixmap{}, /* parent */ nullptr,
+                KNotification::CloseOnTimeout,
+                QStringLiteral("kded_bolt"));
+    };
+    if (mode == Enroll) {
+        mManager->enrollDevice(device->uid(), Bolt::Policy::Auto, Bolt::Auth::Boot | Bolt::Auth::NoKey, okCb, errCb);
+    } else {
+        device->authorize(Bolt::Auth::Boot | Bolt::Auth::NoKey, okCb, errCb);
     }
-
-    const auto device = devices.takeLast();
-    mManager->forgetDevice(device->uid(),
-            [this, devices]() {
-                blockDevices(std::move(devices));
-            },
-            [device](const QString &error) {
-                KNotification::event(
-                    QStringLiteral("deviceAuthError"),
-                    i18n("Thunderbolt Device Blocking Error"),
-                    i18n("Failed to block Thunderbolt device <b>%1</b>: %2", device->name(), error),
-                    /* icon */ QPixmap{}, /* parent */ nullptr,
-                    KNotification::CloseOnTimeout,
-                    QStringLiteral("kded_bolt"));
-            });
 }
+
 
 #include "kded_bolt.moc"
