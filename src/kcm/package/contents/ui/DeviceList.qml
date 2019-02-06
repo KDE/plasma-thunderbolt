@@ -72,7 +72,7 @@ Kirigami.Page {
                         Layout.bottomMargin: Kirigami.Units.smallSpacing
                         color: parent.indicateActiveFocus && (item.highlighted || item.checked || item.pressed) ? item.activeTextColor : item.textColor
                         elide: Text.ElideRight
-                        font: item.fonta
+                        font: item.font
                     }
 
                     Label {
