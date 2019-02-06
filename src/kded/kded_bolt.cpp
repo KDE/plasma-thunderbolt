@@ -31,13 +31,30 @@ KDEDBolt::KDEDBolt(QObject *parent, const QVariantList &)
 
     connect(mManager.get(), &Bolt::Manager::deviceAdded,
             this, [this](const QSharedPointer<Bolt::Device> &device) {
-        // Already authorized, nothing else to do here
-        if (device->status() == Bolt::Status::Authorized) {
-            return;
-        }
+                // Already authorized, nothing else to do here
+                if (device->status() == Bolt::Status::Authorized) {
+                    return;
+                }
 
-        mPendingDevices.append(device);
-        mPendingDeviceTimer.start();
+                mPendingDevices.append(device);
+                mPendingDeviceTimer.start();
+    });
+    connect(mManager.get(), &Bolt::Manager::deviceRemoved,
+            this, [this](const QSharedPointer<Bolt::Device> &device) {
+                // Check if maybe the device is in pending or currently active
+                // notification, remove if if so.
+                mPendingDevices.removeOne(device);
+                Q_ASSERT(!mPendingDevices.removeOne(device));
+
+                for (auto it = mNotifiedDevices.begin(), end = mNotifiedDevices.end(); it != end; ++it) {
+                    if (it->contains(device)) {
+                        auto devices = *it;
+                        devices.removeOne(device);
+                        mPendingDevices += devices;
+                        mPendingDeviceTimer.start();
+                    }
+                    it.key()->close();
+                }
     });
 }
 
@@ -62,14 +79,19 @@ void KDEDBolt::notify()
             i18n("Authorize Now"),
             i18n("Authorize Permanently")
     });
+    mNotifiedDevices.insert(ntf, mPendingDevices);
     connect(ntf, &KNotification::action1Activated,
-            this, [this, devices = mPendingDevices]() {
+            this, [this, ntf, devices = mPendingDevices]() {
                 authorizeDevices(sortDevices(devices), Authorize);
             });
    connect(ntf, &KNotification::action2Activated,
-            this, [this, devices = mPendingDevices]() {
+            this, [this, ntf, devices = mPendingDevices]() {
                 authorizeDevices(sortDevices(devices), Enroll);
             });
+   connect(ntf, &KNotification::closed,
+           this, [this, ntf]() {
+                mNotifiedDevices.remove(ntf);
+           });
 
     mPendingDevices.clear();
 }

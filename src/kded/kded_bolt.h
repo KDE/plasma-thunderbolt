@@ -7,7 +7,9 @@
 #include <QSharedPointer>
 #include <QVector>
 #include <QTimer>
+#include <QMap>
 
+class KNotification;
 namespace Bolt {
 class Manager;
 class Device;
@@ -36,6 +38,7 @@ private:
 protected:
     QScopedPointer<Bolt::Manager> mManager;
     QVector<QSharedPointer<Bolt::Device>> mPendingDevices;
+    QMap<KNotification*, QVector<QSharedPointer<Bolt::Device>>> mNotifiedDevices;
     QTimer mPendingDeviceTimer;
 };
 
