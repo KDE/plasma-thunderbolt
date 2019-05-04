@@ -1,5 +1,7 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
+kde_enable_exceptions()
+
 set(LIBKBOLT_SRCS
     dbushelper.cpp
     device.cpp
@@ -22,19 +24,17 @@ qt5_add_dbus_interfaces(
 )
 
 add_library(kbolt SHARED ${LIBKBOLT_SRCS})
+set_target_properties(kbolt PROPERTIES CXX_STANDARD 14)
 generate_export_header(kbolt)
 target_link_libraries(kbolt
     Qt5::Core
     Qt5::DBus
     KF5::I18n
-    stdc++
 )
 
 target_include_directories(kbolt PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/..>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
     $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
 )
-
 
 install(TARGETS kbolt DESTINATION ${KDE_INSTALL_LIBDIR})

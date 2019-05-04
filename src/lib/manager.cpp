@@ -22,6 +22,7 @@
 #include "device.h"
 #include "managerinterface.h"
 #include "dbushelper.h"
+#include "enum.h"
 #include "libkbolt_debug.h"
 
 using namespace Bolt;
@@ -30,7 +31,7 @@ using ManagerInterface = org::freedesktop::bolt1::Manager;
 
 Manager::Manager(QObject *parent)
     : QObject(parent)
-    , mInterface(new ManagerInterface(
+    , mInterface(std::make_unique<ManagerInterface>(
         DBusHelper::serviceName(), QStringLiteral("/org/freedesktop/bolt"),
         DBusHelper::connection()))
 {
@@ -44,8 +45,9 @@ Manager::Manager(QObject *parent)
             this, [this](const QDBusObjectPath &path) {
                 if (auto device = Device::create(path, this)) {
                     mDevices.push_back(device);
-                    qCDebug(log_libkbolt, "New device %s (%s) added",
-                            qUtf8Printable(device->uid()), qUtf8Printable(device->name()));
+                    qCDebug(log_libkbolt, "New Thunderbolt device %s (%s) added, status=%s",
+                            qUtf8Printable(device->uid()), qUtf8Printable(device->name()),
+                            qUtf8Printable(statusToString(device->status())));
                     Q_EMIT deviceAdded(device);
                 }
             });
@@ -53,7 +55,7 @@ Manager::Manager(QObject *parent)
             this, [this](const QDBusObjectPath &path) {
                 if (auto device = this->device(path)) {
                     mDevices.removeOne(device);
-                    qCDebug(log_libkbolt, "Device %s (%s) removed",
+                    qCDebug(log_libkbolt, "Thunderbolt Device %s (%s) removed",
                             qUtf8Printable(device->uid()), qUtf8Printable(device->name()));
                     Q_EMIT deviceRemoved(device);
                 }
@@ -61,16 +63,16 @@ Manager::Manager(QObject *parent)
 
     const auto devicePaths = mInterface->ListDevices().argumentAt<0>();
     for (const auto &devicePath : devicePaths) {
-        qCDebug(log_libkbolt, "Discovered device %s", qUtf8Printable(devicePath.path()));
         if (auto device = Device::create(devicePath, this)) {
+            qCDebug(log_libkbolt, "Discovered Thunderbolt device %s (%s), status=%s",
+                    qUtf8Printable(device->uid()), qUtf8Printable(device->name()),
+                    qUtf8Printable(statusToString(device->status())));
             mDevices.push_back(device);
         }
     }
 }
 
-Manager::~Manager()
-{
-}
+Manager::~Manager() = default;
 
 bool Manager::isAvailable() const
 {
@@ -127,16 +129,12 @@ QSharedPointer<Device> Manager::device(std::function<bool(const QSharedPointer<D
 
 QSharedPointer<Device> Manager::device(const QString &uid) const
 {
-    return device([uid](const QSharedPointer<Device> &device) {
-        return device->uid() == uid;
-    });
+    return device([uid](const auto &device) { return device->uid() == uid; });
 }
 
 QSharedPointer<Device> Manager::device(const QDBusObjectPath &path) const
 {
-    return device([path](const QSharedPointer<Device> &device) {
-        return device->dbusPath() == path;
-    });
+    return device([path](const auto &device) { return device->dbusPath() == path; });
 }
 
 QList<QSharedPointer<Device>> Manager::devices() const
@@ -148,7 +146,7 @@ void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlag
                            std::function<void()> successCallback,
                            std::function<void(const QString &)> errorCallback)
 {
-    qCDebug(log_libkbolt, "Enrolling device %s with policy %s and flags %s",
+    qCDebug(log_libkbolt, "Enrolling Thunderbolt device %s with policy %s and flags %s",
             qUtf8Printable(uid), qUtf8Printable(policyToString(policy)),
             qUtf8Printable(authFlagsToString(authFlags)));
 
@@ -156,15 +154,15 @@ void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlag
     if (device) {
         device->setStatusOverride(Status::Authorizing);
     } else {
-        qCDebug(log_libkbolt, "Found no matching device object for uid %s",
+        qCWarning(log_libkbolt, "Found no matching Thunderbolt device object for uid %s",
                 qUtf8Printable(uid));
     }
 
     DBusHelper::call<QString, QString, QString>(mInterface.get(),
-            QLatin1Literal("EnrollDevice"), uid,
+            QStringLiteral("EnrollDevice"), uid,
             policyToString(policy), authFlagsToString(authFlags),
             [uid, device, policy, authFlags, cb = std::move(successCallback)]() {
-                qCDebug(log_libkbolt, "Device %s was successfully enrolled", qUtf8Printable(uid));
+                qCDebug(log_libkbolt, "Thunderbolt device %s was successfully enrolled", qUtf8Printable(uid));
                 if (device) {
                     device->clearStatusOverride();
                     Q_EMIT device->storedChanged(true);
@@ -176,7 +174,7 @@ void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlag
                 }
             },
             [this, uid, device, cb = std::move(errorCallback)](const QString &error) {
-                qCWarning(log_libkbolt, "Failed to enroll device %s: %s",
+                qCWarning(log_libkbolt, "Failed to enroll Thunderbolt device %s: %s",
                           qUtf8Printable(uid), qUtf8Printable(error));
                 if (device) {
                     device->setStatusOverride(Status::AuthError);
@@ -192,12 +190,12 @@ void Manager::forgetDevice(const QString &uid,
                            std::function<void()> successCallback,
                            std::function<void(const QString &)> errorCallback)
 {
-    qCDebug(log_libkbolt, "Forgetting device %s", qUtf8Printable(uid));
+    qCDebug(log_libkbolt, "Forgetting Thunderbolt device %s", qUtf8Printable(uid));
 
     DBusHelper::call<QString>(mInterface.get(),
-            QLatin1Literal("ForgetDevice"), uid,
+            QStringLiteral("ForgetDevice"), uid,
             [this, uid, cb = std::move(successCallback)]() {
-                qCDebug(log_libkbolt, "Device %s was successfully forgotten", qUtf8Printable(uid));
+                qCDebug(log_libkbolt, "Thunderbolt device %s was successfully forgotten", qUtf8Printable(uid));
                 if (auto device = this->device(uid)) {
                     device->clearStatusOverride();
                     Q_EMIT device->storedChanged(false);
@@ -209,7 +207,7 @@ void Manager::forgetDevice(const QString &uid,
                 }
             },
             [this, uid, cb = std::move(errorCallback)](const QString &error) {
-                qCWarning(log_libkbolt, "Failed to forget device %s: %s",
+                qCWarning(log_libkbolt, "Failed to forget Thunderbolt device %s: %s",
                           qUtf8Printable(uid), qUtf8Printable(error));
                 if (auto device = this->device(uid)) {
                     device->setStatusOverride(Status::AuthError);

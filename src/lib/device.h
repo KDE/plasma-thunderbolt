@@ -25,6 +25,9 @@
 #include <QString>
 #include <QDateTime>
 #include <QDBusObjectPath>
+#include <QEnableSharedFromThis>
+
+#include <memory>
 
 #include "enum.h"
 #include "kbolt_export.h"
@@ -34,6 +37,7 @@ namespace Bolt {
 
 class Manager;
 class KBOLT_EXPORT Device : public QObject
+                          , public QEnableSharedFromThis<Device>
 {
     Q_OBJECT
 
@@ -89,12 +93,15 @@ Q_SIGNALS:
     void authFlagsChanged(Bolt::AuthFlags authFlags);
 
 private:
+    template<typename ... Args>
+    friend QSharedPointer<Device> QSharedPointer<Device>::create(Args&& ...);
+
     Device(const QDBusObjectPath &path, QObject *parent = nullptr);
 
     void setStatusOverride(Status status);
     void clearStatusOverride();
 
-    QScopedPointer<OrgFreedesktopBolt1DeviceInterface> mInterface;
+    std::unique_ptr<OrgFreedesktopBolt1DeviceInterface> mInterface;
     QDBusObjectPath mDBusPath;
     QString mUid;
     Status mStatusOverride = Status::Unknown;

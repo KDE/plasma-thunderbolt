@@ -3,7 +3,7 @@ Name=Thunderbolt Device Monitor
 Comment=Thunderbolt Device Monitor
 
 Type=Service
-Icon=
+Icon=preferences-desktop-thunderbolt
 X-KDE-ServiceTypes=KDEDModule
 X-KDE-Library=kded_bolt
 X-KDE-Kded-autoload=true

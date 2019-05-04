@@ -26,8 +26,8 @@
 #include "fakemanager.h"
 #include "fakedevice.h"
 
-#include "lib/manager.h"
-#include "lib/device.h"
+#include "manager.h"
+#include "device.h"
 
 #include <QDebug>
 

@@ -24,10 +24,10 @@
 #include <KAboutData>
 #include <KLocalizedString>
 
-#include "lib/device.h"
-#include "lib/devicemodel.h"
-#include "lib/manager.h"
-#include "lib/enum.h"
+#include "device.h"
+#include "devicemodel.h"
+#include "manager.h"
+#include "enum.h"
 
 #include <QDebug>
 
@@ -37,7 +37,9 @@ class QMLHelper : public QObject
 {
     Q_OBJECT
 public:
-    QMLHelper(QObject *parent = nullptr): QObject(parent) {}
+    explicit QMLHelper(QObject *parent = nullptr)
+        : QObject(parent)
+    {}
 
 public Q_SLOTS:
     void authorizeDevice(Bolt::Device *device, Bolt::AuthFlags authFlags,
@@ -61,10 +63,9 @@ private:
     template<typename ... Args>
     std::function<void(Args ...)> invoke(QJSValue cb_)
     {
-        return [cb = std::move(cb_)](const Args & ... args) mutable {
-            if (cb.isCallable()) {
-                cb.call({args ...});
-            }
+        return [cb = std::move(cb_)](Args && ... args) mutable {
+            Q_ASSERT(cb.isCallable());
+            cb.call({std::forward<Args>(args) ...});
         };
     }
 };

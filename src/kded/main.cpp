@@ -18,50 +18,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#ifndef KDED_BOLT_H
-#define KDED_BOLT_H
+#include "kded_bolt.h"
 
-#include "manager.h"
+#include <KPluginFactory>
 
-#include <kdedmodule.h>
+K_PLUGIN_CLASS_WITH_JSON(KDEDBolt, "kded_bolt.json")
 
-#include <QSharedPointer>
-#include <QVector>
-#include <QTimer>
-#include <QMap>
-
-class KNotification;
-namespace Bolt {
-class Device;
-}
-
-class Q_DECL_EXPORT KDEDBolt : public KDEDModule
-{
-    Q_OBJECT
-
-public:
-    using BoltDeviceList = QVector<QSharedPointer<Bolt::Device>>;
-
-    KDEDBolt(QObject *parent, const QVariantList &args);
-    ~KDEDBolt() override;
-
-protected:
-    virtual void notify();
-
-    BoltDeviceList sortDevices(const BoltDeviceList &devices);
-
-private:
-    enum AuthMode {
-        Enroll,
-        Authorize
-    };
-    void authorizeDevices(BoltDeviceList devices, AuthMode mode);
-
-protected:
-    Bolt::Manager mManager;
-    BoltDeviceList mPendingDevices;
-    QMap<KNotification*, BoltDeviceList> mNotifiedDevices;
-    QTimer mPendingDeviceTimer;
-};
-
-#endif // KDED_BOLT_H
+#include "main.moc"

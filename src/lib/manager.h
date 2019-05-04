@@ -22,7 +22,6 @@
 #define MANAGER_H_
 
 #include <QObject>
-#include <QScopedPointer>
 #include <QSharedPointer>
 
 #include <functional>
@@ -87,7 +86,7 @@ Q_SIGNALS:
 
 private:
     QSharedPointer<Device> device(std::function<bool(const QSharedPointer<Device> &)> &&match) const;
-    QScopedPointer<OrgFreedesktopBolt1ManagerInterface> mInterface;
+    std::unique_ptr<OrgFreedesktopBolt1ManagerInterface> mInterface;
 
     uint mVersion = 0;
     Policy mPolicy = Policy::Unknown;

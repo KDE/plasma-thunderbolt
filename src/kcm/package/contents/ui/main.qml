@@ -29,7 +29,8 @@ import org.kde.bolt 0.1 as Bolt
 import "utils.js" as Utils
 
 Kirigami.Page {
-    KCM.ConfigModule.quickHelp: i18n("This module allows you to manage Thunderbolt devices connected to your computer.");
+    KCM.ConfigModule.quickHelp: i18n("This module allows you to manage Thunderbolt devices connected to your computer.")
+    KCM.ConfigModule.buttons: KCM.ConfigModule.NoAdditionalButton
     id: root
 
     title: kcm.name
@@ -43,7 +44,7 @@ Kirigami.Page {
 
     Kirigami.PageRow {
         id: pageRow
-
+        clip: true
         anchors.fill: parent
 
         Component.onCompleted: {
@@ -83,9 +84,7 @@ Kirigami.Page {
                 showHosts: false
             }
 
-            anchors.fill: parent
-
-            onClicked: {
+            onItemClicked: function(device) {
                 pageRow.push(deviceView, { manager: manager, device: device })
             }
         }
@@ -94,7 +93,6 @@ Kirigami.Page {
     Component {
         id: deviceView
         DeviceView {
-            anchors.fill: parent
         }
     }
 }

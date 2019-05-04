@@ -63,7 +63,7 @@ private:
     void populateWithoutReset();
 
     Manager *mManager = nullptr;
-    QList<QSharedPointer<Device>> mDevices;
+    QVector<QSharedPointer<Device>> mDevices;
     bool mShowHosts = true;
 };
 

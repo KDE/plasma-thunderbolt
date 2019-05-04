@@ -47,6 +47,7 @@ enum class Status {
 Q_ENUM_NS(Status)
 
 Status statusFromString(const QString &str);
+QString statusToString(Status status);
 
 enum class Auth {
     None = 0,

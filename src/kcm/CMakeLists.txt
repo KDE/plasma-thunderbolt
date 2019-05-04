@@ -6,6 +6,7 @@ set(KCM_BOLT_SRCS
 )
 
 add_library(kcm_bolt MODULE ${KCM_BOLT_SRCS})
+set_target_properties(kcm_bolt PROPERTIES CXX_STANDARD 14)
 target_link_libraries(kcm_bolt
     KF5::QuickAddons
     KF5::I18n

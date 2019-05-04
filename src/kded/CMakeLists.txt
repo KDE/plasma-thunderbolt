@@ -5,6 +5,7 @@ include_directories(
 )
 
 set(KDED_BOLT_SRCS
+    main.cpp
     kded_bolt.cpp
 )
 
@@ -15,6 +16,7 @@ ecm_qt_declare_logging_category(KDED_BOLT_SRCS
 )
 
 add_library(kded_bolt MODULE ${KDED_BOLT_SRCS})
+set_target_properties(kded_bolt PROPERTIES CXX_STANDARD 14)
 kcoreaddons_desktop_to_json(kded_bolt kded_bolt.desktop)
 target_link_libraries(kded_bolt
     KF5::DBusAddons

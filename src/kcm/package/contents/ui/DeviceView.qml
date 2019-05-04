@@ -27,7 +27,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.bolt 0.1 as Bolt
 import "utils.js" as Utils
 
-Kirigami.Page {
+Kirigami.ScrollablePage {
     id: page
 
     property Bolt.Manager manager: null
@@ -44,10 +44,9 @@ Kirigami.Page {
 
     ColumnLayout {
         spacing: Kirigami.Units.smallSpacing * 5
-        anchors.fill: parent
 
         RowLayout {
-            ToolButton {
+            Button {
                 icon.name: "draw-arrow-back"
                 visible: !pageRow.wideMode
                 onClicked: pageRow.pop()
@@ -83,7 +82,7 @@ Kirigami.Page {
                 Kirigami.FormData.label: i18n("UID:")
             }
             Label {
-                text: _evalTrigger, device ? Utils.deviceStatus(device, false) : ""
+                text: _evalTrigger, device ? Utils.deviceStatus(device, false).text : ""
                 Kirigami.FormData.label: i18n("Status:")
             }
             Label {
@@ -104,11 +103,13 @@ Kirigami.Page {
             Label {
                 visible: device && (device.status == Bolt.Bolt.Status.Authorized || device.status == Bolt.Bolt.Status.Disconnected)
                 text: _evalTrigger, device && device.stored ? i18n("Yes") : i18n("No")
-                Kirigami.FormData.label: i18n("Stored:")
+                Kirigami.FormData.label: i18n("Trusted:")
             }
         }
 
         RowLayout {
+            Layout.alignment: Qt.AlignHCenter
+
             Button {
                 id: authorizeBtn
                 text: device && device.status == Bolt.Bolt.Status.Authorizing ? i18n("Authorizing...") : i18n("Authorize")
@@ -119,7 +120,7 @@ Kirigami.Page {
                         manager, device.uid, Bolt.Bolt.Policy.Default,
                         Bolt.Bolt.Auth.Boot | Bolt.Bolt.Auth.NoKey,
                         function() {
-                            console.log("Device " + device.uid + " enrolled successfuly");
+                            console.log("Thunderbolt device " + device.uid + " (" + device.name + ") enrolled successfully");
                         },
                         function(error) {
                             errorMessage.show(i18n("Failed to enroll device <b>%1</b>: %2", device.name, error));
@@ -129,7 +130,7 @@ Kirigami.Page {
             }
             Button {
                 id: storeBtn
-                text: i18n("Store Device")
+                text: i18n("Trust this Device")
                 visible: device && device.status == Bolt.Bolt.Status.Authorized && device.stored == false
                 onClicked: {
                     enabled = false;
@@ -138,7 +139,7 @@ Kirigami.Page {
                         Bolt.Bolt.Auth.Boot | Bolt.Bolt.Auth.NoKey,
                         function() {
                             enabled = true;
-                            console.log("Device " + device.uid + " enrolled successfuly");
+                            console.log("Thunderbolt Device " + device.uid + " (" + device.name + ") enrolled successfully");
                         },
                         function(error) {
                             enabled = true;
@@ -147,9 +148,10 @@ Kirigami.Page {
                     );
                 }
             }
+
             Button {
                 id: forgetBtn
-                text: i18n("Forget Device")
+                text: i18n("Revoke Trust")
                 visible: device && device.stored
                 onClicked: {
                     enabled = false
@@ -161,7 +163,7 @@ Kirigami.Page {
                         },
                         function(error) {
                             enabled = true;
-                            errorMessage.show(i18n("Error forgetting device <b>%1</b>: %2", device.name, error));
+                            errorMessage.show(i18n("Error changing device trust:  <b>%1</b>: %2", device.name, error));
                         }
                     );
                     // If the device is not connected it will cease to exist
@@ -171,6 +173,18 @@ Kirigami.Page {
                     }
                 }
             }
+        }
+
+        Label {
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+
+            text: device && !device.stored
+                ? qsTr("Hint: trusted device will be automatically authorized the next time it is connected to the computer.")
+                : qsTr("Hint: an untrusted device needs to be manually authorized each time it is connected to the computer.")
+            visible: storeBtn.visible || forgetBtn.visible
+            wrapMode: Text.WordWrap
+            horizontalAlignment: Qt.AlignHCenter
         }
     }
 }

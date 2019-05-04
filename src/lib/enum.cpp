@@ -27,19 +27,19 @@
 
 Bolt::Status Bolt::statusFromString(const QString &str)
 {
-    if (str == QLatin1Literal("unknown")) {
+    if (str == QLatin1String("unknown")) {
         return Bolt::Status::Unknown;
-    } else if (str == QLatin1Literal("disconnected")) {
+    } else if (str == QLatin1String("disconnected")) {
         return Bolt::Status::Disconnected;
-    } else if (str == QLatin1Literal("connecting")) {
+    } else if (str == QLatin1String("connecting")) {
         return Bolt::Status::Connecting;
-    } else if (str == QLatin1Literal("connected")) {
+    } else if (str == QLatin1String("connected")) {
         return Bolt::Status::Connected;
-    } else if (str == QLatin1Literal("authorizing")) {
+    } else if (str == QLatin1String("authorizing")) {
         return Bolt::Status::Authorizing;
-    } else if (str == QLatin1Literal("authorized")) {
+    } else if (str == QLatin1String("authorized")) {
         return Bolt::Status::Authorized;
-    } else if (str == QLatin1Literal("auth-error")) {
+    } else if (str == QLatin1String("auth-error")) {
         return Bolt::Status::AuthError;
     } else {
         qCCritical(log_libkbolt, "Unknown Status enum value '%s'", qUtf8Printable(str));
@@ -48,21 +48,43 @@ Bolt::Status Bolt::statusFromString(const QString &str)
     }
 }
 
+QString Bolt::statusToString(Bolt::Status status)
+{
+    switch (status) {
+    case Bolt::Status::Unknown:
+        return QStringLiteral("unknown");
+    case Bolt::Status::Disconnected:
+        return QStringLiteral("disconnected");
+    case Bolt::Status::Connecting:
+        return QStringLiteral("connecting");
+    case Bolt::Status::Connected:
+        return QStringLiteral("connected");
+    case Bolt::Status::Authorizing:
+        return QStringLiteral("authorizing");
+    case Bolt::Status::Authorized:
+        return QStringLiteral("authorized");
+    case Bolt::Status::AuthError:
+        return QStringLiteral("auth-error");
+    }
+    Q_UNREACHABLE();
+    return {};
+}
+
 Bolt::AuthFlags Bolt::authFlagsFromString(const QString &str)
 {
-    const auto splitRef = str.splitRef(QLatin1Literal("|"));
+    const auto splitRef = str.splitRef(QStringLiteral("|"));
     Bolt::AuthFlags outFlags = Bolt::Auth::None;
     for (const auto &flag : splitRef) {
         const auto f = flag.trimmed();
-        if (f == QLatin1Literal("none")) {
+        if (f == QLatin1String("none")) {
             outFlags |= Bolt::Auth::None;
-        } else if (f == QLatin1Literal("nopcie")) {
+        } else if (f == QLatin1String("nopcie")) {
             outFlags |= Bolt::Auth::NoPCIE;
-        } else if (f == QLatin1Literal("secure")) {
+        } else if (f == QLatin1String("secure")) {
             outFlags |= Bolt::Auth::Secure;
-        } else if (f == QLatin1Literal("nokey")) {
+        } else if (f == QLatin1String("nokey")) {
             outFlags |= Bolt::Auth::NoKey;
-        } else if (f == QLatin1Literal("boot")) {
+        } else if (f == QLatin1String("boot")) {
             outFlags |= Bolt::Auth::Boot;
         } else {
             qCCritical(log_libkbolt, "Unknown AuthFlags enum value '%s'", qUtf8Printable(str));
@@ -77,34 +99,34 @@ QString Bolt::authFlagsToString(AuthFlags flags)
 {
     QStringList str;
     if (flags == AuthFlags(Bolt::Auth::None)) {
-        return QLatin1Literal("none");
+        return QStringLiteral("none");
     }
     if (flags & Bolt::Auth::NoPCIE) {
-        str.push_back(QLatin1Literal("nopcie"));
+        str.push_back(QStringLiteral("nopcie"));
     }
     if (flags & Bolt::Auth::Secure) {
-        str.push_back(QLatin1Literal("secure"));
+        str.push_back(QStringLiteral("secure"));
     }
     if (flags & Bolt::Auth::NoKey) {
-        str.push_back(QLatin1Literal("nokey"));
+        str.push_back(QStringLiteral("nokey"));
     }
     if (flags & Bolt::Auth::Boot) {
-        str.push_back(QLatin1Literal("boot"));
+        str.push_back(QStringLiteral("boot"));
     }
 
-    return str.join(QLatin1Literal(" | "));
+    return str.join(QStringLiteral(" | "));
 }
 
 
 Bolt::KeyState Bolt::keyStateFromString(const QString &str)
 {
-    if (str == QLatin1Literal("unknown")) {
+    if (str == QLatin1String("unknown")) {
         return Bolt::KeyState::Unknown;
-    } else if (str == QLatin1Literal("missing")) {
+    } else if (str == QLatin1String("missing")) {
         return Bolt::KeyState::Missing;
-    } else if (str == QLatin1Literal("have")) {
+    } else if (str == QLatin1String("have")) {
         return Bolt::KeyState::Have;
-    } else if (str == QLatin1Literal("new")) {
+    } else if (str == QLatin1String("new")) {
         return Bolt::KeyState::New;
     } else {
         qCCritical(log_libkbolt, "Unknown KeyState enum value '%s'", qUtf8Printable(str));
@@ -115,13 +137,13 @@ Bolt::KeyState Bolt::keyStateFromString(const QString &str)
 
 Bolt::Policy Bolt::policyFromString(const QString &str)
 {
-    if (str == QLatin1Literal("unknown")) {
+    if (str == QLatin1String("unknown")) {
         return Bolt::Policy::Unknown;
-    } else if (str == QLatin1Literal("default")) {
+    } else if (str == QLatin1String("default")) {
         return Bolt::Policy::Default;
-    } else if (str == QLatin1Literal("manual")) {
+    } else if (str == QLatin1String("manual")) {
         return Bolt::Policy::Manual;
-    } else if (str == QLatin1Literal("auto")) {
+    } else if (str == QLatin1String("auto")) {
         return Bolt::Policy::Auto;
     } else {
         qCCritical(log_libkbolt, "Unknown Policy enum value '%s'", qUtf8Printable(str));
@@ -134,13 +156,13 @@ QString Bolt::policyToString(Bolt::Policy policy)
 {
     switch (policy) {
     case Policy::Unknown:
-        return QLatin1Literal("unknown");
+        return QStringLiteral("unknown");
     case Policy::Auto:
-        return QLatin1Literal("auto");
+        return QStringLiteral("auto");
     case Policy::Default:
-        return QLatin1Literal("default");
+        return QStringLiteral("default");
     case Policy::Manual:
-        return QLatin1Literal("manual");
+        return QStringLiteral("manual");
     }
 
     Q_UNREACHABLE();
@@ -149,11 +171,11 @@ QString Bolt::policyToString(Bolt::Policy policy)
 
 Bolt::Type Bolt::typeFromString(const QString &str)
 {
-    if (str == QLatin1Literal("unknown")) {
+    if (str == QLatin1String("unknown")) {
         return Bolt::Type::Unknown;
-    } else if (str == QLatin1Literal("host")) {
+    } else if (str == QLatin1String("host")) {
         return Bolt::Type::Host;
-    } else if (str == QLatin1Literal("peripheral")) {
+    } else if (str == QLatin1String("peripheral")) {
         return Bolt::Type::Peripheral;
     } else {
         qCCritical(log_libkbolt, "Unknown Type enum value '%s'", qUtf8Printable(str));
@@ -164,9 +186,9 @@ Bolt::Type Bolt::typeFromString(const QString &str)
 
 Bolt::AuthMode Bolt::authModeFromString(const QString &str)
 {
-    if (str == QLatin1Literal("disabled")) {
+    if (str == QLatin1String("disabled")) {
         return Bolt::AuthMode::Disabled;
-    } else if (str == QLatin1Literal("enabled")) {
+    } else if (str == QLatin1String("enabled")) {
         return Bolt::AuthMode::Enabled;
     } else {
         qCCritical(log_libkbolt, "Unknown AuthMode enum value '%s'", qUtf8Printable(str));
@@ -190,17 +212,17 @@ QString Bolt::authModeToString(Bolt::AuthMode authMode)
 
 Bolt::Security Bolt::securityFromString(const QString &str)
 {
-    if (str == QLatin1Literal("unknown")) {
+    if (str == QLatin1String("unknown")) {
         return Bolt::Security::Unknown;
-    } else if (str == QLatin1Literal("none")) {
+    } else if (str == QLatin1String("none")) {
         return Bolt::Security::None;
-    } else if (str == QLatin1Literal("dponly")) {
+    } else if (str == QLatin1String("dponly")) {
         return Bolt::Security::DPOnly;
-    } else if (str == QLatin1Literal("user")) {
+    } else if (str == QLatin1String("user")) {
         return Bolt::Security::User;
-    } else if (str == QLatin1Literal("secure")) {
+    } else if (str == QLatin1String("secure")) {
         return Bolt::Security::Secure;
-    } else if (str == QLatin1Literal("usbonly")) {
+    } else if (str == QLatin1String("usbonly")) {
         return Bolt::Security::USBOnly;
     } else {
         qCCritical(log_libkbolt, "Unknown Security enum value '%s'", qUtf8Printable(str));

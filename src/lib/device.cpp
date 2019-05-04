@@ -44,7 +44,7 @@ Device::Device(QObject *parent)
 
 Device::Device(const QDBusObjectPath &path, QObject *parent)
     : QObject(parent)
-    , mInterface(new DeviceInterface(
+    , mInterface(std::make_unique<DeviceInterface>(
         DBusHelper::serviceName(), path.path(), DBusHelper::connection()))
     , mDBusPath(path)
 {
@@ -58,13 +58,12 @@ Device::Device(const QDBusObjectPath &path, QObject *parent)
     mUid = mInterface->uid();
 }
 
-Device::~Device()
-{}
+Device::~Device() = default;
 
 QSharedPointer<Device> Device::create(const QDBusObjectPath &path, QObject *parent)
 {
     try {
-        return QSharedPointer<Device>(new Device(path, parent));
+        return QSharedPointer<Device>::create(path, parent);
     } catch (const DBusException &e) {
         qCWarning(log_libkbolt, "%s", e.what());
         return {};
@@ -184,7 +183,7 @@ void Device::authorize(AuthFlags authFlags,
             qUtf8Printable(mUid), qUtf8Printable(authFlagsToString(authFlags)));
 
     setStatusOverride(Status::Authorizing);
-    DBusHelper::call<QString>(mInterface.get(), QLatin1Literal("Authorize"),
+    DBusHelper::call<QString>(mInterface.get(), QStringLiteral("Authorize"),
             authFlagsToString(authFlags),
             [this, cb = std::move(successCb)]() {
                 qCDebug(log_libkbolt, "Device %s was successfully authorized",

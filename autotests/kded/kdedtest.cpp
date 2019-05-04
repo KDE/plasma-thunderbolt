@@ -26,7 +26,7 @@
 #include "fakemanager.h"
 #include "fakedevice.h"
 
-#include "lib/device.h"
+#include "device.h"
 
 #include "kded_bolt.h"
 

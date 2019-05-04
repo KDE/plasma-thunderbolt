@@ -21,26 +21,21 @@
 #include "kded_bolt.h"
 #include "kded_bolt_debug.h"
 
-#include "lib/manager.h"
-#include "lib/device.h"
+#include "device.h"
 
 #include <QPointer>
 
 #include <KNotification>
 #include <KLocalizedString>
-#include <KPluginFactory>
 
 #include <chrono>
 
 using namespace std::chrono_literals;
 
-K_PLUGIN_CLASS_WITH_JSON(KDEDBolt, "kded_bolt.json")
-
 KDEDBolt::KDEDBolt(QObject *parent, const QVariantList &)
     : KDEDModule(parent)
-    , mManager(new Bolt::Manager)
 {
-    if (!mManager->isAvailable()) {
+    if (!mManager.isAvailable()) {
         qCInfo(log_kded_bolt, "Couldn't connect to Bolt DBus daemon");
         return;
     }
@@ -49,7 +44,7 @@ KDEDBolt::KDEDBolt(QObject *parent, const QVariantList &)
     mPendingDeviceTimer.setInterval(500ms);
     connect(&mPendingDeviceTimer, &QTimer::timeout, this, &KDEDBolt::notify);
 
-    connect(mManager.get(), &Bolt::Manager::deviceAdded,
+    connect(&mManager, &Bolt::Manager::deviceAdded,
             this, [this](const QSharedPointer<Bolt::Device> &device) {
                 // Already authorized, nothing else to do here
                 if (device->status() == Bolt::Status::Authorized) {
@@ -59,10 +54,10 @@ KDEDBolt::KDEDBolt(QObject *parent, const QVariantList &)
                 mPendingDevices.append(device);
                 mPendingDeviceTimer.start();
     });
-    connect(mManager.get(), &Bolt::Manager::deviceRemoved,
+    connect(&mManager, &Bolt::Manager::deviceRemoved,
             this, [this](const QSharedPointer<Bolt::Device> &device) {
                 // Check if maybe the device is in pending or currently active
-                // notification, remove if if so.
+                // notification, remove it if so.
                 mPendingDevices.removeOne(device);
                 Q_ASSERT(!mPendingDevices.removeOne(device));
 
@@ -116,9 +111,11 @@ void KDEDBolt::notify()
     mPendingDevices.clear();
 }
 
-QVector<QSharedPointer<Bolt::Device>> KDEDBolt::sortDevices(const QVector<QSharedPointer<Bolt::Device>> &devices)
+KDEDBolt::BoltDeviceList KDEDBolt::sortDevices(const BoltDeviceList &devices)
 {
     QVector<QSharedPointer<Bolt::Device>> sorted;
+    sorted.reserve(devices.size());
+
     // Sort the devices so that parents go before their children. Probably
     // fairly inefficient but there's rarely more than a couple of items.
     for (const auto &device : devices) {
@@ -133,7 +130,7 @@ QVector<QSharedPointer<Bolt::Device>> KDEDBolt::sortDevices(const QVector<QShare
     return sorted;
 }
 
-void KDEDBolt::authorizeDevices(QVector<QSharedPointer<Bolt::Device>> devices, AuthMode mode)
+void KDEDBolt::authorizeDevices(BoltDeviceList devices, AuthMode mode)
 {
     if (devices.empty()) {
         return;
@@ -148,17 +145,15 @@ void KDEDBolt::authorizeDevices(QVector<QSharedPointer<Bolt::Device>> devices, A
        KNotification::event(
                 QStringLiteral("deviceAuthError"),
                 i18n("Thunderbolt Device Authorization Error"),
-                i18n("Failed to authorize Thunderbolt device <b>%1</b>: %2", device->name(), error),
+                i18n("Failed to authorize Thunderbolt device <b>%1</b>: %2", device->name().toHtmlEscaped(), error),
                 /* icon */ QPixmap{}, /* parent */ nullptr,
                 KNotification::CloseOnTimeout,
                 QStringLiteral("kded_bolt"));
     };
     if (mode == Enroll) {
-        mManager->enrollDevice(device->uid(), Bolt::Policy::Auto, Bolt::Auth::Boot | Bolt::Auth::NoKey, okCb, errCb);
+        mManager.enrollDevice(device->uid(), Bolt::Policy::Auto, Bolt::Auth::Boot | Bolt::Auth::NoKey, okCb, errCb);
     } else {
         device->authorize(Bolt::Auth::Boot | Bolt::Auth::NoKey, okCb, errCb);
     }
 }
 
-
-#include "kded_bolt.moc"
