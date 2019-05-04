@@ -96,11 +96,11 @@ void KDEDBolt::notify()
     });
     mNotifiedDevices.insert(ntf, mPendingDevices);
     connect(ntf, &KNotification::action1Activated,
-            this, [this, ntf, devices = mPendingDevices]() {
+            this, [this, devices = mPendingDevices]() {
                 authorizeDevices(sortDevices(devices), Authorize);
             });
    connect(ntf, &KNotification::action2Activated,
-            this, [this, ntf, devices = mPendingDevices]() {
+            this, [this, devices = mPendingDevices]() {
                 authorizeDevices(sortDevices(devices), Enroll);
             });
    connect(ntf, &KNotification::closed,

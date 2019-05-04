@@ -173,7 +173,7 @@ void Manager::enrollDevice(const QString &uid, Policy policy, AuthFlags authFlag
                     cb();
                 }
             },
-            [this, uid, device, cb = std::move(errorCallback)](const QString &error) {
+            [uid, device, cb = std::move(errorCallback)](const QString &error) {
                 qCWarning(log_libkbolt, "Failed to enroll Thunderbolt device %s: %s",
                           qUtf8Printable(uid), qUtf8Printable(error));
                 if (device) {

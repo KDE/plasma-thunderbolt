@@ -26,6 +26,7 @@
 #include <QDateTime>
 #include <QDBusObjectPath>
 #include <QEnableSharedFromThis>
+#include <QSharedPointer>
 
 #include <memory>
 
@@ -93,8 +94,8 @@ Q_SIGNALS:
     void authFlagsChanged(Bolt::AuthFlags authFlags);
 
 private:
-    template<typename ... Args>
-    friend QSharedPointer<Device> QSharedPointer<Device>::create(Args&& ...);
+    template<class T> template<class ... Args>
+    friend QSharedPointer<T> QSharedPointer<T>::create(Args && ...);
 
     Device(const QDBusObjectPath &path, QObject *parent = nullptr);
 
