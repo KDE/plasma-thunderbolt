@@ -1,7 +1,6 @@
-project(kcm_bolt)
-
-
 cmake_minimum_required(VERSION 3.10)
+
+project(kcm_bolt)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_AUTOMOC ON)
