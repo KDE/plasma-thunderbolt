@@ -75,10 +75,9 @@ public:
                       std::function<void()> successCallback = {},
                       std::function<void(const QString &)> errorCallback = {});
 
-public Q_SLOTS:
-    QSharedPointer<Bolt::Device> device(const QString &uid) const;
-    QSharedPointer<Bolt::Device> device(const QDBusObjectPath &path) const;
-    QList<QSharedPointer<Bolt::Device>> devices() const;
+    Q_INVOKABLE QSharedPointer<Bolt::Device> device(const QString &uid) const;
+    Q_INVOKABLE QSharedPointer<Bolt::Device> device(const QDBusObjectPath &path) const;
+    Q_INVOKABLE QList<QSharedPointer<Bolt::Device>> devices() const;
 
 Q_SIGNALS:
     void deviceAdded(const QSharedPointer<Bolt::Device> &device);

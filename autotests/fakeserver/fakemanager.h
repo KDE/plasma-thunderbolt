@@ -48,6 +48,7 @@ class FakeManager : public QObject
     Q_PROPERTY(QString DefaultPolicy READ defaultPolicy CONSTANT)
     Q_PROPERTY(QString SecurityLevel READ securityLevel CONSTANT)
     Q_PROPERTY(QString AuthMode READ authMode WRITE setAuthMode)
+
 public:
     explicit FakeManager(const QJsonObject &json, QObject *parent = nullptr);
     explicit FakeManager(QObject *parent = nullptr);
@@ -64,11 +65,10 @@ public:
     void removeDevice(const QString &uid);
     QList<FakeDevice *> devices() const;
 
-public Q_SLOTS:
-    QList<QDBusObjectPath> ListDevices() const;
-    QDBusObjectPath DeviceByUid(const QString &uid) const;
-    QDBusObjectPath EnrollDevice(const QString &uid, const QString &policy, const QString &flags);
-    void ForgetDevice(const QString &uid);
+    Q_INVOKABLE QList<QDBusObjectPath> ListDevices() const;
+    Q_INVOKABLE QDBusObjectPath DeviceByUid(const QString &uid) const;
+    Q_INVOKABLE QDBusObjectPath EnrollDevice(const QString &uid, const QString &policy, const QString &flags);
+    Q_INVOKABLE void ForgetDevice(const QString &uid);
 
 Q_SIGNALS:
     void DeviceAdded(const QDBusObjectPath &device);
