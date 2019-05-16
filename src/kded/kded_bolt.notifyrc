@@ -1,25 +1,69 @@
 [Global]
 IconName=preferences-desktop-thunderbolt
 Name=Thunderbolt Device Monitor
+Name[nl]=Thunderbolt apparaatmonitor
+Name[pt]=Monitor de Dispositivos Thunderbolt
+Name[uk]=Спостереження за пристроями Thunderbolt
+Name[x-test]=xxThunderbolt Device Monitorxx
 Comment=Thunderbolt Device Monitor
+Comment[nl]=Thunderbolt apparaatmonitor
+Comment[pt]=Monitor de Dispositivos Thunderbolt
+Comment[uk]=Спостереження за пристроями Thunderbolt
+Comment[x-test]=xxThunderbolt Device Monitorxx
 
 [Context/warningnot]
 Name=Warning
+Name[nl]=Waarschuwing
+Name[pt]=Aviso
+Name[pt_BR]=Aviso
+Name[uk]=Попередження
+Name[x-test]=xxWarningxx
 Comment=Used for warning notifications
+Comment[nl]=Wordt gebruikt voor waarschuwingsmeldingen
+Comment[pt]=Usado para as notificações de aviso
+Comment[pt_BR]=Usado para as notificações de aviso
+Comment[uk]=Використовується для попереджень
+Comment[x-test]=xxUsed for warning notificationsxx
 
 [Content/errornot]
 Name=Error
+Name[nl]=Fout
+Name[pt]=Erro
+Name[pt_BR]=Erro
+Name[uk]=Помилка
+Name[x-test]=xxErrorxx
 Comment=Used for error notifications
+Comment[nl]=Gebruikt voor foutmeldingen
+Comment[pt]=Usado para as notificações de erro
+Comment[pt_BR]=Usado para as notificações de erro
+Comment[uk]=Використовується для сповіщень про помилки
+Comment[x-test]=xxUsed for error notificationsxx
 
 
 [Event/unauthorizedDeviceConnected]
 Name=Unauthorized device is plugged in
+Name[nl]=Niet geautoriseerd apparaat is ingeplugd
+Name[pt]=Está ligado um dispositivo não autorizado
+Name[uk]=З комп'ютером з'єднано неуповноважений пристрій
+Name[x-test]=xxUnauthorized device is plugged inxx
 Comment=An unauthorized Thunderbolt device has been plugged into the computer
+Comment[nl]=Een niet geautoriseerd Thunderbolt apparaat is ingeplugd in de computer
+Comment[pt]=Foi ligado um dispositivo Thunderbolt não autorizado ao computador
+Comment[uk]=З комп'ютером з'єднано неуповноважений пристрій Thunderbolt
+Comment[x-test]=xxAn unauthorized Thunderbolt device has been plugged into the computerxx
 Contexts=warningnot
 Action=Popup
 
 [Event/deviceAuthError]
 Name=Error during device authorization
+Name[nl]=Fout bij het de autorisatie van apparaat
+Name[pt]=Erro na autorização do dispositivo
+Name[uk]=Помилка під час спроби уповноважити пристрій
+Name[x-test]=xxError during device authorizationxx
 Comment=An error occurred while authorizing or blocking a Thunderbolt device
+Comment[nl]=Er is een fout opgetreden bij het autoriseren of blokkeren van een Thunderbolt apparaat
+Comment[pt]=Ocorreu um erro na autorização ou bloqueio de um dado dispositivo Thunderbolt
+Comment[uk]=Під час спроби уповноважити або заблокувати пристрій Thunderbolt сталася помилка
+Comment[x-test]=xxAn error occurred while authorizing or blocking a Thunderbolt devicexx
 Contexts=errornot
 Action=Popup

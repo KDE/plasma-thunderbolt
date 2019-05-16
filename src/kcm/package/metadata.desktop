@@ -1,6 +1,15 @@
 [Desktop Entry]
 Name=Thunderbolt
+Name[nl]=Thunderbolt
+Name[pt]=Thunderbolt
+Name[pt_BR]=Thunderbolt
+Name[uk]=Thunderbolt
+Name[x-test]=xxThunderboltxx
 Comment=Thunderbolt Device Management
+Comment[nl]=Thunderbolt apparaatbeheer
+Comment[pt]=Gestão de Dispositivos Thunderbolt
+Comment[uk]=Керування пристроями Thunderbolt
+Comment[x-test]=xxThunderbolt Device Managementxx
 Icon=preferences-desktop-thunderbolt
 Keywords=
 Type=Service

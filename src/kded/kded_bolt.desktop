@@ -1,6 +1,14 @@
 [Desktop Entry]
 Name=Thunderbolt Device Monitor
+Name[nl]=Thunderbolt apparaatmonitor
+Name[pt]=Monitor de Dispositivos Thunderbolt
+Name[uk]=Спостереження за пристроями Thunderbolt
+Name[x-test]=xxThunderbolt Device Monitorxx
 Comment=Thunderbolt Device Monitor
+Comment[nl]=Thunderbolt apparaatmonitor
+Comment[pt]=Monitor de Dispositivos Thunderbolt
+Comment[uk]=Спостереження за пристроями Thunderbolt
+Comment[x-test]=xxThunderbolt Device Monitorxx
 
 Type=Service
 Icon=preferences-desktop-thunderbolt
