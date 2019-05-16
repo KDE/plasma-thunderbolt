@@ -1,7 +1,5 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-kde_enable_exceptions()
-
 set(LIBKBOLT_SRCS
     dbushelper.cpp
     device.cpp
