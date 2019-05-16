@@ -126,6 +126,7 @@ void FakeManager::setAuthMode(const QString &authMode)
 {
     qDebug("Manager: authMode changed to %s", qUtf8Printable(authMode));
     mAuthMode = authMode;
+    Q_EMIT authModeChanged(authMode);
 }
 
 QList<QDBusObjectPath> FakeManager::ListDevices() const

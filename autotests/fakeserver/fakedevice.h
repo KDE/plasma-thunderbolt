@@ -48,7 +48,7 @@ class FakeDevice : public QObject
     Q_PROPERTY(bool Stored READ stored CONSTANT)
     Q_PROPERTY(QString Policy READ policy CONSTANT)
     Q_PROPERTY(QString Key READ key CONSTANT)
-    Q_PROPERTY(QString Label READ label WRITE setLabel)
+    Q_PROPERTY(QString Label READ label WRITE setLabel NOTIFY labelChanged)
     Q_PROPERTY(quint64 ConnectTime READ connectTime CONSTANT)
     Q_PROPERTY(quint64 AuthorizeTime READ authorizeTime CONSTANT)
     Q_PROPERTY(quint64 StoreTime READ storeTime CONSTANT)
@@ -91,6 +91,9 @@ public:
 
 public Q_SLOTS:
     void Authorize(const QString &flags);
+
+Q_SIGNALS:
+    void labelChanged(const QString &label);
 
 private:
     QDBusObjectPath mDBusPath;

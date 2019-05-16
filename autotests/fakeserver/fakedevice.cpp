@@ -190,6 +190,7 @@ QString FakeDevice::label() const
 void FakeDevice::setLabel(const QString &label)
 {
     mLabel = label;
+    Q_EMIT labelChanged(label);
 }
 
 quint64 FakeDevice::connectTime() const

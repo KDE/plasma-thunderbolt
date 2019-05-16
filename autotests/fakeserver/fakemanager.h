@@ -47,7 +47,7 @@ class FakeManager : public QObject
     Q_PROPERTY(bool Probing READ isProbing CONSTANT)
     Q_PROPERTY(QString DefaultPolicy READ defaultPolicy CONSTANT)
     Q_PROPERTY(QString SecurityLevel READ securityLevel CONSTANT)
-    Q_PROPERTY(QString AuthMode READ authMode WRITE setAuthMode)
+    Q_PROPERTY(QString AuthMode READ authMode WRITE setAuthMode NOTIFY authModeChanged)
 
 public:
     explicit FakeManager(const QJsonObject &json, QObject *parent = nullptr);
@@ -73,6 +73,7 @@ public:
 Q_SIGNALS:
     void DeviceAdded(const QDBusObjectPath &device);
     void DeviceRemoved(const QDBusObjectPath &device);
+    void authModeChanged(const QString &authMode);
 
 private:
     bool mProbing = false;

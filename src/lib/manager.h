@@ -45,7 +45,7 @@ class KBOLT_EXPORT Manager : public QObject
     Q_PROPERTY(bool isProbing READ isProbing CONSTANT STORED false)
     Q_PROPERTY(Bolt::Policy defaultPolicy READ defaultPolicy CONSTANT STORED false)
     Q_PROPERTY(Bolt::Security securityLevel READ securityLevel CONSTANT STORED false)
-    Q_PROPERTY(Bolt::AuthMode authMode READ authMode WRITE setAuthMode STORED false)
+    Q_PROPERTY(Bolt::AuthMode authMode READ authMode WRITE setAuthMode STORED false NOTIFY authModeChanged)
 
 public:
     explicit Manager(QObject *parent = nullptr);
@@ -82,6 +82,7 @@ public:
 Q_SIGNALS:
     void deviceAdded(const QSharedPointer<Bolt::Device> &device);
     void deviceRemoved(const QSharedPointer<Bolt::Device> &device);
+    void authModeChanged(Bolt::AuthMode authMode);
 
 private:
     QSharedPointer<Device> device(std::function<bool(const QSharedPointer<Device> &)> &&match) const;

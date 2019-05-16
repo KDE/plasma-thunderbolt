@@ -119,6 +119,7 @@ AuthMode Manager::authMode() const
 void Manager::setAuthMode(AuthMode mode)
 {
     mInterface->setAuthMode(authModeToString(mode));
+    Q_EMIT authModeChanged(mode);
 }
 
 QSharedPointer<Device> Manager::device(std::function<bool(const QSharedPointer<Device> &)> &&match) const
