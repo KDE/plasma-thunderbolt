@@ -37,4 +37,5 @@ target_include_directories(kbolt PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
 )
 
-install(TARGETS kbolt DESTINATION ${KDE_INSTALL_LIBDIR})
+# Don't create soname for kbolt, it's a private library
+install(TARGETS kbolt ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
