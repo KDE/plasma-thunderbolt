@@ -1,54 +1,70 @@
 [Global]
 IconName=preferences-desktop-thunderbolt
 Name=Thunderbolt Device Monitor
+Name[ca]=Supervisor del dispositiu Thunderbolt
 Name[nl]=Thunderbolt apparaatmonitor
 Name[pt]=Monitor de Dispositivos Thunderbolt
+Name[sk]=Monitor zariadenia Thunderbolt
 Name[uk]=Спостереження за пристроями Thunderbolt
 Name[x-test]=xxThunderbolt Device Monitorxx
 Comment=Thunderbolt Device Monitor
+Comment[ca]=Supervisor del dispositiu Thunderbolt
 Comment[nl]=Thunderbolt apparaatmonitor
 Comment[pt]=Monitor de Dispositivos Thunderbolt
+Comment[sk]=Monitor zariadenia Thunderbolt
 Comment[uk]=Спостереження за пристроями Thunderbolt
 Comment[x-test]=xxThunderbolt Device Monitorxx
 
 [Context/warningnot]
 Name=Warning
+Name[ca]=Avís
 Name[nl]=Waarschuwing
 Name[pt]=Aviso
 Name[pt_BR]=Aviso
+Name[sk]=Upozornenie
 Name[uk]=Попередження
 Name[x-test]=xxWarningxx
 Comment=Used for warning notifications
+Comment[ca]=S'usa per a les notificacions d'avís
 Comment[nl]=Wordt gebruikt voor waarschuwingsmeldingen
 Comment[pt]=Usado para as notificações de aviso
 Comment[pt_BR]=Usado para as notificações de aviso
+Comment[sk]=Používa sa pre varovné upozornenia
 Comment[uk]=Використовується для попереджень
 Comment[x-test]=xxUsed for warning notificationsxx
 
 [Content/errornot]
 Name=Error
+Name[ca]=Error
 Name[nl]=Fout
 Name[pt]=Erro
 Name[pt_BR]=Erro
+Name[sk]=Chyba
 Name[uk]=Помилка
 Name[x-test]=xxErrorxx
 Comment=Used for error notifications
+Comment[ca]=S'usa per a les notificacions d'error
 Comment[nl]=Gebruikt voor foutmeldingen
 Comment[pt]=Usado para as notificações de erro
 Comment[pt_BR]=Usado para as notificações de erro
+Comment[sk]=Použité na notifikáciu chýb
 Comment[uk]=Використовується для сповіщень про помилки
 Comment[x-test]=xxUsed for error notificationsxx
 
 
 [Event/unauthorizedDeviceConnected]
 Name=Unauthorized device is plugged in
+Name[ca]=S'ha endollat un dispositiu no autoritzat
 Name[nl]=Niet geautoriseerd apparaat is ingeplugd
 Name[pt]=Está ligado um dispositivo não autorizado
+Name[sk]=Je pripojené neautorizované zariadenie
 Name[uk]=З комп'ютером з'єднано неуповноважений пристрій
 Name[x-test]=xxUnauthorized device is plugged inxx
 Comment=An unauthorized Thunderbolt device has been plugged into the computer
+Comment[ca]=S'ha endollat un dispositiu Thunderbolt no autoritzat a l'ordinador
 Comment[nl]=Een niet geautoriseerd Thunderbolt apparaat is ingeplugd in de computer
 Comment[pt]=Foi ligado um dispositivo Thunderbolt não autorizado ao computador
+Comment[sk]=Neautorizované Thunderbolt zariadenie je pripojené k počítaču
 Comment[uk]=З комп'ютером з'єднано неуповноважений пристрій Thunderbolt
 Comment[x-test]=xxAn unauthorized Thunderbolt device has been plugged into the computerxx
 Contexts=warningnot
@@ -56,13 +72,17 @@ Action=Popup
 
 [Event/deviceAuthError]
 Name=Error during device authorization
+Name[ca]=Error durant l'autorització del dispositiu
 Name[nl]=Fout bij het de autorisatie van apparaat
 Name[pt]=Erro na autorização do dispositivo
+Name[sk]=Chyba počas autorizácie zariadenia
 Name[uk]=Помилка під час спроби уповноважити пристрій
 Name[x-test]=xxError during device authorizationxx
 Comment=An error occurred while authorizing or blocking a Thunderbolt device
+Comment[ca]=Hi ha hagut un error en autoritzar o blocar un dispositiu Thunderbolt
 Comment[nl]=Er is een fout opgetreden bij het autoriseren of blokkeren van een Thunderbolt apparaat
 Comment[pt]=Ocorreu um erro na autorização ou bloqueio de um dado dispositivo Thunderbolt
+Comment[sk]=Nastala chyba počas autorizácie alebo blokovanie Thunderbolt zariadenia
 Comment[uk]=Під час спроби уповноважити або заблокувати пристрій Thunderbolt сталася помилка
 Comment[x-test]=xxAn error occurred while authorizing or blocking a Thunderbolt devicexx
 Contexts=errornot

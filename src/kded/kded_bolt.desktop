@@ -1,12 +1,16 @@
 [Desktop Entry]
 Name=Thunderbolt Device Monitor
+Name[ca]=Supervisor del dispositiu Thunderbolt
 Name[nl]=Thunderbolt apparaatmonitor
 Name[pt]=Monitor de Dispositivos Thunderbolt
+Name[sk]=Monitor zariadenia Thunderbolt
 Name[uk]=Спостереження за пристроями Thunderbolt
 Name[x-test]=xxThunderbolt Device Monitorxx
 Comment=Thunderbolt Device Monitor
+Comment[ca]=Supervisor del dispositiu Thunderbolt
 Comment[nl]=Thunderbolt apparaatmonitor
 Comment[pt]=Monitor de Dispositivos Thunderbolt
+Comment[sk]=Monitor zariadenia Thunderbolt
 Comment[uk]=Спостереження за пристроями Thunderbolt
 Comment[x-test]=xxThunderbolt Device Monitorxx
 
