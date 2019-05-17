@@ -163,7 +163,7 @@ Kirigami.ScrollablePage {
                         },
                         function(error) {
                             enabled = true;
-                            errorMessage.show(i18n("Error changing device trust:  <b>%1</b>: %2", device.name, error));
+                            errorMessage.show(i18n("Error changing device trust: <b>%1</b>: %2", device.name, error));
                         }
                     );
                     // If the device is not connected it will cease to exist
@@ -180,8 +180,8 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
 
             text: device && !device.stored
-                ? qsTr("Hint: trusted device will be automatically authorized the next time it is connected to the computer.")
-                : qsTr("Hint: an untrusted device needs to be manually authorized each time it is connected to the computer.")
+                ? i18n("Hint: trusted device will be automatically authorized the next time it is connected to the computer.")
+                : i18n("Hint: an untrusted device needs to be manually authorized each time it is connected to the computer.")
             visible: storeBtn.visible || forgetBtn.visible
             wrapMode: Text.WordWrap
             horizontalAlignment: Qt.AlignHCenter
