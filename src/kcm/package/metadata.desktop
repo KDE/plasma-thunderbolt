@@ -2,6 +2,7 @@
 Name=Thunderbolt
 Name[ca]=Thunderbolt
 Name[es]=Thunderbolt
+Name[fi]=Thunderbolt
 Name[nl]=Thunderbolt
 Name[pt]=Thunderbolt
 Name[pt_BR]=Thunderbolt
@@ -11,6 +12,7 @@ Name[x-test]=xxThunderboltxx
 Comment=Thunderbolt Device Management
 Comment[ca]=Gestió del dispositiu Thunderbolt
 Comment[es]=Gestión de dispositivos Thunderbolt
+Comment[fi]=Thunderbolt-laitehallinta
 Comment[nl]=Thunderbolt apparaatbeheer
 Comment[pt]=Gestão de Dispositivos Thunderbolt
 Comment[sk]=Správa zariadenia Thunderbolt

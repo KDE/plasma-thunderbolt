@@ -2,6 +2,7 @@
 Name=Thunderbolt Device Monitor
 Name[ca]=Supervisor del dispositiu Thunderbolt
 Name[es]=Monitor de dispositivos Thunderbolt
+Name[fi]=Thunderbolt-laitevalvonta
 Name[nl]=Thunderbolt apparaatmonitor
 Name[pt]=Monitor de Dispositivos Thunderbolt
 Name[sk]=Monitor zariadenia Thunderbolt
@@ -10,6 +11,7 @@ Name[x-test]=xxThunderbolt Device Monitorxx
 Comment=Thunderbolt Device Monitor
 Comment[ca]=Supervisor del dispositiu Thunderbolt
 Comment[es]=Monitor de dispositivos Thunderbolt
+Comment[fi]=Thunderbolt-laitevalvonta
 Comment[nl]=Thunderbolt apparaatmonitor
 Comment[pt]=Monitor de Dispositivos Thunderbolt
 Comment[sk]=Monitor zariadenia Thunderbolt
