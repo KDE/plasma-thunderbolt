@@ -6,7 +6,7 @@ X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_bolt
 X-KDE-ParentApp=kcontrol
 
-X-KDE-System-Settings-Parent-Category=Hardware
+X-KDE-System-Settings-Parent-Category=hardware
 X-KDE-Weight=120
 
 Name=Thunderbolt
