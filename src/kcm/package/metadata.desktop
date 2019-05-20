@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Thunderbolt
 Name[ca]=Thunderbolt
+Name[en_GB]=Thunderbolt
 Name[es]=Thunderbolt
 Name[fi]=Thunderbolt
+Name[ko]=Thunderbolt
 Name[nl]=Thunderbolt
 Name[pt]=Thunderbolt
 Name[pt_BR]=Thunderbolt
@@ -11,8 +13,10 @@ Name[uk]=Thunderbolt
 Name[x-test]=xxThunderboltxx
 Comment=Thunderbolt Device Management
 Comment[ca]=Gestió del dispositiu Thunderbolt
+Comment[en_GB]=Thunderbolt Device Management
 Comment[es]=Gestión de dispositivos Thunderbolt
 Comment[fi]=Thunderbolt-laitehallinta
+Comment[ko]=Thunderbolt 장치 관리
 Comment[nl]=Thunderbolt apparaatbeheer
 Comment[pt]=Gestão de Dispositivos Thunderbolt
 Comment[sk]=Správa zariadenia Thunderbolt
