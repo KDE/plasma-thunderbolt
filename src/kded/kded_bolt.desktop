@@ -1,9 +1,11 @@
 [Desktop Entry]
 Name=Thunderbolt Device Monitor
 Name[ca]=Supervisor del dispositiu Thunderbolt
+Name[ca@valencia]=Supervisor del dispositiu Thunderbolt
 Name[en_GB]=Thunderbolt Device Monitor
 Name[es]=Monitor de dispositivos Thunderbolt
 Name[fi]=Thunderbolt-laitevalvonta
+Name[it]=Monitor dei dispositivi Thunderbolt
 Name[ko]=Thunderbolt 장치 모니터
 Name[nl]=Thunderbolt apparaatmonitor
 Name[pt]=Monitor de Dispositivos Thunderbolt
@@ -12,9 +14,11 @@ Name[uk]=Спостереження за пристроями Thunderbolt
 Name[x-test]=xxThunderbolt Device Monitorxx
 Comment=Thunderbolt Device Monitor
 Comment[ca]=Supervisor del dispositiu Thunderbolt
+Comment[ca@valencia]=Supervisor del dispositiu Thunderbolt
 Comment[en_GB]=Thunderbolt Device Monitor
 Comment[es]=Monitor de dispositivos Thunderbolt
 Comment[fi]=Thunderbolt-laitevalvonta
+Comment[it]=Monitor dei dispositivi Thunderbolt
 Comment[ko]=Thunderbolt 장치 모니터입니다
 Comment[nl]=Thunderbolt apparaatmonitor
 Comment[pt]=Monitor de Dispositivos Thunderbolt
