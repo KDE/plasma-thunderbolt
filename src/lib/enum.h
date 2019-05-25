@@ -106,8 +106,8 @@ enum class Security {
     Unknown = -1,
     None,
     DPOnly,
-    User = '1',
-    Secure = '2',
+    User = '1', /* sic! */
+    Secure = '2', /* sic! */
     USBOnly = 4
 };
 Q_ENUM_NS(Security)
