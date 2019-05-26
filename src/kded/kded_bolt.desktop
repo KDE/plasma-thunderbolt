@@ -10,6 +10,7 @@ Name[ko]=Thunderbolt 장치 모니터
 Name[nl]=Thunderbolt apparaatmonitor
 Name[pt]=Monitor de Dispositivos Thunderbolt
 Name[sk]=Monitor zariadenia Thunderbolt
+Name[sv]=Thunderbolt enhetsövervakare
 Name[uk]=Спостереження за пристроями Thunderbolt
 Name[x-test]=xxThunderbolt Device Monitorxx
 Comment=Thunderbolt Device Monitor
@@ -23,6 +24,7 @@ Comment[ko]=Thunderbolt 장치 모니터입니다
 Comment[nl]=Thunderbolt apparaatmonitor
 Comment[pt]=Monitor de Dispositivos Thunderbolt
 Comment[sk]=Monitor zariadenia Thunderbolt
+Comment[sv]=Thunderbolt enhetsövervakare
 Comment[uk]=Спостереження за пристроями Thunderbolt
 Comment[x-test]=xxThunderbolt Device Monitorxx
 
