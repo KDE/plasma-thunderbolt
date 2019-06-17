@@ -1,8 +1,8 @@
 # Plasma Thunderbolt
 
-This repository contains a Plasma Sytem settings module and a KDED module to
+This repository contains a Plasma Sytem Settings module and a KDED module to
 handle authorization of Thunderbolt devices connected to the computer. There's
-also a shared library (libkbolt) thata implements common interface between the
+also a shared library (libkbolt) that implements common interface between the
 modules and the system-wide bolt daemon, which does the actual hard work of
 talking to the kernel.
 
