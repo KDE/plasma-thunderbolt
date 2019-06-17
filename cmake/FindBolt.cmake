@@ -1,5 +1,6 @@
 #=============================================================================
 # Copyright 2019 Daniel Vrátil <dvratil@kde.org>
+# Copyright 2019 Harald Sitter <sitter@kde.org>
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions
@@ -24,8 +25,21 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
+
+# On Debian systems the daemon can be in side various lib directories...
+set(boltd_PATHS
+    /usr/lib/bolt/ # 0.5+ on Debian and Ubuntu
+)
+if(CMAKE_LIBRARY_ARCHITECTURE)
+    list(APPEND boltd_PATHS
+        # 0.5 on Ubuntu
+        /usr/lib/${CMAKE_LIBRARY_ARCHITECTURE}/
+    )
+endif()
+
 find_program(boltd_EXECUTABLE
     NAMES boltd
+    PATHS ${boltd_PATHS}
     PATH_SUFFIXES bin libexec
 )
 find_package_handle_standard_args(bolt
