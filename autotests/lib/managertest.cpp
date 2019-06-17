@@ -21,6 +21,7 @@
 #include <QObject>
 #include <QTest>
 #include <QSignalSpy>
+#include <QDebug>
 
 #include "fakeserver.h"
 #include "fakemanager.h"
@@ -29,7 +30,7 @@
 #include "manager.h"
 #include "device.h"
 
-#include <QDebug>
+#include <memory>
 
 Q_DECLARE_METATYPE(QSharedPointer<Bolt::Device>)
 
@@ -47,9 +48,9 @@ public:
 private Q_SLOTS:
     void testDeviceAddedRemoved()
     {
-        QScopedPointer<FakeServer> server;
+        std::unique_ptr<FakeServer> server;
         try {
-            server.reset(new FakeServer);
+            server = std::make_unique<FakeServer>();
         } catch (const FakeServerException &e) {
             qWarning("Fake server exception: %s", e.what());
             QFAIL("Exception server caught");

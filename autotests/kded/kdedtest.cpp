@@ -63,9 +63,9 @@ public:
 private Q_SLOTS:
     void testShouldNotify()
     {
-        QScopedPointer<FakeServer> fakeServer;
+        std::unique_ptr<FakeServer> fakeServer;
         try {
-            fakeServer.reset(new FakeServer);
+            fakeServer = std::make_unique<FakeServer>();
         } catch (const FakeServerException &e) {
             qWarning("Fake server exception: %s", e.what());
            QFAIL("Caught server exception");

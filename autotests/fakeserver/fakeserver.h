@@ -22,7 +22,8 @@
 #define FAKESERVER_H
 
 #include <QString>
-#include <QScopedPointer>
+
+#include <memory>
 
 class FakeServerException : public std::runtime_error
 {
@@ -45,7 +46,7 @@ public:
 
     FakeManager *manager() const;
 private:
-    QScopedPointer<FakeManager> mManager;
+    std::unique_ptr<FakeManager> mManager;
 };
 
 #endif

@@ -82,13 +82,14 @@ KCMBolt::KCMBolt(QObject *parent, const QVariantList &args)
     qmlRegisterSingletonType<QMLHelper>("org.kde.bolt", 0, 1, "QMLHelper",
             [](auto, auto) -> QObject* { return new QMLHelper(); });
 
-    auto about = new KAboutData(QStringLiteral("kcm_bolt"),
+    auto about = std::make_unique<KAboutData>(
+            QStringLiteral("kcm_bolt"),
             i18n("Thunderbolt Device Management"),
             QStringLiteral("0.1"),
             i18n("System Settings module for managing Thunderbolt devices."),
             KAboutLicense::GPL);
     about->addAuthor(i18n("Daniel Vrátil"), {}, QStringLiteral("dvratil@kde.org"));
-    setAboutData(about);
+    setAboutData(about.release());
 }
 
 #include "kcm_bolt.moc"

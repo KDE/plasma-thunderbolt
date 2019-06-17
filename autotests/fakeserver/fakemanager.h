@@ -28,6 +28,7 @@
 #include <QJsonObject>
 
 #include <memory>
+#include <map>
 
 class FakeManagerException : public std::runtime_error
 {
@@ -81,7 +82,7 @@ private:
     QString mSecurityLevel = QStringLiteral("none");
     QString mAuthMode = QStringLiteral("enabled");
 
-    QMap<QString /*uid*/, FakeDevice*> mDevices;
+    std::map<QString /*uid*/, std::unique_ptr<FakeDevice>> mDevices;
 };
 
 

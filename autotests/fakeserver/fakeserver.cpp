@@ -55,7 +55,7 @@ FakeServer::FakeServer(const QString &filename)
     }
 
     try {
-        mManager.reset(new FakeManager(doc.object()));
+        mManager = std::make_unique<FakeManager>(doc.object());
     } catch (const FakeManagerException &e) {
         throw FakeServerException(e.what());
     }
@@ -70,7 +70,7 @@ FakeServer::FakeServer()
     }
 
     try {
-        mManager.reset(new FakeManager());
+        mManager = std::make_unique<FakeManager>();
     } catch (FakeManagerException &e) {
         throw FakeServerException(e.what());
     }

@@ -51,8 +51,8 @@ FakeManager::FakeManager(const QJsonObject &json, QObject *parent)
 
     const auto jsonDevices = json[QStringLiteral("Devices")].toArray();
     for (const auto &jsonDevice : jsonDevices) {
-        auto device = new FakeDevice(jsonDevice.toObject(), this);
-        mDevices.insert(device->uid(), device);
+        auto device = std::make_unique<FakeDevice>(jsonDevice.toObject(), this);
+        mDevices.emplace(device->uid(), std::move(device));
     }
 }
 
@@ -69,15 +69,13 @@ FakeManager::FakeManager(QObject *parent)
 FakeManager::~FakeManager()
 {
     QDBusConnection::sessionBus().unregisterObject(kManagerDBusPath);
-    qDeleteAll(mDevices);
 }
 
 FakeDevice *FakeManager::addDevice(std::unique_ptr<FakeDevice> device)
 {
-    auto ptr = device.release();
-    mDevices.insert(ptr->uid(), ptr);
-    Q_EMIT DeviceAdded(ptr->dbusPath());
-    return ptr;
+    const auto it = mDevices.emplace(device->uid(), std::move(device)).first;
+    Q_EMIT DeviceAdded(it->second->dbusPath());
+    return it->second.get();
 }
 
 void FakeManager::removeDevice(const QString &uid)
@@ -86,15 +84,18 @@ void FakeManager::removeDevice(const QString &uid)
     if (deviceIt == mDevices.end()) {
         return;
     }
-    auto device = *deviceIt;
+    auto device = std::move(deviceIt->second);
     mDevices.erase(deviceIt);
     Q_EMIT DeviceRemoved(device->dbusPath());
-    device->deleteLater();
 }
 
 QList<FakeDevice*> FakeManager::devices() const
 {
-    return mDevices.values();
+    QList<FakeDevice*> rv;
+    rv.reserve(mDevices.size());
+    std::transform(mDevices.cbegin(), mDevices.cend(),
+                   std::back_inserter(rv), [](const auto &v) { return v.second.get(); });
+    return rv;
 }
 
 unsigned int FakeManager::version() const
@@ -133,16 +134,20 @@ QList<QDBusObjectPath> FakeManager::ListDevices() const
 {
     QList<QDBusObjectPath> rv;
     rv.reserve(mDevices.size());
-    for (const auto device : mDevices) {
-        rv.push_back(device->dbusPath());
+    for (const auto &device : mDevices) {
+        rv.push_back(device.second->dbusPath());
     }
     return rv;
 }
 
 QDBusObjectPath FakeManager::DeviceByUid(const QString &uid) const
 {
-    auto device = mDevices.value(uid);
-    return device ? device->dbusPath() : QDBusObjectPath();
+    auto device = mDevices.find(uid);
+    if (device == mDevices.cend()) {
+        return QDBusObjectPath();
+    } else {
+        return device->second->dbusPath();
+    }
 }
 
 QDBusObjectPath FakeManager::EnrollDevice(const QString &uid,
@@ -151,7 +156,11 @@ QDBusObjectPath FakeManager::EnrollDevice(const QString &uid,
 {
     std::this_thread::sleep_for(1s); // simulate this operation taking time
 
-    auto device = mDevices.value(uid);
+    auto deviceIt = mDevices.find(uid);
+    if (deviceIt == mDevices.end()) {
+        return QDBusObjectPath();
+    }
+    auto &device = deviceIt->second;
     if (policy == QLatin1Literal("default")) {
         device->setPolicy(defaultPolicy());
     } else {
@@ -168,7 +177,11 @@ void FakeManager::ForgetDevice(const QString &uid)
 {
     std::this_thread::sleep_for(1s); // simulate this operation taking time
 
-    auto device = mDevices.value(uid);
+    auto deviceIt = mDevices.find(uid);
+    if (deviceIt == mDevices.end()) {
+        return;
+    }
+    auto &device = deviceIt->second;
     device->setStored(false);
     device->setStatus(QLatin1Literal("connected"));
 }
