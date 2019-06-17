@@ -26,7 +26,7 @@
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-# On Debian systems the daemon can be in side various lib directories...
+# On Debian systems the daemon can be inside various lib directories...
 set(boltd_PATHS
     /usr/lib/bolt/ # 0.5+ on Debian and Ubuntu
 )
