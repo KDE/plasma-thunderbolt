@@ -2,6 +2,7 @@
 Name=Thunderbolt
 Name[ca]=Thunderbolt
 Name[ca@valencia]=Thunderbolt
+Name[de]=Thunderbolt
 Name[en_GB]=Thunderbolt
 Name[es]=Thunderbolt
 Name[eu]=Thunderbolt
@@ -24,6 +25,7 @@ Name[zh_TW]=Thunderbolt
 Comment=Thunderbolt Device Management
 Comment[ca]=Gestió del dispositiu Thunderbolt
 Comment[ca@valencia]=Gestió del dispositiu Thunderbolt
+Comment[de]=Thunderbolt-Geräteverwaltung
 Comment[en_GB]=Thunderbolt Device Management
 Comment[es]=Gestión de dispositivos Thunderbolt
 Comment[eu]=Thunderbolt gailu kudeaketa
