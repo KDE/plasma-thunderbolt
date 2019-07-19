@@ -20,6 +20,7 @@ Name[sk]=Monitor zariadenia Thunderbolt
 Name[sv]=Thunderbolt enhetsövervakare
 Name[uk]=Спостереження за пристроями Thunderbolt
 Name[x-test]=xxThunderbolt Device Monitorxx
+Name[zh_CN]=Thunderbolt 设备监视器
 Name[zh_TW]=Thunderbolt 裝置監控工具
 Comment=Thunderbolt Device Monitor
 Comment[ca]=Supervisor del dispositiu Thunderbolt
@@ -42,6 +43,7 @@ Comment[sk]=Monitor zariadenia Thunderbolt
 Comment[sv]=Thunderbolt enhetsövervakare
 Comment[uk]=Спостереження за пристроями Thunderbolt
 Comment[x-test]=xxThunderbolt Device Monitorxx
+Comment[zh_CN]=Thunderbolt 设备监视器
 Comment[zh_TW]=Thunderbolt 裝置監控工具
 
 Type=Service
