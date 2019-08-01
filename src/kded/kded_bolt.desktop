@@ -2,6 +2,7 @@
 Name=Thunderbolt Device Monitor
 Name[ca]=Supervisor del dispositiu Thunderbolt
 Name[ca@valencia]=Supervisor del dispositiu Thunderbolt
+Name[cs]=Monitoring zařízení Thunderbolt
 Name[en_GB]=Thunderbolt Device Monitor
 Name[es]=Monitor de dispositivos Thunderbolt
 Name[eu]=Thunderbolt gailu begiralea
@@ -26,6 +27,7 @@ Name[zh_TW]=Thunderbolt 裝置監控工具
 Comment=Thunderbolt Device Monitor
 Comment[ca]=Supervisor del dispositiu Thunderbolt
 Comment[ca@valencia]=Supervisor del dispositiu Thunderbolt
+Comment[cs]=Monitoring zařízení Thunderbolt
 Comment[en_GB]=Thunderbolt Device Monitor
 Comment[es]=Monitor de dispositivos Thunderbolt
 Comment[eu]=Thunderbolt gailu begiralea
