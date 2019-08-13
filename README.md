@@ -13,12 +13,12 @@ KDE Frameworks.
 
 # Runtime Dependencies
 
-This software depends on the [Bolt daemon][https://gitlab.freedesktop.org/bolt/bolt] to
+This software depends on the [Bolt daemon](https://gitlab.freedesktop.org/bolt/bolt) to
 be present and running on the system.
 
 # Contributing
 
-To contribute, please follow this [Get Involved][https://community.kde.org/Get_Involved]
+To contribute, please follow this [Get Involved](https://community.kde.org/Get_Involved)
 guide on KDE Community wiki.
 
 # Maintainers
