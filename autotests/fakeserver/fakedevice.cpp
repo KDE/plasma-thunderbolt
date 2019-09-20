@@ -227,5 +227,5 @@ void FakeDevice::Authorize(const QString &flags)
 {
     std::this_thread::sleep_for(1s); // simulate this operation taking time
     mAuthFlags = flags;
-    mStatus = QLatin1Literal("authorized");
+    mStatus = QLatin1String("authorized");
 }

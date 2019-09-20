@@ -138,13 +138,13 @@ QString Device::sysfsPath() const
 QDateTime Device::connectTime() const
 {
     const auto val = mInterface->connectTime();
-    return val == 0 ? QDateTime() : QDateTime::fromTime_t(val);
+    return val == 0 ? QDateTime() : QDateTime::fromSecsSinceEpoch(val);
 }
 
 QDateTime Device::authorizeTime() const
 {
     const auto val = mInterface->authorizeTime();
-    return val == 0 ? QDateTime() : QDateTime::fromTime_t(val);
+    return val == 0 ? QDateTime() : QDateTime::fromSecsSinceEpoch(val);
 }
 
 bool Device::stored() const
@@ -167,7 +167,7 @@ KeyState Device::keyState() const
 QDateTime Device::storeTime() const
 {
     const auto val = mInterface->storeTime();
-    return val == 0 ? QDateTime() : QDateTime::fromTime_t(val);
+    return val == 0 ? QDateTime() : QDateTime::fromSecsSinceEpoch(val);
 }
 
 QString Device::label() const

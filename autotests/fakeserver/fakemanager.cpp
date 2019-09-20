@@ -161,14 +161,14 @@ QDBusObjectPath FakeManager::EnrollDevice(const QString &uid,
         return QDBusObjectPath();
     }
     auto &device = deviceIt->second;
-    if (policy == QLatin1Literal("default")) {
+    if (policy == QLatin1String("default")) {
         device->setPolicy(defaultPolicy());
     } else {
         device->setPolicy(policy);
     }
     device->setAuthFlags(flags);
     device->setStored(true);
-    device->setStatus(QLatin1Literal("authorized"));
+    device->setStatus(QLatin1String("authorized"));
 
     return device->dbusPath();
 }
@@ -183,6 +183,6 @@ void FakeManager::ForgetDevice(const QString &uid)
     }
     auto &device = deviceIt->second;
     device->setStored(false);
-    device->setStatus(QLatin1Literal("connected"));
+    device->setStatus(QLatin1String("connected"));
 }
 
