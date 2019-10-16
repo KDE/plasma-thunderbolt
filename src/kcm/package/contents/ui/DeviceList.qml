@@ -64,6 +64,14 @@ KCM.ScrollViewKCM {
             onTriggered: view._evalTrigger++;
         }
 
+        Kirigami.Heading {
+            anchors.centerIn: parent
+            visible: view.count === 0
+            level: 2
+            text: i18n("No Thunderbolt devices connected")
+            opacity: 0.3
+        }
+
         delegate: Kirigami.AbstractListItem {
             id: item
             width: view.width
