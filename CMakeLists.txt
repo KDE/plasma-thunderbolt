@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 14)
 # Dependencies
 
 set(QT5_VERSION "5.10")
-set(KF5_VERSION "5.40")
+set(KF5_VERSION "5.70")
 
 find_package(ECM ${KF5_VERSION} REQUIRED)
 

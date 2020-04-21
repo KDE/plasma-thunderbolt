@@ -22,7 +22,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3
 
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.kcm 1.2 as KCM
 import org.kde.bolt 0.1 as Bolt
@@ -64,12 +64,15 @@ KCM.ScrollViewKCM {
             onTriggered: view._evalTrigger++;
         }
 
-        Kirigami.Heading {
+        Kirigami.PlaceholderMessage {
             anchors.centerIn: parent
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.margins: Kirigami.Units.largeSpacing
+
             visible: view.count === 0
-            level: 2
+
             text: i18n("No Thunderbolt devices connected")
-            opacity: 0.3
         }
 
         delegate: Kirigami.AbstractListItem {
