@@ -38,12 +38,12 @@ public:
         : std::runtime_error(what.toStdString()) {}
 };
 
-Device::Device(QObject *parent)
-    : QObject(parent)
+Device::Device()
+    : QObject()
 {}
 
-Device::Device(const QDBusObjectPath &path, QObject *parent)
-    : QObject(parent)
+Device::Device(const QDBusObjectPath &path)
+    : QObject()
     , mInterface(std::make_unique<DeviceInterface>(
         DBusHelper::serviceName(), path.path(), DBusHelper::connection()))
     , mDBusPath(path)
@@ -60,10 +60,10 @@ Device::Device(const QDBusObjectPath &path, QObject *parent)
 
 Device::~Device() = default;
 
-QSharedPointer<Device> Device::create(const QDBusObjectPath &path, QObject *parent)
+QSharedPointer<Device> Device::create(const QDBusObjectPath &path)
 {
     try {
-        return QSharedPointer<Device>::create(path, parent);
+        return QSharedPointer<Device>::create(path);
     } catch (const DBusException &e) {
         qCWarning(log_libkbolt, "%s", e.what());
         return {};

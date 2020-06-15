@@ -60,9 +60,7 @@ class KBOLT_EXPORT Device : public QObject
 
     friend class Manager;
 public:
-    static QSharedPointer<Device> create(const QDBusObjectPath &path,
-                                         QObject *parent = nullptr);
-    explicit Device(QObject *parent = nullptr);
+    static QSharedPointer<Device> create(const QDBusObjectPath &path);
     ~Device() override;
 
     QString uid() const;
@@ -94,10 +92,11 @@ Q_SIGNALS:
     void authFlagsChanged(Bolt::AuthFlags authFlags);
 
 private:
+
     template<class T> template<class ... Args>
     friend QSharedPointer<T> QSharedPointer<T>::create(Args && ...);
-
-    Device(const QDBusObjectPath &path, QObject *parent = nullptr);
+    Device();
+    Device(const QDBusObjectPath &path);
 
     void setStatusOverride(Status status);
     void clearStatusOverride();
