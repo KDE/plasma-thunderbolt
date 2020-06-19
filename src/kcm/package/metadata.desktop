@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Thunderbolt
+Name[az]=Thunderbolt
 Name[ca]=Thunderbolt
 Name[ca@valencia]=Thunderbolt
 Name[cs]=Thunderbolt
@@ -31,6 +32,7 @@ Name[x-test]=xxThunderboltxx
 Name[zh_CN]=Thunderbolt
 Name[zh_TW]=Thunderbolt
 Comment=Thunderbolt Device Management
+Comment[az]=Thunderbolt cihazı meneceri
 Comment[ca]=Gestió del dispositiu Thunderbolt
 Comment[ca@valencia]=Gestió del dispositiu Thunderbolt
 Comment[cs]=Správa zařízení Thunderbolt
