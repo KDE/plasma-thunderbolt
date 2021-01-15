@@ -22,7 +22,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3
 
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.kcm 1.2 as KCM
 import org.kde.bolt 0.1 as Bolt
@@ -65,12 +65,11 @@ Kirigami.Page {
         id: noBoltPage
         Kirigami.Page {
             property alias text: label.text
-            Label {
+            Kirigami.PlaceholderMessage {
                 id: label
 
-                anchors.fill: parent
-                verticalAlignment: Qt.AlignVCenter
-                horizontalAlignment: Qt.AlignHCenter
+                anchors.centerIn: parent
+                width: parent.width - (Kirigami.Units.largeSpacing *4)
             }
         }
     }
