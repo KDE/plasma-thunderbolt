@@ -19,12 +19,12 @@
  */
 
 #include <QObject>
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 
-#include "fakeserver.h"
-#include "fakemanager.h"
 #include "fakedevice.h"
+#include "fakemanager.h"
+#include "fakeserver.h"
 
 #include "device.h"
 #include "manager.h"
@@ -56,8 +56,7 @@ private Q_SLOTS:
         auto fakeManager = fakeServer->manager();
         FakeDevice *fakeDevice = nullptr;
         try {
-            fakeDevice = fakeManager->addDevice(
-                std::make_unique<FakeDevice>(QStringLiteral("Device1")));
+            fakeDevice = fakeManager->addDevice(std::make_unique<FakeDevice>(QStringLiteral("Device1")));
         } catch (const FakeDeviceException &e) {
             qWarning("Fake device exception: %s", e.what());
             QFAIL("Caught device exception");

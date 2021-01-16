@@ -19,12 +19,12 @@
  */
 
 #include <QObject>
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 
-#include "fakeserver.h"
-#include "fakemanager.h"
 #include "fakedevice.h"
+#include "fakemanager.h"
+#include "fakeserver.h"
 
 #include "device.h"
 
@@ -48,7 +48,6 @@ protected:
     }
 };
 
-
 class KDEDTest : public QObject
 {
     Q_OBJECT
@@ -68,7 +67,7 @@ private Q_SLOTS:
             fakeServer = std::make_unique<FakeServer>();
         } catch (const FakeServerException &e) {
             qWarning("Fake server exception: %s", e.what());
-           QFAIL("Caught server exception");
+            QFAIL("Caught server exception");
         }
 
         TestableKDEDBolt kded(nullptr, {});

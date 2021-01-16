@@ -21,12 +21,12 @@
 #ifndef DEVICE_H_
 #define DEVICE_H_
 
-#include <QObject>
-#include <QString>
-#include <QDateTime>
 #include <QDBusObjectPath>
+#include <QDateTime>
 #include <QEnableSharedFromThis>
+#include <QObject>
 #include <QSharedPointer>
+#include <QString>
 
 #include <memory>
 
@@ -34,11 +34,10 @@
 #include "kbolt_export.h"
 
 class OrgFreedesktopBolt1DeviceInterface;
-namespace Bolt {
-
+namespace Bolt
+{
 class Manager;
-class KBOLT_EXPORT Device : public QObject
-                          , public QEnableSharedFromThis<Device>
+class KBOLT_EXPORT Device : public QObject, public QEnableSharedFromThis<Device>
 {
     Q_OBJECT
 
@@ -59,9 +58,9 @@ class KBOLT_EXPORT Device : public QObject
     Q_PROPERTY(QString label READ label CONSTANT STORED false)
 
     friend class Manager;
+
 public:
-    static QSharedPointer<Device> create(const QDBusObjectPath &path,
-                                         QObject *parent = nullptr);
+    static QSharedPointer<Device> create(const QDBusObjectPath &path, QObject *parent = nullptr);
     explicit Device(QObject *parent = nullptr);
     ~Device() override;
 
@@ -83,9 +82,7 @@ public:
 
     QDBusObjectPath dbusPath() const;
 
-    void authorize(Bolt::AuthFlags authFlags,
-                   std::function<void()> successCb = {},
-                   std::function<void(const QString &)> errorCb = {});
+    void authorize(Bolt::AuthFlags authFlags, std::function<void()> successCb = {}, std::function<void(const QString &)> errorCb = {});
 
 Q_SIGNALS:
     void statusChanged(Bolt::Status);
@@ -94,8 +91,7 @@ Q_SIGNALS:
     void authFlagsChanged(Bolt::AuthFlags authFlags);
 
 private:
-    template<class T> template<class ... Args>
-    friend QSharedPointer<T> QSharedPointer<T>::create(Args && ...);
+    template<class T> template<class... Args> friend QSharedPointer<T> QSharedPointer<T>::create(Args &&...);
 
     Device(const QDBusObjectPath &path, QObject *parent = nullptr);
 

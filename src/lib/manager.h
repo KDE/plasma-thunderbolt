@@ -34,7 +34,6 @@ class QDBusObjectPath;
 class OrgFreedesktopBolt1ManagerInterface;
 namespace Bolt
 {
-
 class Device;
 class KBOLT_EXPORT Manager : public QObject
 {
@@ -63,7 +62,9 @@ public:
     /**
      * Updates device authorization and stores it persistently.
      */
-    void enrollDevice(const QString &uid, Bolt::Policy policy, Bolt::AuthFlags flags,
+    void enrollDevice(const QString &uid,
+                      Bolt::Policy policy,
+                      Bolt::AuthFlags flags,
                       std::function<void()> successCallback = {},
                       std::function<void(const QString &)> errorCallback = {});
     /**
@@ -71,9 +72,7 @@ public:
      *
      * Next time the device is plugged in, it will not be authorized.
      */
-    void forgetDevice(const QString &uid,
-                      std::function<void()> successCallback = {},
-                      std::function<void(const QString &)> errorCallback = {});
+    void forgetDevice(const QString &uid, std::function<void()> successCallback = {}, std::function<void(const QString &)> errorCallback = {});
 
     Q_INVOKABLE QSharedPointer<Bolt::Device> device(const QString &uid) const;
     Q_INVOKABLE QSharedPointer<Bolt::Device> device(const QDBusObjectPath &path) const;

@@ -25,13 +25,14 @@
 
 #include <kdedmodule.h>
 
-#include <QSharedPointer>
-#include <QVector>
-#include <QTimer>
 #include <QMap>
+#include <QSharedPointer>
+#include <QTimer>
+#include <QVector>
 
 class KNotification;
-namespace Bolt {
+namespace Bolt
+{
 class Device;
 }
 
@@ -53,14 +54,14 @@ protected:
 private:
     enum AuthMode {
         Enroll,
-        Authorize
+        Authorize,
     };
     void authorizeDevices(BoltDeviceList devices, AuthMode mode);
 
 protected:
     Bolt::Manager mManager;
     BoltDeviceList mPendingDevices;
-    QMap<KNotification*, BoltDeviceList> mNotifiedDevices;
+    QMap<KNotification *, BoltDeviceList> mNotifiedDevices;
     QTimer mPendingDeviceTimer;
 };
 

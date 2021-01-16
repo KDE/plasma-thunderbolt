@@ -19,8 +19,8 @@
  */
 
 #include "device.h"
-#include "deviceinterface.h"
 #include "dbushelper.h"
+#include "deviceinterface.h"
 #include "libkbolt_debug.h"
 
 #include <QDBusObjectPath>
@@ -35,22 +35,23 @@ class DBusException : public std::runtime_error
 {
 public:
     DBusException(const QString &what)
-        : std::runtime_error(what.toStdString()) {}
+        : std::runtime_error(what.toStdString())
+    {
+    }
 };
 
 Device::Device(QObject *parent)
     : QObject(parent)
-{}
+{
+}
 
 Device::Device(const QDBusObjectPath &path, QObject *parent)
     : QObject(parent)
-    , mInterface(std::make_unique<DeviceInterface>(
-        DBusHelper::serviceName(), path.path(), DBusHelper::connection()))
+    , mInterface(std::make_unique<DeviceInterface>(DBusHelper::serviceName(), path.path(), DBusHelper::connection()))
     , mDBusPath(path)
 {
     if (!mInterface->isValid()) {
-        throw DBusException(QStringLiteral("Failed to obtain DBus interface for device %1: %2")
-                            .arg(path.path(), mInterface->lastError().message()));
+        throw DBusException(QStringLiteral("Failed to obtain DBus interface for device %1: %2").arg(path.path(), mInterface->lastError().message()));
     }
 
     // cache UID in case the we still need to identify the device, even if it's
@@ -175,32 +176,28 @@ QString Device::label() const
     return mInterface->label();
 }
 
-void Device::authorize(AuthFlags authFlags,
-                       std::function<void()> successCb,
-                       std::function<void(const QString &)> errorCb)
+void Device::authorize(AuthFlags authFlags, std::function<void()> successCb, std::function<void(const QString &)> errorCb)
 {
-    qCDebug(log_libkbolt, "Authorizing device %s with auth flags %s",
-            qUtf8Printable(mUid), qUtf8Printable(authFlagsToString(authFlags)));
+    qCDebug(log_libkbolt, "Authorizing device %s with auth flags %s", qUtf8Printable(mUid), qUtf8Printable(authFlagsToString(authFlags)));
 
     setStatusOverride(Status::Authorizing);
-    DBusHelper::call<QString>(mInterface.get(), QStringLiteral("Authorize"),
-            authFlagsToString(authFlags),
-            [this, cb = std::move(successCb)]() {
-                qCDebug(log_libkbolt, "Device %s was successfully authorized",
-                        qUtf8Printable(mUid));
-                clearStatusOverride();
-                if (cb) {
-                    cb();
-                }
-            },
-            [this, cb = std::move(errorCb)](const QString &error) {
-                qCWarning(log_libkbolt, "Failed to authorize device %s: %s",
-                          qUtf8Printable(mUid), qUtf8Printable(error));
-                setStatusOverride(Status::AuthError);
-                if (cb) {
-                    cb(error);
-                }
-            },
-            this);
+    DBusHelper::call<QString>(
+        mInterface.get(),
+        QStringLiteral("Authorize"),
+        authFlagsToString(authFlags),
+        [this, cb = std::move(successCb)]() {
+            qCDebug(log_libkbolt, "Device %s was successfully authorized", qUtf8Printable(mUid));
+            clearStatusOverride();
+            if (cb) {
+                cb();
+            }
+        },
+        [this, cb = std::move(errorCb)](const QString &error) {
+            qCWarning(log_libkbolt, "Failed to authorize device %s: %s", qUtf8Printable(mUid), qUtf8Printable(error));
+            setStatusOverride(Status::AuthError);
+            if (cb) {
+                cb(error);
+            }
+        },
+        this);
 }
-

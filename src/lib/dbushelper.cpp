@@ -21,12 +21,12 @@
 #include "dbushelper.h"
 
 #include <QDBusConnection>
-#include <QDBusPendingReply>
-#include <QDBusPendingCallWatcher>
 #include <QDBusError>
+#include <QDBusPendingCallWatcher>
+#include <QDBusPendingReply>
 
-namespace {
-
+namespace
+{
 bool isFakeEnv()
 {
     return qEnvironmentVariableIsSet("KBOLT_FAKE");
@@ -52,13 +52,10 @@ QString DBusHelper::serviceName()
     }
 }
 
-void DBusHelper::handleCall(QDBusPendingCall call, CallOkCallback &&okCb,
-                            CallErrorCallback &&errCb, QObject *parent)
+void DBusHelper::handleCall(QDBusPendingCall call, CallOkCallback &&okCb, CallErrorCallback &&errCb, QObject *parent)
 {
     auto watcher = new QDBusPendingCallWatcher(call);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished,
-                     parent, [okCb = std::move(okCb), errCb = std::move(errCb)]
-                         (QDBusPendingCallWatcher *watcher) {
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, parent, [okCb = std::move(okCb), errCb = std::move(errCb)](QDBusPendingCallWatcher *watcher) {
         watcher->deleteLater();
         const QDBusPendingReply<void> reply(*watcher);
         if (reply.isError()) {

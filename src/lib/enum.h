@@ -23,8 +23,8 @@
 
 #include "kbolt_export.h"
 
-#include <QMetaType>
 #include <QMetaObject>
+#include <QMetaType>
 #include <QString>
 
 namespace Bolt
@@ -41,7 +41,7 @@ enum class Status {
     Connected,
     Authorizing,
     AuthError,
-    Authorized
+    Authorized,
 };
 
 Q_ENUM_NS(Status)
@@ -53,8 +53,8 @@ enum class Auth {
     None = 0,
     NoPCIE = 1 << 0,
     Secure = 1 << 1,
-    NoKey  = 1 << 2,
-    Boot   = 1 << 3
+    NoKey = 1 << 2,
+    Boot = 1 << 3,
 };
 Q_ENUM_NS(Auth)
 Q_DECLARE_FLAGS(AuthFlags, Auth)
@@ -66,7 +66,7 @@ enum class KeyState {
     Unknown = -1,
     Missing,
     Have,
-    New
+    New,
 };
 Q_ENUM_NS(KeyState)
 
@@ -76,7 +76,7 @@ enum class Policy {
     Unknown = -1,
     Default,
     Manual,
-    Auto
+    Auto,
 };
 Q_ENUM_NS(Policy)
 
@@ -86,16 +86,15 @@ QString policyToString(Policy policy);
 enum class Type {
     Unknown = -1,
     Host,
-    Peripheral
+    Peripheral,
 };
 Q_ENUM_NS(Type)
 
 Type typeFromString(const QString &str);
 
-
 enum class AuthMode {
     Disabled = 0,
-    Enabled
+    Enabled,
 };
 Q_ENUM_NS(AuthMode)
 
@@ -108,7 +107,7 @@ enum class Security {
     DPOnly,
     User = '1', /* sic! */
     Secure = '2', /* sic! */
-    USBOnly = 4
+    USBOnly = 4,
 };
 Q_ENUM_NS(Security)
 
@@ -124,6 +123,5 @@ Q_DECLARE_METATYPE(Bolt::Type)
 Q_DECLARE_METATYPE(Bolt::AuthMode)
 Q_DECLARE_METATYPE(Bolt::Security)
 Q_DECLARE_OPERATORS_FOR_FLAGS(Bolt::AuthFlags)
-
 
 #endif

@@ -18,17 +18,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QObject>
-#include <QTest>
-#include <QSignalSpy>
 #include <QDebug>
+#include <QObject>
+#include <QSignalSpy>
+#include <QTest>
 
-#include "fakeserver.h"
-#include "fakemanager.h"
 #include "fakedevice.h"
+#include "fakemanager.h"
+#include "fakeserver.h"
 
-#include "manager.h"
 #include "device.h"
+#include "manager.h"
 
 #include <memory>
 
@@ -66,8 +66,7 @@ private Q_SLOTS:
 
         FakeDevice *fakeDevice = nullptr;
         try {
-            fakeDevice = fakeManager->addDevice(
-                std::make_unique<FakeDevice>(QStringLiteral("device1")));
+            fakeDevice = fakeManager->addDevice(std::make_unique<FakeDevice>(QStringLiteral("device1")));
         } catch (const FakeDeviceException &e) {
             qWarning("Fake device exception: %s", e.what());
             QFAIL("Caught device exception");

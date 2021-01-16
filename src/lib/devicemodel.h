@@ -27,7 +27,6 @@
 
 namespace Bolt
 {
-
 class Manager;
 class Device;
 class KBOLT_EXPORT DeviceModel : public QAbstractListModel
@@ -39,7 +38,7 @@ class KBOLT_EXPORT DeviceModel : public QAbstractListModel
     Q_PROPERTY(bool showHosts READ showHosts WRITE setShowHosts NOTIFY showHostsChanged)
 public:
     enum Role {
-        DeviceRole = Qt::UserRole
+        DeviceRole = Qt::UserRole,
     };
 
     using QAbstractListModel::QAbstractListModel;

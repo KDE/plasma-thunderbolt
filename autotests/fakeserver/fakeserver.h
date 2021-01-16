@@ -29,9 +29,13 @@ class FakeServerException : public std::runtime_error
 {
 public:
     FakeServerException(const char *what)
-        : std::runtime_error(what) {}
+        : std::runtime_error(what)
+    {
+    }
     FakeServerException(const QString &what)
-        : std::runtime_error(what.toStdString()) {}
+        : std::runtime_error(what.toStdString())
+    {
+    }
 };
 
 class FakeManager;
@@ -45,6 +49,7 @@ public:
     static void enableFakeEnv();
 
     FakeManager *manager() const;
+
 private:
     std::unique_ptr<FakeManager> mManager;
 };

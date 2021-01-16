@@ -30,7 +30,6 @@ class KCMBolt : public KQuickAddons::ConfigModule
 public:
     KCMBolt(QObject *parent, const QVariantList &args);
     ~KCMBolt() override = default;
-
 };
 
 #endif

@@ -21,21 +21,22 @@
 #ifndef FAKEMANAGER_H_
 #define FAKEMANAGER_H_
 
-#include <QObject>
 #include <QDBusObjectPath>
-#include <QList>
-#include <QString>
 #include <QJsonObject>
+#include <QList>
+#include <QObject>
+#include <QString>
 
-#include <memory>
 #include <map>
+#include <memory>
 
 class FakeManagerException : public std::runtime_error
 {
 public:
     FakeManagerException(const QString &what)
         : std::runtime_error(what.toStdString())
-    {}
+    {
+    }
 };
 
 class FakeDevice;
@@ -84,6 +85,5 @@ private:
 
     std::map<QString /*uid*/, std::unique_ptr<FakeDevice>> mDevices;
 };
-
 
 #endif

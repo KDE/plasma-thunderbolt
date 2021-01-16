@@ -18,12 +18,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <QCommandLineOption>
+#include <QCommandLineParser>
 #include <QCoreApplication>
 #include <QDBusConnection>
-#include <QCommandLineParser>
-#include <QCommandLineOption>
-#include <QJsonDocument>
 #include <QFile>
+#include <QJsonDocument>
 #include <QTimer>
 
 #include <iostream>

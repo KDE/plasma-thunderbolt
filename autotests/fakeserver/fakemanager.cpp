@@ -19,8 +19,8 @@
  */
 
 #include "fakemanager.h"
-#include "fakemanageradaptor.h"
 #include "fakedevice.h"
+#include "fakemanageradaptor.h"
 
 #include <QDBusConnection>
 #include <QDBusError>
@@ -32,7 +32,8 @@
 
 using namespace std::chrono_literals;
 
-namespace {
+namespace
+{
 static const QString kManagerDBusPath = QStringLiteral("/org/freedesktop/bolt");
 }
 
@@ -45,8 +46,7 @@ FakeManager::FakeManager(const QJsonObject &json, QObject *parent)
 {
     new FakeManagerAdaptor(this);
     if (!QDBusConnection::sessionBus().registerObject(kManagerDBusPath, this)) {
-        throw FakeManagerException(QStringLiteral("Failed to register FakeManager to DBus: %1")
-                    .arg(QDBusConnection::sessionBus().lastError().message()));
+        throw FakeManagerException(QStringLiteral("Failed to register FakeManager to DBus: %1").arg(QDBusConnection::sessionBus().lastError().message()));
     }
 
     const auto jsonDevices = json[QStringLiteral("Devices")].toArray();
@@ -61,8 +61,7 @@ FakeManager::FakeManager(QObject *parent)
 {
     new FakeManagerAdaptor(this);
     if (!QDBusConnection::sessionBus().registerObject(kManagerDBusPath, this)) {
-        throw FakeManagerException(QStringLiteral("Failed to register FakeManager to DBus: %1")
-                .arg(QDBusConnection::sessionBus().lastError().message()));
+        throw FakeManagerException(QStringLiteral("Failed to register FakeManager to DBus: %1").arg(QDBusConnection::sessionBus().lastError().message()));
     }
 }
 
@@ -89,12 +88,13 @@ void FakeManager::removeDevice(const QString &uid)
     Q_EMIT DeviceRemoved(device->dbusPath());
 }
 
-QList<FakeDevice*> FakeManager::devices() const
+QList<FakeDevice *> FakeManager::devices() const
 {
-    QList<FakeDevice*> rv;
+    QList<FakeDevice *> rv;
     rv.reserve(mDevices.size());
-    std::transform(mDevices.cbegin(), mDevices.cend(),
-                   std::back_inserter(rv), [](const auto &v) { return v.second.get(); });
+    std::transform(mDevices.cbegin(), mDevices.cend(), std::back_inserter(rv), [](const auto &v) {
+        return v.second.get();
+    });
     return rv;
 }
 
@@ -108,7 +108,7 @@ bool FakeManager::isProbing() const
     return mProbing;
 }
 
-QString  FakeManager::defaultPolicy() const
+QString FakeManager::defaultPolicy() const
 {
     return mDefaultPolicy;
 }
@@ -150,9 +150,7 @@ QDBusObjectPath FakeManager::DeviceByUid(const QString &uid) const
     }
 }
 
-QDBusObjectPath FakeManager::EnrollDevice(const QString &uid,
-                                          const QString &policy,
-                                          const QString &flags)
+QDBusObjectPath FakeManager::EnrollDevice(const QString &uid, const QString &policy, const QString &flags)
 {
     std::this_thread::sleep_for(1s); // simulate this operation taking time
 
@@ -185,4 +183,3 @@ void FakeManager::ForgetDevice(const QString &uid)
     device->setStored(false);
     device->setStatus(QLatin1String("connected"));
 }
-

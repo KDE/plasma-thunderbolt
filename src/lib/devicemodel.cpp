@@ -40,24 +40,22 @@ void DeviceModel::setManager(Manager *manager)
     mManager = manager;
     mDevices.clear();
     if (mManager) {
-        connect(mManager, &Manager::deviceAdded,
-                this, [this](const QSharedPointer<Device> &device) {
-                    if (mShowHosts || device->type() == Type::Peripheral) {
-                        beginInsertRows({}, mDevices.count(), mDevices.count());
-                        mDevices.push_back(device);
-                        endInsertRows();
-                    }
-                });
-        connect(mManager, &Manager::deviceRemoved,
-                this, [this](const QSharedPointer<Device> &device) {
-                    const int idx = mDevices.indexOf(device);
-                    if (idx == -1) {
-                        return;
-                    }
-                    beginRemoveRows({}, idx, idx);
-                    mDevices.removeAt(idx);
-                    endRemoveRows();
-                });
+        connect(mManager, &Manager::deviceAdded, this, [this](const QSharedPointer<Device> &device) {
+            if (mShowHosts || device->type() == Type::Peripheral) {
+                beginInsertRows({}, mDevices.count(), mDevices.count());
+                mDevices.push_back(device);
+                endInsertRows();
+            }
+        });
+        connect(mManager, &Manager::deviceRemoved, this, [this](const QSharedPointer<Device> &device) {
+            const int idx = mDevices.indexOf(device);
+            if (idx == -1) {
+                return;
+            }
+            beginRemoveRows({}, idx, idx);
+            mDevices.removeAt(idx);
+            endRemoveRows();
+        });
 
         populateWithoutReset();
     }
@@ -128,8 +126,7 @@ void DeviceModel::populateWithoutReset()
 
     mDevices.clear();
     const auto all = mManager->devices();
-    std::copy_if(all.cbegin(), all.cend(), std::back_inserter(mDevices),
-            [this](const auto &device) {
-                return mShowHosts || device->type() == Type::Peripheral;
-            });
+    std::copy_if(all.cbegin(), all.cend(), std::back_inserter(mDevices), [this](const auto &device) {
+        return mShowHosts || device->type() == Type::Peripheral;
+    });
 }

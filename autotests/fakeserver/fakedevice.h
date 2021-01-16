@@ -21,15 +21,17 @@
 #ifndef FAKEDEVICE_H
 #define FAKEDEVICE_H
 
-#include <QObject>
 #include <QDBusObjectPath>
 #include <QJsonObject>
+#include <QObject>
 
 class FakeDeviceException : public std::runtime_error
 {
 public:
     FakeDeviceException(const QString &what)
-        : std::runtime_error(what.toStdString()) {}
+        : std::runtime_error(what.toStdString())
+    {
+    }
 };
 
 class FakeDevice : public QObject
@@ -116,4 +118,3 @@ private:
 };
 
 #endif
-

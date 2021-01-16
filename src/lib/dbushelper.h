@@ -21,33 +21,28 @@
 #ifndef DBUSHELPER_H_
 #define DBUSHELPER_H_
 
-#include <QDBusConnection>
 #include <QDBusAbstractInterface>
+#include <QDBusConnection>
 
-namespace KBolt {
+namespace KBolt
+{
 class Device;
 }
 
 namespace DBusHelper
 {
-
 QDBusConnection connection();
 QString serviceName();
 
 using CallErrorCallback = std::function<void(const QString &)>;
 using CallOkCallback = std::function<void()>;
-void handleCall(QDBusPendingCall call, CallOkCallback &&okCb,
-                CallErrorCallback &&errCb, QObject *parent);
+void handleCall(QDBusPendingCall call, CallOkCallback &&okCb, CallErrorCallback &&errCb, QObject *parent);
 
-template<typename ... V>
-void call(QDBusAbstractInterface *iface, const QString &method, const V & ... args,
-          CallOkCallback &&okCb, CallErrorCallback &&errCb, QObject *parent = nullptr)
+template<typename... V>
+void call(QDBusAbstractInterface *iface, const QString &method, const V &... args, CallOkCallback &&okCb, CallErrorCallback &&errCb, QObject *parent = nullptr)
 {
-    handleCall(iface->asyncCall(method, args ...),
-               std::move(okCb), std::move(errCb), parent);
+    handleCall(iface->asyncCall(method, args...), std::move(okCb), std::move(errCb), parent);
 }
-
-
 
 } // namespace
 

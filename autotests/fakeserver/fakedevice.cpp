@@ -35,8 +35,7 @@ FakeDevice::FakeDevice(const QString &uid, QObject *parent)
     new FakeDeviceAdaptor(this);
     auto bus = QDBusConnection::sessionBus();
     if (!bus.registerObject(dbusPath().path(), this)) {
-        throw FakeDeviceException(QStringLiteral("Failed to register device %1 to DBus: %2")
-                .arg(mUid, bus.lastError().message()));
+        throw FakeDeviceException(QStringLiteral("Failed to register device %1 to DBus: %2").arg(mUid, bus.lastError().message()));
     }
 }
 
@@ -61,8 +60,7 @@ FakeDevice::FakeDevice(const QJsonObject &json, QObject *parent)
     new FakeDeviceAdaptor(this);
     auto bus = QDBusConnection::sessionBus();
     if (!bus.registerObject(dbusPath().path(), this)) {
-        throw FakeDeviceException(QStringLiteral("Failed to register device %1 to DBus: %2")
-                .arg(mUid, bus.lastError().message()));
+        throw FakeDeviceException(QStringLiteral("Failed to register device %1 to DBus: %2").arg(mUid, bus.lastError().message()));
     }
 }
 
@@ -73,8 +71,7 @@ FakeDevice::~FakeDevice()
 
 QDBusObjectPath FakeDevice::dbusPath() const
 {
-    return QDBusObjectPath(QStringLiteral("/org/freedesktop/bolt/devices/%1")
-            .arg(QString(mUid).replace(QLatin1Char('-'), QLatin1Char('_'))));
+    return QDBusObjectPath(QStringLiteral("/org/freedesktop/bolt/devices/%1").arg(QString(mUid).replace(QLatin1Char('-'), QLatin1Char('_'))));
 }
 
 QString FakeDevice::uid() const

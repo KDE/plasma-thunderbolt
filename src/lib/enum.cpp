@@ -22,8 +22,8 @@
 #include "libkbolt_debug.h"
 
 #include <QStringList>
-#include <QVector>
 #include <QStringRef>
+#include <QVector>
 
 Bolt::Status Bolt::statusFromString(const QString &str)
 {
@@ -116,7 +116,6 @@ QString Bolt::authFlagsToString(AuthFlags flags)
 
     return str.join(QStringLiteral(" | "));
 }
-
 
 Bolt::KeyState Bolt::keyStateFromString(const QString &str)
 {
@@ -230,4 +229,3 @@ Bolt::Security Bolt::securityFromString(const QString &str)
         return Bolt::Security::Unknown;
     }
 }
-
