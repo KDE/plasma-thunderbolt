@@ -21,7 +21,7 @@ qt5_add_dbus_adaptor(
 )
 
 add_library(libboltfakeserver STATIC ${libboltfakeserver_SRCS})
-target_link_libraries(libboltfakeserver Qt5::Core Qt5::DBus Qt5::Test)
+target_link_libraries(libboltfakeserver Qt::Core Qt::DBus Qt::Test)
 set_target_properties(libboltfakeserver PROPERTIES OUTPUT_NAME boltfakeserver CXX_STANDARD 14)
 target_include_directories(libboltfakeserver PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>;$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>")
 
@@ -32,4 +32,4 @@ set(boltfakeserver_SRCS
 )
 
 add_executable(boltfakeserver ${boltfakeserver_SRCS})
-target_link_libraries(boltfakeserver libboltfakeserver Qt5::Core Qt5::DBus)
+target_link_libraries(boltfakeserver libboltfakeserver Qt::Core Qt::DBus)
