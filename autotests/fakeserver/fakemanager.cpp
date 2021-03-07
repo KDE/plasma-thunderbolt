@@ -29,6 +29,7 @@
 #include <QDebug>
 
 #include <chrono>
+#include <thread>
 
 using namespace std::chrono_literals;
 
