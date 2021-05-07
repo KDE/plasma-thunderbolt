@@ -53,9 +53,8 @@ set_package_properties(Bolt PROPERTIES DESCRIPTION "Thunderbolt device manager"
                        TYPE RUNTIME)
 
 #################################################
-if (EXISTS "${CMAKE_SOURCE_DIR}/.git")
-   add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
-endif()
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050c00)
+
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
