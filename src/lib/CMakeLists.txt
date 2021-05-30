@@ -14,7 +14,7 @@ ecm_qt_declare_logging_category(LIBKBOLT_SRCS
     CATEGORY_NAME org.kde.libkbolt
 )
 
-qt5_add_dbus_interfaces(
+qt_add_dbus_interfaces(
     LIBKBOLT_SRCS
 
     ../interfaces/org.freedesktop.bolt1.manager.xml

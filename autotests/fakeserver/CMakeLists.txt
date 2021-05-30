@@ -9,12 +9,12 @@ set(libboltfakeserver_SRCS
     fakeserver.cpp
 )
 
-qt5_add_dbus_adaptor(
+qt_add_dbus_adaptor(
     libboltfakeserver_SRCS
     ${CMAKE_SOURCE_DIR}/src/interfaces/org.freedesktop.bolt1.device.xml
     fakedevice.h FakeDevice fakedeviceadaptor FakeDeviceAdaptor
 )
-qt5_add_dbus_adaptor(
+qt_add_dbus_adaptor(
     libboltfakeserver_SRCS
     ${CMAKE_SOURCE_DIR}/src/interfaces/org.freedesktop.bolt1.manager.xml
     fakemanager.h FakeManager fakemanageradaptor FakeManagerAdaptor
