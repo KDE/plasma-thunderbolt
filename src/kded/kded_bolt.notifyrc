@@ -1,6 +1,7 @@
 [Global]
 IconName=preferences-desktop-thunderbolt
 Name=Thunderbolt Device Monitor
+Name[ar]=مراقب جهاز ثندر بولت
 Name[az]=Thunderbolt cihazına nəzarət
 Name[ca]=Supervisor del dispositiu Thunderbolt
 Name[ca@valencia]=Supervisor del dispositiu Thunderbolt
@@ -35,6 +36,7 @@ Name[x-test]=xxThunderbolt Device Monitorxx
 Name[zh_CN]=雷电接口设备监视器
 Name[zh_TW]=Thunderbolt 裝置監控工具
 Comment=Thunderbolt Device Monitor
+Comment[ar]=مراقب جهاز ثندر بولت
 Comment[az]=Thunderbolt cihazına nəzarət
 Comment[ca]=Supervisor del dispositiu Thunderbolt
 Comment[ca@valencia]=Supervisor del dispositiu Thunderbolt
@@ -71,6 +73,7 @@ Comment[zh_TW]=Thunderbolt 裝置監控工具
 
 [Context/warningnot]
 Name=Warning
+Name[ar]=تحذير
 Name[az]=Xəbərdarlıq
 Name[ca]=Avís
 Name[ca@valencia]=Avís
@@ -105,6 +108,7 @@ Name[x-test]=xxWarningxx
 Name[zh_CN]=警告
 Name[zh_TW]=警告
 Comment=Used for warning notifications
+Comment[ar]=يُتسخدَم لتنبيهات التحذير
 Comment[az]=Xəbərdarlıq bildirişləri üçün istifadə olunur
 Comment[ca]=S'usa per a les notificacions d'avís
 Comment[ca@valencia]=S'usa per a les notificacions d'avís
@@ -141,6 +145,7 @@ Comment[zh_TW]=用於警告通知
 
 [Content/errornot]
 Name=Error
+Name[ar]=خطأ
 Name[az]=Xəta
 Name[ca]=Error
 Name[ca@valencia]=Error
@@ -175,6 +180,7 @@ Name[x-test]=xxErrorxx
 Name[zh_CN]=错误
 Name[zh_TW]=錯誤
 Comment=Used for error notifications
+Comment[ar]=يُتسخدَم لتنبيهات الأخطاء
 Comment[az]=Xəbərdarlıq bildirişləri üçün istifadə olunur
 Comment[ca]=S'usa per a les notificacions d'error
 Comment[ca@valencia]=S'usa per a les notificacions d'error
@@ -211,6 +217,7 @@ Comment[zh_TW]=用於錯誤通知
 
 [Event/unauthorizedDeviceConnected]
 Name=Unauthorized device is plugged in
+Name[ar]=وصّل جهاز غير مرخص
 Name[az]=İcazəsiz cihaz qoşulub
 Name[ca]=S'ha endollat un dispositiu no autoritzat
 Name[ca@valencia]=S'ha connectat un dispositiu no autoritzat
@@ -244,6 +251,7 @@ Name[x-test]=xxUnauthorized device is plugged inxx
 Name[zh_CN]=未授权设备已被插入
 Name[zh_TW]=插入了未授權裝置
 Comment=An unauthorized Thunderbolt device has been plugged into the computer
+Comment[ar]=وصّل جهاز ثندر بولت غير مرخص بالحاسوب
 Comment[az]=İcazəsiz Thunderbolt cihazı komputerə qoşulub.
 Comment[ca]=S'ha endollat un dispositiu Thunderbolt no autoritzat a l'ordinador
 Comment[ca@valencia]=S'ha connectat un dispositiu Thunderbolt no autoritzat a l'ordinador
@@ -281,6 +289,7 @@ Action=Popup
 
 [Event/deviceAuthError]
 Name=Error during device authorization
+Name[ar]=خطأ أثناء تصريح الجهاز
 Name[az]=Cihaza icazə verilməsi zamanı xəta
 Name[ca]=Error durant l'autorització del dispositiu
 Name[ca@valencia]=Error durant l'autorització del dispositiu
@@ -314,6 +323,7 @@ Name[x-test]=xxError during device authorizationxx
 Name[zh_CN]=设备授权时出错
 Name[zh_TW]=裝置授權時發生錯誤
 Comment=An error occurred while authorizing or blocking a Thunderbolt device
+Comment[ar]=حدث خطأ أثناء تصريح أو منع جهاز ثندر بولت
 Comment[az]=Thunderbolt cihazına icazə verilərkən və ya bloklanarkən xəta baş verdi
 Comment[ca]=Hi ha hagut un error en autoritzar o blocar un dispositiu Thunderbolt
 Comment[ca@valencia]=Hi ha hagut un error en autoritzar o bloquejar un dispositiu Thunderbolt

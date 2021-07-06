@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Thunderbolt
+Name[ar]=ثندر بولت
 Name[az]=Thunderbolt
 Name[ca]=Thunderbolt
 Name[ca@valencia]=Thunderbolt
@@ -34,6 +35,7 @@ Name[x-test]=xxThunderboltxx
 Name[zh_CN]=雷电接口
 Name[zh_TW]=Thunderbolt
 Comment=Thunderbolt Device Management
+Comment[ar]=إدارة جهاز ثندر بولت
 Comment[az]=Thunderbolt cihazı meneceri
 Comment[ca]=Gestió de dispositius Thunderbolt
 Comment[ca@valencia]=Gestió del dispositiu Thunderbolt
