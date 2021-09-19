@@ -91,4 +91,5 @@ X-KDE-Keywords[sl]=thunderbolt,strojna oprema,naprava,protokol,protokol thunderb
 X-KDE-Keywords[sv]=thunderbolt,maskinvara,enhet,protokoll,thunderbolt-protokoll,överföring,usb,usb-c,pci-e,externa enheter
 X-KDE-Keywords[uk]=thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,тандерболт,фандерболт,апаратне,обладнання,протокол,протокол тандерболт,передавання,юесбі,зовнішні пристрої
 X-KDE-Keywords[x-test]=xxthunderboltxx,xxhardwarexx,xxdevicexx,xxprotocolxx,xxthunderbolt protocolxx,xxtransferxx,xxusbxx,xxusb-cxx,xxpci-exx,xxexternal devicesxx
+X-KDE-Keywords[zh_CN]=thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,雷电,硬件,设备,协议,雷电协议,传输,外部设备
 Categories=Qt;KDE;X-KDE-settings-system
