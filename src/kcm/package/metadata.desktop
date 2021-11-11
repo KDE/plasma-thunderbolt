@@ -80,5 +80,4 @@ X-KDE-PluginInfo-Name=kcm_bolt
 X-KDE-PluginInfo-Version=
 X-KDE-PluginInfo-Website=
 X-KDE-ServiceTypes=Plasma/Generic
-X-Plasma-API=declarativeappletscript
 X-Plasma-MainScript=ui/main.qml
