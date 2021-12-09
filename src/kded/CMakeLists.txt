@@ -4,18 +4,19 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
 )
 
-set(KDED_BOLT_SRCS
+
+
+add_library(kded_bolt MODULE)
+target_sources(kded_bolt PRIVATE
     main.cpp
     kded_bolt.cpp
+    kded_bolt.h
 )
-
-ecm_qt_declare_logging_category(KDED_BOLT_SRCS
+ecm_qt_declare_logging_category(kded_bolt
     HEADER kded_bolt_debug.h
     IDENTIFIER log_kded_bolt
     CATEGORY_NAME org.kde.bolt.kded
 )
-
-add_library(kded_bolt MODULE ${KDED_BOLT_SRCS})
 set_target_properties(kded_bolt PROPERTIES CXX_STANDARD 14)
 kcoreaddons_desktop_to_json(kded_bolt kded_bolt.desktop)
 target_link_libraries(kded_bolt

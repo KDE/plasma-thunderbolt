@@ -1,11 +1,12 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_bolt\")
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-set(KCM_BOLT_SRCS
-    kcm_bolt.cpp
-)
 
-add_library(kcm_bolt MODULE ${KCM_BOLT_SRCS})
+add_library(kcm_bolt MODULE)
+target_sources(kcm_bolt PRIVATE
+    kcm_bolt.cpp
+    kcm_bolt.h
+)
 set_target_properties(kcm_bolt PROPERTIES CXX_STANDARD 14)
 target_link_libraries(kcm_bolt
     KF5::QuickAddons
