@@ -6,9 +6,9 @@ set(CMAKE_CXX_STANDARD 14)
 
 #################################################
 # Dependencies
-
-set(QT5_VERSION "5.10")
-set(KF5_VERSION "5.70")
+set(QT_MIN_VERSION "5.15.0")
+set(KF5_VERSION "5.86")
+set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 
 find_package(ECM ${KF5_VERSION} REQUIRED)
 
@@ -23,9 +23,7 @@ include(GenerateExportHeader)
 include(CheckIncludeFiles)
 include(CheckSymbolExists)
 include(FeatureSummary)
-if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
-    include(KDEGitCommitHooks)
-endif()
+include(KDEGitCommitHooks)
 
 kde_enable_exceptions()
 
@@ -54,6 +52,7 @@ set_package_properties(Bolt PROPERTIES DESCRIPTION "Thunderbolt device manager"
 
 #################################################
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050c00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800)
 
 if (BUILD_TESTING)
     add_subdirectory(autotests)
@@ -65,8 +64,6 @@ add_subdirectory(src)
 # add clang-format target for all our real source files
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
-if(ECM_VERSION VERSION_GREATER_EQUAL 5.79)
-    kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
-endif()
+kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
