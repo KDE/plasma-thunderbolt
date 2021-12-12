@@ -79,6 +79,7 @@ Comment[x-test]=xxThunderbolt Device Managementxx
 Comment[zh_CN]=雷电接口设备管理
 Comment[zh_TW]=Thunderbolt 裝置管理
 X-KDE-Keywords=thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices
+X-KDE-Keywords[ar]=ثندربولت
 X-KDE-Keywords[az]=thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,avadanlıq,cihaz,protokol,köçürmə,xarici cihazlar
 X-KDE-Keywords[ca]=thunderbolt,maquinari,dispositiu,protocol,protocol del thunderbolt,transferència,usb,usb-c,pci-e,dispositius externs
 X-KDE-Keywords[en_GB]=thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices
