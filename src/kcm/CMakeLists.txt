@@ -15,10 +15,8 @@ target_link_libraries(kcm_bolt
     kbolt
 )
 
-kcoreaddons_desktop_to_json(kcm_bolt "kcm_bolt.desktop" SERVICE_TYPES kcmodule.desktop)
-
-install(FILES kcm_bolt.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
-install(TARGETS kcm_bolt DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
+install(TARGETS kcm_bolt DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
+install(FILES kcm_bolt.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_bolt kcms)
 
