@@ -2,6 +2,12 @@
     "Categories": "Qt;KDE;X-KDE-settings-system",
     "KPlugin": {
         "Description": "Thunderbolt Device Management",
+        "Description[ca]": "Gestió dels dispositius Thunderbolt",
+        "Description[ia]": "Gestion de dispositivo de Thunderbolt",
+        "Description[nl]": "Thunderbolt apparaatbeheer",
+        "Description[ru]": "Управление устройствами Thunderbolt",
+        "Description[uk]": "Керування пристроями Thunderbolt",
+        "Description[x-test]": "xxThunderbolt Device Managementxx",
         "Icon": "preferences-desktop-thunderbolt",
         "Name": "Thunderbolt",
         "Name[ar]": "ثندر بولت",
