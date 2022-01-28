@@ -6,7 +6,6 @@
 
 #include "devicemodel.h"
 #include "device.h"
-#include "manager.h"
 
 using namespace Bolt;
 

@@ -10,10 +10,9 @@
 #include <QAbstractListModel>
 
 #include "kbolt_export.h"
-
+#include "manager.h"
 namespace Bolt
 {
-class Manager;
 class Device;
 class KBOLT_EXPORT DeviceModel : public QAbstractListModel
 {

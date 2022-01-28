@@ -8,7 +8,11 @@
 #include "libkbolt_debug.h"
 
 #include <QStringList>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QStringRef>
+#else
+#include <QStringView>
+#endif
 #include <QVector>
 
 Bolt::Status Bolt::statusFromString(const QString &str)
@@ -58,7 +62,11 @@ QString Bolt::statusToString(Bolt::Status status)
 
 Bolt::AuthFlags Bolt::authFlagsFromString(const QString &str)
 {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     const auto splitRef = str.splitRef(QStringLiteral("|"));
+#else
+    const auto splitRef = str.split(QStringLiteral("|"));
+#endif
     Bolt::AuthFlags outFlags = Bolt::Auth::None;
     for (const auto &flag : splitRef) {
         const auto f = flag.trimmed();

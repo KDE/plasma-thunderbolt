@@ -27,5 +27,5 @@ target_link_libraries(kded_bolt
     kbolt
 )
 
-install(TARGETS kded_bolt DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/kded)
-install(FILES kded_bolt.notifyrc DESTINATION ${KNOTIFYRC_INSTALL_DIR})
+install(TARGETS kded_bolt DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf${QT_MAJOR_VERSION}/kded)
+install(FILES kded_bolt.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
