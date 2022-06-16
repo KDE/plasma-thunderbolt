@@ -18,6 +18,8 @@ Manager::Manager(QObject *parent)
     : QObject(parent)
     , mInterface(std::make_unique<ManagerInterface>(DBusHelper::serviceName(), QStringLiteral("/org/freedesktop/bolt"), DBusHelper::connection()))
 {
+    qDBusRegisterMetaType<QDBusObjectPath>();
+
     if (!mInterface->isValid()) {
         qCWarning(log_libkbolt, "Failed to connect to Bolt manager DBus interface: %s", qUtf8Printable(mInterface->lastError().message()));
         return;
