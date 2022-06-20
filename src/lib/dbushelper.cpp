@@ -6,7 +6,6 @@
 
 #include "dbushelper.h"
 
-#include <QDBusConnection>
 #include <QDBusError>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>

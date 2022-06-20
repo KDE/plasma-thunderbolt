@@ -7,7 +7,6 @@
 #include "manager.h"
 #include "dbushelper.h"
 #include "device.h"
-#include "enum.h"
 #include "libkbolt_debug.h"
 #include "managerinterface.h"
 

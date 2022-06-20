@@ -9,8 +9,6 @@
 #include "deviceinterface.h"
 #include "libkbolt_debug.h"
 
-#include <QDBusObjectPath>
-
 #include <stdexcept>
 
 using namespace Bolt;
