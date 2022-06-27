@@ -46,7 +46,7 @@ class KBOLT_EXPORT Device : public QObject, public QEnableSharedFromThis<Device>
     friend class Manager;
 
 public:
-    static QSharedPointer<Device> create(const QDBusObjectPath &path, QObject *parent = nullptr);
+    static QSharedPointer<Device> create(const QDBusObjectPath &path);
     explicit Device(QObject *parent = nullptr);
     ~Device() override;
 

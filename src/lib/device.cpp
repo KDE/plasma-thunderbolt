@@ -47,10 +47,10 @@ Device::Device(const QDBusObjectPath &path, QObject *parent)
 
 Device::~Device() = default;
 
-QSharedPointer<Device> Device::create(const QDBusObjectPath &path, QObject *parent)
+QSharedPointer<Device> Device::create(const QDBusObjectPath &path)
 {
     try {
-        return QSharedPointer<Device>::create(path, parent);
+        return QSharedPointer<Device>::create(path);
     } catch (const DBusException &e) {
         qCWarning(log_libkbolt, "%s", e.what());
         return {};
