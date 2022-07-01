@@ -2,6 +2,7 @@
 Name=Thunderbolt Device Monitor
 Name[ar]=مراقب جهاز ثندر بولت
 Name[az]=Thunderbolt cihazına nəzarət
+Name[bg]=Мониториране на Thunderbolt устройства
 Name[ca]=Supervisor del dispositiu Thunderbolt
 Name[ca@valencia]=Supervisor del dispositiu Thunderbolt
 Name[cs]=Monitoring zařízení Thunderbolt
@@ -39,6 +40,7 @@ Name[zh_TW]=Thunderbolt 裝置監控工具
 Comment=Thunderbolt Device Monitor
 Comment[ar]=مراقب جهاز ثندر بولت
 Comment[az]=Thunderbolt cihazına nəzarət
+Comment[bg]=Мониториране на Thunderbolt устройства
 Comment[ca]=Supervisor del dispositiu Thunderbolt
 Comment[ca@valencia]=Supervisor del dispositiu Thunderbolt
 Comment[cs]=Monitoring zařízení Thunderbolt
