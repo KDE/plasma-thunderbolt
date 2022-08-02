@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 14)
 #################################################
 # Dependencies
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_VERSION "5.90")
+set(KF5_VERSION "5.97")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 
 find_package(ECM ${KF5_VERSION} REQUIRED)

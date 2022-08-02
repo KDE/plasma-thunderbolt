@@ -3,6 +3,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 
 add_library(kcm_bolt MODULE)
+kcmutils_generate_desktop_file(kcm_bolt)
 target_sources(kcm_bolt PRIVATE
     kcm_bolt.cpp
     kcm_bolt.h
@@ -16,7 +17,6 @@ target_link_libraries(kcm_bolt
 )
 
 install(TARGETS kcm_bolt DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
-install(FILES kcm_bolt.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_bolt kcms)
 
