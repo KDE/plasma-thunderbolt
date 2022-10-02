@@ -1,0 +1,200 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-thunderbolt package.
+# Sergiu Bivol <sergiu@cip.md>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-thunderbolt\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"PO-Revision-Date: 2020-09-08 18:18+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@cip.md"
+
+#: kcm_bolt.cpp:70
+#, kde-format
+msgid "Thunderbolt Device Management"
+msgstr "Gestiune dispozitive Thunderbolt"
+
+#: kcm_bolt.cpp:72
+#, kde-format
+msgid "System Settings module for managing Thunderbolt devices."
+msgstr ""
+"Modul pentru Configurări de sistem de gestiune a dispozitivelor Thunderbolt."
+
+#: kcm_bolt.cpp:74
+#, kde-format
+msgid "Daniel Vrátil"
+msgstr "Daniel Vrátil"
+
+#: package/contents/ui/DeviceList.qml:27
+#, kde-format
+msgid "Enable Thunderbolt devices"
+msgstr "Activează dispozitive Thunderbolt"
+
+#: package/contents/ui/DeviceList.qml:61
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "Niciun dispozitiv Thunderbolt conectat"
+
+#: package/contents/ui/DeviceView.qml:64
+#, kde-format
+msgid "Vendor:"
+msgstr "Vânzător:"
+
+#: package/contents/ui/DeviceView.qml:68
+#, kde-format
+msgid "UID:"
+msgstr "UID:"
+
+#: package/contents/ui/DeviceView.qml:72
+#, kde-format
+msgid "Status:"
+msgstr "Stare:"
+
+#: package/contents/ui/DeviceView.qml:77
+#, kde-format
+msgid "Authorized at:"
+msgstr "Autorizat la:"
+
+#: package/contents/ui/DeviceView.qml:82
+#, kde-format
+msgid "Connected at:"
+msgstr "Conectat la:"
+
+#: package/contents/ui/DeviceView.qml:87
+#, kde-format
+msgid "Enrolled at:"
+msgstr "Înrolat la:"
+
+#: package/contents/ui/DeviceView.qml:91
+#, kde-format
+msgid "Yes"
+msgstr "Da"
+
+#: package/contents/ui/DeviceView.qml:91
+#, kde-format
+msgid "No"
+msgstr "Nu"
+
+#: package/contents/ui/DeviceView.qml:92
+#, kde-format
+msgid "Trusted:"
+msgstr "De încredere:"
+
+#: package/contents/ui/DeviceView.qml:101
+#, kde-format
+msgid "Authorizing..."
+msgstr "Se autorizează..."
+
+#: package/contents/ui/DeviceView.qml:101
+#, kde-format
+msgid "Authorize"
+msgstr "Autorizează"
+
+#: package/contents/ui/DeviceView.qml:112
+#: package/contents/ui/DeviceView.qml:132
+#, kde-format
+msgid "Failed to enroll device <b>%1</b>: %2"
+msgstr "Înrolarea dispozitivului <b>%1</b> a eșuat: %2"
+
+#: package/contents/ui/DeviceView.qml:119
+#, kde-format
+msgid "Trust this Device"
+msgstr "Acordă încredere acestui dispozitiv"
+
+#: package/contents/ui/DeviceView.qml:140
+#, kde-format
+msgid "Revoke Trust"
+msgstr "Revocă încrederea"
+
+#: package/contents/ui/DeviceView.qml:152
+#, kde-format
+msgid "Error changing device trust: <b>%1</b>: %2"
+msgstr "Eroare la schimbarea încrederii în dispozitiv: <b>%1</b>: %2"
+
+#: package/contents/ui/DeviceView.qml:169
+#, kde-format
+msgid ""
+"Hint: trusted device will be automatically authorized the next time it is "
+"connected to the computer."
+msgstr ""
+"Indiciu: dispozitivul de încredere va fi autorizat automat când e conectat "
+"iar la calculator."
+
+#: package/contents/ui/DeviceView.qml:170
+#, kde-format
+msgid ""
+"Hint: an untrusted device needs to be manually authorized each time it is "
+"connected to the computer."
+msgstr ""
+"Indiciu: un dispozitiv fără încredere trebuie autorizat manual de fiecare "
+"dată când e conectat la calculator."
+
+#: package/contents/ui/main.qml:18
+#, kde-format
+msgid ""
+"This module allows you to manage Thunderbolt devices connected to your "
+"computer."
+msgstr ""
+"Acest modul permite gestiunea dispozitivelor Thunderbolt conectate la "
+"calculator."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Thunderbolt support has been disabled in BIOS"
+msgstr "Suportul pentru Thunderbolt a fost dezactivat în BIOS"
+
+#: package/contents/ui/main.qml:45
+#, kde-format
+msgid "Thunderbolt subsystem is not available"
+msgstr "Subsistemul Thunderbolt nu e disponibil"
+
+#: package/contents/ui/utils.js:16
+msgid "Disconnected"
+msgstr "Deconectat"
+
+#: package/contents/ui/utils.js:18
+msgid "Connecting"
+msgstr "Se conectează"
+
+#: package/contents/ui/utils.js:20
+msgid "Connected"
+msgstr "Conectat"
+
+#: package/contents/ui/utils.js:23
+msgid "Authorization Error"
+msgstr "Eroare de autorizare"
+
+#: package/contents/ui/utils.js:25
+msgid "Authorizing"
+msgstr "Se autorizează"
+
+#: package/contents/ui/utils.js:29
+msgid "Reduced Functionality"
+msgstr "Funcționalitate redusă"
+
+#: package/contents/ui/utils.js:31
+msgid "Connected & Authorized"
+msgstr "Conectat și autorizat"
+
+#: package/contents/ui/utils.js:38
+msgid "Trusted"
+msgstr "De încredere"

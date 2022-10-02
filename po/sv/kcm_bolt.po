@@ -1,0 +1,198 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-thunderbolt package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-thunderbolt\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"PO-Revision-Date: 2019-10-26 11:09+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stefan Asserhäll"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "stefan.asserhall@bredband.net"
+
+#: kcm_bolt.cpp:70
+#, kde-format
+msgid "Thunderbolt Device Management"
+msgstr "Thunderbolt enhetshantering"
+
+#: kcm_bolt.cpp:72
+#, kde-format
+msgid "System Settings module for managing Thunderbolt devices."
+msgstr "Systeminställningsmodul för att hantera Thunderbolt-enheter."
+
+#: kcm_bolt.cpp:74
+#, kde-format
+msgid "Daniel Vrátil"
+msgstr "Daniel Vrátil"
+
+#: package/contents/ui/DeviceList.qml:27
+#, kde-format
+msgid "Enable Thunderbolt devices"
+msgstr "Aktivera Thunderbolt-enheter"
+
+#: package/contents/ui/DeviceList.qml:61
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "Inga Thunderbolt-enheter anslutna"
+
+#: package/contents/ui/DeviceView.qml:64
+#, kde-format
+msgid "Vendor:"
+msgstr "Tillverkare:"
+
+#: package/contents/ui/DeviceView.qml:68
+#, kde-format
+msgid "UID:"
+msgstr "Användar-id:"
+
+#: package/contents/ui/DeviceView.qml:72
+#, kde-format
+msgid "Status:"
+msgstr "Status:"
+
+#: package/contents/ui/DeviceView.qml:77
+#, kde-format
+msgid "Authorized at:"
+msgstr "Behörighet given:"
+
+#: package/contents/ui/DeviceView.qml:82
+#, kde-format
+msgid "Connected at:"
+msgstr "Ansluten:"
+
+#: package/contents/ui/DeviceView.qml:87
+#, kde-format
+msgid "Enrolled at:"
+msgstr "Inregistrerad:"
+
+#: package/contents/ui/DeviceView.qml:91
+#, kde-format
+msgid "Yes"
+msgstr "Ja"
+
+#: package/contents/ui/DeviceView.qml:91
+#, kde-format
+msgid "No"
+msgstr "Nej"
+
+#: package/contents/ui/DeviceView.qml:92
+#, kde-format
+msgid "Trusted:"
+msgstr "Pålitlig:"
+
+#: package/contents/ui/DeviceView.qml:101
+#, kde-format
+msgid "Authorizing..."
+msgstr "Ger behörighet..."
+
+#: package/contents/ui/DeviceView.qml:101
+#, kde-format
+msgid "Authorize"
+msgstr "Ge behörighet"
+
+#: package/contents/ui/DeviceView.qml:112
+#: package/contents/ui/DeviceView.qml:132
+#, kde-format
+msgid "Failed to enroll device <b>%1</b>: %2"
+msgstr "Misslyckades inregistrera enhet <b>%1</b>: %2"
+
+#: package/contents/ui/DeviceView.qml:119
+#, kde-format
+msgid "Trust this Device"
+msgstr "Lita på enheten"
+
+#: package/contents/ui/DeviceView.qml:140
+#, kde-format
+msgid "Revoke Trust"
+msgstr "Återkalla tillit"
+
+#: package/contents/ui/DeviceView.qml:152
+#, kde-format
+msgid "Error changing device trust: <b>%1</b>: %2"
+msgstr "Fel vid ändring av enhetens tillit: <b>%1</b>: %2"
+
+#: package/contents/ui/DeviceView.qml:169
+#, kde-format
+msgid ""
+"Hint: trusted device will be automatically authorized the next time it is "
+"connected to the computer."
+msgstr ""
+"Tips: En pålitlig enhet ges automatiskt behörighet nästa gång den ansluts "
+"till datorn."
+
+#: package/contents/ui/DeviceView.qml:170
+#, kde-format
+msgid ""
+"Hint: an untrusted device needs to be manually authorized each time it is "
+"connected to the computer."
+msgstr ""
+"Tips: En opålitlig enhet måste ges manuell behörighet varje gång den ansluts "
+"till datorn."
+
+#: package/contents/ui/main.qml:18
+#, kde-format
+msgid ""
+"This module allows you to manage Thunderbolt devices connected to your "
+"computer."
+msgstr ""
+"Den här modulen låter dig hantera Thunderbolt-enheter som ansluts till "
+"datorn."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Thunderbolt support has been disabled in BIOS"
+msgstr "Stöd för Thunderbolt har inaktiverats i BIOS"
+
+#: package/contents/ui/main.qml:45
+#, kde-format
+msgid "Thunderbolt subsystem is not available"
+msgstr "Thunderbolt-delsystemet är inte tillgängligt"
+
+#: package/contents/ui/utils.js:16
+msgid "Disconnected"
+msgstr "Nerkopplad"
+
+#: package/contents/ui/utils.js:18
+msgid "Connecting"
+msgstr "Ansluter"
+
+#: package/contents/ui/utils.js:20
+msgid "Connected"
+msgstr "Ansluten"
+
+#: package/contents/ui/utils.js:23
+msgid "Authorization Error"
+msgstr "Behörighetsfel"
+
+#: package/contents/ui/utils.js:25
+msgid "Authorizing"
+msgstr "Ger behörighet"
+
+#: package/contents/ui/utils.js:29
+msgid "Reduced Functionality"
+msgstr "Reducerad funktionalitet"
+
+#: package/contents/ui/utils.js:31
+msgid "Connected & Authorized"
+msgstr "Ansluten och behörig"
+
+#: package/contents/ui/utils.js:38
+msgid "Trusted"
+msgstr "Pålitlig"

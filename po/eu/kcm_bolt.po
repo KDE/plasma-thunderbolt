@@ -1,0 +1,201 @@
+# Translation for kcm_bolt.po to Euskara/Basque (eu).
+# Copyright (C) 2019-2020, This file is copyright:
+# This file is distributed under the same license as the plasma-thunderbolt package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-thunderbolt\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"PO-Revision-Date: 2020-09-07 23:39+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Iñigo Salvador Azurmendi"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xalba@euskalnet.net"
+
+#: kcm_bolt.cpp:70
+#, kde-format
+msgid "Thunderbolt Device Management"
+msgstr "Thunderbolt gailu kudeaketa"
+
+#: kcm_bolt.cpp:72
+#, kde-format
+msgid "System Settings module for managing Thunderbolt devices."
+msgstr "Thunderbolt gailuak kudeatzeko sistema ezarpenetako modulua."
+
+#: kcm_bolt.cpp:74
+#, kde-format
+msgid "Daniel Vrátil"
+msgstr "Daniel Vrátil"
+
+#: package/contents/ui/DeviceList.qml:27
+#, kde-format
+msgid "Enable Thunderbolt devices"
+msgstr "Gaitu Thunderbolt gailuak"
+
+#: package/contents/ui/DeviceList.qml:61
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "Ez dago konektatuta Thunderbolt gailurik"
+
+#: package/contents/ui/DeviceView.qml:64
+#, kde-format
+msgid "Vendor:"
+msgstr "Hornitzailea:"
+
+#: package/contents/ui/DeviceView.qml:68
+#, kde-format
+msgid "UID:"
+msgstr "UID:"
+
+#: package/contents/ui/DeviceView.qml:72
+#, kde-format
+msgid "Status:"
+msgstr "Egoera:"
+
+#: package/contents/ui/DeviceView.qml:77
+#, kde-format
+msgid "Authorized at:"
+msgstr "Baimenduta hemen:"
+
+#: package/contents/ui/DeviceView.qml:82
+#, kde-format
+msgid "Connected at:"
+msgstr "Konektatuta hemen:"
+
+#: package/contents/ui/DeviceView.qml:87
+#, kde-format
+msgid "Enrolled at:"
+msgstr "Erroldatua hemen:"
+
+#: package/contents/ui/DeviceView.qml:91
+#, kde-format
+msgid "Yes"
+msgstr "Bai"
+
+#: package/contents/ui/DeviceView.qml:91
+#, kde-format
+msgid "No"
+msgstr "Ez"
+
+#: package/contents/ui/DeviceView.qml:92
+#, kde-format
+msgid "Trusted:"
+msgstr "Konfiantzazkoa:"
+
+#: package/contents/ui/DeviceView.qml:101
+#, kde-format
+msgid "Authorizing..."
+msgstr "Baimen-ematen..."
+
+#: package/contents/ui/DeviceView.qml:101
+#, kde-format
+msgid "Authorize"
+msgstr "Baimena eman"
+
+#: package/contents/ui/DeviceView.qml:112
+#: package/contents/ui/DeviceView.qml:132
+#, kde-format
+msgid "Failed to enroll device <b>%1</b>: %2"
+msgstr "<b>%1</b> gailua erroldatzea huts egin du: %2"
+
+#: package/contents/ui/DeviceView.qml:119
+#, kde-format
+msgid "Trust this Device"
+msgstr "Konfiantza izan gailu honengan"
+
+#: package/contents/ui/DeviceView.qml:140
+#, kde-format
+msgid "Revoke Trust"
+msgstr "Indargabetu konfiantza"
+
+#: package/contents/ui/DeviceView.qml:152
+#, kde-format
+msgid "Error changing device trust: <b>%1</b>: %2"
+msgstr "Errorea gailuaren gaineko konfiantza aldatzean: <b>%1</b>:%2"
+
+#: package/contents/ui/DeviceView.qml:169
+#, kde-format
+msgid ""
+"Hint: trusted device will be automatically authorized the next time it is "
+"connected to the computer."
+msgstr ""
+"Argibidea: konfiantza duen gailuari automatikoki baimen-emango zaio "
+"ordenagailura konektatzen den hurrengo aldian."
+
+#: package/contents/ui/DeviceView.qml:170
+#, kde-format
+msgid ""
+"Hint: an untrusted device needs to be manually authorized each time it is "
+"connected to the computer."
+msgstr ""
+"Argibidea: konfiantzarik ez duen gailu bati eskuz baimen-eman behar zaio "
+"ordenagailura konektatzen den bakoitzean."
+
+#: package/contents/ui/main.qml:18
+#, kde-format
+msgid ""
+"This module allows you to manage Thunderbolt devices connected to your "
+"computer."
+msgstr ""
+"Modulu honek zure ordenagailura konektatzen diren Thunderbolt gailuak "
+"kudeatzen uzten dizu."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Thunderbolt support has been disabled in BIOS"
+msgstr "Thunderbolt euskarria ezgaitu da BIOSean"
+
+#: package/contents/ui/main.qml:45
+#, kde-format
+msgid "Thunderbolt subsystem is not available"
+msgstr "Thunderbolt azpi-sistema ez dago erabilgarri"
+
+#: package/contents/ui/utils.js:16
+msgid "Disconnected"
+msgstr "Deskonektatuta"
+
+#: package/contents/ui/utils.js:18
+msgid "Connecting"
+msgstr "Konektatzen"
+
+#: package/contents/ui/utils.js:20
+msgid "Connected"
+msgstr "Konektatuta"
+
+#: package/contents/ui/utils.js:23
+msgid "Authorization Error"
+msgstr "Baimen-emate errorea"
+
+#: package/contents/ui/utils.js:25
+msgid "Authorizing"
+msgstr "Baimen-ematen"
+
+#: package/contents/ui/utils.js:29
+msgid "Reduced Functionality"
+msgstr "Funtzionaltasun murriztua"
+
+#: package/contents/ui/utils.js:31
+msgid "Connected & Authorized"
+msgstr "Konektatuta eta baimenduta"
+
+#: package/contents/ui/utils.js:38
+msgid "Trusted"
+msgstr "Konfiantzazkoa"

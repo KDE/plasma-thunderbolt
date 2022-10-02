@@ -1,0 +1,200 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the PACKAGE package.
+# Pino Toscano <toscano.pino@tiscali.it>, 2019, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"PO-Revision-Date: 2020-06-03 23:27+0200\n"
+"Last-Translator: Pino Toscano <toscano.pino@tiscali.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 19.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Pino Toscano"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toscano.pino@tiscali.it"
+
+#: kcm_bolt.cpp:70
+#, kde-format
+msgid "Thunderbolt Device Management"
+msgstr "Gestione dei dispositivi Thunderbolt"
+
+#: kcm_bolt.cpp:72
+#, kde-format
+msgid "System Settings module for managing Thunderbolt devices."
+msgstr ""
+"Modulo delle Impostazioni di sistema per la gestione dei dispositivi "
+"Thunderbolt."
+
+#: kcm_bolt.cpp:74
+#, kde-format
+msgid "Daniel Vrátil"
+msgstr "Daniel Vrátil"
+
+#: package/contents/ui/DeviceList.qml:27
+#, kde-format
+msgid "Enable Thunderbolt devices"
+msgstr "Abilita dispositivi Thunderbolt"
+
+#: package/contents/ui/DeviceList.qml:61
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "Nessun dispositivo Thunderbolt connesso"
+
+#: package/contents/ui/DeviceView.qml:64
+#, kde-format
+msgid "Vendor:"
+msgstr "Produttore:"
+
+#: package/contents/ui/DeviceView.qml:68
+#, kde-format
+msgid "UID:"
+msgstr "UID:"
+
+#: package/contents/ui/DeviceView.qml:72
+#, kde-format
+msgid "Status:"
+msgstr "Stato:"
+
+#: package/contents/ui/DeviceView.qml:77
+#, kde-format
+msgid "Authorized at:"
+msgstr "Autorizzato il:"
+
+#: package/contents/ui/DeviceView.qml:82
+#, kde-format
+msgid "Connected at:"
+msgstr "Connesso il:"
+
+#: package/contents/ui/DeviceView.qml:87
+#, kde-format
+msgid "Enrolled at:"
+msgstr "Registrato il:"
+
+#: package/contents/ui/DeviceView.qml:91
+#, kde-format
+msgid "Yes"
+msgstr "Sì"
+
+#: package/contents/ui/DeviceView.qml:91
+#, kde-format
+msgid "No"
+msgstr "No"
+
+#: package/contents/ui/DeviceView.qml:92
+#, kde-format
+msgid "Trusted:"
+msgstr "Di fiducia:"
+
+#: package/contents/ui/DeviceView.qml:101
+#, kde-format
+msgid "Authorizing..."
+msgstr "Autorizzazione..."
+
+#: package/contents/ui/DeviceView.qml:101
+#, kde-format
+msgid "Authorize"
+msgstr "Autorizza"
+
+#: package/contents/ui/DeviceView.qml:112
+#: package/contents/ui/DeviceView.qml:132
+#, kde-format
+msgid "Failed to enroll device <b>%1</b>: %2"
+msgstr "Non è stato possibile registrare il dispositivo <b>%1</b>: %2"
+
+#: package/contents/ui/DeviceView.qml:119
+#, kde-format
+msgid "Trust this Device"
+msgstr "Fidati di questo dispositivo"
+
+#: package/contents/ui/DeviceView.qml:140
+#, kde-format
+msgid "Revoke Trust"
+msgstr "Revoca fiducia"
+
+#: package/contents/ui/DeviceView.qml:152
+#, kde-format
+msgid "Error changing device trust: <b>%1</b>: %2"
+msgstr "Errore durante la modifica della fiducia: <b>%1</b>: %2"
+
+#: package/contents/ui/DeviceView.qml:169
+#, kde-format
+msgid ""
+"Hint: trusted device will be automatically authorized the next time it is "
+"connected to the computer."
+msgstr ""
+"Suggerimento: un dispositivo di fiducia sarà autorizzato automaticamente la "
+"prossima volta che viene connesso al computer."
+
+#: package/contents/ui/DeviceView.qml:170
+#, kde-format
+msgid ""
+"Hint: an untrusted device needs to be manually authorized each time it is "
+"connected to the computer."
+msgstr ""
+"Suggerimento: un dispositivo non di fiducia deve essere autorizzato "
+"manualmente ogni prossima volta che viene connesso al computer."
+
+#: package/contents/ui/main.qml:18
+#, kde-format
+msgid ""
+"This module allows you to manage Thunderbolt devices connected to your "
+"computer."
+msgstr ""
+"Questo modulo permette di gestire i dispositivi Thunderbolt collegati al "
+"computer."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Thunderbolt support has been disabled in BIOS"
+msgstr "Il supporto per Thunderbolt è stato disabilitato nel BIOS"
+
+#: package/contents/ui/main.qml:45
+#, kde-format
+msgid "Thunderbolt subsystem is not available"
+msgstr "Il sottosistema Thunderbolt non è disponibile"
+
+#: package/contents/ui/utils.js:16
+msgid "Disconnected"
+msgstr "Disconnesso"
+
+#: package/contents/ui/utils.js:18
+msgid "Connecting"
+msgstr "Connessione"
+
+#: package/contents/ui/utils.js:20
+msgid "Connected"
+msgstr "Connesso"
+
+#: package/contents/ui/utils.js:23
+msgid "Authorization Error"
+msgstr "Errore di autorizzazione"
+
+#: package/contents/ui/utils.js:25
+msgid "Authorizing"
+msgstr "Autorizzazione"
+
+#: package/contents/ui/utils.js:29
+msgid "Reduced Functionality"
+msgstr "Funzionalità ridotte"
+
+#: package/contents/ui/utils.js:31
+msgid "Connected & Authorized"
+msgstr "Connesso e autorizzato"
+
+#: package/contents/ui/utils.js:38
+msgid "Trusted"
+msgstr "Di fiducia"
