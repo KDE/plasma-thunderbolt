@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-05-04 00:21+0000\n"
-"PO-Revision-Date: 2022-09-27 05:03+0200\n"
+"PO-Revision-Date: 2022-11-17 08:17+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -136,6 +136,8 @@ msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
 "connected to the computer."
 msgstr ""
+"მინიშნება: სანდო მოწყობილობა ავტომატურად იქნება ავტორიზებული მის შემდეგ "
+"შეერთებაზე."
 
 #: package/contents/ui/DeviceView.qml:170
 #, kde-format
@@ -143,6 +145,8 @@ msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
 "connected to the computer."
 msgstr ""
+"მინიშნება: არასანდო მოწყობილობის ავტორიზაცია ყოველ ჯერზე, როცა მას "
+"კომპიუტერზე მიაერთებთ, აუცილებელია."
 
 #: package/contents/ui/main.qml:18
 #, kde-format
@@ -150,6 +154,8 @@ msgid ""
 "This module allows you to manage Thunderbolt devices connected to your "
 "computer."
 msgstr ""
+"ეს მოდული თქვენს კომპიუტერზე მიერთებული Thunderbolt მოწყობილობები მართვის "
+"საშუალებას გაძლევთ."
 
 #: package/contents/ui/main.qml:40
 #, kde-format
