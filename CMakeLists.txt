@@ -24,6 +24,7 @@ include(CheckIncludeFiles)
 include(CheckSymbolExists)
 include(FeatureSummary)
 include(KDEGitCommitHooks)
+include(ECMDeprecationSettings)
 
 kde_enable_exceptions()
 
@@ -51,8 +52,10 @@ set_package_properties(Bolt PROPERTIES DESCRIPTION "Thunderbolt device manager"
                        TYPE RUNTIME)
 
 #################################################
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050c00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800)
+ecm_set_disabled_deprecation_versions(QT 5.15.2
+    KF 5.101
+)
+
 
 if (BUILD_TESTING)
     add_subdirectory(autotests)
