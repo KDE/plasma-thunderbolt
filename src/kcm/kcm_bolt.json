@@ -36,6 +36,7 @@
         "Description[uk]": "Керування пристроями Thunderbolt",
         "Description[x-test]": "xxThunderbolt Device Managementxx",
         "Description[zh_CN]": "雷电接口设备管理",
+        "Description[zh_TW]": "Thunderbolt 裝置管理",
         "Icon": "preferences-desktop-thunderbolt",
         "Name": "Thunderbolt",
         "Name[ar]": "ثندر بولت",
