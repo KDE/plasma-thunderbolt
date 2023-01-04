@@ -61,45 +61,25 @@ KCM.ScrollViewKCM {
             text: i18n("No Thunderbolt devices connected")
         }
 
-        delegate: Kirigami.AbstractListItem {
+        delegate: Kirigami.BasicListItem {
             id: item
             width: view.width
 
-            RowLayout {
-                id: layout
-                spacing: Kirigami.Units.smallSpacing * 2
-                property bool indicateActiveFocus: item.pressed || Kirigami.Settings.tabletMode || item.activeFocus || (item.ListView.view ? item.ListView.view.activeFocus : false)
+            leading: BusyIndicator {
+                id: busyIndicator
+                visible: model.device.status == Bolt.Bolt.Status.Authorizing
+                running: visible
+                implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                implicitHeight: Kirigami.Units.iconSizes.smallMedium
+            }
+            text: model.device.label
 
-                BusyIndicator {
-                    id: busyIndicator
-                    visible: model.device.status == Bolt.Bolt.Status.Authorizing
-                    running: visible
-                    Layout.minimumHeight: Kirigami.Units.iconSizes.smallMedium
-                    Layout.maximumHeight: Layout.minimumHeight
-                    Layout.minimumWidth: height
-                }
+            trailing: Label {
+                id: statusLabel
+                property var _deviceStatus: Utils.deviceStatus(model.device, true)
 
-                Label {
-                    id: label
-                    text: model.device.label
-                    Layout.fillWidth: true
-                    Layout.topMargin: Kirigami.Units.smallSpacing
-                    Layout.bottomMargin: Kirigami.Units.smallSpacing
-                    color: parent.indicateActiveFocus && (item.highlighted || item.checked || item.pressed) ? item.activeTextColor : item.textColor
-                    elide: Text.ElideRight
-                    font: item.font
-                }
-
-                Label {
-                    id: statusLabel
-
-                    Layout.alignment: Qt.AlignRight
-
-                    property var _deviceStatus: Utils.deviceStatus(model.device, true)
-
-                    text: view._evalTrigger, _deviceStatus.text
-                    color: _deviceStatus.color
-                }
+                text: view._evalTrigger, _deviceStatus.text
+                color: item.highlighted ? Kirigami.Theme.highlightedTextColor : _deviceStatus.color
             }
 
             onClicked: {
