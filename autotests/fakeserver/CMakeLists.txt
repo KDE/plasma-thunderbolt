@@ -6,7 +6,7 @@ include_directories(
 set(libboltfakeserver_SRCS
     fakedevice.cpp
     fakemanager.cpp
-    fakeserver.cpp fakeserver.h
+    fakeserver.cpp
 )
 
 qt_add_dbus_adaptor(

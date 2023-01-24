@@ -1,10 +1,10 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 set(LIBKBOLT_SRCS
-    dbushelper.cpp dbushelper.h
+    dbushelper.cpp
     device.cpp
-    devicemodel.cpp devicemodel.h
-    enum.cpp enum.h
+    devicemodel.cpp
+    enum.cpp
     manager.cpp
 )
 
