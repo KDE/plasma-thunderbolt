@@ -18,7 +18,6 @@ ecm_qt_declare_logging_category(kded_bolt
     CATEGORY_NAME org.kde.bolt.kded
 )
 set_target_properties(kded_bolt PROPERTIES CXX_STANDARD 14)
-kcoreaddons_desktop_to_json(kded_bolt kded_bolt.desktop)
 target_link_libraries(kded_bolt
     KF5::DBusAddons
     KF5::I18n
