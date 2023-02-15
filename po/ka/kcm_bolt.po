@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-05-04 00:21+0000\n"
-"PO-Revision-Date: 2022-11-17 08:17+0100\n"
+"PO-Revision-Date: 2023-02-14 06:50+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,13 +31,13 @@ msgstr "Temuri.doghonadze@gmail.com"
 #: kcm_bolt.cpp:70
 #, kde-format
 msgid "Thunderbolt Device Management"
-msgstr "Thunderbolt მოწყობილობების მართვა"
+msgstr "თანდერბოლტის მოწყობილობების მართვა"
 
 #: kcm_bolt.cpp:72
 #, kde-format
 msgid "System Settings module for managing Thunderbolt devices."
 msgstr ""
-"სისტემის მორგების ფანჯრის მოდული Thunderbolt მოწყობილობების სამართავად."
+"სისტემის მორგების ფანჯრის მოდული თანდერბოლტის მოწყობილობების სამართავად."
 
 #: kcm_bolt.cpp:74
 #, kde-format
@@ -47,12 +47,12 @@ msgstr "Daniel Vrátil"
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
 msgid "Enable Thunderbolt devices"
-msgstr "Thunderbolt მოწყობილობის ჩართვა"
+msgstr "თანდერბოლტის მოწყობილობის ჩართვა"
 
 #: package/contents/ui/DeviceList.qml:61
 #, kde-format
 msgid "No Thunderbolt devices connected"
-msgstr "დაკავშირებული Thunderbolt მოწყობილობების გარეშე"
+msgstr "დაკავშირებული თანდერბოლტის მოწყობილობების გარეშე"
 
 #: package/contents/ui/DeviceView.qml:64
 #, kde-format
@@ -154,18 +154,18 @@ msgid ""
 "This module allows you to manage Thunderbolt devices connected to your "
 "computer."
 msgstr ""
-"ეს მოდული თქვენს კომპიუტერზე მიერთებული Thunderbolt მოწყობილობები მართვის "
+"ეს მოდული თქვენს კომპიუტერზე მიერთებული თანდერბოლტის მოწყობილობები მართვის "
 "საშუალებას გაძლევთ."
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
-msgstr "Thunderbolt -ის მხარდაჭერა BIOS-შია გამორთული"
+msgstr "თანდერბოლტის მხარდაჭერა BIOS-შია გამორთული"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
-msgstr "Thunderbolt ქვესისტემა ხელმიუწვდომელია"
+msgstr "თანდერბოლტის ქვესისტემა ხელმიუწვდომელია"
 
 #: package/contents/ui/utils.js:16
 msgid "Disconnected"

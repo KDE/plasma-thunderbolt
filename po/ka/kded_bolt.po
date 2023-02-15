@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-05-04 00:21+0000\n"
-"PO-Revision-Date: 2022-09-27 05:06+0200\n"
+"PO-Revision-Date: 2023-02-14 06:49+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: kded_bolt.cpp:67
 #, kde-format
 msgid "New Thunderbolt Device Detected"
-msgstr "ნაპოვნია ახალი Thunderbolt მოწყობილობა"
+msgstr "ნაპოვნია ახალი თანდერბოლტის მოწყობილობა"
 
 #: kded_bolt.cpp:68
 #, kde-format
@@ -29,7 +29,7 @@ msgid ""
 "Unauthorized Thunderbolt device <b>%1</b> was detected. Do you want to "
 "authorize it?"
 msgstr ""
-"ნაპოვნია არაავტორიზებული Thunderbolt მოწყობილობა: <b>%1</b>. გნებავთ მისი "
+"ნაპოვნია არაავტორიზებული თანდერბოლტის მოწყობილობა: <b>%1</b>. გნებავთ მისი "
 "ავტორიზაცია?"
 
 #: kded_bolt.cpp:70
@@ -40,10 +40,10 @@ msgid_plural ""
 "%1 unauthorized Thunderbolt devices were detected. Do you want to authorize "
 "them?"
 msgstr[0] ""
-"ნაპოვნია %1 არაავტორიზებული Thunderbolt მოწყობილობა. გნებავთ მათი "
+"ნაპოვნია %1 არაავტორიზებული თანდერბოლტის მოწყობილობა. გნებავთ მათი "
 "ავტორიზაცია?"
 msgstr[1] ""
-"ნაპოვნია %1 არაავტორიზებული Thunderbolt მოწყობილობა. გნებავთ მათი "
+"ნაპოვნია %1 არაავტორიზებული თანდერბოლტის მოწყობილობა. გნებავთ მათი "
 "ავტორიზაცია?"
 
 #: kded_bolt.cpp:77
@@ -59,9 +59,9 @@ msgstr "ავტორიზაცია სამუადმოდ"
 #: kded_bolt.cpp:128
 #, kde-format
 msgid "Thunderbolt Device Authorization Error"
-msgstr "Thunderbolt მოწყობილობის ავტორიზაცის შეცდომა"
+msgstr "თანდერბოლტის მოწყობილობის ავტორიზაცის შეცდომა"
 
 #: kded_bolt.cpp:129
 #, kde-format
 msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
-msgstr "შეცდომა Thunderbolt მოწყობილობის ავტორიზაციისას <b>%1</b>: %2"
+msgstr "შეცდომა თანდერბოლტის მოწყობილობის ავტორიზაციისას <b>%1</b>: %2"
