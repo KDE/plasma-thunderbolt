@@ -4,6 +4,7 @@
             {
                 "Email": "dvratil@kde.org",
                 "Name": "Daniel Vrátil",
+                "Name[ar]": "دانييل فراتل",
                 "Name[az]": "Daniel Vrátil",
                 "Name[bg]": "Daniel Vrátil",
                 "Name[ca@valencia]": "Daniel Vrátil",
@@ -29,6 +30,7 @@
             }
         ],
         "Description": "Thunderbolt Device Monitor",
+        "Description[ar]": "مراقب جهاز ثندر بولت",
         "Description[az]": "Thunderbolt cihazlarının izlənməsi",
         "Description[bg]": "Мониториране на Thunderbolt устройства",
         "Description[ca@valencia]": "Supervisor del dispositiu Thunderbolt",
