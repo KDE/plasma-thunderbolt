@@ -14,7 +14,7 @@ class KCMBolt : public KQuickAddons::ConfigModule
     Q_OBJECT
 
 public:
-    KCMBolt(QObject *parent, const QVariantList &args);
+    KCMBolt(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~KCMBolt() override = default;
 };
 

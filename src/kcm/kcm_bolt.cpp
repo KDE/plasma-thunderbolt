@@ -6,7 +6,6 @@
 
 #include "kcm_bolt.h"
 
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 
@@ -55,8 +54,8 @@ private:
     }
 };
 
-KCMBolt::KCMBolt(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+KCMBolt::KCMBolt(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, metaData, args)
 {
     qmlRegisterType<Bolt::DeviceModel>("org.kde.bolt", 0, 1, "DeviceModel");
     qmlRegisterType<Bolt::Manager>("org.kde.bolt", 0, 1, "Manager");
@@ -65,14 +64,6 @@ KCMBolt::KCMBolt(QObject *parent, const QVariantList &args)
     qmlRegisterSingletonType<QMLHelper>("org.kde.bolt", 0, 1, "QMLHelper", [](auto, auto) -> QObject * {
         return new QMLHelper();
     });
-
-    auto about = std::make_unique<KAboutData>(QStringLiteral("kcm_bolt"),
-                                              i18n("Thunderbolt Device Management"),
-                                              QStringLiteral("0.1"),
-                                              i18n("System Settings module for managing Thunderbolt devices."),
-                                              KAboutLicense::GPL);
-    about->addAuthor(i18n("Daniel Vrátil"), {}, QStringLiteral("dvratil@kde.org"));
-    setAboutData(about.release());
 }
 
 #include "kcm_bolt.moc"
