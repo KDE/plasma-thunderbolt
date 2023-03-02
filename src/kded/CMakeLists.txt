@@ -19,10 +19,10 @@ ecm_qt_declare_logging_category(kded_bolt
 )
 set_target_properties(kded_bolt PROPERTIES CXX_STANDARD 14)
 target_link_libraries(kded_bolt
-    KF5::DBusAddons
-    KF5::I18n
-    KF5::Notifications
-    KF5::CoreAddons
+    KF6::DBusAddons
+    KF6::I18n
+    KF6::Notifications
+    KF6::CoreAddons
     kbolt
 )
 

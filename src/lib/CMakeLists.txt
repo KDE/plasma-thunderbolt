@@ -27,7 +27,7 @@ generate_export_header(kbolt)
 target_link_libraries(kbolt
     Qt${QT_MAJOR_VERSION}::Core
     Qt${QT_MAJOR_VERSION}::DBus
-    KF5::I18n
+    KF6::I18n
 )
 
 target_include_directories(kbolt PUBLIC

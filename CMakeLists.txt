@@ -7,10 +7,10 @@ set(CMAKE_CXX_STANDARD 14)
 #################################################
 # Dependencies
 set(QT_MIN_VERSION "5.15.2")
-set(KF5_VERSION "5.97")
+set(KF6_VERSION "5.97")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 
-find_package(ECM ${KF5_VERSION} REQUIRED)
+find_package(ECM ${KF6_VERSION} REQUIRED)
 
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake ${ECM_MODULE_PATH} ${CMAKE_MODULE_PATH})
 
@@ -38,12 +38,13 @@ if (BUILD_TESTING)
     find_package(Qt${QT_MAJOR_VERSION}Test ${QT_VERSION} REQUIRED)
 endif()
 
-find_package(KF5CoreAddons ${KF5_VERSION} REQUIRED)
-find_package(KF5KCMUtils ${KF5_VERSION} REQUIRED)
-find_package(KF5Declarative ${KF5_VERSION} REQUIRED)
-find_package(KF5I18n ${KF5_VERSION} REQUIRED)
-find_package(KF5DBusAddons ${KF5_VERSION} REQUIRED)
-find_package(KF5Notifications ${KF5_VERSION} REQUIRED)
+find_package(KF6CoreAddons ${KF6_VERSION} REQUIRED)
+find_package(KF6KCMUtils ${KF6_VERSION} REQUIRED)
+find_package(KF6Declarative ${KF6_VERSION} REQUIRED)
+find_package(KF6I18n ${KF6_VERSION} REQUIRED)
+find_package(KF6DBusAddons ${KF6_VERSION} REQUIRED)
+find_package(KF6Notifications ${KF6_VERSION} REQUIRED)
+find_package(KF6Package ${KF6_VERSION} REQUIRED)
 
 find_package(Bolt)
 set_package_properties(Bolt PROPERTIES DESCRIPTION "Thunderbolt device manager"
