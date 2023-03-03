@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2019-10-18 22:33+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -18,31 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 2.0.6\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Moo"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "<>"
-
-#: kcm_bolt.cpp:70
-#, kde-format
-msgid "Thunderbolt Device Management"
-msgstr "Thunderbolt įrenginių tvarkymas"
-
-#: kcm_bolt.cpp:72
-#, kde-format
-msgid "System Settings module for managing Thunderbolt devices."
-msgstr "Sistemos nuostatų modulis, skirtas Thunderbolt įrenginių tvarkymui."
-
-#: kcm_bolt.cpp:74
-#, kde-format
-msgid "Daniel Vrátil"
-msgstr "Daniel Vrátil"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
@@ -198,3 +173,20 @@ msgstr "Prijungtas ir įgaliotas"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Patikimas"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "<>"
+
+#~ msgid "Thunderbolt Device Management"
+#~ msgstr "Thunderbolt įrenginių tvarkymas"
+
+#~ msgid "System Settings module for managing Thunderbolt devices."
+#~ msgstr "Sistemos nuostatų modulis, skirtas Thunderbolt įrenginių tvarkymui."
+
+#~ msgid "Daniel Vrátil"
+#~ msgstr "Daniel Vrátil"

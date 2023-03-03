@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2020-09-08 18:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -17,32 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Sergiu Bivol"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "sergiu@cip.md"
-
-#: kcm_bolt.cpp:70
-#, kde-format
-msgid "Thunderbolt Device Management"
-msgstr "Gestiune dispozitive Thunderbolt"
-
-#: kcm_bolt.cpp:72
-#, kde-format
-msgid "System Settings module for managing Thunderbolt devices."
-msgstr ""
-"Modul pentru Configurări de sistem de gestiune a dispozitivelor Thunderbolt."
-
-#: kcm_bolt.cpp:74
-#, kde-format
-msgid "Daniel Vrátil"
-msgstr "Daniel Vrátil"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
@@ -198,3 +172,22 @@ msgstr "Conectat și autorizat"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "De încredere"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sergiu@cip.md"
+
+#~ msgid "Thunderbolt Device Management"
+#~ msgstr "Gestiune dispozitive Thunderbolt"
+
+#~ msgid "System Settings module for managing Thunderbolt devices."
+#~ msgstr ""
+#~ "Modul pentru Configurări de sistem de gestiune a dispozitivelor "
+#~ "Thunderbolt."
+
+#~ msgid "Daniel Vrátil"
+#~ msgstr "Daniel Vrátil"

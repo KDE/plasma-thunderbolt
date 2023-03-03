@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2020-02-08 15:33+0100\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 18.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Martin Schlander"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "mschlander@opensuse.org"
-
-#: kcm_bolt.cpp:70
-#, kde-format
-msgid "Thunderbolt Device Management"
-msgstr "Håndtering af Thunderbolt-enheder"
-
-#: kcm_bolt.cpp:72
-#, kde-format
-msgid "System Settings module for managing Thunderbolt devices."
-msgstr "Systemindstillinger-modul til håndtering af Thunderbolt-enheder."
-
-#: kcm_bolt.cpp:74
-#, kde-format
-msgid "Daniel Vrátil"
-msgstr "Daniel Vrátil"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
@@ -196,3 +171,20 @@ msgstr "Tilsluttet og godkendt"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Betroet"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Martin Schlander"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mschlander@opensuse.org"
+
+#~ msgid "Thunderbolt Device Management"
+#~ msgstr "Håndtering af Thunderbolt-enheder"
+
+#~ msgid "System Settings module for managing Thunderbolt devices."
+#~ msgstr "Systemindstillinger-modul til håndtering af Thunderbolt-enheder."
+
+#~ msgid "Daniel Vrátil"
+#~ msgstr "Daniel Vrátil"

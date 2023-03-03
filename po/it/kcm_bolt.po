@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2020-06-03 23:27+0200\n"
 "Last-Translator: Pino Toscano <toscano.pino@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -16,33 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 19.12.0\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Pino Toscano"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "toscano.pino@tiscali.it"
-
-#: kcm_bolt.cpp:70
-#, kde-format
-msgid "Thunderbolt Device Management"
-msgstr "Gestione dei dispositivi Thunderbolt"
-
-#: kcm_bolt.cpp:72
-#, kde-format
-msgid "System Settings module for managing Thunderbolt devices."
-msgstr ""
-"Modulo delle Impostazioni di sistema per la gestione dei dispositivi "
-"Thunderbolt."
-
-#: kcm_bolt.cpp:74
-#, kde-format
-msgid "Daniel Vrátil"
-msgstr "Daniel Vrátil"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
@@ -198,3 +171,22 @@ msgstr "Connesso e autorizzato"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Di fiducia"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Pino Toscano"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "toscano.pino@tiscali.it"
+
+#~ msgid "Thunderbolt Device Management"
+#~ msgstr "Gestione dei dispositivi Thunderbolt"
+
+#~ msgid "System Settings module for managing Thunderbolt devices."
+#~ msgstr ""
+#~ "Modulo delle Impostazioni di sistema per la gestione dei dispositivi "
+#~ "Thunderbolt."
+
+#~ msgid "Daniel Vrátil"
+#~ msgstr "Daniel Vrátil"

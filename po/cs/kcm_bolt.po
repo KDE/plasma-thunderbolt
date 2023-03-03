@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2023-01-04 09:08+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.12.0\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Vít Pelčák"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "vit@pelcak.org"
-
-#: kcm_bolt.cpp:70
-#, kde-format
-msgid "Thunderbolt Device Management"
-msgstr "Správa zařízení Thunderbolt"
-
-#: kcm_bolt.cpp:72
-#, kde-format
-msgid "System Settings module for managing Thunderbolt devices."
-msgstr "Modul Nastavení Systému pro správu zařízení Thunderbolt."
-
-#: kcm_bolt.cpp:74
-#, kde-format
-msgid "Daniel Vrátil"
-msgstr "Daniel Vrátil"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
@@ -196,3 +171,20 @@ msgstr "Připojen a oprávněn"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Důvěryhodný"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Vít Pelčák"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vit@pelcak.org"
+
+#~ msgid "Thunderbolt Device Management"
+#~ msgstr "Správa zařízení Thunderbolt"
+
+#~ msgid "System Settings module for managing Thunderbolt devices."
+#~ msgstr "Modul Nastavení Systému pro správu zařízení Thunderbolt."
+
+#~ msgid "Daniel Vrátil"
+#~ msgstr "Daniel Vrátil"

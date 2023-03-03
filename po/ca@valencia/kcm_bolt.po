@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2021-10-23 23:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,32 +21,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Empar Montoro Martín,Josep M. Ferrer"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "montoro_mde@gva.es,txemaq@gmail.com"
-
-#: kcm_bolt.cpp:70
-#, kde-format
-msgid "Thunderbolt Device Management"
-msgstr "Gestió de dispositius Thunderbolt"
-
-#: kcm_bolt.cpp:72
-#, kde-format
-msgid "System Settings module for managing Thunderbolt devices."
-msgstr ""
-"Mòdul de Configuració del sistema per a gestionar dispositius Thunderbolt."
-
-#: kcm_bolt.cpp:74
-#, kde-format
-msgid "Daniel Vrátil"
-msgstr "Daniel Vrátil"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
@@ -203,3 +177,21 @@ msgstr "Connectat i autoritzat"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "De confiança"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Empar Montoro Martín,Josep M. Ferrer"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "montoro_mde@gva.es,txemaq@gmail.com"
+
+#~ msgid "Thunderbolt Device Management"
+#~ msgstr "Gestió de dispositius Thunderbolt"
+
+#~ msgid "System Settings module for managing Thunderbolt devices."
+#~ msgstr ""
+#~ "Mòdul de Configuració del sistema per a gestionar dispositius Thunderbolt."
+
+#~ msgid "Daniel Vrátil"
+#~ msgstr "Daniel Vrátil"

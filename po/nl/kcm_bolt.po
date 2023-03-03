@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-03-03 02:18+0000\n"
 "PO-Revision-Date: 2019-10-19 15:00+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Freek de Kruijf - 2019"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "freekdekruijf@kde.nl"
-
-#: kcm_bolt.cpp:70
-#, kde-format
-msgid "Thunderbolt Device Management"
-msgstr "Beheer van Thunderbolt apparaten"
-
-#: kcm_bolt.cpp:72
-#, kde-format
-msgid "System Settings module for managing Thunderbolt devices."
-msgstr "Module van Systeeminstellingen voor beheer van Thunderbolt apparaten."
-
-#: kcm_bolt.cpp:74
-#, kde-format
-msgid "Daniel Vrátil"
-msgstr "Daniel Vrátil"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
@@ -196,3 +171,21 @@ msgstr "Verbonden & geautoriseerd"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Vertrouwd"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Freek de Kruijf - 2019"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "freekdekruijf@kde.nl"
+
+#~ msgid "Thunderbolt Device Management"
+#~ msgstr "Beheer van Thunderbolt apparaten"
+
+#~ msgid "System Settings module for managing Thunderbolt devices."
+#~ msgstr ""
+#~ "Module van Systeeminstellingen voor beheer van Thunderbolt apparaten."
+
+#~ msgid "Daniel Vrátil"
+#~ msgstr "Daniel Vrátil"
