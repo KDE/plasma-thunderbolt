@@ -172,20 +172,3 @@ msgstr "Tilkopla og godkjend"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Tiltrudd"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Karl Ove Hufthammer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "karl@huftis.org"
-
-#~ msgid "Thunderbolt Device Management"
-#~ msgstr "Handsaming av Thunderbolt-einingar"
-
-#~ msgid "System Settings module for managing Thunderbolt devices."
-#~ msgstr "Modul for handsaming av Thunderbolt-einingar."
-
-#~ msgid "Daniel Vrátil"
-#~ msgstr "Daniel Vrátil"
