@@ -177,21 +177,3 @@ msgstr "Connectat i autoritzat"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "De confiança"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Empar Montoro Martín,Josep M. Ferrer"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "montoro_mde@gva.es,txemaq@gmail.com"
-
-#~ msgid "Thunderbolt Device Management"
-#~ msgstr "Gestió de dispositius Thunderbolt"
-
-#~ msgid "System Settings module for managing Thunderbolt devices."
-#~ msgstr ""
-#~ "Mòdul de Configuració del sistema per a gestionar dispositius Thunderbolt."
-
-#~ msgid "Daniel Vrátil"
-#~ msgstr "Daniel Vrátil"
