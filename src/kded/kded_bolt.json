@@ -27,7 +27,8 @@
                 "Name[tr]": "Daniel Vrátil",
                 "Name[uk]": "Daniel Vrátil",
                 "Name[x-test]": "xxDaniel Vrátilxx",
-                "Name[zh_CN]": "Daniel Vrátil"
+                "Name[zh_CN]": "Daniel Vrátil",
+                "Name[zh_TW]": "Daniel Vrátil"
             }
         ],
         "Description": "Thunderbolt Device Monitor",
@@ -55,6 +56,7 @@
         "Description[uk]": "Спостереження за пристроями Thunderbolt",
         "Description[x-test]": "xxThunderbolt Device Monitorxx",
         "Description[zh_CN]": "雷电接口设备监视程序",
+        "Description[zh_TW]": "Thunderbolt 裝置監控工具",
         "Icon": "preferences-desktop-thunderbolt",
         "Id": "kded_bolt",
         "License": "GPL",
