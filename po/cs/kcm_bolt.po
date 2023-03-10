@@ -171,20 +171,3 @@ msgstr "Připojen a oprávněn"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Důvěryhodný"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Vít Pelčák"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "vit@pelcak.org"
-
-#~ msgid "Thunderbolt Device Management"
-#~ msgstr "Správa zařízení Thunderbolt"
-
-#~ msgid "System Settings module for managing Thunderbolt devices."
-#~ msgstr "Modul Nastavení Systému pro správu zařízení Thunderbolt."
-
-#~ msgid "Daniel Vrátil"
-#~ msgstr "Daniel Vrátil"
