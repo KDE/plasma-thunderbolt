@@ -40,7 +40,6 @@ endif()
 
 find_package(KF6CoreAddons ${KF6_VERSION} REQUIRED)
 find_package(KF6KCMUtils ${KF6_VERSION} REQUIRED)
-find_package(KF6Declarative ${KF6_VERSION} REQUIRED)
 find_package(KF6I18n ${KF6_VERSION} REQUIRED)
 find_package(KF6DBusAddons ${KF6_VERSION} REQUIRED)
 find_package(KF6Notifications ${KF6_VERSION} REQUIRED)

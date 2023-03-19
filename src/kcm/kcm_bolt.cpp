@@ -45,9 +45,10 @@ public Q_SLOTS:
     }
 
 private:
-    template<typename... Args> std::function<void(Args...)> invoke(QJSValue cb_)
+    template<typename... Args>
+    std::function<void(Args...)> invoke(QJSValue cb_)
     {
-        return [cb = std::move(cb_)](Args &&... args) mutable {
+        return [cb = std::move(cb_)](Args &&...args) mutable {
             Q_ASSERT(cb.isCallable());
             cb.call({std::forward<Args>(args)...});
         };
@@ -55,7 +56,7 @@ private:
 };
 
 KCMBolt::KCMBolt(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, metaData, args)
+    : KQuickConfigModule(parent, metaData, args)
 {
     qmlRegisterType<Bolt::DeviceModel>("org.kde.bolt", 0, 1, "DeviceModel");
     qmlRegisterType<Bolt::Manager>("org.kde.bolt", 0, 1, "Manager");

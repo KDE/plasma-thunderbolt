@@ -10,9 +10,8 @@ target_sources(kcm_bolt PRIVATE
 )
 set_target_properties(kcm_bolt PROPERTIES CXX_STANDARD 14)
 target_link_libraries(kcm_bolt
-    KF6::QuickAddons
+    KF6::KCMUtilsQuick
     KF6::I18n
-    KF6::Declarative
     kbolt
 )
 

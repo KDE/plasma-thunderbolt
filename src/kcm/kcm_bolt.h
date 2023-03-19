@@ -7,9 +7,9 @@
 #ifndef KCMBOLT_H
 #define KCMBOLT_H
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 
-class KCMBolt : public KQuickAddons::ConfigModule
+class KCMBolt : public KQuickConfigModule
 {
     Q_OBJECT
 
