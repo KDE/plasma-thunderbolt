@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2021-10-23 23:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -127,15 +127,6 @@ msgstr ""
 "Suggeriment: el dispositiu sense confiança necessitarà que s'autoritze "
 "manualment cada vegada que es connecte amb l'ordinador."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Este mòdul permet gestionar els dispositius Thunderbolt connectats amb "
-"l'ordinador."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -177,3 +168,10 @@ msgstr "Connectat i autoritzat"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "De confiança"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Este mòdul permet gestionar els dispositius Thunderbolt connectats amb "
+#~ "l'ordinador."

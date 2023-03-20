@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2019-10-18 17:22+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -124,15 +124,6 @@ msgstr ""
 "Nota: un dispositivo no confiable se debe autorizar manualmente cada vez que "
 "se conecta al equipo."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Este módulo le permite gestionar los dispositivos Thunderbolt conectados a "
-"su equipo."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -174,6 +165,13 @@ msgstr "Conectado y autorizado"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "De confianza"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Este módulo le permite gestionar los dispositivos Thunderbolt conectados "
+#~ "a su equipo."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

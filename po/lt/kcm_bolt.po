@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2019-10-18 22:33+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -123,15 +123,6 @@ msgstr ""
 "Patarimas: nepatikimas įrenginys, kiekvieną kartą jį prijungus prie "
 "kompiuterio, turi būti įgaliotas rankiniu būdu."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Šis modulis leidžia jums tvarkyti prie jūsų kompiuterio prijungtus "
-"Thunderbolt įrenginius."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -173,6 +164,13 @@ msgstr "Prijungtas ir įgaliotas"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Patikimas"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Šis modulis leidžia jums tvarkyti prie jūsų kompiuterio prijungtus "
+#~ "Thunderbolt įrenginius."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

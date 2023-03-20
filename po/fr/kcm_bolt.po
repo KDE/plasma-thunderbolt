@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2021-01-14 15:23+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -124,15 +124,6 @@ msgstr ""
 "Conseil : les périphériques non considérés comme fiable devront être "
 "autorisés manuellement lors de chaque raccordement à cet ordinateur."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Ce module permet de gérer les périphériques Thunderbolt connectés à votre "
-"ordinateur."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -177,6 +168,13 @@ msgstr "Connecté et autorisé"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Fiable"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Ce module permet de gérer les périphériques Thunderbolt connectés à votre "
+#~ "ordinateur."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

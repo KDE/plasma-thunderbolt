@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2019-10-18 07:59+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -124,15 +124,6 @@ msgstr ""
 "Підказка: пристрій, який не є довіреним, доведеться уповноважувати після "
 "кожного з'єднання з комп'ютером."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"За допомогою цього модуля ви можете керувати пристроями Thunderbolt, які "
-"з'єднано із вашим комп'ютером."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -174,6 +165,13 @@ msgstr "З'єднано і уповноважено"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Довірений"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "За допомогою цього модуля ви можете керувати пристроями Thunderbolt, які "
+#~ "з'єднано із вашим комп'ютером."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

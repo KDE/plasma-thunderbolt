@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2023-01-24 16:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -125,15 +125,6 @@ msgstr ""
 "Падказка: пры падлучэнні да камп'ютара недаверанай прылады трэба кожны раз "
 "уласнаручна выконваць аўтарызацыю."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Гэты модуль дазваляе вам кіраваць прыладамі Thunderbolt, падлучанымі да "
-"вашага камп'ютара."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -175,6 +166,13 @@ msgstr "Падлучана і аўтарызавана"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Давераная"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Гэты модуль дазваляе вам кіраваць прыладамі Thunderbolt, падлучанымі да "
+#~ "вашага камп'ютара."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

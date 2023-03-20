@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2020-09-07 23:39+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -124,15 +124,6 @@ msgstr ""
 "Argibidea: konfiantzarik ez duen gailu bati eskuz baimen-eman behar zaio "
 "ordenagailura konektatzen den bakoitzean."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Modulu honek zure ordenagailura konektatzen diren Thunderbolt gailuak "
-"kudeatzen uzten dizu."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -174,6 +165,13 @@ msgstr "Konektatuta eta baimenduta"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Konfiantzazkoa"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Modulu honek zure ordenagailura konektatzen diren Thunderbolt gailuak "
+#~ "kudeatzen uzten dizu."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

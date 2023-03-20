@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -121,15 +121,6 @@ msgstr ""
 "Petunjuk: peranti yang tak dipercaya perlu secara manual diotorisasikan "
 "setiap kali saat ia dikoneksikan ke komputer."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Modul ini memungkinkan kamu untuk mengelola peranti Thunderbolt yang "
-"terkoneksi ke komputermu."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -171,6 +162,13 @@ msgstr "Terkoneksi & Terotorisasi"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Dipercaya"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Modul ini memungkinkan kamu untuk mengelola peranti Thunderbolt yang "
+#~ "terkoneksi ke komputermu."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

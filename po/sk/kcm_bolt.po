@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2019-11-05 20:22+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -120,15 +120,6 @@ msgstr ""
 "Tip: nedôveryhodné zariadenie sa musí ručne autorizovať pri každom pripojení "
 "k počítaču."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Tento modul vám umožní spravovať Thunderbolt zariadenia pripojené k vášmu "
-"počítaču."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -170,6 +161,13 @@ msgstr "Pripojené & Autorizované"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Dôveryhodný"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Tento modul vám umožní spravovať Thunderbolt zariadenia pripojené k vášmu "
+#~ "počítaču."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

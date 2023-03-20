@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2020-09-08 18:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -122,15 +122,6 @@ msgstr ""
 "Indiciu: un dispozitiv fără încredere trebuie autorizat manual de fiecare "
 "dată când e conectat la calculator."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Acest modul permite gestiunea dispozitivelor Thunderbolt conectate la "
-"calculator."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -172,6 +163,13 @@ msgstr "Conectat și autorizat"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "De încredere"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Acest modul permite gestiunea dispozitivelor Thunderbolt conectate la "
+#~ "calculator."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

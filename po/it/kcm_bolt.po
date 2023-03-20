@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2020-06-03 23:27+0200\n"
 "Last-Translator: Pino Toscano <toscano.pino@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -121,15 +121,6 @@ msgstr ""
 "Suggerimento: un dispositivo non di fiducia deve essere autorizzato "
 "manualmente ogni prossima volta che viene connesso al computer."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Questo modulo permette di gestire i dispositivi Thunderbolt collegati al "
-"computer."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -171,6 +162,13 @@ msgstr "Connesso e autorizzato"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Di fiducia"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Questo modulo permette di gestire i dispositivi Thunderbolt collegati al "
+#~ "computer."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

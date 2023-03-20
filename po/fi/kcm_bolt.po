@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2019-11-16 14:35+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -121,14 +121,6 @@ msgstr ""
 "Vihje: ei-luotettu laite vaatii käyttäjän vahvistuksen joka kerran "
 "tietokoneeseen kytkettäessä."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Tällä moduulilla voit hallita koneeseen kytkettyjä Thunderbolt-laitteita."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -170,6 +162,12 @@ msgstr "Kytketty ja hyväksytty"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Luotettu"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Tällä moduulilla voit hallita koneeseen kytkettyjä Thunderbolt-laitteita."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

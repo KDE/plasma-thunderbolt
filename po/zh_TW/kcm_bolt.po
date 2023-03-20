@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2019-10-19 14:54+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -120,13 +120,6 @@ msgid ""
 "connected to the computer."
 msgstr "提示：未信任裝置需要在其連結至電腦時手動授權。"
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr "此模組讓你能管理連結到電腦的 Thunderbolt 裝置。"
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -168,6 +161,11 @@ msgstr "已連結 & 已授權"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "已信任"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr "此模組讓你能管理連結到電腦的 Thunderbolt 裝置。"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

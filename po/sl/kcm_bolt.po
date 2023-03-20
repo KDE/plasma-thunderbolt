@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-03 02:18+0000\n"
+"POT-Creation-Date: 2023-03-20 02:18+0000\n"
 "PO-Revision-Date: 2020-05-19 17:47+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -122,15 +122,6 @@ msgstr ""
 "Namig: nepreverjeno napravo je treba vsakič ročno pooblastiti in povezati z "
 "računalnikom."
 
-#: package/contents/ui/main.qml:18
-#, kde-format
-msgid ""
-"This module allows you to manage Thunderbolt devices connected to your "
-"computer."
-msgstr ""
-"Ta modul vam omogoča upravljanje naprav Thunderbolt, povezanih z vašim "
-"računalnikom."
-
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
@@ -172,6 +163,13 @@ msgstr "Priklopljeno in overjeno"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Zaupanja vredno"
+
+#~ msgid ""
+#~ "This module allows you to manage Thunderbolt devices connected to your "
+#~ "computer."
+#~ msgstr ""
+#~ "Ta modul vam omogoča upravljanje naprav Thunderbolt, povezanih z vašim "
+#~ "računalnikom."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
