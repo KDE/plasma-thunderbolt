@@ -162,10 +162,3 @@ msgstr "Připojen a oprávněn"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Důvěryhodný"
-
-#~ msgid ""
-#~ "This module allows you to manage Thunderbolt devices connected to your "
-#~ "computer."
-#~ msgstr ""
-#~ "Tento modul vám umožňuje nastavit zařízení Thunderbolt připojená k vašemu "
-#~ "počítači."

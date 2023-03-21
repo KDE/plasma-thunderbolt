@@ -164,9 +164,3 @@ msgstr "Tilkopla og godkjend"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "Tiltrudd"
-
-#~ msgid ""
-#~ "This module allows you to manage Thunderbolt devices connected to your "
-#~ "computer."
-#~ msgstr ""
-#~ "Denne modulen lèt deg handsama Thunderbolt-eininga kopla til datamaskina."
