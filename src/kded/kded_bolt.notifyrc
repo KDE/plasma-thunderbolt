@@ -170,6 +170,7 @@ Comment[zh_TW]=用於警告通知
 [Content/errornot]
 Name=Error
 Name[ar]=خطأ
+Name[ast]=Error
 Name[az]=Xəta
 Name[be]=Памылка
 Name[bg]=Грешка
