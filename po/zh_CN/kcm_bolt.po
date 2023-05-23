@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-20 02:18+0000\n"
-"PO-Revision-Date: 2023-02-24 12:43\n"
+"PO-Revision-Date: 2023-05-22 13:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/plasma-thunderbolt/kcm_bolt.pot\n"
-"X-Crowdin-File-ID: 10622\n"
+"X-Crowdin-File: /kf6-trunk/messages/plasma-thunderbolt/kcm_bolt.pot\n"
+"X-Crowdin-File-ID: 42705\n"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
@@ -158,25 +158,3 @@ msgstr "已连接并授权"
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
 msgstr "已信任"
-
-#~ msgid ""
-#~ "This module allows you to manage Thunderbolt devices connected to your "
-#~ "computer."
-#~ msgstr "此模块用于管理与连接到本机的雷电接口设备。"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "KDE China, Guo Yunhe, Tyson Tan"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "kde-china@kde.org, i@guoyunhe.me, tysontan@tysontan.com"
-
-#~ msgid "Thunderbolt Device Management"
-#~ msgstr "雷电接口设备管理"
-
-#~ msgid "System Settings module for managing Thunderbolt devices."
-#~ msgstr "管理雷电接口设备的系统设置模块。"
-
-#~ msgid "Daniel Vrátil"
-#~ msgstr "Daniel Vrátil"
