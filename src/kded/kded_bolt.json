@@ -70,7 +70,6 @@
         "Description[zh_CN]": "雷电接口设备监视程序",
         "Description[zh_TW]": "Thunderbolt 裝置監控工具",
         "Icon": "preferences-desktop-thunderbolt",
-        "Id": "kded_bolt",
         "License": "GPL",
         "Name": "Thunderbolt Device Monitor",
         "Name[ar]": "مراقب جهاز ثندر بولت",
