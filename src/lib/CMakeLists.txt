@@ -25,8 +25,8 @@ add_library(kbolt SHARED ${LIBKBOLT_SRCS})
 set_target_properties(kbolt PROPERTIES CXX_STANDARD 14)
 generate_export_header(kbolt)
 target_link_libraries(kbolt
-    Qt${QT_MAJOR_VERSION}::Core
-    Qt${QT_MAJOR_VERSION}::DBus
+    Qt6::Core
+    Qt6::DBus
     KF6::I18n
 )
 
