@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-system",
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_thunderbolt",
         "Description": "Thunderbolt Device Management",
@@ -82,10 +81,7 @@
         "Name[uk]": "Thunderbolt",
         "Name[x-test]": "xxThunderboltxx",
         "Name[zh_CN]": "雷电接口",
-        "Name[zh_TW]": "Thunderbolt",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_TW]": "Thunderbolt"
     },
     "X-KDE-Keywords": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices",
     "X-KDE-Keywords[ar]": "ثندربولت",
@@ -111,7 +107,6 @@
     "X-KDE-Keywords[uk]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,тандерболт,фандерболт,апаратне,обладнання,протокол,протокол тандерболт,передавання,юесбі,зовнішні пристрої",
     "X-KDE-Keywords[x-test]": "xxthunderboltxx,xxhardwarexx,xxdevicexx,xxprotocolxx,xxthunderbolt protocolxx,xxtransferxx,xxusbxx,xxusb-cxx,xxpci-exx,xxexternal devicesxx",
     "X-KDE-Keywords[zh_CN]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,雷电,硬件,设备,协议,雷电协议,传输,外部设备",
-    "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "hardware",
     "X-KDE-Weight": 120
 }
