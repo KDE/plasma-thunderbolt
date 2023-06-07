@@ -43,7 +43,6 @@ find_package(KF6KCMUtils ${KF6_VERSION} REQUIRED)
 find_package(KF6I18n ${KF6_VERSION} REQUIRED)
 find_package(KF6DBusAddons ${KF6_VERSION} REQUIRED)
 find_package(KF6Notifications ${KF6_VERSION} REQUIRED)
-find_package(KF6Package ${KF6_VERSION} REQUIRED)
 
 find_package(Bolt)
 set_package_properties(Bolt PROPERTIES DESCRIPTION "Thunderbolt device manager"

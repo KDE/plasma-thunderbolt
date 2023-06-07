@@ -4,10 +4,9 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-#include "kcm_bolt.h"
-
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <KQuickConfigModule>
 
 #include "device.h"
 #include "devicemodel.h"
@@ -15,8 +14,6 @@
 #include "manager.h"
 
 #include <QDebug>
-
-K_PLUGIN_FACTORY_WITH_JSON(KCMBoltFactory, "kcm_bolt.json", registerPlugin<KCMBolt>();)
 
 class QMLHelper : public QObject
 {
@@ -55,16 +52,24 @@ private:
     }
 };
 
-KCMBolt::KCMBolt(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : KQuickConfigModule(parent, metaData, args)
+class KCMBolt : public KQuickConfigModule
 {
-    qmlRegisterType<Bolt::DeviceModel>("org.kde.bolt", 0, 1, "DeviceModel");
-    qmlRegisterType<Bolt::Manager>("org.kde.bolt", 0, 1, "Manager");
-    qmlRegisterUncreatableType<Bolt::Device>("org.kde.bolt", 0, 1, "Device", QStringLiteral("Use DeviceModel"));
-    qmlRegisterUncreatableMetaObject(Bolt::staticMetaObject, "org.kde.bolt", 0, 1, "Bolt", QStringLiteral("For enums and flags only"));
-    qmlRegisterSingletonType<QMLHelper>("org.kde.bolt", 0, 1, "QMLHelper", [](auto, auto) -> QObject * {
-        return new QMLHelper();
-    });
-}
+    Q_OBJECT
+
+public:
+    explicit KCMBolt(QObject *parent, const KPluginMetaData &metaData)
+        : KQuickConfigModule(parent, metaData)
+    {
+        qmlRegisterType<Bolt::DeviceModel>("org.kde.bolt", 0, 1, "DeviceModel");
+        qmlRegisterType<Bolt::Manager>("org.kde.bolt", 0, 1, "Manager");
+        qmlRegisterUncreatableType<Bolt::Device>("org.kde.bolt", 0, 1, "Device", QStringLiteral("Use DeviceModel"));
+        qmlRegisterUncreatableMetaObject(Bolt::staticMetaObject, "org.kde.bolt", 0, 1, "Bolt", QStringLiteral("For enums and flags only"));
+        qmlRegisterSingletonType<QMLHelper>("org.kde.bolt", 0, 1, "QMLHelper", [](auto, auto) -> QObject * {
+            return new QMLHelper();
+        });
+    }
+};
+
+K_PLUGIN_CLASS_WITH_JSON(KCMBolt, "kcm_bolt.json")
 
 #include "kcm_bolt.moc"
