@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-20 02:18+0000\n"
+"POT-Creation-Date: 2023-06-08 02:13+0000\n"
 "PO-Revision-Date: 2019-10-18 17:22+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,94 +19,93 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.2\n"
 
-#: package/contents/ui/DeviceList.qml:27
+#: ui/DeviceList.qml:27
 #, kde-format
 msgid "Enable Thunderbolt devices"
 msgstr "Activar dispositivos Thunderbolt"
 
-#: package/contents/ui/DeviceList.qml:61
+#: ui/DeviceList.qml:61
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "No hay dispositivos Thunderbolt conectados"
 
-#: package/contents/ui/DeviceView.qml:64
+#: ui/DeviceView.qml:64
 #, kde-format
 msgid "Vendor:"
 msgstr "Fabricante:"
 
-#: package/contents/ui/DeviceView.qml:68
+#: ui/DeviceView.qml:68
 #, kde-format
 msgid "UID:"
 msgstr "UID:"
 
-#: package/contents/ui/DeviceView.qml:72
+#: ui/DeviceView.qml:72
 #, kde-format
 msgid "Status:"
 msgstr "Estado:"
 
-#: package/contents/ui/DeviceView.qml:77
+#: ui/DeviceView.qml:77
 #, kde-format
 msgid "Authorized at:"
 msgstr "Autorizado en:"
 
-#: package/contents/ui/DeviceView.qml:82
+#: ui/DeviceView.qml:82
 #, kde-format
 msgid "Connected at:"
 msgstr "Conectado en:"
 
-#: package/contents/ui/DeviceView.qml:87
+#: ui/DeviceView.qml:87
 #, kde-format
 msgid "Enrolled at:"
 msgstr "Registrado en:"
 
-#: package/contents/ui/DeviceView.qml:91
+#: ui/DeviceView.qml:91
 #, kde-format
 msgid "Yes"
 msgstr "Sí"
 
-#: package/contents/ui/DeviceView.qml:91
+#: ui/DeviceView.qml:91
 #, kde-format
 msgid "No"
 msgstr "No"
 
-#: package/contents/ui/DeviceView.qml:92
+#: ui/DeviceView.qml:92
 #, kde-format
 msgid "Trusted:"
 msgstr "De confianza:"
 
-#: package/contents/ui/DeviceView.qml:101
+#: ui/DeviceView.qml:101
 #, kde-format
 msgid "Authorizing..."
 msgstr "Autorizando..."
 
-#: package/contents/ui/DeviceView.qml:101
+#: ui/DeviceView.qml:101
 #, kde-format
 msgid "Authorize"
 msgstr "Autorizar"
 
-#: package/contents/ui/DeviceView.qml:112
-#: package/contents/ui/DeviceView.qml:132
+#: ui/DeviceView.qml:112 ui/DeviceView.qml:132
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
 msgstr "No se ha podido registrar el dispositivo <b>%1</b>: %2"
 
-#: package/contents/ui/DeviceView.qml:119
+#: ui/DeviceView.qml:119
 #, kde-format
 msgid "Trust this Device"
 msgstr "Confiar en este dispositivo"
 
-#: package/contents/ui/DeviceView.qml:140
+#: ui/DeviceView.qml:140
 #, kde-format
 msgid "Revoke Trust"
 msgstr "Revocar confianza"
 
-#: package/contents/ui/DeviceView.qml:152
+#: ui/DeviceView.qml:152
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
 msgstr ""
 "Ha ocurrido un error al cambiar la confianza en el dispositivo: <b>%1</b>: %2"
 
-#: package/contents/ui/DeviceView.qml:169
+#: ui/DeviceView.qml:169
 #, kde-format
 msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
@@ -115,7 +114,7 @@ msgstr ""
 "Nota: un dispositivo de confianza se autorizará automáticamente la próxima "
 "vez que lo conecte al equipo."
 
-#: package/contents/ui/DeviceView.qml:170
+#: ui/DeviceView.qml:170
 #, kde-format
 msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
@@ -124,45 +123,45 @@ msgstr ""
 "Nota: un dispositivo no confiable se debe autorizar manualmente cada vez que "
 "se conecta al equipo."
 
-#: package/contents/ui/main.qml:40
+#: ui/main.qml:39
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "El uso de Thunderbolt ha sido desactivado en BIOS"
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:44
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
 msgstr "El subsistema Thunderbolt no está disponible"
 
-#: package/contents/ui/utils.js:16
+#: ui/utils.js:16
 msgid "Disconnected"
 msgstr "Desconectado"
 
-#: package/contents/ui/utils.js:18
+#: ui/utils.js:18
 msgid "Connecting"
 msgstr "Conectando"
 
-#: package/contents/ui/utils.js:20
+#: ui/utils.js:20
 msgid "Connected"
 msgstr "Conectado"
 
-#: package/contents/ui/utils.js:23
+#: ui/utils.js:23
 msgid "Authorization Error"
 msgstr "Error de autorización"
 
-#: package/contents/ui/utils.js:25
+#: ui/utils.js:25
 msgid "Authorizing"
 msgstr "Autorizando"
 
-#: package/contents/ui/utils.js:29
+#: ui/utils.js:29
 msgid "Reduced Functionality"
 msgstr "Funcionalidad reducida"
 
-#: package/contents/ui/utils.js:31
+#: ui/utils.js:31
 msgid "Connected & Authorized"
 msgstr "Conectado y autorizado"
 
-#: package/contents/ui/utils.js:38
+#: ui/utils.js:38
 msgid "Trusted"
 msgstr "De confianza"
 

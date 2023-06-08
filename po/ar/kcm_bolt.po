@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-20 02:18+0000\n"
+"POT-Creation-Date: 2023-06-08 02:13+0000\n"
 "PO-Revision-Date: 2021-12-08 21:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,93 +18,92 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.07.70\n"
 
-#: package/contents/ui/DeviceList.qml:27
+#: ui/DeviceList.qml:27
 #, kde-format
 msgid "Enable Thunderbolt devices"
 msgstr "مكن أجهزة ثندربولت"
 
-#: package/contents/ui/DeviceList.qml:61
+#: ui/DeviceList.qml:61
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "لا يوجد أجهزة ثندربولت متصلة"
 
-#: package/contents/ui/DeviceView.qml:64
+#: ui/DeviceView.qml:64
 #, kde-format
 msgid "Vendor:"
 msgstr "البائع:"
 
-#: package/contents/ui/DeviceView.qml:68
+#: ui/DeviceView.qml:68
 #, kde-format
 msgid "UID:"
 msgstr "المعرّف الفريد:"
 
-#: package/contents/ui/DeviceView.qml:72
+#: ui/DeviceView.qml:72
 #, kde-format
 msgid "Status:"
 msgstr "الحالة:"
 
-#: package/contents/ui/DeviceView.qml:77
+#: ui/DeviceView.qml:77
 #, kde-format
 msgid "Authorized at:"
 msgstr "مصرح في:"
 
-#: package/contents/ui/DeviceView.qml:82
+#: ui/DeviceView.qml:82
 #, kde-format
 msgid "Connected at:"
 msgstr "متصل في:"
 
-#: package/contents/ui/DeviceView.qml:87
+#: ui/DeviceView.qml:87
 #, kde-format
 msgid "Enrolled at:"
 msgstr "مسجل في:"
 
-#: package/contents/ui/DeviceView.qml:91
+#: ui/DeviceView.qml:91
 #, kde-format
 msgid "Yes"
 msgstr "نعم"
 
-#: package/contents/ui/DeviceView.qml:91
+#: ui/DeviceView.qml:91
 #, kde-format
 msgid "No"
 msgstr "لا"
 
-#: package/contents/ui/DeviceView.qml:92
+#: ui/DeviceView.qml:92
 #, kde-format
 msgid "Trusted:"
 msgstr "موثوقة:"
 
-#: package/contents/ui/DeviceView.qml:101
+#: ui/DeviceView.qml:101
 #, kde-format
 msgid "Authorizing..."
 msgstr "يصرح..."
 
-#: package/contents/ui/DeviceView.qml:101
+#: ui/DeviceView.qml:101
 #, kde-format
 msgid "Authorize"
 msgstr "صرّح"
 
-#: package/contents/ui/DeviceView.qml:112
-#: package/contents/ui/DeviceView.qml:132
+#: ui/DeviceView.qml:112 ui/DeviceView.qml:132
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
 msgstr "فشل في تسجيل الجهاز <b>%1</b>:‏ %2"
 
-#: package/contents/ui/DeviceView.qml:119
+#: ui/DeviceView.qml:119
 #, kde-format
 msgid "Trust this Device"
 msgstr "ثق في هذا الجهاز"
 
-#: package/contents/ui/DeviceView.qml:140
+#: ui/DeviceView.qml:140
 #, kde-format
 msgid "Revoke Trust"
 msgstr "اسحب الثقة"
 
-#: package/contents/ui/DeviceView.qml:152
+#: ui/DeviceView.qml:152
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
 msgstr "خطأ في تغيير ثقة الجهاز  <b>%1</b>:‏ %2"
 
-#: package/contents/ui/DeviceView.qml:169
+#: ui/DeviceView.qml:169
 #, kde-format
 msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
@@ -112,7 +111,7 @@ msgid ""
 msgstr ""
 "تلميح: سيسمح تلقائيًا للجهاز الموثوق به في المرة التالية عند وصله بالحاسوب."
 
-#: package/contents/ui/DeviceView.qml:170
+#: ui/DeviceView.qml:170
 #, kde-format
 msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
@@ -120,45 +119,45 @@ msgid ""
 msgstr ""
 "تلميح: يجب ترخيص الجهاز غير الموثوق به يدويًا في كل مرة يتم توصيله بالحاسوب."
 
-#: package/contents/ui/main.qml:40
+#: ui/main.qml:39
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "عطل دعم ثندربولت في البايوس"
 
-#: package/contents/ui/main.qml:45
+#: ui/main.qml:44
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
 msgstr "النظام الفرعي لثندربولت غير متوفر"
 
-#: package/contents/ui/utils.js:16
+#: ui/utils.js:16
 msgid "Disconnected"
 msgstr "قطع الاتصال"
 
-#: package/contents/ui/utils.js:18
+#: ui/utils.js:18
 msgid "Connecting"
 msgstr "يتّصل"
 
-#: package/contents/ui/utils.js:20
+#: ui/utils.js:20
 msgid "Connected"
 msgstr "متّصل"
 
-#: package/contents/ui/utils.js:23
+#: ui/utils.js:23
 msgid "Authorization Error"
 msgstr "خطأ استيثاق"
 
-#: package/contents/ui/utils.js:25
+#: ui/utils.js:25
 msgid "Authorizing"
 msgstr "يصرح"
 
-#: package/contents/ui/utils.js:29
+#: ui/utils.js:29
 msgid "Reduced Functionality"
 msgstr "وظائف مخفضة"
 
-#: package/contents/ui/utils.js:31
+#: ui/utils.js:31
 msgid "Connected & Authorized"
 msgstr "متّصل ومخوّل"
 
-#: package/contents/ui/utils.js:38
+#: ui/utils.js:38
 msgid "Trusted"
 msgstr "موثوق"
 
