@@ -14,7 +14,7 @@ import org.kde.kcmutils as KCM
 import org.kde.bolt 0.1 as Bolt
 import "utils.js" as Utils
 
-KCM.ScrollViewKCM {
+Kirigami.ScrollablePage {
     id: page
 
     property Bolt.DeviceModel deviceModel: null
@@ -36,7 +36,7 @@ KCM.ScrollViewKCM {
         }
     }
 
-    view: ListView {
+    ListView {
         id: view
         model: deviceModel
         enabled: enableBox.checked
