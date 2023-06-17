@@ -9,7 +9,6 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3
 
 import org.kde.kirigami 2.12 as Kirigami
-import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 import org.kde.kcmutils as KCM
 import org.kde.bolt 0.1 as Bolt
 import "utils.js" as Utils
