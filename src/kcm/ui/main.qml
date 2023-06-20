@@ -11,7 +11,6 @@ import QtQuick.Controls 2.3
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.kcmutils
 import org.kde.bolt 0.1 as Bolt
-import "utils.js" as Utils
 
 Kirigami.Page {
     ConfigModule.buttons: ConfigModule.NoAdditionalButton
