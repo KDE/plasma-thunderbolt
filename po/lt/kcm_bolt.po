@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2019-10-18 22:33+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -122,12 +122,12 @@ msgstr ""
 "Patarimas: nepatikimas įrenginys, kiekvieną kartą jį prijungus prie "
 "kompiuterio, turi būti įgaliotas rankiniu būdu."
 
-#: ui/main.qml:38
+#: ui/main.qml:37
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Thunderbolt palaikymas išjungtas BIOS sistemoje"
 
-#: ui/main.qml:43
+#: ui/main.qml:42
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
 msgstr "Thunderbolt posistemis neprieinamas"

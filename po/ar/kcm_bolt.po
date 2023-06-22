@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2021-12-08 21:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -119,12 +119,12 @@ msgid ""
 msgstr ""
 "تلميح: يجب ترخيص الجهاز غير الموثوق به يدويًا في كل مرة يتم توصيله بالحاسوب."
 
-#: ui/main.qml:38
+#: ui/main.qml:37
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "عطل دعم ثندربولت في البايوس"
 
-#: ui/main.qml:43
+#: ui/main.qml:42
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
 msgstr "النظام الفرعي لثندربولت غير متوفر"

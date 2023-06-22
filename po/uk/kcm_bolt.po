@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2019-10-18 07:59+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -123,12 +123,12 @@ msgstr ""
 "Підказка: пристрій, який не є довіреним, доведеться уповноважувати після "
 "кожного з'єднання з комп'ютером."
 
-#: ui/main.qml:38
+#: ui/main.qml:37
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Підтримку Thunderbolt було вимкнено у BIOS"
 
-#: ui/main.qml:43
+#: ui/main.qml:42
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
 msgstr "Підсистема Thunderbolt є недоступною"

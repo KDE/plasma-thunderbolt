@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2023-01-24 16:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -124,12 +124,12 @@ msgstr ""
 "Падказка: пры падлучэнні да камп'ютара недаверанай прылады трэба кожны раз "
 "уласнаручна выконваць аўтарызацыю."
 
-#: ui/main.qml:38
+#: ui/main.qml:37
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Падтрымка Thunderbolt адключаная ў BIOS"
 
-#: ui/main.qml:43
+#: ui/main.qml:42
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
 msgstr "Падсістэма Thunderbolt недаступная"

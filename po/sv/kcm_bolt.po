@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-20 02:59+0000\n"
+"POT-Creation-Date: 2023-06-22 02:08+0000\n"
 "PO-Revision-Date: 2019-10-26 11:09+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -120,12 +120,12 @@ msgstr ""
 "Tips: En opålitlig enhet måste ges manuell behörighet varje gång den ansluts "
 "till datorn."
 
-#: ui/main.qml:38
+#: ui/main.qml:37
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Stöd för Thunderbolt har inaktiverats i BIOS"
 
-#: ui/main.qml:43
+#: ui/main.qml:42
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
 msgstr "Thunderbolt-delsystemet är inte tillgängligt"
