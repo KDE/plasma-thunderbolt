@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-05-04 00:21+0000\n"
-"PO-Revision-Date: 2023-01-04 09:08+0100\n"
+"PO-Revision-Date: 2023-06-22 13:19+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -158,7 +158,7 @@ msgstr ""
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
-msgstr "Podpora Thunderboltu byla vypnuta v BIOSu"
+msgstr "Podpora Thunderbolt byla vypnuta v BIOSu"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
