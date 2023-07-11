@@ -213,3 +213,5 @@ void FakeDevice::Authorize(const QString &flags)
     mAuthFlags = flags;
     mStatus = QLatin1String("authorized");
 }
+
+#include "moc_fakedevice.cpp"

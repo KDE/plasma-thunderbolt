@@ -215,3 +215,5 @@ Bolt::Security Bolt::securityFromString(const QString &str)
         return Bolt::Security::Unknown;
     }
 }
+
+#include "moc_enum.cpp"

@@ -185,3 +185,5 @@ void Device::authorize(AuthFlags authFlags, std::function<void()> successCb, std
         },
         this);
 }
+
+#include "moc_device.cpp"

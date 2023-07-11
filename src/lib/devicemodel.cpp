@@ -115,3 +115,5 @@ void DeviceModel::populateWithoutReset()
         return mShowHosts || device->type() == Type::Peripheral;
     });
 }
+
+#include "moc_devicemodel.cpp"

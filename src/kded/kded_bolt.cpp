@@ -138,3 +138,5 @@ void KDEDBolt::authorizeDevices(BoltDeviceList devices, AuthMode mode)
         device->authorize(Bolt::Auth::Boot | Bolt::Auth::NoKey, okCb, errCb);
     }
 }
+
+#include "moc_kded_bolt.cpp"

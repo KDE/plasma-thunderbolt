@@ -170,3 +170,5 @@ void FakeManager::ForgetDevice(const QString &uid)
     device->setStored(false);
     device->setStatus(QLatin1String("connected"));
 }
+
+#include "moc_fakemanager.cpp"

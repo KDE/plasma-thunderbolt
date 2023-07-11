@@ -212,3 +212,5 @@ void Manager::forgetDevice(const QString &uid, std::function<void()> successCall
         },
         this);
 }
+
+#include "moc_manager.cpp"
