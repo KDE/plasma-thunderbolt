@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2019-10-18 17:22+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.2\n"
 
-#: ui/DeviceList.qml:26
+#: ui/DeviceList.qml:25
 #, kde-format
 msgid "Enable Thunderbolt devices"
 msgstr "Activar dispositivos Thunderbolt"
 
-#: ui/DeviceList.qml:60
+#: ui/DeviceList.qml:59
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "No hay dispositivos Thunderbolt conectados"

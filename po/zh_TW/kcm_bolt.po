@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2019-10-19 14:54+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -20,12 +20,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 19.08.2\n"
 
-#: ui/DeviceList.qml:26
+#: ui/DeviceList.qml:25
 #, kde-format
 msgid "Enable Thunderbolt devices"
 msgstr "啟用 Thunderbolt 裝置"
 
-#: ui/DeviceList.qml:60
+#: ui/DeviceList.qml:59
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "沒有連結的 Thunderbolt 裝置"

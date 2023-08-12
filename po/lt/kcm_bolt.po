@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-22 02:08+0000\n"
+"POT-Creation-Date: 2023-08-12 02:01+0000\n"
 "PO-Revision-Date: 2019-10-18 22:33+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -19,12 +19,12 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 2.0.6\n"
 
-#: ui/DeviceList.qml:26
+#: ui/DeviceList.qml:25
 #, kde-format
 msgid "Enable Thunderbolt devices"
 msgstr "Įjungti Thunderbolt įrenginius"
 
-#: ui/DeviceList.qml:60
+#: ui/DeviceList.qml:59
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "Nėra jokių prijungtų Thunderbolt įrenginių"
