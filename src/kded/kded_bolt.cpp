@@ -71,7 +71,6 @@ void KDEDBolt::notify()
                                                                         "%1 unauthorized Thunderbolt devices were detected. Do you want to authorize them?",
                                                                         mPendingDevices.size()),
                                     /*icon*/ QPixmap{},
-                                    /* widget */ nullptr,
                                     KNotification::Persistent,
                                     QStringLiteral("kded_bolt"));
     ntf->setActions({i18n("Authorize Now"), i18n("Authorize Permanently")});
@@ -128,7 +127,6 @@ void KDEDBolt::authorizeDevices(BoltDeviceList devices, AuthMode mode)
                              i18n("Thunderbolt Device Authorization Error"),
                              i18n("Failed to authorize Thunderbolt device <b>%1</b>: %2", device->name().toHtmlEscaped(), error),
                              /* icon */ QPixmap{},
-                             /* parent */ nullptr,
                              KNotification::CloseOnTimeout,
                              QStringLiteral("kded_bolt"));
     };
