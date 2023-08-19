@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
 "PO-Revision-Date: 2023-04-29 22:44+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -46,22 +46,22 @@ msgstr[1] ""
 "%1 nerajtigitaj Thunderbolt-aparatoj estis detektitaj. Ĉu vi volas rajtigi "
 "ilin?"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Now"
 msgstr "Rajtigi nun"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Permanently"
 msgstr "Rajtigi porĉiame"
 
-#: kded_bolt.cpp:128
+#: kded_bolt.cpp:127
 #, kde-format
 msgid "Thunderbolt Device Authorization Error"
 msgstr "Thunderbolt aparat-rajtiga eraro"
 
-#: kded_bolt.cpp:129
+#: kded_bolt.cpp:128
 #, kde-format
 msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
 msgstr "Malsukcesis rajtigi Thunderbolt-aparaton <b>%1</b>: %2"

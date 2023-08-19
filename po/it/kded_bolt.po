@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
 "PO-Revision-Date: 2019-05-15 23:36+0100\n"
 "Last-Translator: Pino Toscano <toscano.pino@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -45,22 +45,22 @@ msgstr[1] ""
 "Sono stati rilevati %1 dispositivi Thunderbolt non autorizzati. Vuoi "
 "autorizzarli?"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Now"
 msgstr "Autorizza ora"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Permanently"
 msgstr "Autorizza permanentemente"
 
-#: kded_bolt.cpp:128
+#: kded_bolt.cpp:127
 #, kde-format
 msgid "Thunderbolt Device Authorization Error"
 msgstr "Errore di autorizzazione del dispositivo Thunderbolt"
 
-#: kded_bolt.cpp:129
+#: kded_bolt.cpp:128
 #, kde-format
 msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
 msgstr ""

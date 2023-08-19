@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
 "PO-Revision-Date: 2023-08-02 12:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -38,22 +38,22 @@ msgid_plural ""
 "them?"
 msgstr[0] "检测到 %1 个未经授权的雷电接口设备。您想要对它们进行授权吗？"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Now"
 msgstr "临时授权"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Permanently"
 msgstr "永久授权"
 
-#: kded_bolt.cpp:128
+#: kded_bolt.cpp:127
 #, kde-format
 msgid "Thunderbolt Device Authorization Error"
 msgstr "雷电接口设备授权错误"
 
-#: kded_bolt.cpp:129
+#: kded_bolt.cpp:128
 #, kde-format
 msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
 msgstr "授权雷电接口设备 <b>%1</b> 失败：%2"

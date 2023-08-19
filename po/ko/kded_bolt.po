@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
 "PO-Revision-Date: 2019-05-18 15:37+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -41,22 +41,22 @@ msgid_plural ""
 msgstr[0] ""
 "승인되지 않은 Thunderbolt 장치 %1개가 감지되었습니다. 승인하시겠습니까?"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Now"
 msgstr "지금 승인"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Permanently"
 msgstr "영원히 승인"
 
-#: kded_bolt.cpp:128
+#: kded_bolt.cpp:127
 #, kde-format
 msgid "Thunderbolt Device Authorization Error"
 msgstr "Thunderbolt 장치 승인 오류"
 
-#: kded_bolt.cpp:129
+#: kded_bolt.cpp:128
 #, kde-format
 msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
 msgstr "Thunderbolt 장치 <b>%1</b>을(를) 승인할 수 없음: %2"

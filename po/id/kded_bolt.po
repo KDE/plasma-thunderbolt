@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-05-04 00:21+0000\n"
+"POT-Creation-Date: 2023-08-19 01:58+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -45,22 +45,22 @@ msgstr[1] ""
 "%1 peranti Thunderbolt tak diotorisasi telah terdeteksi. Apakah kamu ingin "
 "mengotorisasikannya?"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Now"
 msgstr "Otorisasikan Sekarang"
 
-#: kded_bolt.cpp:77
+#: kded_bolt.cpp:76
 #, kde-format
 msgid "Authorize Permanently"
 msgstr "Otorisasikan Secara Permanen"
 
-#: kded_bolt.cpp:128
+#: kded_bolt.cpp:127
 #, kde-format
 msgid "Thunderbolt Device Authorization Error"
 msgstr "Otorisasi Peranti Thunderbolt Error"
 
-#: kded_bolt.cpp:129
+#: kded_bolt.cpp:128
 #, kde-format
 msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
 msgstr "Gagal mengotorisasikan peranti Thunderbolt <b>%1</b>: %2"
