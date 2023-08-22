@@ -73,14 +73,18 @@ void KDEDBolt::notify()
                                     /*icon*/ QPixmap{},
                                     KNotification::Persistent,
                                     QStringLiteral("kded_bolt"));
-    ntf->setActions({i18n("Authorize Now"), i18n("Authorize Permanently")});
     mNotifiedDevices.insert(ntf, mPendingDevices);
-    connect(ntf, &KNotification::action1Activated, this, [this, devices = mPendingDevices]() {
+
+    auto authorizeNowAction = ntf->addAction(i18n("Authorize Now"));
+    connect(authorizeNowAction, &KNotificationAction::activated, this, [this, devices = mPendingDevices]() {
         authorizeDevices(sortDevices(devices), Authorize);
     });
-    connect(ntf, &KNotification::action2Activated, this, [this, devices = mPendingDevices]() {
+
+    auto authorizePermanentlyAction = ntf->addAction(i18n("Authorize Permanently"));
+    connect(authorizePermanentlyAction, &KNotificationAction::activated, this, [this, devices = mPendingDevices]() {
         authorizeDevices(sortDevices(devices), Enroll);
     });
+
     connect(ntf, &KNotification::closed, this, [this, ntf]() {
         mNotifiedDevices.remove(ntf);
     });
