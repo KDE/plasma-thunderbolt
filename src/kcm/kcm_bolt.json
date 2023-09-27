@@ -108,5 +108,5 @@
     "X-KDE-Keywords[x-test]": "xxthunderboltxx,xxhardwarexx,xxdevicexx,xxprotocolxx,xxthunderbolt protocolxx,xxtransferxx,xxusbxx,xxusb-cxx,xxpci-exx,xxexternal devicesxx",
     "X-KDE-Keywords[zh_CN]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,雷电,硬件,设备,协议,雷电协议,传输,外部设备",
     "X-KDE-System-Settings-Parent-Category": "hardware",
-    "X-KDE-Weight": 120
+    "X-KDE-Weight": 40
 }
