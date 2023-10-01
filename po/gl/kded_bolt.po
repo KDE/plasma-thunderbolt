@@ -62,4 +62,4 @@ msgstr "Erro de autorización de dispositivo de Thunderbolt"
 #: kded_bolt.cpp:128
 #, kde-format
 msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
-msgstr "Non se puido autorizar o dispositivo de Thunderbolt <b>%1</b>: %2"
+msgstr "Non foi posíbel autorizar o dispositivo de Thunderbolt <b>%1</b>: %2"
