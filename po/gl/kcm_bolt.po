@@ -113,7 +113,7 @@ msgstr "Autorizar"
 #: package/contents/ui/DeviceView.qml:132
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
-msgstr "Non se puido inscribir o dispositivo <b>%1</b>: %2"
+msgstr "Non foi posíbel inscribir o dispositivo <b>%1</b>: %2"
 
 #: package/contents/ui/DeviceView.qml:119
 #, kde-format
