@@ -11,10 +11,10 @@
 
 #include <kdedmodule.h>
 
+#include <QList>
 #include <QMap>
 #include <QSharedPointer>
 #include <QTimer>
-#include <QVector>
 
 class KNotification;
 namespace Bolt
@@ -27,7 +27,7 @@ class Q_DECL_EXPORT KDEDBolt : public KDEDModule
     Q_OBJECT
 
 public:
-    using BoltDeviceList = QVector<QSharedPointer<Bolt::Device>>;
+    using BoltDeviceList = QList<QSharedPointer<Bolt::Device>>;
 
     KDEDBolt(QObject *parent, const QVariantList &args);
     ~KDEDBolt() override;

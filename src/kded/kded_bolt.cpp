@@ -90,7 +90,7 @@ void KDEDBolt::notify()
 
 KDEDBolt::BoltDeviceList KDEDBolt::sortDevices(const BoltDeviceList &devices)
 {
-    QVector<QSharedPointer<Bolt::Device>> sorted;
+    QList<QSharedPointer<Bolt::Device>> sorted;
     sorted.reserve(devices.size());
 
     // Sort the devices so that parents go before their children. Probably

@@ -25,7 +25,7 @@ public:
     using KDEDBolt::KDEDBolt;
 
 Q_SIGNALS:
-    void deviceNotify(const QVector<QSharedPointer<Bolt::Device>> &device);
+    void deviceNotify(const QList<QSharedPointer<Bolt::Device>> &device);
 
 protected:
     void notify() override
@@ -69,7 +69,7 @@ private Q_SLOTS:
             fakeManager->addDevice(std::move(fakeDevice));
 
             QTRY_COMPARE(notifySpy.size(), 1);
-            const auto devices = notifySpy[0][0].value<QVector<QSharedPointer<Bolt::Device>>>();
+            const auto devices = notifySpy[0][0].value<QList<QSharedPointer<Bolt::Device>>>();
             QCOMPARE(devices.size(), 1);
             const auto device = devices.front();
             QCOMPARE(device->uid(), QStringLiteral("Device1"));

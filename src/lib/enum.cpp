@@ -7,9 +7,9 @@
 #include "enum.h"
 #include "libkbolt_debug.h"
 
+#include <QList>
 #include <QStringList>
 #include <QStringView>
-#include <QVector>
 
 Bolt::Status Bolt::statusFromString(const QString &str)
 {
