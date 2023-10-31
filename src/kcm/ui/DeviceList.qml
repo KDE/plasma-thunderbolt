@@ -6,7 +6,7 @@
 
 import QtQuick 2.7
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.3
+import QtQuick.Controls
 
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.bolt 0.1 as Bolt
@@ -59,25 +59,34 @@ Kirigami.ScrollablePage {
             text: i18n("No Thunderbolt devices connected")
         }
 
-        delegate: Kirigami.BasicListItem {
+        delegate: ItemDelegate {
             id: item
+
+            property var _deviceStatus: Utils.deviceStatus(model.device, true)
+
             width: view.width
 
-            leading: BusyIndicator {
-                id: busyIndicator
-                visible: model.device.status == Bolt.Bolt.Status.Authorizing
-                running: visible
-                implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                implicitHeight: Kirigami.Units.iconSizes.smallMedium
-            }
-            text: model.device.label
+            contentItem: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
 
-            trailing: Label {
-                id: statusLabel
-                property var _deviceStatus: Utils.deviceStatus(model.device, true)
+                BusyIndicator {
+                    visible: model.device.status == Bolt.Bolt.Status.Authorizing
+                    running: visible
+                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                }
 
-                text: view._evalTrigger, _deviceStatus.text
-                color: item.highlighted ? Kirigami.Theme.highlightedTextColor : _deviceStatus.color
+                Label {
+                    Layout.fillWidth: true
+                    text: model.device.label
+                    elide: Text.ElideRight
+                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.TextColor
+                }
+
+                Label {
+                    text: view._evalTrigger, item._deviceStatus.text
+                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : item._deviceStatus.color
+                }
             }
 
             onClicked: {
