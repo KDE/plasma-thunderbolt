@@ -25,6 +25,24 @@ Kirigami.Page {
         id: boltManager
     }
 
+    Kirigami.PlaceholderMessage {
+        visible: boltManager.isAvailable && (boltManager.securityLevel == Bolt.Bolt.Security.DPOnly || boltManager.securityLevel == Bolt.Bolt.Security.USBOnly)
+        anchors.centerIn: parent
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        icon.name: "preferences-desktop-thunderbolt"
+        text: i18n("Thunderbolt support has been disabled in BIOS");
+        explanation: i18n("Follow your system manufacturer's guide to enable Thunderbolt support") 
+    }
+
+    Kirigami.PlaceholderMessage {
+        visible: !boltManager.isAvailable
+        anchors.centerIn: parent
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        icon.name: "preferences-desktop-thunderbolt"
+        text: i18n("Thunderbolt subsystem is disabled or unavailable");
+        explanation: i18n("If the device supports Thunderbolt, try plugging in a Thunderbolt device") 
+    }
+
     Kirigami.PageRow {
         id: pageRow
         clip: true
@@ -32,14 +50,10 @@ Kirigami.Page {
 
         Component.onCompleted: {
             if (boltManager.isAvailable) {
-                if (boltManager.securityLevel == Bolt.Bolt.Security.DPOnly
-                        || boltManager.securityLevel == Bolt.Bolt.Security.USBOnly) {
-                    pageRow.push(noBoltPage, { text: i18n("Thunderbolt support has been disabled in BIOS") })
-                } else {
+                if (!(boltManager.securityLevel == Bolt.Bolt.Security.DPOnly
+                        || boltManager.securityLevel == Bolt.Bolt.Security.USBOnly)) {
                     pageRow.push(deviceList, { manager: boltManager })
                 }
-            } else {
-                pageRow.push(noBoltPage, { text: i18n("Thunderbolt subsystem is not available") })
             }
         }
     }

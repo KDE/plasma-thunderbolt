@@ -56,7 +56,9 @@ Kirigami.ScrollablePage {
 
             visible: view.count === 0
 
+            icon.name: "preferences-desktop-thunderbolt"
             text: i18n("No Thunderbolt devices connected")
+            explanation: i18n("Plug in a Thunderbolt device")
         }
 
         delegate: ItemDelegate {
