@@ -1,11 +1,12 @@
+# SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-05-04 00:21+0000\n"
-"PO-Revision-Date: 2019-05-18 11:43-0700\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2024-02-26 02:47+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"Language-Team: ja\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,117 +14,118 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Ryuichi Yamada"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "ryuichi_ya220@outlook.jp"
 
 #: kcm_bolt.cpp:70
 #, kde-format
 msgid "Thunderbolt Device Management"
-msgstr ""
+msgstr "Thunderbolt デバイス管理"
 
 #: kcm_bolt.cpp:72
 #, kde-format
 msgid "System Settings module for managing Thunderbolt devices."
-msgstr ""
+msgstr "Thunderbolt デバイスを管理するシステム設定モジュールです。"
 
 #: kcm_bolt.cpp:74
 #, kde-format
 msgid "Daniel Vrátil"
-msgstr ""
+msgstr "Daniel Vrátil"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
 msgid "Enable Thunderbolt devices"
-msgstr ""
+msgstr "Thunderbolt デバイスを有効化"
 
 #: package/contents/ui/DeviceList.qml:61
 #, kde-format
 msgid "No Thunderbolt devices connected"
-msgstr ""
+msgstr "接続された Thunderbolt デバイスはありません"
 
 #: package/contents/ui/DeviceView.qml:64
 #, kde-format
 msgid "Vendor:"
-msgstr ""
+msgstr "ベンダー:"
 
 #: package/contents/ui/DeviceView.qml:68
 #, kde-format
 msgid "UID:"
-msgstr ""
+msgstr "UID:"
 
 #: package/contents/ui/DeviceView.qml:72
 #, kde-format
 msgid "Status:"
-msgstr ""
+msgstr "状態:"
 
 #: package/contents/ui/DeviceView.qml:77
 #, kde-format
 msgid "Authorized at:"
-msgstr ""
+msgstr "承認された時刻:"
 
 #: package/contents/ui/DeviceView.qml:82
 #, kde-format
 msgid "Connected at:"
-msgstr ""
+msgstr "接続された時刻:"
 
 #: package/contents/ui/DeviceView.qml:87
 #, kde-format
 msgid "Enrolled at:"
-msgstr ""
+msgstr "登録された時刻:"
 
 #: package/contents/ui/DeviceView.qml:91
 #, kde-format
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: package/contents/ui/DeviceView.qml:91
 #, kde-format
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: package/contents/ui/DeviceView.qml:92
 #, kde-format
 msgid "Trusted:"
-msgstr ""
+msgstr "信頼済み:"
 
 #: package/contents/ui/DeviceView.qml:101
 #, kde-format
 msgid "Authorizing..."
-msgstr ""
+msgstr "承認中..."
 
 #: package/contents/ui/DeviceView.qml:101
 #, kde-format
 msgid "Authorize"
-msgstr ""
+msgstr "承認"
 
 #: package/contents/ui/DeviceView.qml:112
 #: package/contents/ui/DeviceView.qml:132
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
-msgstr ""
+msgstr "デバイス <b>%1</b> の登録に失敗しました: %2"
 
 #: package/contents/ui/DeviceView.qml:119
 #, kde-format
 msgid "Trust this Device"
-msgstr ""
+msgstr "このデバイスを信頼する"
 
 #: package/contents/ui/DeviceView.qml:140
 #, kde-format
 msgid "Revoke Trust"
-msgstr ""
+msgstr "信頼を取り消す"
 
 #: package/contents/ui/DeviceView.qml:152
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
-msgstr ""
+msgstr "デバイス信頼設定の変更中にエラーが発生しました: <b>%1</b>: %2"
 
 #: package/contents/ui/DeviceView.qml:169
 #, kde-format
@@ -131,6 +133,8 @@ msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
 "connected to the computer."
 msgstr ""
+"ヒント: 信頼されたデバイスは次回コンピュータに接続された際に自動的に承認され"
+"ます。"
 
 #: package/contents/ui/DeviceView.qml:170
 #, kde-format
@@ -138,6 +142,8 @@ msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
 "connected to the computer."
 msgstr ""
+"ヒント: 信頼されていないデバイスはコンピュータに接続するたびに手動で承認する"
+"必要があります。"
 
 #: package/contents/ui/main.qml:18
 #, kde-format
@@ -145,45 +151,46 @@ msgid ""
 "This module allows you to manage Thunderbolt devices connected to your "
 "computer."
 msgstr ""
+"このモジュールでコンピュータに接続された Thunderbolt デバイスを管理できます。"
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
-msgstr ""
+msgstr "Thunderbolt サポートは BIOS で無効化されています。"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
-msgstr ""
+msgstr "Thunderbolt サブシステムが利用できません"
 
 #: package/contents/ui/utils.js:16
 msgid "Disconnected"
-msgstr ""
+msgstr "切断済み"
 
 #: package/contents/ui/utils.js:18
 msgid "Connecting"
-msgstr ""
+msgstr "接続中"
 
 #: package/contents/ui/utils.js:20
 msgid "Connected"
-msgstr ""
+msgstr "接続済み"
 
 #: package/contents/ui/utils.js:23
 msgid "Authorization Error"
-msgstr ""
+msgstr "承認エラー"
 
 #: package/contents/ui/utils.js:25
 msgid "Authorizing"
-msgstr ""
+msgstr "承認中"
 
 #: package/contents/ui/utils.js:29
 msgid "Reduced Functionality"
-msgstr ""
+msgstr "制限された機能性"
 
 #: package/contents/ui/utils.js:31
 msgid "Connected & Authorized"
-msgstr ""
+msgstr "接続＆承認済み"
 
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
-msgstr ""
+msgstr "信頼済み"
