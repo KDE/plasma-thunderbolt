@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2024-03-03 00:40+0000\n"
 "PO-Revision-Date: 2019-10-18 17:22+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -24,10 +24,16 @@ msgstr ""
 msgid "Enable Thunderbolt devices"
 msgstr "Activar dispositivos Thunderbolt"
 
-#: ui/DeviceList.qml:59
+#: ui/DeviceList.qml:60
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "No hay dispositivos Thunderbolt conectados"
+
+#: ui/DeviceList.qml:61
+#, fuzzy, kde-format
+#| msgid "Enable Thunderbolt devices"
+msgid "Plug in a Thunderbolt device"
+msgstr "Activar dispositivos Thunderbolt"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -123,15 +129,27 @@ msgstr ""
 "Nota: un dispositivo no confiable se debe autorizar manualmente cada vez que "
 "se conecta al equipo."
 
-#: ui/main.qml:37
+#: ui/main.qml:33
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "El uso de Thunderbolt ha sido desactivado en BIOS"
 
-#: ui/main.qml:42
+#: ui/main.qml:34
 #, kde-format
-msgid "Thunderbolt subsystem is not available"
+msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
+msgstr ""
+
+#: ui/main.qml:42
+#, fuzzy, kde-format
+#| msgid "Thunderbolt subsystem is not available"
+msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "El subsistema Thunderbolt no está disponible"
+
+#: ui/main.qml:43
+#, kde-format
+msgid ""
+"If the device supports Thunderbolt, try plugging in a Thunderbolt device"
+msgstr ""
 
 #: ui/utils.js:16
 msgid "Disconnected"

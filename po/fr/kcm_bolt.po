@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2024-03-03 00:40+0000\n"
 "PO-Revision-Date: 2021-01-14 15:23+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -24,10 +24,16 @@ msgstr ""
 msgid "Enable Thunderbolt devices"
 msgstr "Activer les périphériques Thunderbolt"
 
-#: ui/DeviceList.qml:59
+#: ui/DeviceList.qml:60
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "Aucun périphérique Thunderbolt n'est connecté"
+
+#: ui/DeviceList.qml:61
+#, fuzzy, kde-format
+#| msgid "Enable Thunderbolt devices"
+msgid "Plug in a Thunderbolt device"
+msgstr "Activer les périphériques Thunderbolt"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -123,18 +129,30 @@ msgstr ""
 "Conseil : les périphériques non considérés comme fiable devront être "
 "autorisés manuellement lors de chaque raccordement à cet ordinateur."
 
-#: ui/main.qml:37
+#: ui/main.qml:33
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr ""
 "La prise en charge des périphériques « Thunderbolt » est désactivée dans le "
 "« BIOS » de votre ordinateur."
 
-#: ui/main.qml:42
+#: ui/main.qml:34
 #, kde-format
-msgid "Thunderbolt subsystem is not available"
+msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
+msgstr ""
+
+#: ui/main.qml:42
+#, fuzzy, kde-format
+#| msgid "Thunderbolt subsystem is not available"
+msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr ""
 "Le système de gestion des périphériques Thunderbolt n'est pas disponible."
+
+#: ui/main.qml:43
+#, kde-format
+msgid ""
+"If the device supports Thunderbolt, try plugging in a Thunderbolt device"
+msgstr ""
 
 #: ui/utils.js:16
 msgid "Disconnected"

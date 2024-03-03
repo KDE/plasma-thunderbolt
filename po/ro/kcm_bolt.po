@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-12 02:01+0000\n"
+"POT-Creation-Date: 2024-03-03 00:40+0000\n"
 "PO-Revision-Date: 2020-09-08 18:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -23,10 +23,16 @@ msgstr ""
 msgid "Enable Thunderbolt devices"
 msgstr "Activează dispozitive Thunderbolt"
 
-#: ui/DeviceList.qml:59
+#: ui/DeviceList.qml:60
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "Niciun dispozitiv Thunderbolt conectat"
+
+#: ui/DeviceList.qml:61
+#, fuzzy, kde-format
+#| msgid "Enable Thunderbolt devices"
+msgid "Plug in a Thunderbolt device"
+msgstr "Activează dispozitive Thunderbolt"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -121,15 +127,27 @@ msgstr ""
 "Indiciu: un dispozitiv fără încredere trebuie autorizat manual de fiecare "
 "dată când e conectat la calculator."
 
-#: ui/main.qml:37
+#: ui/main.qml:33
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Suportul pentru Thunderbolt a fost dezactivat în BIOS"
 
-#: ui/main.qml:42
+#: ui/main.qml:34
 #, kde-format
-msgid "Thunderbolt subsystem is not available"
+msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
+msgstr ""
+
+#: ui/main.qml:42
+#, fuzzy, kde-format
+#| msgid "Thunderbolt subsystem is not available"
+msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "Subsistemul Thunderbolt nu e disponibil"
+
+#: ui/main.qml:43
+#, kde-format
+msgid ""
+"If the device supports Thunderbolt, try plugging in a Thunderbolt device"
+msgstr ""
 
 #: ui/utils.js:16
 msgid "Disconnected"
