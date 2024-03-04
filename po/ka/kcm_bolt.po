@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2023-02-14 06:50+0100\n"
+"PO-Revision-Date: 2024-03-03 05:42+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: ui/DeviceList.qml:25
 #, kde-format
@@ -29,10 +29,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "დაკავშირებული თანდერბოლტის მოწყობილობების გარეშე"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "თანდერბოლტის მოწყობილობის ჩართვა"
+msgstr "მიაერთეთ თანდერბოლტის მოწყობილობა"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -136,18 +135,21 @@ msgstr "თანდერბოლტის მხარდაჭერა BIOS
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"მიჰყევით თქვენი სისტემის მწარმოებლის ნაბიჯებს, რომ თანდერბოლტის მხარდაჭერა "
+"ჩართოთ"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "თანდერბოლტის ქვესისტემა ხელმიუწვდომელია"
+msgstr "თანდერბოლტის ქვესისტემა ხელმიუწვდომელი ან გათიშულია"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"თუ მოწყობილობას თანდერბოლტის მხარდაჭერა გააჩნია, სცადეთ, თანდერბოლტის "
+"მოწყობილობა მიაერთოთ"
 
 #: ui/utils.js:16
 msgid "Disconnected"

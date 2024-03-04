@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019.
+# SPDX-FileCopyrightText: 2019, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2019-10-19 15:00+0200\n"
+"PO-Revision-Date: 2024-03-03 14:21+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ui/DeviceList.qml:25
 #, kde-format
@@ -28,10 +28,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "Geen Thunderbolt apparaten verbonden"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Thunderbolt apparaten inschakelen"
+msgstr "En Thunderbolt apparaat inpluggen"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -135,18 +134,21 @@ msgstr "Ondersteuning van Thunderbolt is uitgeschakeld in BIOS"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"De gids van de producent van uw systeem volgen om ondersteuning voor "
+"Thunderbolt in te schakelen"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Subsysteem Thunderbolt is niet beschikbaar"
+msgstr "Subsysteem Thunderbolt is uitgeschakeld of niet beschikbaar"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Als het apparaat Thunderbolt ondersteunt, probeer een Thunderbolt apparaat "
+"in te pluggen"
 
 #: ui/utils.js:16
 msgid "Disconnected"

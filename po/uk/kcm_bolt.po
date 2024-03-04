@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2019-10-18 07:59+0300\n"
+"PO-Revision-Date: 2024-03-03 08:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: ui/DeviceList.qml:25
 #, kde-format
@@ -31,10 +31,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "Немає з'єднаних пристроїв Thunderbolt"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Увімкнути пристрої Thunderbolt"
+msgstr "З'єднайте пристрій Thunderbolt"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -138,18 +137,21 @@ msgstr "Підтримку Thunderbolt було вимкнено у BIOS"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Скористайтеся настановами виробника вашої системи для вмикання підтримки "
+"Thunderbolt"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Підсистема Thunderbolt є недоступною"
+msgstr "Підсистему Thunderbolt вимкнено або вона є недоступною"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Якщо на пристрої передбачено підтримку Thunderbolt, спробуйте з'єднати з ним "
+"пристрій Thunderbolt"
 
 #: ui/utils.js:16
 msgid "Disconnected"

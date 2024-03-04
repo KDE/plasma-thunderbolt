@@ -1,9 +1,9 @@
 # Translation of kcm_bolt.po to Catalan
-# Copyright (C) 2019-2021 This_file_is_part_of_KDE
+# Copyright (C) 2019-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2021, 2024.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2021-10-23 23:19+0200\n"
+"PO-Revision-Date: 2024-03-03 11:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/DeviceList.qml:25
 #, kde-format
@@ -33,10 +33,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "No hi ha connectat cap dispositiu Thunderbolt"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Activa els dispositius Thunderbolt"
+msgstr "Endolla un dispositiu Thunderbolt"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -140,18 +139,21 @@ msgstr "El funcionament del Thunderbolt està desactivat a la BIOS"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Seguiu la guia del fabricant del sistema per a activar el suport del "
+"Thunderbolt"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "El subsistema Thunderbolt no està disponible"
+msgstr "El subsistema Thunderbolt està desactivat o no està disponible"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Si el dispositiu admet el Thunderbolt, proveu de connectar un dispositiu "
+"Thunderbolt"
 
 #: ui/utils.js:16
 msgid "Disconnected"

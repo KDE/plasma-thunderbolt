@@ -1,16 +1,16 @@
 # Translation for kcm_bolt.po to Euskara/Basque (eu).
-# Copyright (C) 2019-2020, This file is copyright:
+# Copyright (C) 2019-2024 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2019, 2020.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2020-09-07 23:39+0200\n"
+"PO-Revision-Date: 2024-03-03 08:50+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #: ui/DeviceList.qml:25
 #, kde-format
@@ -31,10 +31,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "Ez dago konektatuta Thunderbolt gailurik"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Gaitu Thunderbolt gailuak"
+msgstr "Entxufatu Thunderbolt gailu bat"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -138,18 +137,20 @@ msgstr "Thunderbolt euskarria ezgaitu da BIOSean"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Jarraitu zure sistemaren fabrikatzailearen gidaliburua «Thunderbolt»en "
+"euskarria gaitzeko"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Thunderbolt azpi-sistema ez dago erabilgarri"
+msgstr "Thunderbolt azpi-sistema ezgaituta dago edo ez dago erabilgarri"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Gailuak Thunderbolt onartzen badu, saiatu Thunderbolt gailu bat entxufatzen"
 
 #: ui/utils.js:16
 msgid "Disconnected"
