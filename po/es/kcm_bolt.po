@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-thunderbolt package.
 #
 # Automatically generated, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019.
+# SPDX-FileCopyrightText: 2019, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2019-10-18 17:22+0200\n"
+"PO-Revision-Date: 2024-03-05 12:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.08.2\n"
+"X-Generator: Lokalize 23.08.4\n"
 
 #: ui/DeviceList.qml:25
 #, kde-format
@@ -30,10 +30,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "No hay dispositivos Thunderbolt conectados"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Activar dispositivos Thunderbolt"
+msgstr "Conectar un dispositivo Thunderbolt"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -138,18 +137,19 @@ msgstr "El uso de Thunderbolt ha sido desactivado en BIOS"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Siga la guía del fabricante de su sistema para activar la compatibilidad con "
+"Thunderbolt"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "El subsistema Thunderbolt no está disponible"
+msgstr "El subsistema Thunderbolt está desactivado o no está disponible"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
-msgstr ""
+msgstr "Si el dispositivo es compatible con Thunderbolt, pruebe a conectarlo"
 
 #: ui/utils.js:16
 msgid "Disconnected"
