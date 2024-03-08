@@ -1,20 +1,20 @@
+# SPDX-FileCopyrightText: 2021, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Yoann Laissus <yoann.laissus@gmail.com>, 2019.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
-# Xavier Besnard <xavier.besnard@kde.org>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2021-01-14 15:23+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2024-03-06 12:37+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -30,10 +30,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "Aucun périphérique Thunderbolt n'est connecté"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Activer les périphériques Thunderbolt"
+msgstr "Connecter un périphérique Thunderbolt"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -140,19 +139,21 @@ msgstr ""
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Veuillez suivre le guide du système concernant le fabricant pour activer la "
+"prise en charge du Thunderbolt"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr ""
-"Le système de gestion des périphériques Thunderbolt n'est pas disponible."
+msgstr "Le sous-système pour Thunderbolt est désactivé ou indisponible."
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Si le périphérique prend en charge l'interface Thunderbolt, veuillez tenter "
+"la connexion d'un périphérique Thunderbolt"
 
 #: ui/utils.js:16
 msgid "Disconnected"
