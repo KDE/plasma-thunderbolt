@@ -28,10 +28,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "Nebyla připojena žádná zařízení Thunderbolt"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Povolit zařízení Thunderbolt"
+msgstr ""
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -137,10 +136,9 @@ msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Podsystém Thunderbolt není dostupný"
+msgstr ""
 
 #: ui/main.qml:43
 #, kde-format
