@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2024-02-29 12:52\n"
+"PO-Revision-Date: 2024-03-09 04:45\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -28,10 +28,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "未连接雷电接口设备"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "启用雷电接口设备"
+msgstr "插入雷电接口设备"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -130,19 +129,18 @@ msgstr "雷电接口支持已经在 BIOS 中禁用"
 #: ui/main.qml:34
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
-msgstr ""
+msgstr "按照您的系统制造商的指引启用雷电接口支持"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "雷电接口子系统不可用"
+msgstr "雷电接口子系统已禁用或者不可用"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
-msgstr ""
+msgstr "如果设备支持雷电接口，请尝试插入一个雷电接口设备"
 
 #: ui/utils.js:16
 msgid "Disconnected"
