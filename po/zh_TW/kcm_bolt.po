@@ -5,20 +5,21 @@
 #
 # Automatically generated, 2019.
 # pan93412 <pan93412@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2019-10-19 14:54+0800\n"
-"Last-Translator: pan93412 <pan93412@gmail.com>\n"
-"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"PO-Revision-Date: 2024-03-12 02:09+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.08.2\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: ui/DeviceList.qml:25
 #, kde-format
@@ -31,10 +32,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "沒有連結的 Thunderbolt 裝置"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "啟用 Thunderbolt 裝置"
+msgstr "插入一個 Thunderbolt 裝置"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -133,19 +133,18 @@ msgstr "Thunderbolt 支援已在 BIOS 停用"
 #: ui/main.qml:34
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
-msgstr ""
+msgstr "跟隨您的系統製造商的說明來啟用 Thunderbolt 支援"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "尚未支援 Thunderbolt 子系統"
+msgstr "Thunderbolt 子系統已停用或不可使用"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
-msgstr ""
+msgstr "若此裝置支援 Thunderbolt，請試著插入一個 Thunderbolt 裝置"
 
 #: ui/utils.js:16
 msgid "Disconnected"
