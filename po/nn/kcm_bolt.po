@@ -1,12 +1,11 @@
 # Translation of kcm_bolt to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2019-10-26 12:36+0200\n"
+"PO-Revision-Date: 2024-03-17 11:03+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.11.70\n"
+"X-Generator: Lokalize 24.02.0\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -30,10 +29,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "Ingen Thunderbolt-einingar tilkopla"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Ta i bruk Thunderbolt-einingar"
+msgstr "Kopla til ei Thunderbolt-eining"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -136,19 +134,20 @@ msgstr "Thunderbolt-støtte er slått av i BIOS"
 #: ui/main.qml:34
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
-msgstr ""
+msgstr "Følg bruksrettleiinga til leverandøren for å slå på Thunderbolt-støtte"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Thunderbolt-delsystemet er ikkje tilgjengeleg"
+msgstr "Thunderbolt-delsystemet er slått av eller ikkje tilgjengeleg"
 
+# Første «device» må vera maskina/maskinvara ein sit på, meiner eg.
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Viss maskina støttar Thunderbolt, prøv å kopla til ei Thunderbolt-eining"
 
 #: ui/utils.js:16
 msgid "Disconnected"
