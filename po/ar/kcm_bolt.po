@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2021-12-08 21:16+0400\n"
+"PO-Revision-Date: 2024-03-31 12:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: ui/DeviceList.qml:25
 #, kde-format
@@ -29,10 +29,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "لا يوجد أجهزة ثندربولت متصلة"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "مكن أجهزة ثندربولت"
+msgstr "صل جهاز ثندربولت"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -133,19 +132,18 @@ msgstr "عطل دعم ثندربولت في البايوس"
 #: ui/main.qml:34
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
-msgstr ""
+msgstr "اتبع دليل الشركة المصنعة للنظام الخاص بك لتمكين دعم ثندربولت"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "النظام الفرعي لثندربولت غير متوفر"
+msgstr "النظام الفرعي لثندربولت غير متوفر أو معطل"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
-msgstr ""
+msgstr "إذا كان الجهاز يدعم ثندربولت، فحاول وصل جهاز ثندربولت"
 
 #: ui/utils.js:16
 msgid "Disconnected"
