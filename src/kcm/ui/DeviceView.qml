@@ -27,6 +27,19 @@ Kirigami.ScrollablePage {
         onTriggered: page._evalTrigger++;
     }
 
+    header: Kirigami.InlineMessage {
+        id: errorMessage
+
+        position: Kirigami.InlineMessage.Position.Header
+        type: Kirigami.MessageType.Error
+        showCloseButton: true
+
+        function show(msg) {
+            text = msg;
+            visible = true;
+        }
+    }
+
     ColumnLayout {
         spacing: Kirigami.Units.smallSpacing * 5
 
@@ -40,20 +53,6 @@ Kirigami.ScrollablePage {
             Kirigami.Heading {
                 level: 2
                 text: _evalTrigger, device ? device.name : ""
-            }
-        }
-
-        Kirigami.InlineMessage {
-            id: errorMessage
-
-            Layout.fillWidth: true
-
-            type: Kirigami.MessageType.Error
-            showCloseButton: true
-
-            function show(msg) {
-                text = msg;
-                visible = true;
             }
         }
 
