@@ -80,7 +80,7 @@ msgstr "De confiança:"
 #: ui/DeviceView.qml:100
 #, kde-format
 msgid "Authorizing..."
-msgstr "Autorització..."
+msgstr "Autorització…"
 
 #: ui/DeviceView.qml:100
 #, kde-format
