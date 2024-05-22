@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-12 20:05\n"
+"PO-Revision-Date: 2024-05-20 21:10\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -33,10 +33,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "Няма падлучаных прылад Thunderbolt"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Уключыць прылады Thunderbolt"
+msgstr "Падлучыце прыладу Thunderbolt"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -140,18 +139,20 @@ msgstr "Падтрымка Thunderbolt адключаная ў BIOS"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Каб уключыць падтрымку Thunderbolt, выконвайце інструкцыі вытворцы сістэмы"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Падсістэма Thunderbolt недаступная"
+msgstr "Падсістэма Thunderbolt адключаная або недаступная"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Калі прылада падтрымлівае Thunderbolt, паспрабуйце падлучыць прыладу "
+"Thunderbolt"
 
 #: ui/utils.js:16
 msgid "Disconnected"
