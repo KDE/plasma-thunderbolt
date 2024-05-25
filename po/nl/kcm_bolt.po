@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-03 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-03-03 14:21+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -32,82 +32,82 @@ msgstr "Geen Thunderbolt apparaten verbonden"
 msgid "Plug in a Thunderbolt device"
 msgstr "En Thunderbolt apparaat inpluggen"
 
-#: ui/DeviceView.qml:63
+#: ui/DeviceView.qml:62
 #, kde-format
 msgid "Vendor:"
 msgstr "Fabrikant:"
 
-#: ui/DeviceView.qml:67
+#: ui/DeviceView.qml:66
 #, kde-format
 msgid "UID:"
 msgstr "Gebruikers-id:"
 
-#: ui/DeviceView.qml:71
+#: ui/DeviceView.qml:70
 #, kde-format
 msgid "Status:"
 msgstr "Status:"
 
-#: ui/DeviceView.qml:76
+#: ui/DeviceView.qml:75
 #, kde-format
 msgid "Authorized at:"
 msgstr "Geautoriseerd op:"
 
-#: ui/DeviceView.qml:81
+#: ui/DeviceView.qml:80
 #, kde-format
 msgid "Connected at:"
 msgstr "Verbonden op:"
 
-#: ui/DeviceView.qml:86
+#: ui/DeviceView.qml:85
 #, kde-format
 msgid "Enrolled at:"
 msgstr "ingepast op:"
 
-#: ui/DeviceView.qml:90
+#: ui/DeviceView.qml:89
 #, kde-format
 msgid "Yes"
 msgstr "Ja"
 
-#: ui/DeviceView.qml:90
+#: ui/DeviceView.qml:89
 #, kde-format
 msgid "No"
 msgstr "Nee"
 
-#: ui/DeviceView.qml:91
+#: ui/DeviceView.qml:90
 #, kde-format
 msgid "Trusted:"
 msgstr "Vertrouwd:"
 
-#: ui/DeviceView.qml:100
+#: ui/DeviceView.qml:99
 #, kde-format
 msgid "Authorizing..."
 msgstr "Wordt geautoriseerd..."
 
-#: ui/DeviceView.qml:100
+#: ui/DeviceView.qml:99
 #, kde-format
 msgid "Authorize"
 msgstr "Autoriseren"
 
-#: ui/DeviceView.qml:111 ui/DeviceView.qml:131
+#: ui/DeviceView.qml:110 ui/DeviceView.qml:130
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
 msgstr "Inpassen van apparaat <b>%1</b> is mislukt: %2"
 
-#: ui/DeviceView.qml:118
+#: ui/DeviceView.qml:117
 #, kde-format
 msgid "Trust this Device"
 msgstr "Dit apparaat vertrouwen"
 
-#: ui/DeviceView.qml:139
+#: ui/DeviceView.qml:138
 #, kde-format
 msgid "Revoke Trust"
 msgstr "Vertrouwen intrekken"
 
-#: ui/DeviceView.qml:151
+#: ui/DeviceView.qml:150
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
 msgstr "Fout bij het wijzigen van vertrouwen in apparaat: <b>%1</b>: %2"
 
-#: ui/DeviceView.qml:168
+#: ui/DeviceView.qml:167
 #, kde-format
 msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
@@ -116,7 +116,7 @@ msgstr ""
 "Tip: vertrouwd apparaat zal automatisch geautoriseerd worden bij de volgende "
 "keer dat het verbonden wordt met de computer."
 
-#: ui/DeviceView.qml:169
+#: ui/DeviceView.qml:168
 #, kde-format
 msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
