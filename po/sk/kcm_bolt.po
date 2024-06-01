@@ -1,19 +1,19 @@
 # translation of kcm_bolt.po to Slovak
 # Roman Paholík <wizzardsk@gmail.com>, 2019.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2019.
+# SPDX-FileCopyrightText: 2019, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2019-11-05 20:22+0100\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
-"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"PO-Revision-Date: 2024-05-31 12:49+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ui/DeviceList.qml:25
@@ -27,10 +27,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "Nie sú pripojené žiadne zariadenia Thunderbolt"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Povoliť Thunderbolt zariadenia"
+msgstr "Zapojte zariadenie Thunderbolt"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -134,18 +133,20 @@ msgstr "Podpora Thunderbolt bola zakázaná v BIOSe"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Ak chcete povoliť podporu Thunderbolt, postupujte podľa príručky výrobcu "
+"systému"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Subsystém Thunderbolt nie je dostupný"
+msgstr "Subsystém Thunderbolt je nedostupný alebo zakázaný"
 
 #: ui/main.qml:43
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Ak zariadenie podporuje Thunderbolt, skúste pripojiť Thunderbolt zariadenie"
 
 #: ui/utils.js:16
 msgid "Disconnected"
