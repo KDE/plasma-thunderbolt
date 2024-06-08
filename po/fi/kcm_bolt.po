@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-# Tommi Nieminen <translator@legisign.org>, 2019.
+# Tommi Nieminen <translator@legisign.org>, 2019, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-03 00:40+0000\n"
-"PO-Revision-Date: 2019-11-16 14:35+0200\n"
+"PO-Revision-Date: 2024-03-20 17:05+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/DeviceList.qml:25
 #, kde-format
@@ -28,10 +28,9 @@ msgid "No Thunderbolt devices connected"
 msgstr "Ei kytkettyjä Thunderbolt-laitteita"
 
 #: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Salli Thunderbolt-laitteiden käyttö"
+msgstr "Kytke Thunderbolt-laite"
 
 #: ui/DeviceView.qml:63
 #, kde-format
@@ -135,10 +134,10 @@ msgstr "Thunderbolt-tuki on poistettu käytöstä BIOSissa."
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Noudata järjestelmän valmistajan ohjeita Thunderbolt-tuen käyttöönottamiseksi"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "Thunderbolt-alijärjestelmä ei ole käytettävissä"
 
@@ -146,7 +145,7 @@ msgstr "Thunderbolt-alijärjestelmä ei ole käytettävissä"
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
-msgstr ""
+msgstr "Jos laite tukee Thunderboltia, yritä kytkeä Thunderbolt-laite"
 
 #: ui/utils.js:16
 msgid "Disconnected"
