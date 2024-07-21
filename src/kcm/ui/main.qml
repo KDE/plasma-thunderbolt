@@ -4,13 +4,13 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-import QtQuick 2.7
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.3
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
 
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils
-import org.kde.bolt 0.1 as Bolt
+import org.kde.bolt as Bolt
 
 Kirigami.Page {
     ConfigModule.buttons: ConfigModule.NoAdditionalButton
@@ -31,7 +31,7 @@ Kirigami.Page {
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         icon.name: "preferences-desktop-thunderbolt"
         text: i18n("Thunderbolt support has been disabled in BIOS");
-        explanation: i18n("Follow your system manufacturer's guide to enable Thunderbolt support") 
+        explanation: i18n("Follow your system manufacturer's guide to enable Thunderbolt support")
     }
 
     Kirigami.PlaceholderMessage {
@@ -40,7 +40,7 @@ Kirigami.Page {
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         icon.name: "preferences-desktop-thunderbolt"
         text: i18n("Thunderbolt subsystem is disabled or unavailable");
-        explanation: i18n("If the device supports Thunderbolt, try plugging in a Thunderbolt device") 
+        explanation: i18n("If the device supports Thunderbolt, try plugging in a Thunderbolt device")
     }
 
     Kirigami.PageRow {

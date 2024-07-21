@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
-.import org.kde.kirigami 2.0 as Kirigami
-.import org.kde.bolt 0.1 as Bolt
+.import org.kde.kirigami as Kirigami
+.import org.kde.bolt as Bolt
 
 function deviceStatus(device, withStored)
 {
