@@ -20,12 +20,18 @@ Kirigami.Page {
     implicitHeight: pageRow.contentHeight > 0 ? Math.min(pageRow.contentHeight, Kirigami.Units.gridUnit * 20)
                                               : Kirigami.Units.gridUnit * 20
 
-    Bolt.Manager {
-        id: boltManager
+    Bolt.DeviceModel {
+        id: deviceModel
 
-        function isDPOnlyOrUSBOnly(): bool {
-            return [Bolt.Bolt.Security.DPOnly, Bolt.Bolt.Security.USBOnly].includes(securityLevel);
+        manager: Bolt.Manager {
+            id: boltManager
+
+            function isDPOnlyOrUSBOnly(): bool {
+                return [Bolt.Bolt.Security.DPOnly, Bolt.Bolt.Security.USBOnly].includes(securityLevel);
+            }
         }
+
+        showHosts: false
     }
 
     Kirigami.PlaceholderMessage {
@@ -53,7 +59,7 @@ Kirigami.Page {
 
         Component.onCompleted: {
             if (boltManager.isAvailable && !boltManager.isDPOnlyOrUSBOnly()) {
-                pageRow.push(deviceList, { manager: boltManager })
+                pageRow.push(deviceList, { deviceModel })
             }
         }
     }
@@ -61,14 +67,8 @@ Kirigami.Page {
     Component {
         id: deviceList
         DeviceList {
-            property alias manager: model.manager
-            deviceModel: Bolt.DeviceModel {
-                id: model
-                showHosts: false
-            }
-
             onItemClicked: function(device) {
-                pageRow.push(deviceView, { manager: manager, device: device })
+                pageRow.push(deviceView, { device: device })
             }
         }
     }
@@ -76,6 +76,7 @@ Kirigami.Page {
     Component {
         id: deviceView
         DeviceView {
+            manager: boltManager
         }
     }
 }
