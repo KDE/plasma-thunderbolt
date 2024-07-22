@@ -83,7 +83,7 @@ Kirigami.ScrollablePage {
                     Layout.fillWidth: true
                     text: model.device.label
                     elide: Text.ElideRight
-                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.TextColor
+                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
                 }
 
                 QQC2.Label {
