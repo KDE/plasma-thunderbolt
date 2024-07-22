@@ -59,19 +59,6 @@ Kirigami.Page {
     }
 
     Component {
-        id: noBoltPage
-        Kirigami.Page {
-            property alias text: label.text
-            Kirigami.PlaceholderMessage {
-                id: label
-
-                anchors.centerIn: parent
-                width: parent.width - (Kirigami.Units.largeSpacing *4)
-            }
-        }
-    }
-
-    Component {
         id: deviceList
         DeviceList {
             property alias manager: model.manager
