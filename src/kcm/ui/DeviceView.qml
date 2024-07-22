@@ -97,7 +97,7 @@ Kirigami.ScrollablePage {
 
             QQC2.Button {
                 id: authorizeBtn
-                text: page.device !== null && page.device.status === Bolt.Bolt.Status.Authorizing ? i18n("Authorizing...") : i18n("Authorize")
+                text: page.device !== null && page.device.status === Bolt.Bolt.Status.Authorizing ? i18n("Authorizing…") : i18n("Authorize")
                 enabled: page.device !== null && page.device.status !== Bolt.Bolt.Status.Authorizing
                 visible: page.device !== null && (page.device.status === Bolt.Bolt.Status.Connected || page.device.status === Bolt.Bolt.Status.AuthError)
                 onClicked: {
