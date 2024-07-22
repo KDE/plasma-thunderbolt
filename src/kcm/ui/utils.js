@@ -11,20 +11,20 @@ function deviceStatus(device, withStored)
 {
     var status = device.status;
     var str = "";
-    var color = Kirigami.Theme.textColor;
+    var color = "textColor";
     if (status == Bolt.Bolt.Status.Disconnected) {
         str = i18n("Disconnected");
     } else if (status == Bolt.Bolt.Status.Connecting) {
         str = i18n("Connecting");
     } else if (status == Bolt.Bolt.Status.Connected) {
         str = i18n("Connected");
-        color = Kirigami.Theme.neutralTextColor;
+        color = "neutralTextColor";
     } else if (status == Bolt.Bolt.Status.AuthError) {
         str = i18n("Authorization Error");
     } else if (status == Bolt.Bolt.Status.Authorizing) {
         str = i18n("Authorizing");
     } else if (status == Bolt.Bolt.Status.Authorized) {
-        color = Kirigami.Theme.positiveTextColor;
+        color = "positiveTextColor";
         if (device.authFlags & Bolt.Bolt.Auth.NoPCIE) {
             str = i18n("Reduced Functionality");
         } else {

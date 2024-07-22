@@ -88,7 +88,7 @@ Kirigami.ScrollablePage {
 
                 QQC2.Label {
                     text: view._evalTrigger, item._deviceStatus.text
-                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : item._deviceStatus.color
+                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme[item._deviceStatus.color]
                 }
             }
 
