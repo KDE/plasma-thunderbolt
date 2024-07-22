@@ -9,15 +9,16 @@ import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
 import org.kde.bolt as Bolt
+import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
 
 import "utils.js" as Utils
 
-Kirigami.ScrollablePage {
+KCMUtils.SimpleKCM {
     id: page
 
-    property Bolt.Manager manager
-    property Bolt.Device device
+    required property Bolt.Manager manager
+    required property Bolt.Device device
 
     property int evalTrigger: 0
 
@@ -27,6 +28,8 @@ Kirigami.ScrollablePage {
         repeat: true
         onTriggered: page.evalTrigger++;
     }
+
+    title: page.evalTrigger, (page.device?.name ?? "")
 
     header: Kirigami.InlineMessage {
         id: errorMessage
@@ -42,20 +45,7 @@ Kirigami.ScrollablePage {
     }
 
     ColumnLayout {
-        spacing: Kirigami.Units.smallSpacing * 5
-
-        RowLayout {
-            QQC2.Button {
-                icon.name: "draw-arrow-back"
-                visible: !pageRow.wideMode
-                onClicked: pageRow.pop()
-            }
-
-            Kirigami.Heading {
-                level: 2
-                text: page.evalTrigger, (page.device?.name ?? "")
-            }
-        }
+        spacing: Kirigami.Units.gridUnit
 
         Kirigami.FormLayout {
             QQC2.Label {
@@ -94,6 +84,7 @@ Kirigami.ScrollablePage {
 
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
+            spacing: Kirigami.Units.smallSpacing
 
             QQC2.Button {
                 id: authorizeBtn
@@ -154,14 +145,13 @@ Kirigami.ScrollablePage {
                     // If the device is not connected it will cease to exist
                     // once forgotten, so we should pop this view
                     if (page.device.status === Bolt.Bolt.Status.Disconnected) {
-                        pageRow.pop();
+                        page.KCMUtils.ConfigModule.pop();
                     }
                 }
             }
         }
 
         QQC2.Label {
-            Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
 
             text: page.device !== null && !page.device.stored

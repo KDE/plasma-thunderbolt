@@ -13,88 +13,58 @@ import org.kde.kirigami as Kirigami
 
 import "utils.js" as Utils
 
-Kirigami.ScrollablePage {
-    id: page
+ListView {
+    id: view
 
-    property Bolt.DeviceModel deviceModel
+    required property Bolt.DeviceModel deviceModel
 
-    signal itemClicked(Bolt.Device device)
+    signal deviceClicked(Bolt.Device device)
 
-    header: RowLayout {
-        QQC2.CheckBox {
-            id: enableBox
-            text: i18n("Enable Thunderbolt devices")
+    property int evalTrigger: 0
 
-            checked: deviceModel.manager.authMode === Bolt.Bolt.AuthMode.Enabled
-
-            onToggled: {
-                deviceModel.manager.authMode = enableBox.checked
-                    ? Bolt.Bolt.AuthMode.Enabled
-                    : Bolt.Bolt.AuthMode.Disabled
-            }
+    Timer {
+        interval: 2000
+        running: view.count > 0
+        repeat: true
+        onTriggered: {
+            view.evalTrigger++;
         }
     }
 
-    ListView {
-        id: view
-        model: deviceModel
-        enabled: enableBox.checked
+    model: deviceModel
 
-        property int evalTrigger: 0
+    delegate: QQC2.ItemDelegate {
+        id: item
 
-        Timer {
-            interval: 2000
-            running: view.visible
-            repeat: true
-            onTriggered: view.evalTrigger++;
-        }
+        property var deviceStatus: Utils.deviceStatus(model.device, true)
 
-        Kirigami.PlaceholderMessage {
-            anchors.centerIn: parent
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.margins: Kirigami.Units.largeSpacing
+        width: view.width
 
-            visible: view.count === 0
+        contentItem: RowLayout {
+            spacing: Kirigami.Units.smallSpacing
 
-            icon.name: "preferences-desktop-thunderbolt"
-            text: i18n("No Thunderbolt devices connected")
-            explanation: i18n("Plug in a Thunderbolt device")
-        }
-
-        delegate: QQC2.ItemDelegate {
-            id: item
-
-            property var deviceStatus: Utils.deviceStatus(model.device, true)
-
-            width: view.width
-
-            contentItem: RowLayout {
-                spacing: Kirigami.Units.smallSpacing
-
-                QQC2.BusyIndicator {
-                    visible: model.device.status === Bolt.Bolt.Status.Authorizing
-                    running: visible
-                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                }
-
-                QQC2.Label {
-                    Layout.fillWidth: true
-                    text: model.device.label
-                    elide: Text.ElideRight
-                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                }
-
-                QQC2.Label {
-                    text: view.evalTrigger, item.deviceStatus.text
-                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme[item.deviceStatus.color]
-                }
+            QQC2.BusyIndicator {
+                visible: model.device.status === Bolt.Bolt.Status.Authorizing
+                running: visible
+                implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                implicitHeight: Kirigami.Units.iconSizes.smallMedium
             }
 
-            onClicked: {
-                page.itemClicked(model.device)
+            QQC2.Label {
+                Layout.fillWidth: true
+                text: model.device.label
+                elide: Text.ElideRight
+                color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             }
+
+            QQC2.Label {
+                text: view.evalTrigger, item.deviceStatus.text
+                color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme[item.deviceStatus.color]
+            }
+        }
+
+        onClicked: {
+            view.deviceClicked(model.device)
         }
     }
 }
