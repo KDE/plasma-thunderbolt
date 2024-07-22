@@ -5,11 +5,12 @@
  */
 
 import QtQuick
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
-import QtQuick.Controls
 
-import org.kde.kirigami as Kirigami
 import org.kde.bolt as Bolt
+import org.kde.kirigami as Kirigami
+
 import "utils.js" as Utils
 
 Kirigami.ScrollablePage {
@@ -20,7 +21,7 @@ Kirigami.ScrollablePage {
     signal itemClicked(Bolt.Device device)
 
     header: RowLayout {
-        CheckBox {
+        QQC2.CheckBox {
             id: enableBox
             text: i18n("Enable Thunderbolt devices")
 
@@ -61,7 +62,7 @@ Kirigami.ScrollablePage {
             explanation: i18n("Plug in a Thunderbolt device")
         }
 
-        delegate: ItemDelegate {
+        delegate: QQC2.ItemDelegate {
             id: item
 
             property var _deviceStatus: Utils.deviceStatus(model.device, true)
@@ -71,21 +72,21 @@ Kirigami.ScrollablePage {
             contentItem: RowLayout {
                 spacing: Kirigami.Units.smallSpacing
 
-                BusyIndicator {
+                QQC2.BusyIndicator {
                     visible: model.device.status == Bolt.Bolt.Status.Authorizing
                     running: visible
                     implicitWidth: Kirigami.Units.iconSizes.smallMedium
                     implicitHeight: Kirigami.Units.iconSizes.smallMedium
                 }
 
-                Label {
+                QQC2.Label {
                     Layout.fillWidth: true
                     text: model.device.label
                     elide: Text.ElideRight
                     color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.TextColor
                 }
 
-                Label {
+                QQC2.Label {
                     text: view._evalTrigger, item._deviceStatus.text
                     color: item.highlighted ? Kirigami.Theme.highlightedTextColor : item._deviceStatus.color
                 }

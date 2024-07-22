@@ -5,11 +5,12 @@
  */
 
 import QtQuick
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
-import QtQuick.Controls
 
-import org.kde.kirigami as Kirigami
 import org.kde.bolt as Bolt
+import org.kde.kirigami as Kirigami
+
 import "utils.js" as Utils
 
 Kirigami.ScrollablePage {
@@ -44,7 +45,7 @@ Kirigami.ScrollablePage {
         spacing: Kirigami.Units.smallSpacing * 5
 
         RowLayout {
-            Button {
+            QQC2.Button {
                 icon.name: "draw-arrow-back"
                 visible: !pageRow.wideMode
                 onClicked: pageRow.pop()
@@ -57,34 +58,34 @@ Kirigami.ScrollablePage {
         }
 
         Kirigami.FormLayout {
-            Label {
+            QQC2.Label {
                 text: _evalTrigger, device ? device.vendor : ""
                 Kirigami.FormData.label: i18n("Vendor:")
             }
-            Label {
+            QQC2.Label {
                 text: _evalTrigger, device ? device.uid : ""
                 Kirigami.FormData.label: i18n("UID:")
             }
-            Label {
+            QQC2.Label {
                 text: _evalTrigger, device ? Utils.deviceStatus(device, false).text : ""
                 Kirigami.FormData.label: i18n("Status:")
             }
-            Label {
+            QQC2.Label {
                 visible: device && device.status == Bolt.Bolt.Status.Authorized
                 text: _evalTrigger, device ? Qt.formatDateTime(device.authorizeTime) : ""
                 Kirigami.FormData.label: i18n("Authorized at:")
             }
-            Label {
+            QQC2.Label {
                 visible: device && device.status == Bolt.Bolt.Status.Connected
                 text: _evalTrigger, device ? Qt.formatDateTime(device.connectTime) : ""
                 Kirigami.FormData.label: i18n("Connected at:")
             }
-            Label {
+            QQC2.Label {
                 visible: device && device.status == Bolt.Bolt.Status.Disconnected
                 text: _evalTrigger, device ? Qt.formatDateTime(device.storeTime) : ""
                 Kirigami.FormData.label: i18n("Enrolled at:")
             }
-            Label {
+            QQC2.Label {
                 visible: device && (device.status == Bolt.Bolt.Status.Authorized || device.status == Bolt.Bolt.Status.Disconnected)
                 text: _evalTrigger, device && device.stored ? i18n("Yes") : i18n("No")
                 Kirigami.FormData.label: i18n("Trusted:")
@@ -94,7 +95,7 @@ Kirigami.ScrollablePage {
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
 
-            Button {
+            QQC2.Button {
                 id: authorizeBtn
                 text: device && device.status == Bolt.Bolt.Status.Authorizing ? i18n("Authorizing...") : i18n("Authorize")
                 enabled: device && device.status != Bolt.Bolt.Status.Authorizing
@@ -112,7 +113,7 @@ Kirigami.ScrollablePage {
                     );
                 }
             }
-            Button {
+            QQC2.Button {
                 id: storeBtn
                 text: i18n("Trust this Device")
                 visible: device && device.status == Bolt.Bolt.Status.Authorized && device.stored == false
@@ -133,7 +134,7 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            Button {
+            QQC2.Button {
                 id: forgetBtn
                 text: i18n("Revoke Trust")
                 visible: device && device.stored
@@ -159,7 +160,7 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Label {
+        QQC2.Label {
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
 

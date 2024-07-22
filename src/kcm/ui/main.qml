@@ -6,14 +6,13 @@
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls
 
-import org.kde.kirigami as Kirigami
-import org.kde.kcmutils
 import org.kde.bolt as Bolt
+import org.kde.kcmutils as KCMUtils
+import org.kde.kirigami as Kirigami
 
 Kirigami.Page {
-    ConfigModule.buttons: ConfigModule.NoAdditionalButton
+    KCMUtils.ConfigModule.buttons: KCMUtils.ConfigModule.NoAdditionalButton
     id: root
 
     title: kcm.name
