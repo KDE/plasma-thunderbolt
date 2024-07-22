@@ -22,10 +22,14 @@ Kirigami.Page {
 
     Bolt.Manager {
         id: boltManager
+
+        function isDPOnlyOrUSBOnly(): bool {
+            return [Bolt.Bolt.Security.DPOnly, Bolt.Bolt.Security.USBOnly].includes(securityLevel);
+        }
     }
 
     Kirigami.PlaceholderMessage {
-        visible: boltManager.isAvailable && (boltManager.securityLevel == Bolt.Bolt.Security.DPOnly || boltManager.securityLevel == Bolt.Bolt.Security.USBOnly)
+        visible: boltManager.isAvailable && boltManager.isDPOnlyOrUSBOnly()
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         icon.name: "preferences-desktop-thunderbolt"
@@ -48,11 +52,8 @@ Kirigami.Page {
         anchors.fill: parent
 
         Component.onCompleted: {
-            if (boltManager.isAvailable) {
-                if (!(boltManager.securityLevel == Bolt.Bolt.Security.DPOnly
-                        || boltManager.securityLevel == Bolt.Bolt.Security.USBOnly)) {
-                    pageRow.push(deviceList, { manager: boltManager })
-                }
+            if (boltManager.isAvailable && !boltManager.isDPOnlyOrUSBOnly()) {
+                pageRow.push(deviceList, { manager: boltManager })
             }
         }
     }
