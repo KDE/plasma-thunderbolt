@@ -16,7 +16,7 @@ import "utils.js" as Utils
 Kirigami.ScrollablePage {
     id: page
 
-    property Bolt.DeviceModel deviceModel: null
+    property Bolt.DeviceModel deviceModel
 
     signal itemClicked(Bolt.Device device)
 
@@ -25,7 +25,7 @@ Kirigami.ScrollablePage {
             id: enableBox
             text: i18n("Enable Thunderbolt devices")
 
-            checked: deviceModel.manager.authMode == Bolt.Bolt.AuthMode.Enabled
+            checked: deviceModel.manager.authMode === Bolt.Bolt.AuthMode.Enabled
 
             onToggled: {
                 deviceModel.manager.authMode = enableBox.checked
@@ -40,13 +40,13 @@ Kirigami.ScrollablePage {
         model: deviceModel
         enabled: enableBox.checked
 
-        property int _evalTrigger: 0
+        property int evalTrigger: 0
 
         Timer {
             interval: 2000
             running: view.visible
             repeat: true
-            onTriggered: view._evalTrigger++;
+            onTriggered: view.evalTrigger++;
         }
 
         Kirigami.PlaceholderMessage {
@@ -65,7 +65,7 @@ Kirigami.ScrollablePage {
         delegate: QQC2.ItemDelegate {
             id: item
 
-            property var _deviceStatus: Utils.deviceStatus(model.device, true)
+            property var deviceStatus: Utils.deviceStatus(model.device, true)
 
             width: view.width
 
@@ -73,7 +73,7 @@ Kirigami.ScrollablePage {
                 spacing: Kirigami.Units.smallSpacing
 
                 QQC2.BusyIndicator {
-                    visible: model.device.status == Bolt.Bolt.Status.Authorizing
+                    visible: model.device.status === Bolt.Bolt.Status.Authorizing
                     running: visible
                     implicitWidth: Kirigami.Units.iconSizes.smallMedium
                     implicitHeight: Kirigami.Units.iconSizes.smallMedium
@@ -87,8 +87,8 @@ Kirigami.ScrollablePage {
                 }
 
                 QQC2.Label {
-                    text: view._evalTrigger, item._deviceStatus.text
-                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme[item._deviceStatus.color]
+                    text: view.evalTrigger, item.deviceStatus.text
+                    color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme[item.deviceStatus.color]
                 }
             }
 

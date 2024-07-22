@@ -12,13 +12,16 @@ import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
 
 Kirigami.Page {
-    KCMUtils.ConfigModule.buttons: KCMUtils.ConfigModule.NoAdditionalButton
     id: root
 
+    KCMUtils.ConfigModule.buttons: KCMUtils.ConfigModule.NoAdditionalButton
+
     title: kcm.name
+
     implicitWidth: Kirigami.Units.gridUnit * 20
-    implicitHeight: pageRow.contentHeight > 0 ? Math.min(pageRow.contentHeight, Kirigami.Units.gridUnit * 20)
-                                              : Kirigami.Units.gridUnit * 20
+    implicitHeight: pageRow.contentHeight > 0
+        ? Math.min(pageRow.contentHeight, Kirigami.Units.gridUnit * 20)
+        : Kirigami.Units.gridUnit * 20
 
     Bolt.DeviceModel {
         id: deviceModel
@@ -39,7 +42,7 @@ Kirigami.Page {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         icon.name: "preferences-desktop-thunderbolt"
-        text: i18n("Thunderbolt support has been disabled in BIOS");
+        text: i18n("Thunderbolt support has been disabled in BIOS")
         explanation: i18n("Follow your system manufacturer's guide to enable Thunderbolt support")
     }
 
@@ -48,7 +51,7 @@ Kirigami.Page {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
         icon.name: "preferences-desktop-thunderbolt"
-        text: i18n("Thunderbolt subsystem is disabled or unavailable");
+        text: i18n("Thunderbolt subsystem is disabled or unavailable")
         explanation: i18n("If the device supports Thunderbolt, try plugging in a Thunderbolt device")
     }
 
@@ -67,8 +70,8 @@ Kirigami.Page {
     Component {
         id: deviceList
         DeviceList {
-            onItemClicked: function(device) {
-                pageRow.push(deviceView, { device: device })
+            onItemClicked: device => {
+                pageRow.push(deviceView, { device })
             }
         }
     }

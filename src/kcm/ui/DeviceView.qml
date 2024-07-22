@@ -16,16 +16,16 @@ import "utils.js" as Utils
 Kirigami.ScrollablePage {
     id: page
 
-    property Bolt.Manager manager: null
-    property Bolt.Device device: null
+    property Bolt.Manager manager
+    property Bolt.Device device
 
-    property int _evalTrigger: 0
+    property int evalTrigger: 0
 
     Timer {
         interval: 2000
-        running: device != null
+        running: page.device !== null
         repeat: true
-        onTriggered: page._evalTrigger++;
+        onTriggered: page.evalTrigger++;
     }
 
     header: Kirigami.InlineMessage {
@@ -35,7 +35,7 @@ Kirigami.ScrollablePage {
         type: Kirigami.MessageType.Error
         showCloseButton: true
 
-        function show(msg) {
+        function show(msg: string) {
             text = msg;
             visible = true;
         }
@@ -53,41 +53,41 @@ Kirigami.ScrollablePage {
 
             Kirigami.Heading {
                 level: 2
-                text: _evalTrigger, device ? device.name : ""
+                text: page.evalTrigger, (page.device?.name ?? "")
             }
         }
 
         Kirigami.FormLayout {
             QQC2.Label {
-                text: _evalTrigger, device ? device.vendor : ""
+                text: page.evalTrigger, (page.device?.vendor ?? "")
                 Kirigami.FormData.label: i18n("Vendor:")
             }
             QQC2.Label {
-                text: _evalTrigger, device ? device.uid : ""
+                text: page.evalTrigger, (page.device?.uid ?? "")
                 Kirigami.FormData.label: i18n("UID:")
             }
             QQC2.Label {
-                text: _evalTrigger, device ? Utils.deviceStatus(device, false).text : ""
+                text: page.evalTrigger, page.device !== null ? Utils.deviceStatus(page.device, false).text : ""
                 Kirigami.FormData.label: i18n("Status:")
             }
             QQC2.Label {
-                visible: device && device.status == Bolt.Bolt.Status.Authorized
-                text: _evalTrigger, device ? Qt.formatDateTime(device.authorizeTime) : ""
+                visible: page.device !== null && page.device.status === Bolt.Bolt.Status.Authorized
+                text: page.evalTrigger, page.device !== null ? Qt.formatDateTime(page.device.authorizeTime) : ""
                 Kirigami.FormData.label: i18n("Authorized at:")
             }
             QQC2.Label {
-                visible: device && device.status == Bolt.Bolt.Status.Connected
-                text: _evalTrigger, device ? Qt.formatDateTime(device.connectTime) : ""
+                visible: page.device !== null && page.device.status === Bolt.Bolt.Status.Connected
+                text: page.evalTrigger, page.device !== null ? Qt.formatDateTime(page.device.connectTime) : ""
                 Kirigami.FormData.label: i18n("Connected at:")
             }
             QQC2.Label {
-                visible: device && device.status == Bolt.Bolt.Status.Disconnected
-                text: _evalTrigger, device ? Qt.formatDateTime(device.storeTime) : ""
+                visible: page.device !== null && page.device.status === Bolt.Bolt.Status.Disconnected
+                text: page.evalTrigger, page.device !== null ? Qt.formatDateTime(page.device.storeTime) : ""
                 Kirigami.FormData.label: i18n("Enrolled at:")
             }
             QQC2.Label {
-                visible: device && (device.status == Bolt.Bolt.Status.Authorized || device.status == Bolt.Bolt.Status.Disconnected)
-                text: _evalTrigger, device && device.stored ? i18n("Yes") : i18n("No")
+                visible: page.device !== null && (page.device.status === Bolt.Bolt.Status.Authorized || page.device.status === Bolt.Bolt.Status.Disconnected)
+                text: page.evalTrigger, page.device !== null && page.device.stored ? i18n("Yes") : i18n("No")
                 Kirigami.FormData.label: i18n("Trusted:")
             }
         }
@@ -97,18 +97,18 @@ Kirigami.ScrollablePage {
 
             QQC2.Button {
                 id: authorizeBtn
-                text: device && device.status == Bolt.Bolt.Status.Authorizing ? i18n("Authorizing...") : i18n("Authorize")
-                enabled: device && device.status != Bolt.Bolt.Status.Authorizing
-                visible: device && (device.status == Bolt.Bolt.Status.Connected || device.status == Bolt.Bolt.Status.AuthError)
+                text: page.device !== null && page.device.status === Bolt.Bolt.Status.Authorizing ? i18n("Authorizing...") : i18n("Authorize")
+                enabled: page.device !== null && page.device.status !== Bolt.Bolt.Status.Authorizing
+                visible: page.device !== null && (page.device.status === Bolt.Bolt.Status.Connected || page.device.status === Bolt.Bolt.Status.AuthError)
                 onClicked: {
                     Bolt.QMLHelper.enrollDevice(
-                        manager, device.uid, Bolt.Bolt.Policy.Default,
+                        page.manager, page.device.uid, Bolt.Bolt.Policy.Default,
                         Bolt.Bolt.Auth.Boot | Bolt.Bolt.Auth.NoKey,
-                        function() {
-                            console.log("Thunderbolt device " + device.uid + " (" + device.name + ") enrolled successfully");
+                        () => {
+                            console.log("Thunderbolt device " + page.device.uid + " (" + page.device.name + ") enrolled successfully");
                         },
-                        function(error) {
-                            errorMessage.show(i18n("Failed to enroll device <b>%1</b>: %2", device.name, error));
+                        error => {
+                            errorMessage.show(i18n("Failed to enroll device <b>%1</b>: %2", page.device.name, error));
                         }
                     );
                 }
@@ -116,19 +116,19 @@ Kirigami.ScrollablePage {
             QQC2.Button {
                 id: storeBtn
                 text: i18n("Trust this Device")
-                visible: device && device.status == Bolt.Bolt.Status.Authorized && device.stored == false
+                visible: page.device !== null && page.device.status === Bolt.Bolt.Status.Authorized && !page.device.stored
                 onClicked: {
                     enabled = false;
                     Bolt.QMLHelper.enrollDevice(
-                        manager, device.uid, Bolt.Bolt.Policy.Default,
+                        page.manager, page.device.uid, Bolt.Bolt.Policy.Default,
                         Bolt.Bolt.Auth.Boot | Bolt.Bolt.Auth.NoKey,
-                        function() {
+                        () => {
                             enabled = true;
-                            console.log("Thunderbolt Device " + device.uid + " (" + device.name + ") enrolled successfully");
+                            console.log("Thunderbolt Device " + page.device.uid + " (" + page.device.name + ") enrolled successfully");
                         },
-                        function(error) {
+                        error => {
                             enabled = true;
-                            errorMessage.show(i18n("Failed to enroll device <b>%1</b>: %2", device.name, error));
+                            errorMessage.show(i18n("Failed to enroll device <b>%1</b>: %2", page.device.name, error));
                         }
                     );
                 }
@@ -137,23 +137,23 @@ Kirigami.ScrollablePage {
             QQC2.Button {
                 id: forgetBtn
                 text: i18n("Revoke Trust")
-                visible: device && device.stored
+                visible: page.device !== null && page.device.stored
                 onClicked: {
                     enabled = false
                     Bolt.QMLHelper.forgetDevice(
-                        manager, device.uid,
-                        function() {
+                        page.manager, page.device.uid,
+                        () => {
                             enabled = true;
-                            console.log("Device " + device.uid + " successfully forgotten.");
+                            console.log("Device " + page.device.uid + " successfully forgotten.");
                         },
-                        function(error) {
+                        error => {
                             enabled = true;
-                            errorMessage.show(i18n("Error changing device trust: <b>%1</b>: %2", device.name, error));
+                            errorMessage.show(i18n("Error changing device trust: <b>%1</b>: %2", page.device.name, error));
                         }
                     );
                     // If the device is not connected it will cease to exist
                     // once forgotten, so we should pop this view
-                    if (device.status == Bolt.Bolt.Status.Disconnected) {
+                    if (page.device.status === Bolt.Bolt.Status.Disconnected) {
                         pageRow.pop();
                     }
                 }
@@ -164,7 +164,7 @@ Kirigami.ScrollablePage {
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
 
-            text: device && !device.stored
+            text: page.device !== null && !page.device.stored
                 ? i18n("Hint: trusted device will be automatically authorized the next time it is connected to the computer.")
                 : i18n("Hint: an untrusted device needs to be manually authorized each time it is connected to the computer.")
             visible: storeBtn.visible || forgetBtn.visible

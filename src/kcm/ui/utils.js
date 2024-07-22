@@ -7,36 +7,43 @@
 .import org.kde.kirigami as Kirigami
 .import org.kde.bolt as Bolt
 
-function deviceStatus(device, withStored)
-{
-    var status = device.status;
-    var str = "";
-    var color = "textColor";
-    if (status == Bolt.Bolt.Status.Disconnected) {
-        str = i18n("Disconnected");
-    } else if (status == Bolt.Bolt.Status.Connecting) {
-        str = i18n("Connecting");
-    } else if (status == Bolt.Bolt.Status.Connected) {
-        str = i18n("Connected");
+function deviceStatus(device /*Bolt.Device*/, withStored /*bool*/) {
+    const { authFlags, status, stored } = device;
+    let text = "";
+    let color = "textColor";
+
+    switch (status) {
+    case Bolt.Bolt.Status.Disconnected:
+        text = i18n("Disconnected");
+        break;
+    case Bolt.Bolt.Status.Connecting:
+        text = i18n("Connecting");
+        break;
+    case Bolt.Bolt.Status.Connected:
+        text = i18n("Connected");
         color = "neutralTextColor";
-    } else if (status == Bolt.Bolt.Status.AuthError) {
-        str = i18n("Authorization Error");
-    } else if (status == Bolt.Bolt.Status.Authorizing) {
-        str = i18n("Authorizing");
-    } else if (status == Bolt.Bolt.Status.Authorized) {
+        break;
+    case Bolt.Bolt.Status.AuthError:
+        text = i18n("Authorization Error");
+        break;
+    case Bolt.Bolt.Status.Authorizing:
+        text = i18n("Authorizing");
+        break;
+    case Bolt.Bolt.Status.Authorized:
         color = "positiveTextColor";
-        if (device.authFlags & Bolt.Bolt.Auth.NoPCIE) {
-            str = i18n("Reduced Functionality");
+        if (authFlags & Bolt.Bolt.Auth.NoPCIE) {
+            text = i18n("Reduced Functionality");
         } else {
-            str = i18n("Connected & Authorized");
+            text = i18n("Connected & Authorized");
         }
+        break;
     }
-    if (withStored && device.stored) {
-        if (str != "") {
-            str += ", ";
+    if (withStored && stored) {
+        if (text !== "") {
+            text += ", ";
         }
-        str += i18n("Trusted");
+        text += i18n("Trusted");
     }
 
-    return { text: str, color: color };
+    return { text, color };
 }
