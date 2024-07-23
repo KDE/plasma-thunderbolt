@@ -12,6 +12,8 @@ import QtQuick.Layouts
 
 import org.kde.bolt as Bolt
 import org.kde.kirigami as Kirigami
+import org.kde.kirigami.delegates as KD
+import org.kde.kirigami.platform as Platform
 
 import "utils.js" as Utils
 
@@ -45,6 +47,8 @@ ListView {
 
         width: ListView.view.width - ListView.view.leftMargin - ListView.view.rightMargin
 
+        text: device.label
+
         contentItem: RowLayout {
             spacing: Kirigami.Units.smallSpacing
 
@@ -54,16 +58,16 @@ ListView {
                 implicitHeight: Kirigami.Units.iconSizes.smallMedium
             }
 
-            QQC2.Label {
+            KD.TitleSubtitle {
                 Layout.fillWidth: true
-                text: delegate.device.label
-                elide: Text.ElideRight
-                color: delegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-            }
-
-            QQC2.Label {
-                text: view.evalTrigger, delegate.deviceStatus.text
-                color: delegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme[delegate.deviceStatus.color]
+                title: delegate.text
+                subtitle: view.evalTrigger, delegate.deviceStatus.text
+                font: delegate.font
+                selected: delegate.highlighted || delegate.down
+                subtitleColor: selected
+                    ? Platform.Theme.highlightedTextColor
+                    : Platform.ColorUtils.linearInterpolation(Kirigami.Theme[delegate.deviceStatus.color], Platform.Theme.backgroundColor, 0.3)
+                wrapMode: Text.Wrap
             }
         }
 
