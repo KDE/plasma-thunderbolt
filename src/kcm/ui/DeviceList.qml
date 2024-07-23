@@ -49,8 +49,7 @@ ListView {
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.BusyIndicator {
-                visible: delegate.device.status === Bolt.Bolt.Status.Authorizing
-                running: visible
+                running: delegate.device.status === Bolt.Bolt.Status.Authorizing
                 implicitWidth: Kirigami.Units.iconSizes.smallMedium
                 implicitHeight: Kirigami.Units.iconSizes.smallMedium
             }
