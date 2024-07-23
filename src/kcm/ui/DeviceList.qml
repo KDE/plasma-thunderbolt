@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
@@ -34,17 +36,20 @@ ListView {
     model: deviceModel
 
     delegate: QQC2.ItemDelegate {
-        id: item
+        id: delegate
 
-        property var deviceStatus: Utils.deviceStatus(model.device, true)
+        required property int index
+        required property Bolt.Device device
 
-        width: view.width
+        readonly property var deviceStatus: Utils.deviceStatus(device, true)
+
+        width: ListView.view.width - ListView.view.leftMargin - ListView.view.rightMargin
 
         contentItem: RowLayout {
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.BusyIndicator {
-                visible: model.device.status === Bolt.Bolt.Status.Authorizing
+                visible: delegate.device.status === Bolt.Bolt.Status.Authorizing
                 running: visible
                 implicitWidth: Kirigami.Units.iconSizes.smallMedium
                 implicitHeight: Kirigami.Units.iconSizes.smallMedium
@@ -52,19 +57,19 @@ ListView {
 
             QQC2.Label {
                 Layout.fillWidth: true
-                text: model.device.label
+                text: delegate.device.label
                 elide: Text.ElideRight
-                color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                color: delegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
             }
 
             QQC2.Label {
-                text: view.evalTrigger, item.deviceStatus.text
-                color: item.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme[item.deviceStatus.color]
+                text: view.evalTrigger, delegate.deviceStatus.text
+                color: delegate.highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme[delegate.deviceStatus.color]
             }
         }
 
         onClicked: {
-            view.deviceClicked(model.device)
+            view.deviceClicked(device)
         }
     }
 }
