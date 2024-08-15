@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-15 00:41+0000\n"
 "PO-Revision-Date: 2024-03-03 08:50+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,97 +20,83 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.02.0\n"
 
-#: ui/DeviceList.qml:25
-#, kde-format
-msgid "Enable Thunderbolt devices"
-msgstr "Gaitu Thunderbolt gailuak"
-
-#: ui/DeviceList.qml:60
-#, kde-format
-msgid "No Thunderbolt devices connected"
-msgstr "Ez dago konektatuta Thunderbolt gailurik"
-
-#: ui/DeviceList.qml:61
-#, kde-format
-msgid "Plug in a Thunderbolt device"
-msgstr "Entxufatu Thunderbolt gailu bat"
-
-#: ui/DeviceView.qml:62
+#: ui/DeviceView.qml:56
 #, kde-format
 msgid "Vendor:"
 msgstr "Hornitzailea:"
 
-#: ui/DeviceView.qml:66
+#: ui/DeviceView.qml:60
 #, kde-format
 msgid "UID:"
 msgstr "UID:"
 
-#: ui/DeviceView.qml:70
+#: ui/DeviceView.qml:64
 #, kde-format
 msgid "Status:"
 msgstr "Egoera:"
 
-#: ui/DeviceView.qml:75
+#: ui/DeviceView.qml:69
 #, kde-format
 msgid "Authorized at:"
 msgstr "Baimenduta hemen:"
 
-#: ui/DeviceView.qml:80
+#: ui/DeviceView.qml:74
 #, kde-format
 msgid "Connected at:"
 msgstr "Konektatuta hemen:"
 
-#: ui/DeviceView.qml:85
+#: ui/DeviceView.qml:79
 #, kde-format
 msgid "Enrolled at:"
 msgstr "Erroldatua hemen:"
 
-#: ui/DeviceView.qml:89
+#: ui/DeviceView.qml:83
 #, kde-format
 msgid "Yes"
 msgstr "Bai"
 
-#: ui/DeviceView.qml:89
+#: ui/DeviceView.qml:83
 #, kde-format
 msgid "No"
 msgstr "Ez"
 
-#: ui/DeviceView.qml:90
+#: ui/DeviceView.qml:84
 #, kde-format
 msgid "Trusted:"
 msgstr "Konfiantzazkoa:"
 
-#: ui/DeviceView.qml:99
-#, kde-format
-msgid "Authorizing..."
-msgstr "Baimen-ematen..."
+#: ui/DeviceView.qml:94
+#, fuzzy, kde-format
+#| msgid "Authorizing"
+msgid "Authorizing…"
+msgstr "Baimen-ematen"
 
-#: ui/DeviceView.qml:99
+#: ui/DeviceView.qml:94
 #, kde-format
 msgid "Authorize"
 msgstr "Baimena eman"
 
-#: ui/DeviceView.qml:110 ui/DeviceView.qml:130
+#: ui/DeviceView.qml:105 ui/DeviceView.qml:125
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
 msgstr "<b>%1</b> gailua erroldatzea huts egin du: %2"
 
-#: ui/DeviceView.qml:117
+#: ui/DeviceView.qml:112
 #, kde-format
 msgid "Trust this Device"
 msgstr "Konfiantza izan gailu honengan"
 
-#: ui/DeviceView.qml:138
+#: ui/DeviceView.qml:133
 #, kde-format
 msgid "Revoke Trust"
 msgstr "Indargabetu konfiantza"
 
-#: ui/DeviceView.qml:150
+#: ui/DeviceView.qml:145
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
 msgstr "Errorea gailuaren gaineko konfiantza aldatzean: <b>%1</b>:%2"
 
-#: ui/DeviceView.qml:167
+#: ui/DeviceView.qml:161
 #, kde-format
 msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
@@ -119,7 +105,7 @@ msgstr ""
 "Argibidea: konfiantza duen gailuari automatikoki baimen-emango zaio "
 "ordenagailura konektatzen den hurrengo aldian."
 
-#: ui/DeviceView.qml:168
+#: ui/DeviceView.qml:162
 #, kde-format
 msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
@@ -128,61 +114,82 @@ msgstr ""
 "Argibidea: konfiantzarik ez duen gailu bati eskuz baimen-eman behar zaio "
 "ordenagailura konektatzen den bakoitzean."
 
-#: ui/main.qml:33
+#: ui/main.qml:31
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
+#: ui/main.qml:62
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Thunderbolt euskarria ezgaitu da BIOSean"
 
-#: ui/main.qml:34
+#: ui/main.qml:63
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
 "Jarraitu zure sistemaren fabrikatzailearen gidaliburua «Thunderbolt»en "
 "euskarria gaitzeko"
 
-#: ui/main.qml:42
+#: ui/main.qml:69
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "Ez dago konektatuta Thunderbolt gailurik"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Plug in a Thunderbolt device"
+msgstr "Entxufatu Thunderbolt gailu bat"
+
+#: ui/main.qml:84
 #, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "Thunderbolt azpi-sistema ezgaituta dago edo ez dago erabilgarri"
 
-#: ui/main.qml:43
+#: ui/main.qml:85
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
 "Gailuak Thunderbolt onartzen badu, saiatu Thunderbolt gailu bat entxufatzen"
 
-#: ui/utils.js:16
+#: ui/utils.js:18
 msgid "Disconnected"
 msgstr "Deskonektatuta"
 
-#: ui/utils.js:18
+#: ui/utils.js:21
 msgid "Connecting"
 msgstr "Konektatzen"
 
-#: ui/utils.js:20
+#: ui/utils.js:24
 msgid "Connected"
 msgstr "Konektatuta"
 
-#: ui/utils.js:23
+#: ui/utils.js:28
 msgid "Authorization Error"
 msgstr "Baimen-emate errorea"
 
-#: ui/utils.js:25
+#: ui/utils.js:31
 msgid "Authorizing"
 msgstr "Baimen-ematen"
 
-#: ui/utils.js:29
+#: ui/utils.js:36
 msgid "Reduced Functionality"
 msgstr "Funtzionaltasun murriztua"
 
-#: ui/utils.js:31
+#: ui/utils.js:38
 msgid "Connected & Authorized"
 msgstr "Konektatuta eta baimenduta"
 
-#: ui/utils.js:38
+#: ui/utils.js:46
 msgid "Trusted"
 msgstr "Konfiantzazkoa"
+
+#~ msgid "Enable Thunderbolt devices"
+#~ msgstr "Gaitu Thunderbolt gailuak"
+
+#~ msgid "Authorizing..."
+#~ msgstr "Baimen-ematen..."
 
 #~ msgid ""
 #~ "This module allows you to manage Thunderbolt devices connected to your "

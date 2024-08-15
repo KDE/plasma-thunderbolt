@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-15 00:41+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -17,98 +17,83 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: ui/DeviceList.qml:25
-#, kde-format
-msgid "Enable Thunderbolt devices"
-msgstr "Fungsikan peranti Thunderbolt"
-
-#: ui/DeviceList.qml:60
-#, kde-format
-msgid "No Thunderbolt devices connected"
-msgstr "Tidak ada peranti Thunderbolt yang terkoneksi"
-
-#: ui/DeviceList.qml:61
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
-msgid "Plug in a Thunderbolt device"
-msgstr "Fungsikan peranti Thunderbolt"
-
-#: ui/DeviceView.qml:62
+#: ui/DeviceView.qml:56
 #, kde-format
 msgid "Vendor:"
 msgstr "Vendor:"
 
-#: ui/DeviceView.qml:66
+#: ui/DeviceView.qml:60
 #, kde-format
 msgid "UID:"
 msgstr "UID:"
 
-#: ui/DeviceView.qml:70
+#: ui/DeviceView.qml:64
 #, kde-format
 msgid "Status:"
 msgstr "Status:"
 
-#: ui/DeviceView.qml:75
+#: ui/DeviceView.qml:69
 #, kde-format
 msgid "Authorized at:"
 msgstr "Terotorisasi di:"
 
-#: ui/DeviceView.qml:80
+#: ui/DeviceView.qml:74
 #, kde-format
 msgid "Connected at:"
 msgstr "Terkoneksi di:"
 
-#: ui/DeviceView.qml:85
+#: ui/DeviceView.qml:79
 #, kde-format
 msgid "Enrolled at:"
 msgstr "Terdaftar di:"
 
-#: ui/DeviceView.qml:89
+#: ui/DeviceView.qml:83
 #, kde-format
 msgid "Yes"
 msgstr "Ya"
 
-#: ui/DeviceView.qml:89
+#: ui/DeviceView.qml:83
 #, kde-format
 msgid "No"
 msgstr "Tidak"
 
-#: ui/DeviceView.qml:90
+#: ui/DeviceView.qml:84
 #, kde-format
 msgid "Trusted:"
 msgstr "Dipercaya:"
 
-#: ui/DeviceView.qml:99
-#, kde-format
-msgid "Authorizing..."
-msgstr "Mengotorisasi..."
+#: ui/DeviceView.qml:94
+#, fuzzy, kde-format
+#| msgid "Authorizing"
+msgid "Authorizing…"
+msgstr "Mengotorisasi"
 
-#: ui/DeviceView.qml:99
+#: ui/DeviceView.qml:94
 #, kde-format
 msgid "Authorize"
 msgstr "Otorisasikan"
 
-#: ui/DeviceView.qml:110 ui/DeviceView.qml:130
+#: ui/DeviceView.qml:105 ui/DeviceView.qml:125
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
 msgstr "Gagal mendaftarkan peranti <b>%1</b>: %2"
 
-#: ui/DeviceView.qml:117
+#: ui/DeviceView.qml:112
 #, kde-format
 msgid "Trust this Device"
 msgstr "Percayai Peranti ini"
 
-#: ui/DeviceView.qml:138
+#: ui/DeviceView.qml:133
 #, kde-format
 msgid "Revoke Trust"
 msgstr "Cabut Kepercayaan"
 
-#: ui/DeviceView.qml:150
+#: ui/DeviceView.qml:145
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
 msgstr "Error mengubah kepercayaan peranti: <b>%1</b>: %2"
 
-#: ui/DeviceView.qml:167
+#: ui/DeviceView.qml:161
 #, kde-format
 msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
@@ -117,7 +102,7 @@ msgstr ""
 "Petunjuk: peranti yang dipercaya akan secara otomatis diotorisasikan lain "
 "kali saat ia dikoneksikan ke komputer."
 
-#: ui/DeviceView.qml:168
+#: ui/DeviceView.qml:162
 #, kde-format
 msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
@@ -126,59 +111,81 @@ msgstr ""
 "Petunjuk: peranti yang tak dipercaya perlu secara manual diotorisasikan "
 "setiap kali saat ia dikoneksikan ke komputer."
 
-#: ui/main.qml:33
+#: ui/main.qml:31
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
+#: ui/main.qml:62
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Dukungan Thunderbolt telah dinonfungsikan di dalam BIOS"
 
-#: ui/main.qml:34
+#: ui/main.qml:63
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
 
-#: ui/main.qml:42
+#: ui/main.qml:69
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "Tidak ada peranti Thunderbolt yang terkoneksi"
+
+#: ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Enable Thunderbolt devices"
+msgid "Plug in a Thunderbolt device"
+msgstr "Fungsikan peranti Thunderbolt"
+
+#: ui/main.qml:84
 #, fuzzy, kde-format
 #| msgid "Thunderbolt subsystem is not available"
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "Subsistem Thunderbolt tidaklah tersedia"
 
-#: ui/main.qml:43
+#: ui/main.qml:85
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
 
-#: ui/utils.js:16
+#: ui/utils.js:18
 msgid "Disconnected"
 msgstr "Terdiskoneksi"
 
-#: ui/utils.js:18
+#: ui/utils.js:21
 msgid "Connecting"
 msgstr "Mengkoneksi"
 
-#: ui/utils.js:20
+#: ui/utils.js:24
 msgid "Connected"
 msgstr "Terkoneksi"
 
-#: ui/utils.js:23
+#: ui/utils.js:28
 msgid "Authorization Error"
 msgstr "Error Pengotorisasian"
 
-#: ui/utils.js:25
+#: ui/utils.js:31
 msgid "Authorizing"
 msgstr "Mengotorisasi"
 
-#: ui/utils.js:29
+#: ui/utils.js:36
 msgid "Reduced Functionality"
 msgstr "Fungsionalitas Berkurang"
 
-#: ui/utils.js:31
+#: ui/utils.js:38
 msgid "Connected & Authorized"
 msgstr "Terkoneksi & Terotorisasi"
 
-#: ui/utils.js:38
+#: ui/utils.js:46
 msgid "Trusted"
 msgstr "Dipercaya"
+
+#~ msgid "Enable Thunderbolt devices"
+#~ msgstr "Fungsikan peranti Thunderbolt"
+
+#~ msgid "Authorizing..."
+#~ msgstr "Mengotorisasi..."
 
 #~ msgid ""
 #~ "This module allows you to manage Thunderbolt devices connected to your "

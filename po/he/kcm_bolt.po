@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-15 00:41+0000\n"
 "PO-Revision-Date: 2024-03-03 12:56+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,159 +18,166 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
-#: ui/DeviceList.qml:25
-#, kde-format
-msgid "Enable Thunderbolt devices"
-msgstr "הפעלת התקני Thunderbolt"
-
-#: ui/DeviceList.qml:60
-#, kde-format
-msgid "No Thunderbolt devices connected"
-msgstr "לא מחוברים התקני Thunderbolt"
-
-#: ui/DeviceList.qml:61
-#, kde-format
-msgid "Plug in a Thunderbolt device"
-msgstr "נא לחבר התקן Thunderbolt"
-
-#: ui/DeviceView.qml:62
+#: ui/DeviceView.qml:56
 #, kde-format
 msgid "Vendor:"
 msgstr "יצרן:"
 
-#: ui/DeviceView.qml:66
+#: ui/DeviceView.qml:60
 #, kde-format
 msgid "UID:"
 msgstr "מזהה ייחודי:"
 
-#: ui/DeviceView.qml:70
+#: ui/DeviceView.qml:64
 #, kde-format
 msgid "Status:"
 msgstr "מצב:"
 
-#: ui/DeviceView.qml:75
+#: ui/DeviceView.qml:69
 #, kde-format
 msgid "Authorized at:"
 msgstr "אומת ב־:"
 
-#: ui/DeviceView.qml:80
+#: ui/DeviceView.qml:74
 #, kde-format
 msgid "Connected at:"
 msgstr "חובר ב־:"
 
-#: ui/DeviceView.qml:85
+#: ui/DeviceView.qml:79
 #, kde-format
 msgid "Enrolled at:"
 msgstr "נרשם ב־:"
 
-#: ui/DeviceView.qml:89
+#: ui/DeviceView.qml:83
 #, kde-format
 msgid "Yes"
 msgstr "כן"
 
-#: ui/DeviceView.qml:89
+#: ui/DeviceView.qml:83
 #, kde-format
 msgid "No"
 msgstr "לא"
 
-#: ui/DeviceView.qml:90
+#: ui/DeviceView.qml:84
 #, kde-format
 msgid "Trusted:"
 msgstr "מהימן:"
 
-#: ui/DeviceView.qml:99
-#, kde-format
-msgid "Authorizing..."
-msgstr "מתבצע אימות…"
+#: ui/DeviceView.qml:94
+#, fuzzy, kde-format
+#| msgid "Authorizing"
+msgid "Authorizing…"
+msgstr "ממתבצע אימות"
 
-#: ui/DeviceView.qml:99
+#: ui/DeviceView.qml:94
 #, kde-format
 msgid "Authorize"
 msgstr "אימות"
 
-#: ui/DeviceView.qml:110 ui/DeviceView.qml:130
+#: ui/DeviceView.qml:105 ui/DeviceView.qml:125
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
 msgstr "רישום המכשיר <b>%1</b> נכשל: %2"
 
-#: ui/DeviceView.qml:117
+#: ui/DeviceView.qml:112
 #, kde-format
 msgid "Trust this Device"
 msgstr "מתן אמון בהתקן הזה"
 
-#: ui/DeviceView.qml:138
+#: ui/DeviceView.qml:133
 #, kde-format
 msgid "Revoke Trust"
 msgstr "שלילת אמון"
 
-#: ui/DeviceView.qml:150
+#: ui/DeviceView.qml:145
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
 msgstr "שגיאה בשינוי מהימנות התקן: <b>%1</b>: %2"
 
-#: ui/DeviceView.qml:167
+#: ui/DeviceView.qml:161
 #, kde-format
 msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
 "connected to the computer."
 msgstr "עצה: התקן מהימן יאומת אוטומטית עם החיבור הבא למחשב."
 
-#: ui/DeviceView.qml:168
+#: ui/DeviceView.qml:162
 #, kde-format
 msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
 "connected to the computer."
 msgstr "עצה: התקן מפוקפק דורש אימות ידנית עם כל חיבור למחשב."
 
-#: ui/main.qml:33
+#: ui/main.qml:31
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
+#: ui/main.qml:62
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "התמיכה ב־Thunderbolt הושבתה ב־BIOS"
 
-#: ui/main.qml:34
+#: ui/main.qml:63
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr "נא לפנות למדריך של יצרן המערכת שלך כדי להפעיל תמיכה ב־Thunderbolt"
 
-#: ui/main.qml:42
+#: ui/main.qml:69
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "לא מחוברים התקני Thunderbolt"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Plug in a Thunderbolt device"
+msgstr "נא לחבר התקן Thunderbolt"
+
+#: ui/main.qml:84
 #, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "תת־מערכת Thunderbolt מושבתת או שאינה זמינה"
 
-#: ui/main.qml:43
+#: ui/main.qml:85
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr "אם המכשיר תומך ב־Thunderbolt, כדאי לנסות לחבר אותו להתקן Thunderbolt"
 
-#: ui/utils.js:16
+#: ui/utils.js:18
 msgid "Disconnected"
 msgstr "מנותק"
 
-#: ui/utils.js:18
+#: ui/utils.js:21
 msgid "Connecting"
 msgstr "מתחבר"
 
-#: ui/utils.js:20
+#: ui/utils.js:24
 msgid "Connected"
 msgstr "מחובר"
 
-#: ui/utils.js:23
+#: ui/utils.js:28
 msgid "Authorization Error"
 msgstr "שגיאת אימות"
 
-#: ui/utils.js:25
+#: ui/utils.js:31
 msgid "Authorizing"
 msgstr "ממתבצע אימות"
 
-#: ui/utils.js:29
+#: ui/utils.js:36
 msgid "Reduced Functionality"
 msgstr "תפקוד מצומצם"
 
-#: ui/utils.js:31
+#: ui/utils.js:38
 msgid "Connected & Authorized"
 msgstr "מחובר ומאומת"
 
-#: ui/utils.js:38
+#: ui/utils.js:46
 msgid "Trusted"
 msgstr "מהימן"
+
+#~ msgid "Enable Thunderbolt devices"
+#~ msgstr "הפעלת התקני Thunderbolt"
+
+#~ msgid "Authorizing..."
+#~ msgstr "מתבצע אימות…"

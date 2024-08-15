@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-15 00:41+0000\n"
 "PO-Revision-Date: 2024-03-18 19:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -18,97 +18,83 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 24.02.0\n"
 
-#: ui/DeviceList.qml:25
-#, kde-format
-msgid "Enable Thunderbolt devices"
-msgstr "Thunderbolt aygıtlarını etkinleştir"
-
-#: ui/DeviceList.qml:60
-#, kde-format
-msgid "No Thunderbolt devices connected"
-msgstr "Bağlı Thunderbolt aygıtı yok"
-
-#: ui/DeviceList.qml:61
-#, kde-format
-msgid "Plug in a Thunderbolt device"
-msgstr "Bir Thunderbolt Aygıtı Tak"
-
-#: ui/DeviceView.qml:62
+#: ui/DeviceView.qml:56
 #, kde-format
 msgid "Vendor:"
 msgstr "Satıcı:"
 
-#: ui/DeviceView.qml:66
+#: ui/DeviceView.qml:60
 #, kde-format
 msgid "UID:"
 msgstr "UID:"
 
-#: ui/DeviceView.qml:70
+#: ui/DeviceView.qml:64
 #, kde-format
 msgid "Status:"
 msgstr "Durum:"
 
-#: ui/DeviceView.qml:75
+#: ui/DeviceView.qml:69
 #, kde-format
 msgid "Authorized at:"
 msgstr "Doğrulandı:"
 
-#: ui/DeviceView.qml:80
+#: ui/DeviceView.qml:74
 #, kde-format
 msgid "Connected at:"
 msgstr "Bağlı:"
 
-#: ui/DeviceView.qml:85
+#: ui/DeviceView.qml:79
 #, kde-format
 msgid "Enrolled at:"
 msgstr "Kaydı yazılı:"
 
-#: ui/DeviceView.qml:89
+#: ui/DeviceView.qml:83
 #, kde-format
 msgid "Yes"
 msgstr "Evet"
 
-#: ui/DeviceView.qml:89
+#: ui/DeviceView.qml:83
 #, kde-format
 msgid "No"
 msgstr "Hayır"
 
-#: ui/DeviceView.qml:90
+#: ui/DeviceView.qml:84
 #, kde-format
 msgid "Trusted:"
 msgstr "Güvenilir:"
 
-#: ui/DeviceView.qml:99
-#, kde-format
-msgid "Authorizing..."
-msgstr "Kimlik doğrulanıyor…"
+#: ui/DeviceView.qml:94
+#, fuzzy, kde-format
+#| msgid "Authorizing"
+msgid "Authorizing…"
+msgstr "Kimlik Doğrulanıyor"
 
-#: ui/DeviceView.qml:99
+#: ui/DeviceView.qml:94
 #, kde-format
 msgid "Authorize"
 msgstr "Kimliğini doğrula"
 
-#: ui/DeviceView.qml:110 ui/DeviceView.qml:130
+#: ui/DeviceView.qml:105 ui/DeviceView.qml:125
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
 msgstr "<b>%1</b> aygıtı kaydı yazılamadı: %2"
 
-#: ui/DeviceView.qml:117
+#: ui/DeviceView.qml:112
 #, kde-format
 msgid "Trust this Device"
 msgstr "Bu Aygıta Güven"
 
-#: ui/DeviceView.qml:138
+#: ui/DeviceView.qml:133
 #, kde-format
 msgid "Revoke Trust"
 msgstr "Güvenme"
 
-#: ui/DeviceView.qml:150
+#: ui/DeviceView.qml:145
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
 msgstr "Aygıt güveni değiştirilirken hata: <b>%1</b>: %2"
 
-#: ui/DeviceView.qml:167
+#: ui/DeviceView.qml:161
 #, kde-format
 msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
@@ -117,7 +103,7 @@ msgstr ""
 "İpucu: Güvenilen aygıt, bir sonraki bilgisayara bağlandığında doğrudan "
 "kullanılabilir olacaktır."
 
-#: ui/DeviceView.qml:168
+#: ui/DeviceView.qml:162
 #, kde-format
 msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
@@ -126,61 +112,82 @@ msgstr ""
 "İpucu: Güvenilmeyen bir aygıt, bilgisayara her bağlandığında yeniden kimlik "
 "doğrulama isteyecektir."
 
-#: ui/main.qml:33
+#: ui/main.qml:31
+#, kde-format
+msgid "Enabled"
+msgstr ""
+
+#: ui/main.qml:62
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Thunderbolt desteği BIOS'ta devre dışı bırakılmış"
 
-#: ui/main.qml:34
+#: ui/main.qml:63
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
 "Thunderbolt desteğini etkinleştirmek için sistem üreticinizin yönergelerini "
 "izleyin"
 
-#: ui/main.qml:42
+#: ui/main.qml:69
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "Bağlı Thunderbolt aygıtı yok"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Plug in a Thunderbolt device"
+msgstr "Bir Thunderbolt Aygıtı Tak"
+
+#: ui/main.qml:84
 #, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "Thunderbolt alt sistemi devre dışı veya kullanılamıyor"
 
-#: ui/main.qml:43
+#: ui/main.qml:85
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
 "Aygıtınız Thunderbolt destekliyorsa bir Thunderbolt aygıtı takmayı deneyin"
 
-#: ui/utils.js:16
+#: ui/utils.js:18
 msgid "Disconnected"
 msgstr "Bağlantı kesildi"
 
-#: ui/utils.js:18
+#: ui/utils.js:21
 msgid "Connecting"
 msgstr "Bağlanıyor"
 
-#: ui/utils.js:20
+#: ui/utils.js:24
 msgid "Connected"
 msgstr "Bağlı"
 
-#: ui/utils.js:23
+#: ui/utils.js:28
 msgid "Authorization Error"
 msgstr "Kimlik Doğrulama Hatası"
 
-#: ui/utils.js:25
+#: ui/utils.js:31
 msgid "Authorizing"
 msgstr "Kimlik Doğrulanıyor"
 
-#: ui/utils.js:29
+#: ui/utils.js:36
 msgid "Reduced Functionality"
 msgstr "Azaltılmış İşlevsellik"
 
-#: ui/utils.js:31
+#: ui/utils.js:38
 msgid "Connected & Authorized"
 msgstr "Bağlı & Kimliği Doğrulanmış"
 
-#: ui/utils.js:38
+#: ui/utils.js:46
 msgid "Trusted"
 msgstr "Güvenilir"
+
+#~ msgid "Enable Thunderbolt devices"
+#~ msgstr "Thunderbolt aygıtlarını etkinleştir"
+
+#~ msgid "Authorizing..."
+#~ msgstr "Kimlik doğrulanıyor…"
 
 #~ msgid ""
 #~ "This module allows you to manage Thunderbolt devices connected to your "
