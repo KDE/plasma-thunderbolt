@@ -63,10 +63,9 @@ msgid "Trusted:"
 msgstr "已信任："
 
 #: ui/DeviceView.qml:94
-#, fuzzy, kde-format
-#| msgid "Authorizing"
+#, kde-format
 msgid "Authorizing…"
-msgstr "正在授权"
+msgstr ""
 
 #: ui/DeviceView.qml:94
 #, kde-format
@@ -174,9 +173,3 @@ msgstr "已连接并授权"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "已信任"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "启用雷电接口设备"
-
-#~ msgid "Authorizing..."
-#~ msgstr "正在授权..."

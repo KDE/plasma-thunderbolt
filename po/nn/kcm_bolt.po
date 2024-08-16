@@ -181,9 +181,3 @@ msgstr "Tilkopla og godkjend"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "Tiltrudd"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "Ta i bruk Thunderbolt-einingar"
-
-#~ msgid "Authorizing..."
-#~ msgstr "Godkjenner …"
