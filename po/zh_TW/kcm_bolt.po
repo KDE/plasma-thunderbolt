@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-15 00:41+0000\n"
-"PO-Revision-Date: 2024-03-12 02:09+0900\n"
+"PO-Revision-Date: 2024-08-18 00:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -67,10 +67,9 @@ msgid "Trusted:"
 msgstr "信任："
 
 #: ui/DeviceView.qml:94
-#, fuzzy, kde-format
-#| msgid "Authorizing"
+#, kde-format
 msgid "Authorizing…"
-msgstr "授權中"
+msgstr "授權中…"
 
 #: ui/DeviceView.qml:94
 #, kde-format
@@ -114,7 +113,7 @@ msgstr "提示：未信任裝置需要在其連結至電腦時手動授權。"
 #: ui/main.qml:31
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "已啟用"
 
 #: ui/main.qml:62
 #, kde-format

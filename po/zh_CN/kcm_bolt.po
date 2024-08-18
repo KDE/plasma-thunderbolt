@@ -65,7 +65,7 @@ msgstr "已信任："
 #: ui/DeviceView.qml:94
 #, kde-format
 msgid "Authorizing…"
-msgstr ""
+msgstr "正在授权…"
 
 #: ui/DeviceView.qml:94
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "提示：未信任设备需要在每次连接到计算机时手动授权
 #: ui/main.qml:31
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "已启用"
 
 #: ui/main.qml:62
 #, kde-format
