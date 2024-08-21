@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-15 00:41+0000\n"
-"PO-Revision-Date: 2024-04-03 11:47+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2024-08-15 13:47+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/DeviceView.qml:56
 #, kde-format
@@ -63,10 +63,9 @@ msgid "Trusted:"
 msgstr "Důvěryhodný:"
 
 #: ui/DeviceView.qml:94
-#, fuzzy, kde-format
-#| msgid "Authorizing"
+#, kde-format
 msgid "Authorizing…"
-msgstr "Uděluji oprávnění"
+msgstr "Uděluji oprávnění…"
 
 #: ui/DeviceView.qml:94
 #, kde-format
@@ -114,7 +113,7 @@ msgstr ""
 #: ui/main.qml:31
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Povoleno"
 
 #: ui/main.qml:62
 #, kde-format
@@ -178,9 +177,3 @@ msgstr "Připojen a oprávněn"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "Důvěryhodný"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "Povolit zařízení Thunderbolt"
-
-#~ msgid "Authorizing..."
-#~ msgstr "Uděluji oprávnění..."
