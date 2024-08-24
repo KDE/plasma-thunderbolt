@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-15 00:41+0000\n"
-"PO-Revision-Date: 2024-03-17 11:03+0100\n"
+"PO-Revision-Date: 2024-08-19 20:58+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -64,10 +64,9 @@ msgid "Trusted:"
 msgstr "Tiltrudd:"
 
 #: ui/DeviceView.qml:94
-#, fuzzy, kde-format
-#| msgid "Authorizing"
+#, kde-format
 msgid "Authorizing…"
-msgstr "Godkjenner"
+msgstr "Godkjenner …"
 
 #: ui/DeviceView.qml:94
 #, kde-format
@@ -115,7 +114,7 @@ msgstr ""
 #: ui/main.qml:31
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Slått på"
 
 #: ui/main.qml:62
 #, kde-format
