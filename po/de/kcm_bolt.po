@@ -1,21 +1,23 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-#
 # Frederik Schwarzer <schwarzer@kde.org>, 2019.
 # Burkhard Lück <lueck@hube-lueck.de>, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-15 00:41+0000\n"
-"PO-Revision-Date: 2021-04-24 10:35+0200\n"
-"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"PO-Revision-Date: 2024-09-02 19:33+0200\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: ui/DeviceView.qml:56
 #, kde-format
@@ -63,10 +65,9 @@ msgid "Trusted:"
 msgstr "Vertrauenswürdig:"
 
 #: ui/DeviceView.qml:94
-#, fuzzy, kde-format
-#| msgid "Authorizing"
+#, kde-format
 msgid "Authorizing…"
-msgstr "Autorisierung läuft"
+msgstr "Autorisierung läuft …"
 
 #: ui/DeviceView.qml:94
 #, kde-format
@@ -114,7 +115,7 @@ msgstr ""
 #: ui/main.qml:31
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiviert"
 
 #: ui/main.qml:62
 #, kde-format
@@ -125,6 +126,8 @@ msgstr "Die Thunderbolt-Unterstützung ist im BIOS deaktiviert"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Bitte folgen Sie die Angaben des Systemherstellers zum Aktiveren der "
+"Thunderbolt-Unterstütztung"
 
 #: ui/main.qml:69
 #, kde-format
@@ -132,22 +135,22 @@ msgid "No Thunderbolt devices connected"
 msgstr "Keine Thunderbolt-Geräte angeschlossen"
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Thunderbolt-Geräte aktivieren"
+msgstr "Ein Thunderbolt-Gerät anstecken"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Das Thunderbolt-Subsystem ist nicht verfügbar"
+msgstr "Das Thunderbolt-Subsystem ist deaktiviert oder nicht verfügbar"
 
 #: ui/main.qml:85
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Wenn das Gerät Thunderbolt unterstützt, versuchen Sie sollten es mit dem "
+"Anschließen eines Thunderbolt-Gerätes versuchen."
 
 #: ui/utils.js:18
 msgid "Disconnected"
