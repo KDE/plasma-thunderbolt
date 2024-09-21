@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-15 00:41+0000\n"
-"PO-Revision-Date: 2024-05-21 22:51+0300\n"
+"PO-Revision-Date: 2024-09-20 07:50+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -65,10 +65,9 @@ msgid "Trusted:"
 msgstr "Доверенное:"
 
 #: ui/DeviceView.qml:94
-#, fuzzy, kde-format
-#| msgid "Authorizing"
+#, kde-format
 msgid "Authorizing…"
-msgstr "Авторизация"
+msgstr "Авторизация…"
 
 #: ui/DeviceView.qml:94
 #, kde-format
@@ -116,7 +115,7 @@ msgstr ""
 #: ui/main.qml:31
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Включено"
 
 #: ui/main.qml:62
 #, kde-format
