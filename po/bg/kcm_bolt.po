@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-15 00:41+0000\n"
-"PO-Revision-Date: 2024-09-19 19:43+0200\n"
+"PO-Revision-Date: 2024-09-22 12:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -113,7 +113,7 @@ msgstr ""
 #: ui/main.qml:31
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Активирано"
 
 #: ui/main.qml:62
 #, kde-format
