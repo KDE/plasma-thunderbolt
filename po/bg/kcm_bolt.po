@@ -181,9 +181,3 @@ msgstr "Свързан и оторизиран"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "Доверен"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "Активиране на Thunderbolt устройства"
-
-#~ msgid "Authorizing..."
-#~ msgstr "Упълномощаване..."
