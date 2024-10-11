@@ -120,6 +120,7 @@
     "X-KDE-Keywords[tr]": "thunderbolt,donanım,aygıt,protokol,thunderbolt protokolü,aktarım,transfer,aktarma,usb,usb-a,usb-b,usb-c,pci-e,dış aygıtlar,harici aygıtlar,dış cihazlar,harici cihazlar",
     "X-KDE-Keywords[uk]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,тандерболт,фандерболт,апаратне,обладнання,протокол,протокол тандерболт,передавання,юесбі,зовнішні пристрої",
     "X-KDE-Keywords[x-test]": "xxthunderboltxx,xxhardwarexx,xxdevicexx,xxprotocolxx,xxthunderbolt protocolxx,xxtransferxx,xxusbxx,xxusb-cxx,xxpci-exx,xxexternal devicesxx",
+    "X-KDE-Keywords[zh_CN]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,leidian,yingjian,shebei,xieyi,leidianxieyi,chuanshu,waibushebei,雷电,硬件,设备,协议,雷电协议,传输,外部设备",
     "X-KDE-Keywords[zh_TW]": "thunderbolt,硬體,裝置,協定,傳輸,外部裝置,外接裝置",
     "X-KDE-System-Settings-Parent-Category": "hardware",
     "X-KDE-Weight": 40
