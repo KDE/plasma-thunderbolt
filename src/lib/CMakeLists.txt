@@ -6,6 +6,12 @@ set(LIBKBOLT_SRCS
     devicemodel.cpp
     enum.cpp
     manager.cpp
+
+    dbushelper.h
+    device.h
+    devicemodel.h
+    enum.h
+    manager.h
 )
 
 ecm_qt_declare_logging_category(LIBKBOLT_SRCS
