@@ -1,0 +1,61 @@
+# Hindi translations for plasma-thunderbolt package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-thunderbolt package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-thunderbolt\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-04 16:53+0000\n"
+"PO-Revision-Date: 2024-12-15 17:36+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1)\n"
+
+#: kded_bolt.cpp:67
+#, kde-format
+msgid "New Thunderbolt Device Detected"
+msgstr "नए थंडरबोल्ट डिवाइस का पता चला"
+
+#: kded_bolt.cpp:68
+#, kde-format
+msgid ""
+"Unauthorized Thunderbolt device <b>%1</b> was detected. Do you want to "
+"authorize it?"
+msgstr ""
+"अनधिकृत थंडरबोल्ट डिवाइस <b>%1</b> का पता चला। क्या आप इसे अधिकृत करना चाहते हैं?"
+
+#: kded_bolt.cpp:70
+#, kde-format
+msgid ""
+"%1 unauthorized Thunderbolt device was detected. Do you want to authorize it?"
+msgid_plural ""
+"%1 unauthorized Thunderbolt devices were detected. Do you want to authorize "
+"them?"
+msgstr[0] "%1 अनधिकृत थंडरबोल्ट डिवाइस का पता चला। क्या आप उन्हें अधिकृत करना चाहते हैं?"
+msgstr[1] "%1 अनधिकृत थंडरबोल्ट डिवाइस का पता चला। क्या आप उन्हें अधिकृत करना चाहते हैं?"
+
+#: kded_bolt.cpp:78
+#, kde-format
+msgid "Authorize Now"
+msgstr "अभी अधिकृत करें"
+
+#: kded_bolt.cpp:83
+#, kde-format
+msgid "Authorize Permanently"
+msgstr "स्थायी रूप से अधिकृत करें"
+
+#: kded_bolt.cpp:131
+#, kde-format
+msgid "Thunderbolt Device Authorization Error"
+msgstr "थंडरबोल्ट डिवाइस प्राधिकरण त्रुटि"
+
+#: kded_bolt.cpp:132
+#, kde-format
+msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
+msgstr "थंडरबोल्ट डिवाइस <b>%1</b> को अधिकृत करने में विफल : %2"

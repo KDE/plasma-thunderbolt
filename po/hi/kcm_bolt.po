@@ -1,0 +1,180 @@
+# Hindi translations for plasma-thunderbolt package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-thunderbolt package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-thunderbolt\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-15 00:41+0000\n"
+"PO-Revision-Date: 2024-12-15 17:36+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ui/DeviceView.qml:56
+#, kde-format
+msgid "Vendor:"
+msgstr "विक्रेता:"
+
+#: ui/DeviceView.qml:60
+#, kde-format
+msgid "UID:"
+msgstr "यूआईडी:"
+
+#: ui/DeviceView.qml:64
+#, kde-format
+msgid "Status:"
+msgstr "स्थिति:"
+
+#: ui/DeviceView.qml:69
+#, kde-format
+msgid "Authorized at:"
+msgstr "प्राधिकृत:"
+
+#: ui/DeviceView.qml:74
+#, kde-format
+msgid "Connected at:"
+msgstr "यहां से जुड़े:"
+
+#: ui/DeviceView.qml:79
+#, kde-format
+msgid "Enrolled at:"
+msgstr "नामांकित स्थान:"
+
+#: ui/DeviceView.qml:83
+#, kde-format
+msgid "Yes"
+msgstr "हाँ"
+
+#: ui/DeviceView.qml:83
+#, kde-format
+msgid "No"
+msgstr "नहीं"
+
+#: ui/DeviceView.qml:84
+#, kde-format
+msgid "Trusted:"
+msgstr "विश्वसनीय:"
+
+#: ui/DeviceView.qml:94
+#, kde-format
+msgid "Authorizing…"
+msgstr "प्राधिकृत करना…"
+
+#: ui/DeviceView.qml:94
+#, kde-format
+msgid "Authorize"
+msgstr "अधिकृत"
+
+#: ui/DeviceView.qml:105 ui/DeviceView.qml:125
+#, kde-format
+msgid "Failed to enroll device <b>%1</b>: %2"
+msgstr "डिवाइस <b>%1</b> नामांकित करने में विफल : %2"
+
+#: ui/DeviceView.qml:112
+#, kde-format
+msgid "Trust this Device"
+msgstr "इस डिवाइस पर भरोसा करें"
+
+#: ui/DeviceView.qml:133
+#, kde-format
+msgid "Revoke Trust"
+msgstr "ट्रस्ट रद्द करें"
+
+#: ui/DeviceView.qml:145
+#, kde-format
+msgid "Error changing device trust: <b>%1</b>: %2"
+msgstr "डिवाइस ट्रस्ट बदलते समय त्रुटि: <b>%1</b> : %2"
+
+#: ui/DeviceView.qml:161
+#, kde-format
+msgid ""
+"Hint: trusted device will be automatically authorized the next time it is "
+"connected to the computer."
+msgstr ""
+"संकेत: विश्वसनीय डिवाइस अगली बार कंप्यूटर से कनेक्ट होने पर स्वचालित रूप से अधिकृत हो "
+"जाएगी।"
+
+#: ui/DeviceView.qml:162
+#, kde-format
+msgid ""
+"Hint: an untrusted device needs to be manually authorized each time it is "
+"connected to the computer."
+msgstr ""
+"संकेत: किसी अविश्वसनीय डिवाइस को प्रत्येक बार कंप्यूटर से कनेक्ट करने पर मैन्युअल रूप से अधिकृत "
+"करने की आवश्यकता होती है।"
+
+#: ui/main.qml:31
+#, kde-format
+msgid "Enabled"
+msgstr "सक्रिय"
+
+#: ui/main.qml:62
+#, kde-format
+msgid "Thunderbolt support has been disabled in BIOS"
+msgstr "BIOS में थंडरबोल्ट समर्थन अक्षम कर दिया गया है"
+
+#: ui/main.qml:63
+#, kde-format
+msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
+msgstr ""
+"थंडरबोल्ट समर्थन सक्षम करने के लिए अपने सिस्टम निर्माता की मार्गदर्शिका का पालन करें"
+
+#: ui/main.qml:69
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "कोई थंडरबोल्ट डिवाइस कनेक्ट नहीं है"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "Plug in a Thunderbolt device"
+msgstr "थंडरबोल्ट डिवाइस प्लग इन करें"
+
+#: ui/main.qml:84
+#, kde-format
+msgid "Thunderbolt subsystem is disabled or unavailable"
+msgstr "थंडरबोल्ट सबसिस्टम अक्षम या अनुपलब्ध है"
+
+#: ui/main.qml:85
+#, kde-format
+msgid ""
+"If the device supports Thunderbolt, try plugging in a Thunderbolt device"
+msgstr ""
+"यदि डिवाइस थंडरबोल्ट का समर्थन करता है, तो थंडरबोल्ट डिवाइस प्लग इन करने का प्रयास करें"
+
+#: ui/utils.js:18
+msgid "Disconnected"
+msgstr "डिस्कनेक्ट किया गया"
+
+#: ui/utils.js:21
+msgid "Connecting"
+msgstr "कनेक्ट"
+
+#: ui/utils.js:24
+msgid "Connected"
+msgstr "जुड़े हुए"
+
+#: ui/utils.js:28
+msgid "Authorization Error"
+msgstr "प्राधिकरण त्रुटि"
+
+#: ui/utils.js:31
+msgid "Authorizing"
+msgstr "को अधिकृत करना"
+
+#: ui/utils.js:36
+msgid "Reduced Functionality"
+msgstr "कम कार्यक्षमता"
+
+#: ui/utils.js:38
+msgid "Connected & Authorized"
+msgstr "कनेक्टेड और अधिकृत"
+
+#: ui/utils.js:46
+msgid "Trusted"
+msgstr "विश्वस्त"
