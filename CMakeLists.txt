@@ -51,8 +51,8 @@ set_package_properties(Bolt PROPERTIES DESCRIPTION "Thunderbolt device manager"
                        TYPE RUNTIME)
 
 #################################################
-ecm_set_disabled_deprecation_versions(QT 6.5
-    KF 5.240
+ecm_set_disabled_deprecation_versions(QT 6.8.1
+    KF 6.9.0
 )
 
 
