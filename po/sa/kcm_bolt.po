@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the plasma-thunderbolt package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-15 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:10+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: ui/DeviceView.qml:56
 #, kde-format
@@ -25,7 +27,7 @@ msgstr "व:"
 #: ui/DeviceView.qml:60
 #, kde-format
 msgid "UID:"
-msgstr "यूआईडी : १."
+msgstr "यूआईडी :"
 
 #: ui/DeviceView.qml:64
 #, kde-format
@@ -35,17 +37,17 @@ msgstr "स्थितिः:"
 #: ui/DeviceView.qml:69
 #, kde-format
 msgid "Authorized at:"
-msgstr "अत्र अधिकृतः : १."
+msgstr "अत्र अधिकृतः :"
 
 #: ui/DeviceView.qml:74
 #, kde-format
 msgid "Connected at:"
-msgstr "अत्र सम्बद्धः अस्ति : १."
+msgstr "अत्र सम्बद्धः अस्ति :"
 
 #: ui/DeviceView.qml:79
 #, kde-format
 msgid "Enrolled at:"
-msgstr "नामाङ्कनं कृतवान् : १."
+msgstr "नामाङ्कनं कृतवान् :"
 
 #: ui/DeviceView.qml:83
 #, kde-format
@@ -60,7 +62,7 @@ msgstr "नहि"
 #: ui/DeviceView.qml:84
 #, kde-format
 msgid "Trusted:"
-msgstr "विश्वसनीयः : १."
+msgstr "विश्वसनीयः :"
 
 #: ui/DeviceView.qml:94
 #, kde-format
