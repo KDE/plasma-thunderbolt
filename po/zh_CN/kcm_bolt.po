@@ -129,7 +129,7 @@ msgstr "没有连接雷电接口设备"
 #: ui/main.qml:70
 #, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "插入雷电接口设备"
+msgstr "请插入雷电接口设备"
 
 #: ui/main.qml:84
 #, kde-format
