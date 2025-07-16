@@ -1,195 +1,192 @@
-# Copyright (C) 2024 This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-# SPDX-FileCopyrightText: 2021, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-05-04 00:21+0000\n"
-"PO-Revision-Date: 2021-12-08 21:16+0400\n"
-"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: ar\n"
-"Language: ar\n"
+"PO-Revision-Date: 2025-07-14 16:11+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "زايد السعيدي"
+msgstr "צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zayed.alsaidi@gmail.com"
+msgstr "kde-l10n-he@kde.org"
 
 #: kcm_bolt.cpp:70
 #, kde-format
 msgid "Thunderbolt Device Management"
-msgstr "إدارة جهاز ثندر بولت"
+msgstr "ניהול התקני Thunderbolt"
 
 #: kcm_bolt.cpp:72
 #, kde-format
 msgid "System Settings module for managing Thunderbolt devices."
-msgstr "وحدة إعدادات النظام لإدارة أجهز ثندر بولت."
+msgstr "מודול הגדרות מערכת שמנהל התקני Thunderbolt."
 
 #: kcm_bolt.cpp:74
 #, kde-format
 msgid "Daniel Vrátil"
-msgstr "Daniel Vrátil"
+msgstr "דניאל וראטיל"
 
 #: package/contents/ui/DeviceList.qml:27
 #, kde-format
 msgid "Enable Thunderbolt devices"
-msgstr "مكن أجهزة ثندربولت"
+msgstr "הפעלת התקני Thunderbolt"
 
 #: package/contents/ui/DeviceList.qml:61
 #, kde-format
 msgid "No Thunderbolt devices connected"
-msgstr "لا يوجد أجهزة ثندربولت متصلة"
+msgstr "לא מחוברים התקני Thunderbolt"
 
 #: package/contents/ui/DeviceView.qml:64
 #, kde-format
 msgid "Vendor:"
-msgstr "البائع:"
+msgstr "יצרן:"
 
 #: package/contents/ui/DeviceView.qml:68
 #, kde-format
 msgid "UID:"
-msgstr "المعرّف الفريد:"
+msgstr "מזהה ייחודי:"
 
 #: package/contents/ui/DeviceView.qml:72
 #, kde-format
 msgid "Status:"
-msgstr "الحالة:"
+msgstr "מצב:"
 
 #: package/contents/ui/DeviceView.qml:77
 #, kde-format
 msgid "Authorized at:"
-msgstr "مصرح في:"
+msgstr "אומת ב־:"
 
 #: package/contents/ui/DeviceView.qml:82
 #, kde-format
 msgid "Connected at:"
-msgstr "متصل في:"
+msgstr "חובר ב־:"
 
 #: package/contents/ui/DeviceView.qml:87
 #, kde-format
 msgid "Enrolled at:"
-msgstr "مسجل في:"
+msgstr "נרשם ב־:"
 
 #: package/contents/ui/DeviceView.qml:91
 #, kde-format
 msgid "Yes"
-msgstr "نعم"
+msgstr "כן"
 
 #: package/contents/ui/DeviceView.qml:91
 #, kde-format
 msgid "No"
-msgstr "لا"
+msgstr "לא"
 
 #: package/contents/ui/DeviceView.qml:92
 #, kde-format
 msgid "Trusted:"
-msgstr "موثوقة:"
+msgstr "מהימן:"
 
 #: package/contents/ui/DeviceView.qml:101
 #, kde-format
 msgid "Authorizing..."
-msgstr "يصرح..."
+msgstr "מתבצע אימות…"
 
 #: package/contents/ui/DeviceView.qml:101
 #, kde-format
 msgid "Authorize"
-msgstr "صرّح"
+msgstr "אימות"
 
 #: package/contents/ui/DeviceView.qml:112
 #: package/contents/ui/DeviceView.qml:132
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
-msgstr "فشل في تسجيل الجهاز <b>%1</b>:‏ %2"
+msgstr "רישום המכשיר <b>%1</b> נכשל: %2"
 
 #: package/contents/ui/DeviceView.qml:119
 #, kde-format
 msgid "Trust this Device"
-msgstr "ثق في هذا الجهاز"
+msgstr "מתן אמון בהתקן הזה"
 
 #: package/contents/ui/DeviceView.qml:140
 #, kde-format
 msgid "Revoke Trust"
-msgstr "اسحب الثقة"
+msgstr "שלילת אמון"
 
 #: package/contents/ui/DeviceView.qml:152
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
-msgstr "خطأ في تغيير ثقة الجهاز  <b>%1</b>:‏ %2"
+msgstr "שגיאה בשינוי מהימנות התקן: <b>%1</b>: %2"
 
 #: package/contents/ui/DeviceView.qml:169
 #, kde-format
 msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
 "connected to the computer."
-msgstr ""
-"تلميح: سيسمح تلقائيًا للجهاز الموثوق به في المرة التالية عند وصله بالحاسوب."
+msgstr "עצה: התקן מהימן יאומת אוטומטית עם החיבור הבא למחשב."
 
 #: package/contents/ui/DeviceView.qml:170
 #, kde-format
 msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
 "connected to the computer."
-msgstr ""
-"تلميح: يجب ترخيص الجهاز غير الموثوق به يدويًا في كل مرة يتم توصيله بالحاسوب."
+msgstr "עצה: התקן מפוקפק דורש אימות ידנית עם כל חיבור למחשב."
 
 #: package/contents/ui/main.qml:18
 #, kde-format
 msgid ""
 "This module allows you to manage Thunderbolt devices connected to your "
 "computer."
-msgstr "سمح لك هذه الوحدة بإدارة أجهزة ثندربولت المتصلة بحاسوبك."
+msgstr "המודול הזה מאפשר לך לנהל התקני Thunderbolt שמחוברים למחשב שלך."
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
-msgstr "عطل دعم ثندربولت في البايوس"
+msgstr "התמיכה ב־Thunderbolt הושבתה ב־BIOS"
 
 #: package/contents/ui/main.qml:45
 #, kde-format
 msgid "Thunderbolt subsystem is not available"
-msgstr "النظام الفرعي لثندربولت غير متوفر"
+msgstr "תת־מערכת Thunderbolt אינה זמינה"
 
 #: package/contents/ui/utils.js:16
 msgid "Disconnected"
-msgstr "قطع الاتصال"
+msgstr "מנותק"
 
 #: package/contents/ui/utils.js:18
 msgid "Connecting"
-msgstr "يتّصل"
+msgstr "מתחבר"
 
 #: package/contents/ui/utils.js:20
 msgid "Connected"
-msgstr "متّصل"
+msgstr "מחובר"
 
 #: package/contents/ui/utils.js:23
 msgid "Authorization Error"
-msgstr "خطأ استيثاق"
+msgstr "שגיאת אימות"
 
 #: package/contents/ui/utils.js:25
 msgid "Authorizing"
-msgstr "يصرح"
+msgstr "ממתבצע אימות"
 
 #: package/contents/ui/utils.js:29
 msgid "Reduced Functionality"
-msgstr "وظائف مخفضة"
+msgstr "תפקוד מצומצם"
 
 #: package/contents/ui/utils.js:31
 msgid "Connected & Authorized"
-msgstr "متّصل ومخوّل"
+msgstr "מחובר ומאומת"
 
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
-msgstr "موثوق"
+msgstr "מהימן"
