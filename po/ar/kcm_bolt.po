@@ -99,7 +99,7 @@ msgid ""
 "Hint: trusted device will be automatically authorized the next time it is "
 "connected to the computer."
 msgstr ""
-"تلميح: سيسمح تلقائيًا للجهاز الموثوق به في المرة التالية عند وصله بالحاسوب."
+"تلميح: سيسمح آليًّا للجهاز الموثوق به في المرة التالية عند وصله بالحاسوب."
 
 #: ui/DeviceView.qml:162
 #, kde-format
