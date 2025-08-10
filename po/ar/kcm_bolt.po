@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-# SPDX-FileCopyrightText: 2021, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-05-04 00:21+0000\n"
-"PO-Revision-Date: 2024-08-17 20:40+0400\n"
+"PO-Revision-Date: 2025-08-09 19:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -142,8 +142,7 @@ msgstr ""
 msgid ""
 "Hint: an untrusted device needs to be manually authorized each time it is "
 "connected to the computer."
-msgstr ""
-"تلميح: يجب ترخيص الجهاز غير الموثوق به يدويًا في كل مرة يتم توصيله بالحاسوب."
+msgstr "تلميح: يجب ترخيص الجهاز غير الموثوق به يدويًا في كل مرة يُوصل بالحاسوب."
 
 #: package/contents/ui/main.qml:18
 #, kde-format
