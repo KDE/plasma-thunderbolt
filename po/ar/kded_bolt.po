@@ -27,7 +27,7 @@ msgstr "اكتشف جهاز ثندر بولت جديد"
 msgid ""
 "Unauthorized Thunderbolt device <b>%1</b> was detected. Do you want to "
 "authorize it?"
-msgstr "اكتشف جهاز ثندربولت <b>%1</b> غير مصرح. هل تريد تصريحه؟"
+msgstr "اكتشف جهاز ثندربولت <b>%1</b> غير مصرح. هل تريد إذْنه؟"
 
 #: kded_bolt.cpp:70
 #, kde-format
@@ -36,12 +36,12 @@ msgid ""
 msgid_plural ""
 "%1 unauthorized Thunderbolt devices were detected. Do you want to authorize "
 "them?"
-msgstr[0] "اكتشف جهاز ثندربولت غير مصرح. هل تريد تصريحه؟"
-msgstr[1] "اكتشف جهاز ثندربولت غير مصرح. هل تريد تصريحه؟"
-msgstr[2] "اكتشف جهازان ثندربولت غير مصرحين. هل تريد تصريحه؟"
-msgstr[3] "اكتشف %1 أجهزة ثندربولت غير مصرحة. هل تريد تصريحه؟"
-msgstr[4] "اكتشف %1 جهاز ثندربولت غير مصرح. هل تريد تصريحه؟"
-msgstr[5] "اكتشف %1 جهاز ثندربولت غير مصرح. هل تريد تصريحه؟"
+msgstr[0] "اكتشف جهاز ثندربولت غير مصرح. هل تريد إذْنه؟"
+msgstr[1] "اكتشف جهاز ثندربولت غير مصرح. هل تريد إذْنه؟"
+msgstr[2] "اكتشف جهازان ثندربولت غير مصرحين. هل تريد إذْنه؟"
+msgstr[3] "اكتشف %1 أجهزة ثندربولت غير مصرحة. هل تريد إذْنه؟"
+msgstr[4] "اكتشف %1 جهاز ثندربولت غير مصرح. هل تريد إذْنه؟"
+msgstr[5] "اكتشف %1 جهاز ثندربولت غير مصرح. هل تريد إذْنه؟"
 
 #: kded_bolt.cpp:77
 #, kde-format
@@ -56,9 +56,9 @@ msgstr "مصرح بشكل دائم"
 #: kded_bolt.cpp:128
 #, kde-format
 msgid "Thunderbolt Device Authorization Error"
-msgstr "خطأ في تصريح جهاز ثندربولت"
+msgstr "خطأ في إذْن جهاز ثندربولت"
 
 #: kded_bolt.cpp:129
 #, kde-format
 msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
-msgstr "فشل في تصريح جهاز ثندربولت <b>%1</b>:‏ %2"
+msgstr "فشل في إذْن جهاز ثندربولت <b>%1</b>:‏ %2"
