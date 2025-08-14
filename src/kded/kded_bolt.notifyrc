@@ -339,7 +339,7 @@ Action=Popup
 
 [Event/deviceAuthError]
 Name=Error during device authorization
-Name[ar]=خطأ أثناء تصريح الجهاز
+Name[ar]=خطأ أثناء إذْن الجهاز
 Name[az]=Cihaza icazə verilməsi zamanı xəta
 Name[bg]=Грешка при упълномощаване на устройство
 Name[ca]=Error durant l'autorització del dispositiu
@@ -379,7 +379,7 @@ Name[x-test]=xxError during device authorizationxx
 Name[zh_CN]=设备授权时出错
 Name[zh_TW]=裝置授權時發生錯誤
 Comment=An error occurred while authorizing or blocking a Thunderbolt device
-Comment[ar]=حدث خطأ أثناء تصريح أو منع جهاز ثندر بولت
+Comment[ar]=حدث خطأ أثناء إذْن أو منع جهاز ثندر بولت
 Comment[az]=Thunderbolt cihazına icazə verilərkən və ya bloklanarkən xəta baş verdi
 Comment[bg]=Възникна грешка при упълномощаване на Thunderbolt устройство
 Comment[ca]=Hi ha hagut un error en autoritzar o blocar un dispositiu Thunderbolt
