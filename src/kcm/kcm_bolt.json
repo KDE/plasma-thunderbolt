@@ -42,7 +42,6 @@
         "Description[sv]": "Thunderbolt enhetshantering",
         "Description[tr]": "Thunderbolt Aygıt Yönetimi",
         "Description[uk]": "Керування пристроями Thunderbolt",
-        "Description[x-test]": "xxThunderbolt Device Managementxx",
         "Description[zh_CN]": "雷电接口设备管理",
         "Description[zh_TW]": "Thunderbolt 裝置管理",
         "Icon": "preferences-desktop-thunderbolt",
@@ -90,7 +89,6 @@
         "Name[sv]": "Thunderbolt",
         "Name[tr]": "Thunderbolt",
         "Name[uk]": "Thunderbolt",
-        "Name[x-test]": "xxThunderboltxx",
         "Name[zh_CN]": "雷电接口",
         "Name[zh_TW]": "Thunderbolt"
     },
@@ -128,7 +126,6 @@
     "X-KDE-Keywords[sv]": "thunderbolt,maskinvara,enhet,protokoll,thunderbolt-protokoll,överföring,usb,usb-c,pci-e,externa enheter",
     "X-KDE-Keywords[tr]": "thunderbolt,donanım,aygıt,protokol,thunderbolt protokolü,aktarım,transfer,aktarma,usb,usb-a,usb-b,usb-c,pci-e,dış aygıtlar,harici aygıtlar,dış cihazlar,harici cihazlar",
     "X-KDE-Keywords[uk]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,тандерболт,фандерболт,апаратне,обладнання,протокол,протокол тандерболт,передавання,юесбі,зовнішні пристрої",
-    "X-KDE-Keywords[x-test]": "xxthunderboltxx,xxhardwarexx,xxdevicexx,xxprotocolxx,xxthunderbolt protocolxx,xxtransferxx,xxusbxx,xxusb-cxx,xxpci-exx,xxexternal devicesxx",
     "X-KDE-Keywords[zh_CN]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,leidian,yingjian,shebei,xieyi,leidianxieyi,chuanshu,waibushebei,雷电,硬件,设备,协议,雷电协议,传输,外部设备",
     "X-KDE-Keywords[zh_TW]": "thunderbolt,硬體,裝置,協定,傳輸,外部裝置,外接裝置",
     "X-KDE-System-Settings-Parent-Category": "hardware",
