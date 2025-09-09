@@ -37,7 +37,6 @@
         "Description[sv]": "Thunderbolt enhetshantering",
         "Description[tr]": "Thunderbolt Aygıt Yönetimi",
         "Description[uk]": "Керування пристроями Thunderbolt",
-        "Description[x-test]": "xxThunderbolt Device Managementxx",
         "Description[zh_CN]": "雷电接口设备管理",
         "Description[zh_TW]": "Thunderbolt 裝置管理",
         "Icon": "preferences-desktop-thunderbolt",
@@ -79,7 +78,6 @@
         "Name[sv]": "Thunderbolt",
         "Name[tr]": "Thunderbolt",
         "Name[uk]": "Thunderbolt",
-        "Name[x-test]": "xxThunderboltxx",
         "Name[zh_CN]": "雷电接口",
         "Name[zh_TW]": "Thunderbolt",
         "ServiceTypes": [
@@ -111,7 +109,6 @@
     "X-KDE-Keywords[sl]": "thunderbolt,strojna oprema,naprava,protokol,protokol thunderbolt,prenos,usb,usb-c,pci-e,zunanje naprave",
     "X-KDE-Keywords[sv]": "thunderbolt,maskinvara,enhet,protokoll,thunderbolt-protokoll,överföring,usb,usb-c,pci-e,externa enheter",
     "X-KDE-Keywords[uk]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,тандерболт,фандерболт,апаратне,обладнання,протокол,протокол тандерболт,передавання,юесбі,зовнішні пристрої",
-    "X-KDE-Keywords[x-test]": "xxthunderboltxx,xxhardwarexx,xxdevicexx,xxprotocolxx,xxthunderbolt protocolxx,xxtransferxx,xxusbxx,xxusb-cxx,xxpci-exx,xxexternal devicesxx",
     "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "hardware",
     "X-KDE-Weight": 120
