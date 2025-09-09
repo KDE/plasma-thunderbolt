@@ -42,7 +42,6 @@
                 "Name[sv]": "Daniel Vrátil",
                 "Name[tr]": "Daniel Vrátil",
                 "Name[uk]": "Daniel Vrátil",
-                "Name[x-test]": "xxDaniel Vrátilxx",
                 "Name[zh_CN]": "Daniel Vrátil",
                 "Name[zh_TW]": "Daniel Vrátil"
             }
@@ -87,7 +86,6 @@
         "Description[sv]": "Thunderbolt enhetsövervakare",
         "Description[tr]": "Thunderbolt Aygıt Monitörü",
         "Description[uk]": "Спостереження за пристроями Thunderbolt",
-        "Description[x-test]": "xxThunderbolt Device Monitorxx",
         "Description[zh_CN]": "雷电接口设备监视程序",
         "Description[zh_TW]": "Thunderbolt 裝置監控工具",
         "Icon": "preferences-desktop-thunderbolt",
@@ -134,7 +132,6 @@
         "Name[sv]": "Thunderbolt enhetsövervakare",
         "Name[tr]": "Thunderbolt Aygıt Monitörü",
         "Name[uk]": "Спостереження за пристроями Thunderbolt",
-        "Name[x-test]": "xxThunderbolt Device Monitorxx",
         "Name[zh_CN]": "雷电接口设备监视程序",
         "Name[zh_TW]": "Thunderbolt 裝置監控工具",
         "Version": "0.1"
