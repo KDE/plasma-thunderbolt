@@ -279,7 +279,7 @@ Comment[zh_TW]=用於錯誤通知
 
 [Event/unauthorizedDeviceConnected]
 Name=Unauthorized device is plugged in
-Name[ar]=وصّل جهاز غير مرخص
+Name[ar]=وصّل جهاز غير مصرّح
 Name[az]=İcazəsiz cihaz qoşulub
 Name[be]=Падлучана неаўтарызаваная прылада
 Name[bg]=Неупълномощено устройство е включено
@@ -324,7 +324,7 @@ Name[uk]=З комп'ютером з'єднано неуповноважений
 Name[zh_CN]=未授权设备已被插入
 Name[zh_TW]=插入了未授權裝置
 Comment=An unauthorized Thunderbolt device has been plugged into the computer
-Comment[ar]=وصّل جهاز ثندر بولت غير مرخص بالحاسوب
+Comment[ar]=وصّل جهاز ثندر بولت غير مصرّح بالحاسوب
 Comment[az]=İcazəsiz Thunderbolt cihazı komputerə qoşulub.
 Comment[be]=Да камп'ютара была падлучана неаўтарызаваная прылада Thunderbolt
 Comment[bg]=Неупълномощено устройство е включено в компютъра
