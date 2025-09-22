@@ -1,15 +1,15 @@
 # Spanish translations for kcm_bolt.po package.
-# Copyright (C) 2019 This file is copyright:
+# Copyright (C) 2019-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-#
 # Automatically generated, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019.
+#
+# SPDX-FileCopyrightText: 2019, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_bolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-05-04 00:21+0000\n"
-"PO-Revision-Date: 2019-10-18 17:22+0200\n"
+"PO-Revision-Date: 2025-09-22 01:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -104,7 +104,7 @@ msgstr "De confianza:"
 #: package/contents/ui/DeviceView.qml:101
 #, kde-format
 msgid "Authorizing..."
-msgstr "Autorizando..."
+msgstr "Autorizando…"
 
 #: package/contents/ui/DeviceView.qml:101
 #, kde-format
