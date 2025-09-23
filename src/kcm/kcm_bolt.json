@@ -110,6 +110,7 @@
     "X-KDE-Keywords[sl]": "thunderbolt,strojna oprema,naprava,protokol,protokol thunderbolt,prenos,usb,usb-c,pci-e,zunanje naprave",
     "X-KDE-Keywords[sv]": "thunderbolt,maskinvara,enhet,protokoll,thunderbolt-protokoll,överföring,usb,usb-c,pci-e,externa enheter",
     "X-KDE-Keywords[uk]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,тандерболт,фандерболт,апаратне,обладнання,протокол,протокол тандерболт,передавання,юесбі,зовнішні пристрої",
+    "X-KDE-Keywords[zh_TW]": "thunderbolt,硬體,裝置,協定,傳輸,外部裝置,外接裝置",
     "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "hardware",
     "X-KDE-Weight": 120
