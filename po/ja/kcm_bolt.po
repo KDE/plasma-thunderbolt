@@ -1,12 +1,13 @@
 # SPDX-FileCopyrightText: 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2025 Yuma Kakei <yumasansansan@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-15 00:41+0000\n"
-"PO-Revision-Date: 2024-02-26 02:47+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: ja\n"
+"PO-Revision-Date: 2025-09-23 20:57+0900\n"
+"Last-Translator: Yuma Kakei <yumasansansan@gmail.com>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: ui/DeviceView.qml:56
 #, kde-format
@@ -62,10 +63,9 @@ msgid "Trusted:"
 msgstr "信頼済み:"
 
 #: ui/DeviceView.qml:94
-#, fuzzy, kde-format
-#| msgid "Authorizing"
+#, kde-format
 msgid "Authorizing…"
-msgstr "承認中"
+msgstr "承認中…"
 
 #: ui/DeviceView.qml:94
 #, kde-format
@@ -113,7 +113,7 @@ msgstr ""
 #: ui/main.qml:31
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "有効"
 
 #: ui/main.qml:62
 #, kde-format
@@ -124,6 +124,8 @@ msgstr "Thunderbolt サポートは BIOS で無効化されています。"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Thunderbolt サポートを有効にするには、システム製造元のガイドに従ってくださ"
+"い。"
 
 #: ui/main.qml:69
 #, kde-format
@@ -131,22 +133,22 @@ msgid "No Thunderbolt devices connected"
 msgstr "接続された Thunderbolt デバイスはありません"
 
 #: ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Thunderbolt デバイスを有効化"
+msgstr "Thunderbolt デバイスを接続"
 
 #: ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Thunderbolt サブシステムが利用できません"
+msgstr "Thunderbolt サブシステムが無効化されているか、利用できません"
 
 #: ui/main.qml:85
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"デバイスが Thunderbolt に対応している場合は、Thunderbolt デバイスを接続してみ"
+"てください。"
 
 #: ui/utils.js:18
 msgid "Disconnected"
@@ -179,9 +181,3 @@ msgstr "接続＆承認済み"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "信頼済み"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "Thunderbolt デバイスを有効化"
-
-#~ msgid "Authorizing..."
-#~ msgstr "承認中..."
