@@ -28,7 +28,8 @@ KCMUtils.ScrollViewKCM {
     actions: Kirigami.Action {
         id: toggleAuthModeAction
 
-        text: i18n("Enabled")
+        text: i18nc("@option:check Enable Thunderbolt subsystem", "Enable")
+        Accessible.name: i18nc("@option:check", "Enable Thunderbolt subsystem")
         checkable: true
         checked: boltManager.authMode === Bolt.Bolt.AuthMode.Enabled
         displayComponent: QQC2.Switch {
