@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2024-08-17 23:44+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -113,38 +113,47 @@ msgstr ""
 "kompiuterio, turi būti įgaliotas rankiniu būdu."
 
 #: ui/main.qml:31
-#, kde-format
-msgid "Enabled"
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check Enable Thunderbolt subsystem"
+msgid "Enable"
 msgstr "Įjungtas"
 
-#: ui/main.qml:62
+#: ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "Enable Thunderbolt devices"
+msgctxt "@option:check"
+msgid "Enable Thunderbolt subsystem"
+msgstr "Įjungti Thunderbolt įrenginius"
+
+#: ui/main.qml:63
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Thunderbolt palaikymas išjungtas BIOS sistemoje"
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
 "Norėdami įjungti Thunderbolt palaikymą, vykdykite sistemos gamintojo "
 "instrukcijos nurodymus"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "Nėra jokių prijungtų Thunderbolt įrenginių"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Plug in a Thunderbolt device"
 msgstr "Prijunkite Thunderbolt įrenginį"
 
-#: ui/main.qml:84
+#: ui/main.qml:85
 #, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "Thunderbolt posistemis yra išjungtas arba neprieinamas"
 
-#: ui/main.qml:85
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
@@ -182,9 +191,6 @@ msgstr "Prijungtas ir įgaliotas"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "Patikimas"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "Įjungti Thunderbolt įrenginius"
 
 #~ msgid "Authorizing..."
 #~ msgstr "Suteikiamos prieigos teisės..."

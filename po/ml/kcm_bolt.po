@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2019-12-12 23:01+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -109,35 +109,42 @@ msgstr ""
 
 #: ui/main.qml:31
 #, kde-format
-msgid "Enabled"
+msgctxt "@option:check Enable Thunderbolt subsystem"
+msgid "Enable"
 msgstr ""
 
-#: ui/main.qml:62
+#: ui/main.qml:32
 #, kde-format
-msgid "Thunderbolt support has been disabled in BIOS"
+msgctxt "@option:check"
+msgid "Enable Thunderbolt subsystem"
 msgstr ""
 
 #: ui/main.qml:63
 #, kde-format
-msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
+msgid "Thunderbolt support has been disabled in BIOS"
 msgstr ""
 
-#: ui/main.qml:69
+#: ui/main.qml:64
 #, kde-format
-msgid "No Thunderbolt devices connected"
+msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
 
 #: ui/main.qml:70
 #, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr ""
+
+#: ui/main.qml:71
+#, kde-format
 msgid "Plug in a Thunderbolt device"
 msgstr ""
 
-#: ui/main.qml:84
+#: ui/main.qml:85
 #, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr ""
 
-#: ui/main.qml:85
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"

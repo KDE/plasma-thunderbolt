@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2024-08-16 19:58+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -112,38 +112,47 @@ msgstr ""
 "manualmente ogni prossima volta che viene connesso al computer."
 
 #: ui/main.qml:31
-#, kde-format
-msgid "Enabled"
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check Enable Thunderbolt subsystem"
+msgid "Enable"
 msgstr "Abilitato"
 
-#: ui/main.qml:62
+#: ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "Enable Thunderbolt devices"
+msgctxt "@option:check"
+msgid "Enable Thunderbolt subsystem"
+msgstr "Abilita dispositivi Thunderbolt"
+
+#: ui/main.qml:63
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Il supporto per Thunderbolt è stato disabilitato nel BIOS"
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
 "Segui la guida del produttore del tuo sistema per abilitare il supporto "
 "Thunderbolt"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "Nessun dispositivo Thunderbolt connesso"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Plug in a Thunderbolt device"
 msgstr "Collega un dispositivo Thunderbolt"
 
-#: ui/main.qml:84
+#: ui/main.qml:85
 #, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "Il sottosistema Thunderbolt è disabilitato o non è disponibile"
 
-#: ui/main.qml:85
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
@@ -182,9 +191,6 @@ msgstr "Connesso e autorizzato"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "Di fiducia"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "Abilita dispositivi Thunderbolt"
 
 #~ msgid "Authorizing..."
 #~ msgstr "Autorizzazione..."

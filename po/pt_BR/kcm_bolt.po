@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -114,37 +114,46 @@ msgstr ""
 "vez que for conectado ao computador."
 
 #: ui/main.qml:31
-#, kde-format
-msgid "Enabled"
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check Enable Thunderbolt subsystem"
+msgid "Enable"
 msgstr "Habilitado"
 
-#: ui/main.qml:62
+#: ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "Enable Thunderbolt devices"
+msgctxt "@option:check"
+msgid "Enable Thunderbolt subsystem"
+msgstr "Ativar dispositivos Thunderbolt"
+
+#: ui/main.qml:63
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "O suporte para Thunderbolt foi desativado na BIOS"
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
 "Siga o guia do fabricante do seu sistema para ativar o suporte ao Thunderbolt"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "Nenhum dispositivo Thunderbolt conectado"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Plug in a Thunderbolt device"
 msgstr "Conecte um dispositivo Thunderbolt"
 
-#: ui/main.qml:84
+#: ui/main.qml:85
 #, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "O subsistema Thunderbolt está desligado ou não está disponível"
 
-#: ui/main.qml:85
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
@@ -183,9 +192,6 @@ msgstr "Conectado e autorizado"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "Confiável"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "Ativar dispositivos Thunderbolt"
 
 #~ msgid "Authorizing..."
 #~ msgstr "Autorizando..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2024-08-15 09:53+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -111,38 +111,47 @@ msgstr ""
 "keer dat het verbonden wordt met de computer."
 
 #: ui/main.qml:31
-#, kde-format
-msgid "Enabled"
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check Enable Thunderbolt subsystem"
+msgid "Enable"
 msgstr "Ingeschakeld"
 
-#: ui/main.qml:62
+#: ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "Enable Thunderbolt devices"
+msgctxt "@option:check"
+msgid "Enable Thunderbolt subsystem"
+msgstr "Thunderbolt apparaten inschakelen"
+
+#: ui/main.qml:63
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "Ondersteuning van Thunderbolt is uitgeschakeld in BIOS"
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
 "De gids van de producent van uw systeem volgen om ondersteuning voor "
 "Thunderbolt in te schakelen"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "Geen Thunderbolt apparaten verbonden"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Plug in a Thunderbolt device"
 msgstr "En Thunderbolt apparaat inpluggen"
 
-#: ui/main.qml:84
+#: ui/main.qml:85
 #, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "Subsysteem Thunderbolt is uitgeschakeld of niet beschikbaar"
 
-#: ui/main.qml:85
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
@@ -181,9 +190,6 @@ msgstr "Verbonden & geautoriseerd"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "Vertrouwd"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "Thunderbolt apparaten inschakelen"
 
 #~ msgid "Authorizing..."
 #~ msgstr "Wordt geautoriseerd..."

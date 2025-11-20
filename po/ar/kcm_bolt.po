@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-08-13 20:19+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -109,36 +109,45 @@ msgid ""
 msgstr "تلميح: يجب ترخيص الجهاز غير الموثوق به يدويًا في كل مرة يُوصل بالحاسوب."
 
 #: ui/main.qml:31
-#, kde-format
-msgid "Enabled"
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgctxt "@option:check Enable Thunderbolt subsystem"
+msgid "Enable"
 msgstr "ممكّن"
 
-#: ui/main.qml:62
+#: ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "Enable Thunderbolt devices"
+msgctxt "@option:check"
+msgid "Enable Thunderbolt subsystem"
+msgstr "مكن أجهزة ثندربولت"
+
+#: ui/main.qml:63
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
 msgstr "عُطل توفير ثندربولت في البايوس"
 
-#: ui/main.qml:63
+#: ui/main.qml:64
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr "اتبع دليل الشركة المصنعة للنظام الخاص بك لتمكين توفير ثندربولت"
 
-#: ui/main.qml:69
+#: ui/main.qml:70
 #, kde-format
 msgid "No Thunderbolt devices connected"
 msgstr "لا يوجد أجهزة ثندربولت متصلة"
 
-#: ui/main.qml:70
+#: ui/main.qml:71
 #, kde-format
 msgid "Plug in a Thunderbolt device"
 msgstr "صل جهاز ثندربولت"
 
-#: ui/main.qml:84
+#: ui/main.qml:85
 #, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "النظام الفرعي لثندربولت غير متوفر أو معطل"
 
-#: ui/main.qml:85
+#: ui/main.qml:86
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
@@ -175,9 +184,6 @@ msgstr "متّصل ومخوّل"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "موثوق"
-
-#~ msgid "Enable Thunderbolt devices"
-#~ msgstr "مكن أجهزة ثندربولت"
 
 #~ msgid "Authorizing..."
 #~ msgstr "يصرح..."
