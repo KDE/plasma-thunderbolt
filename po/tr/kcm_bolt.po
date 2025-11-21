@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2025-01-27 17:05+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-11-20 21:38+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: ui/DeviceView.qml:56
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "Etkin"
 #: ui/main.qml:62
 #, kde-format
 msgid "Thunderbolt support has been disabled in BIOS"
-msgstr "Thunderbolt desteği BIOS'ta devre dışı bırakılmış"
+msgstr "Thunderbolt desteği BIOS’ta devre dışı bırakılmış"
 
 #: ui/main.qml:63
 #, kde-format
