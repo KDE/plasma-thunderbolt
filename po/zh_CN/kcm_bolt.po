@@ -107,11 +107,10 @@ msgid ""
 msgstr "提示：未信任设备需要在每次连接到计算机时手动授权。"
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check Enable Thunderbolt subsystem"
 msgid "Enable"
-msgstr "已启用"
+msgstr ""
 
 #: ui/main.qml:32
 #, kde-format
