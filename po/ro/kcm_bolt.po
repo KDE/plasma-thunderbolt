@@ -1,22 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-# Sergiu Bivol <sergiu@cip.md>, 2020.
+# SPDX-FileCopyrightText: 2020, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-20 00:44+0000\n"
-"PO-Revision-Date: 2020-09-08 18:18+0100\n"
+"PO-Revision-Date: 2025-11-27 13:20+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: ui/DeviceView.qml:56
 #, kde-format
@@ -64,10 +64,9 @@ msgid "Trusted:"
 msgstr "De încredere:"
 
 #: ui/DeviceView.qml:94
-#, fuzzy, kde-format
-#| msgid "Authorizing"
+#, kde-format
 msgid "Authorizing…"
-msgstr "Se autorizează"
+msgstr "Se autorizează…"
 
 #: ui/DeviceView.qml:94
 #, kde-format
@@ -116,14 +115,13 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check Enable Thunderbolt subsystem"
 msgid "Enable"
-msgstr ""
+msgstr "Activează"
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Thunderbolt subsystem"
-msgstr "Activează dispozitive Thunderbolt"
+msgstr "Activează subsistemul Thunderbolt"
 
 #: ui/main.qml:63
 #, kde-format
@@ -134,6 +132,8 @@ msgstr "Suportul pentru Thunderbolt a fost dezactivat în BIOS"
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
 msgstr ""
+"Urmați ghidul producătorului sistemului dumneavoastră pentru a activa "
+"suportul pentru Thunderbolt"
 
 #: ui/main.qml:70
 #, kde-format
@@ -141,22 +141,22 @@ msgid "No Thunderbolt devices connected"
 msgstr "Niciun dispozitiv Thunderbolt conectat"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
-msgstr "Activează dispozitive Thunderbolt"
+msgstr "Conectați un dispozitiv Thunderbolt"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
-msgstr "Subsistemul Thunderbolt nu e disponibil"
+msgstr "Subsistemul Thunderbolt e dezactivat sau nu e disponibil"
 
 #: ui/main.qml:86
 #, kde-format
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"Dacă acest dispozitiv susține Thunderbolt, încercați să atașați un "
+"dispozitiv Thunderbolt"
 
 #: ui/utils.js:18
 msgid "Disconnected"
