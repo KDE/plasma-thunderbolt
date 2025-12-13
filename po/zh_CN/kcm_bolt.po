@@ -110,13 +110,13 @@ msgstr "提示：未信任设备需要在每次连接到计算机时手动授权
 #, kde-format
 msgctxt "@option:check Enable Thunderbolt subsystem"
 msgid "Enable"
-msgstr ""
+msgstr "启用"
 
 #: ui/main.qml:32
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable Thunderbolt subsystem"
-msgstr ""
+msgstr "启用雷电接口子系统"
 
 #: ui/main.qml:63
 #, kde-format
