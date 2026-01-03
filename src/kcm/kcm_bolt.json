@@ -131,5 +131,6 @@
     "X-KDE-Keywords[zh_CN]": "thunderbolt,hardware,device,protocol,thunderbolt protocol,transfer,usb,usb-c,pci-e,external devices,leidian,yingjian,shebei,xieyi,leidianxieyi,chuanshu,waibushebei,雷电,硬件,设备,协议,雷电协议,传输,外部设备",
     "X-KDE-Keywords[zh_TW]": "thunderbolt,硬體,裝置,協定,傳輸,外部裝置,外接裝置",
     "X-KDE-System-Settings-Parent-Category": "hardware",
+    "X-KDE-System-Settings-Uses-ModuleData": true,
     "X-KDE-Weight": 40
 }

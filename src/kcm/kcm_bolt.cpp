@@ -12,6 +12,7 @@
 #include "devicemodel.h"
 #include "enum.h"
 #include "manager.h"
+#include "thunderboltmoduledata.h"
 
 #include <QDebug>
 
@@ -70,6 +71,6 @@ public:
     }
 };
 
-K_PLUGIN_CLASS_WITH_JSON(KCMBolt, "kcm_bolt.json")
+K_PLUGIN_FACTORY_WITH_JSON(KCMBoltFactory, "kcm_bolt.json", registerPlugin<KCMBolt>(); registerPlugin<ThunderboltModuleData>();)
 
 #include "kcm_bolt.moc"
