@@ -96,7 +96,8 @@ msgstr "Revoca la confiança"
 #, kde-format
 msgid "Error changing device trust: <b>%1</b>: %2"
 msgstr ""
-"S'ha produït un error en canviar la confiança del dispositiu: <b>%1</b>: %2"
+"S'ha produït un error mentre es canviava la confiança del dispositiu: <b>%1</"
+"b>: %2"
 
 #: ui/DeviceView.qml:161
 #, kde-format
