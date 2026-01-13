@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 
 #################################################
 # Dependencies
-set(QT_MIN_VERSION "6.9.0")
+set(QT_MIN_VERSION "6.10.0")
 set(KF6_VERSION "5.240.0")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 
