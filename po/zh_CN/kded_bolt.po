@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-thunderbolt/kded_bolt.pot\n"
-"X-Crowdin-File-ID: 42545\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-thunderbolt/kded_bolt.pot\n"
+"X-Crowdin-File-ID: 50326\n"
 
 #: kded_bolt.cpp:67
 #, kde-format
