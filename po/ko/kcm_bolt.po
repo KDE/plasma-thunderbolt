@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-# SPDX-FileCopyrightText: 2019, 2020, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2019, 2020, 2024, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-20 00:44+0000\n"
-"PO-Revision-Date: 2024-08-21 00:18+0200\n"
+"PO-Revision-Date: 2026-02-03 22:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: ui/DeviceView.qml:56
 #, kde-format
@@ -109,18 +109,16 @@ msgstr ""
 "힌트: 신뢰하지 않는 장치는 컴퓨터에 연결할 때마다 수동으로 인증해야 합니다."
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check Enable Thunderbolt subsystem"
 msgid "Enable"
 msgstr "활성화됨"
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Thunderbolt subsystem"
-msgstr "Thunderbolt 장치 활성화"
+msgstr "Thunderbolt 하위 시스템 활성화"
 
 #: ui/main.qml:63
 #, kde-format
