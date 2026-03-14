@@ -1,21 +1,21 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-# SPDX-FileCopyrightText: 2019, 2021, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2019, 2021, 2023, 2024, 2025, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2023-06-22 13:19+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 13:55+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -70,17 +70,17 @@ msgstr "Stav:"
 #: package/contents/ui/DeviceView.qml:77
 #, kde-format
 msgid "Authorized at:"
-msgstr ""
+msgstr "Autorizováno:"
 
 #: package/contents/ui/DeviceView.qml:82
 #, kde-format
 msgid "Connected at:"
-msgstr "Rychlost spojení:"
+msgstr "Připojeno:"
 
 #: package/contents/ui/DeviceView.qml:87
 #, kde-format
 msgid "Enrolled at:"
-msgstr ""
+msgstr "Registrováno:"
 
 #: package/contents/ui/DeviceView.qml:91
 #, kde-format
@@ -95,7 +95,7 @@ msgstr "Ne"
 #: package/contents/ui/DeviceView.qml:92
 #, kde-format
 msgid "Trusted:"
-msgstr "Důvěryhodný:"
+msgstr "Důvěryhodné:"
 
 #: package/contents/ui/DeviceView.qml:101
 #, kde-format
@@ -111,7 +111,7 @@ msgstr "Autorizace"
 #: package/contents/ui/DeviceView.qml:132
 #, kde-format
 msgid "Failed to enroll device <b>%1</b>: %2"
-msgstr ""
+msgstr "Nepodařilo se zaregistrovat zařízení <b>%1</b>: %2"
 
 #: package/contents/ui/DeviceView.qml:119
 #, kde-format
@@ -167,15 +167,15 @@ msgstr "Podsystém Thunderbolt není dostupný"
 
 #: package/contents/ui/utils.js:16
 msgid "Disconnected"
-msgstr "Odpojen"
+msgstr "Odpojeno"
 
 #: package/contents/ui/utils.js:18
 msgid "Connecting"
-msgstr "Navazuji spojení"
+msgstr "Připojování"
 
 #: package/contents/ui/utils.js:20
 msgid "Connected"
-msgstr "Připojen"
+msgstr "Připojeno"
 
 #: package/contents/ui/utils.js:23
 msgid "Authorization Error"
@@ -183,7 +183,7 @@ msgstr "Chyba autorizace"
 
 #: package/contents/ui/utils.js:25
 msgid "Authorizing"
-msgstr "Uděluji oprávnění"
+msgstr "Udělování autorizace"
 
 #: package/contents/ui/utils.js:29
 msgid "Reduced Functionality"
@@ -191,8 +191,8 @@ msgstr "Snížená funkčnost"
 
 #: package/contents/ui/utils.js:31
 msgid "Connected & Authorized"
-msgstr "Připojen a oprávněn"
+msgstr "Připojeno a autorizováno"
 
 #: package/contents/ui/utils.js:38
 msgid "Trusted"
-msgstr "Důvěryhodný"
+msgstr "Důvěryhodné"
