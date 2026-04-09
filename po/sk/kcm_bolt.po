@@ -13,8 +13,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: ui/DeviceView.qml:56
 #, kde-format
@@ -62,8 +62,7 @@ msgid "Trusted:"
 msgstr "Dôveryhodný:"
 
 #: ui/DeviceView.qml:94
-#, fuzzy, kde-format
-#| msgid "Authorizing"
+#, kde-format
 msgid "Authorizing…"
 msgstr "Autorizujem..."
 
@@ -114,11 +113,10 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check Enable Thunderbolt subsystem"
 msgid "Enable"
-msgstr ""
+msgstr "Povoliť"
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Thunderbolt subsystem"
 msgstr "Povoliť Thunderbolt zariadenia"
@@ -131,7 +129,7 @@ msgstr "Podpora Thunderbolt bola zakázaná v BIOSe"
 #: ui/main.qml:64
 #, kde-format
 msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
-msgstr ""
+msgstr "Follow your system manufacturer's guide to enable Thunderbolt support"
 
 #: ui/main.qml:70
 #, kde-format
@@ -139,14 +137,12 @@ msgid "No Thunderbolt devices connected"
 msgstr "Nie sú pripojené žiadne zariadenia Thunderbolt"
 
 #: ui/main.qml:71
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgid "Plug in a Thunderbolt device"
 msgstr "Povoliť Thunderbolt zariadenia"
 
 #: ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "Thunderbolt subsystem is not available"
+#, kde-format
 msgid "Thunderbolt subsystem is disabled or unavailable"
 msgstr "Subsystém Thunderbolt nie je dostupný"
 
@@ -155,6 +151,7 @@ msgstr "Subsystém Thunderbolt nie je dostupný"
 msgid ""
 "If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 msgstr ""
+"If the device supports Thunderbolt, try plugging in a Thunderbolt device"
 
 #: ui/utils.js:18
 msgid "Disconnected"
