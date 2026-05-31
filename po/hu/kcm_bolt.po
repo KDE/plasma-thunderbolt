@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-thunderbolt package.
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2019.
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-20 00:44+0000\n"
-"PO-Revision-Date: 2024-09-18 21:42+0200\n"
+"PO-Revision-Date: 2026-05-30 21:41+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: ui/DeviceView.qml:56
 #, kde-format
@@ -112,18 +112,16 @@ msgstr ""
 "alkalommal, amikor a számítógéphez csatlakoztatja azokat."
 
 #: ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgctxt "@option:check Enable Thunderbolt subsystem"
 msgid "Enable"
-msgstr "Bekapcsolva"
+msgstr "Engedélyezés"
 
 #: ui/main.qml:32
-#, fuzzy, kde-format
-#| msgid "Enable Thunderbolt devices"
+#, kde-format
 msgctxt "@option:check"
 msgid "Enable Thunderbolt subsystem"
-msgstr "Thunderbolt eszközök engedélyezése"
+msgstr "Thunderbolt alrendszer engedélyezése"
 
 #: ui/main.qml:63
 #, kde-format
