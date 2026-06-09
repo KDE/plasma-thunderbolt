@@ -189,31 +189,3 @@ msgstr "მიერთებული და ავტორიზებულ�
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "სანდო"
-
-#~ msgid "Authorizing..."
-#~ msgstr "ავტორიზაცია..."
-
-#~ msgid ""
-#~ "This module allows you to manage Thunderbolt devices connected to your "
-#~ "computer."
-#~ msgstr ""
-#~ "ეს მოდული თქვენს კომპიუტერზე მიერთებული თანდერბოლტის მოწყობილობები "
-#~ "მართვის საშუალებას გაძლევთ."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Temuri Doghonadze"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "Temuri.doghonadze@gmail.com"
-
-#~ msgid "Thunderbolt Device Management"
-#~ msgstr "თანდერბოლტის მოწყობილობების მართვა"
-
-#~ msgid "System Settings module for managing Thunderbolt devices."
-#~ msgstr ""
-#~ "სისტემის მორგების ფანჯრის მოდული თანდერბოლტის მოწყობილობების სამართავად."
-
-#~ msgid "Daniel Vrátil"
-#~ msgstr "Daniel Vrátil"
