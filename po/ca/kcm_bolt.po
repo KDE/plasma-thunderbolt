@@ -193,13 +193,3 @@ msgstr "Connectat i autoritzat"
 #: ui/utils.js:46
 msgid "Trusted"
 msgstr "De confiança"
-
-#~ msgid "Authorizing..."
-#~ msgstr "Autorització..."
-
-#~ msgid ""
-#~ "This module allows you to manage Thunderbolt devices connected to your "
-#~ "computer."
-#~ msgstr ""
-#~ "Aquest mòdul permet gestionar els dispositius Thunderbolt connectats a "
-#~ "l'ordinador."
