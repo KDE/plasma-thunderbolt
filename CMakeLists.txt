@@ -31,7 +31,7 @@ kde_enable_exceptions()
 #################################################
 # Dependencies
 
-find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Quick DBus)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Qml Quick DBus)
 if (BUILD_TESTING)
     find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Test)
 endif()
