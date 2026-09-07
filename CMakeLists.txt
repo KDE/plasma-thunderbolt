@@ -31,18 +31,18 @@ kde_enable_exceptions()
 #################################################
 # Dependencies
 
-find_package(Qt6Core ${QT_MIN_VERSION} REQUIRED)
-find_package(Qt6Quick ${QT_MIN_VERSION} REQUIRED)
-find_package(Qt6DBus ${QT_MIN_VERSION} REQUIRED)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Core Quick DBus)
 if (BUILD_TESTING)
-	find_package(Qt6Test ${QT_MIN_VERSION} REQUIRED)
+    find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Test)
 endif()
 
-find_package(KF6CoreAddons ${KF6_VERSION} REQUIRED)
-find_package(KF6KCMUtils ${KF6_VERSION} REQUIRED)
-find_package(KF6I18n ${KF6_VERSION} REQUIRED)
-find_package(KF6DBusAddons ${KF6_VERSION} REQUIRED)
-find_package(KF6Notifications ${KF6_VERSION} REQUIRED)
+find_package(KF6 ${KF6_VERSION} REQUIRED COMPONENTS
+    CoreAddons
+    KCMUtils
+    I18n
+    DBusAddons
+    Notifications
+)
 
 find_package(Bolt)
 set_package_properties(Bolt PROPERTIES DESCRIPTION "Thunderbolt device manager"
