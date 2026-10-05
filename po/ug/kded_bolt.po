@@ -1,14 +1,14 @@
 # Uyghur translation for kded_bolt.
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-thunderbolt package.
-# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-thunderbolt\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-09-23 06:56+0900\n"
+"PO-Revision-Date: 2026-10-03 19:38-0400\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -29,6 +29,7 @@ msgid ""
 "Unauthorized Thunderbolt device <b>%1</b> was detected. Do you want to "
 "authorize it?"
 msgstr ""
+"دەلىللەنمىگەن Thunderbolt ئۈسكۈنە <b>%1</b> بايقالغان. ئۇنى دەلىللەمسىز؟"
 
 #: kded_bolt.cpp:70
 #, kde-format
@@ -38,23 +39,24 @@ msgid_plural ""
 "%1 unauthorized Thunderbolt devices were detected. Do you want to authorize "
 "them?"
 msgstr[0] ""
+"دەلىللەنمىگەن Thunderbolt ئۈسكۈنىدىن %1 بايقالغان. ئۇنى دەلىللەمسىز؟"
 
 #: kded_bolt.cpp:78
 #, kde-format
 msgid "Authorize Now"
-msgstr ""
+msgstr "ھازىر دەلىللە"
 
 #: kded_bolt.cpp:83
 #, kde-format
 msgid "Authorize Permanently"
-msgstr ""
+msgstr "مەڭگۈلۈك دەلىللە"
 
 #: kded_bolt.cpp:131
 #, kde-format
 msgid "Thunderbolt Device Authorization Error"
-msgstr ""
+msgstr "Thunderbolt ئۈسكۈنە دەلىللەش خاتالىقى"
 
 #: kded_bolt.cpp:132
 #, kde-format
 msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
-msgstr ""
+msgstr "<b>%1</b> Thunderbolt ئۈسكۈنىنى دەلىللىيەلمىدى: %2"

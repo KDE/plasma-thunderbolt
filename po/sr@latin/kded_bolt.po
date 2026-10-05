@@ -1,0 +1,68 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-thunderbolt\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-10-04 12:24+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: kded_bolt.cpp:67
+#, kde-format
+msgid "New Thunderbolt Device Detected"
+msgstr "Otkriven nov tanderbolt uređaj"
+
+#: kded_bolt.cpp:68
+#, kde-format
+msgid ""
+"Unauthorized Thunderbolt device <b>%1</b> was detected. Do you want to "
+"authorize it?"
+msgstr ""
+"Otkriven je neovlašćen tanderbolt uređaj <b>%1</b>. Želite li da ga "
+"ovlastite?"
+
+#: kded_bolt.cpp:70
+#, kde-format
+msgid ""
+"%1 unauthorized Thunderbolt device was detected. Do you want to authorize it?"
+msgid_plural ""
+"%1 unauthorized Thunderbolt devices were detected. Do you want to authorize "
+"them?"
+msgstr[0] ""
+"Otkriven je %1 neovlašćen tanderbolt uređaj. Želite li da ih ovlastite?"
+msgstr[1] ""
+"Otkrivena su %1 neovlašćena tanderbolt uređaja. Želite li da ih ovlastite?"
+msgstr[2] ""
+"Otkriveno je %1 neovlašćenih tanderbolt uređaja. Želite li da ih ovlastite?"
+msgstr[3] ""
+"Otkriven je jedan neovlašćen tanderbolt uređaj. Želite li da ga ovlastite?"
+
+#: kded_bolt.cpp:78
+#, kde-format
+msgid "Authorize Now"
+msgstr "Ovlasti sada"
+
+#: kded_bolt.cpp:83
+#, kde-format
+msgid "Authorize Permanently"
+msgstr "Ovlasti trajno"
+
+#: kded_bolt.cpp:131
+#, kde-format
+msgid "Thunderbolt Device Authorization Error"
+msgstr "Greška pri ovlašćivanju tanderbolt uređaja"
+
+#: kded_bolt.cpp:132
+#, kde-format
+msgid "Failed to authorize Thunderbolt device <b>%1</b>: %2"
+msgstr "Ne mogu da ovlastim tanderbolt uređaj <b>%1</b>: %2"
