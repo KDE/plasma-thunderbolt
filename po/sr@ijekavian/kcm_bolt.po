@@ -1,0 +1,188 @@
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-thunderbolt\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
+"PO-Revision-Date: 2026-10-04 12:24+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: ui/DeviceView.qml:56
+#, kde-format
+msgid "Vendor:"
+msgstr "Произвођач:"
+
+#: ui/DeviceView.qml:60
+#, kde-format
+msgid "UID:"
+msgstr "УИД:"
+
+#: ui/DeviceView.qml:64
+#, kde-format
+msgid "Status:"
+msgstr "Стање:"
+
+#: ui/DeviceView.qml:69
+#, kde-format
+msgid "Authorized at:"
+msgstr "Вријеме овлашћења:"
+
+#: ui/DeviceView.qml:74
+#, kde-format
+msgid "Connected at:"
+msgstr "Вријеме повезивања:"
+
+#: ui/DeviceView.qml:79
+#, kde-format
+msgid "Enrolled at:"
+msgstr "Вријеме уписа:"
+
+#: ui/DeviceView.qml:83
+#, kde-format
+msgid "Yes"
+msgstr "да"
+
+#: ui/DeviceView.qml:83
+#, kde-format
+msgid "No"
+msgstr "не"
+
+#: ui/DeviceView.qml:84
+#, kde-format
+msgid "Trusted:"
+msgstr "Поуздан:"
+
+#: ui/DeviceView.qml:94
+#, kde-format
+msgid "Authorizing…"
+msgstr "Овлашћујем…"
+
+#: ui/DeviceView.qml:94
+#, kde-format
+msgid "Authorize"
+msgstr "Овласти"
+
+#: ui/DeviceView.qml:105 ui/DeviceView.qml:125
+#, kde-format
+msgid "Failed to enroll device <b>%1</b>: %2"
+msgstr "Не могу да упишем уређај <b>%1</b>: %2"
+
+#: ui/DeviceView.qml:112
+#, kde-format
+msgid "Trust this Device"
+msgstr "Вјеруј овом уређају"
+
+#: ui/DeviceView.qml:133
+#, kde-format
+msgid "Revoke Trust"
+msgstr "Опозови повјерење"
+
+#: ui/DeviceView.qml:145
+#, kde-format
+msgid "Error changing device trust: <b>%1</b>: %2"
+msgstr "Грешка при промјени повјерења у уређај: <b>%1</b>: %2"
+
+#: ui/DeviceView.qml:161
+#, kde-format
+msgid ""
+"Hint: trusted device will be automatically authorized the next time it is "
+"connected to the computer."
+msgstr ""
+"Савјет: поуздан уређај биће аутоматски овлашћен сљедећи пут кад се повеже са "
+"рачунаром."
+
+#: ui/DeviceView.qml:162
+#, kde-format
+msgid ""
+"Hint: an untrusted device needs to be manually authorized each time it is "
+"connected to the computer."
+msgstr ""
+"Савјет: непоуздан уређај мора се ручно овластити сваки пут кад се повеже са "
+"рачунаром."
+
+#: ui/main.qml:31
+#, kde-format
+msgctxt "@option:check Enable Thunderbolt subsystem"
+msgid "Enable"
+msgstr "Укључи"
+
+#: ui/main.qml:32
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable Thunderbolt subsystem"
+msgstr "Укључи тандерболт подсистем"
+
+#: ui/main.qml:63
+#, kde-format
+msgid "Thunderbolt support has been disabled in BIOS"
+msgstr "Подршка за тандерболт је искључена у БИОС‑у"
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
+msgstr ""
+"Пратите упутство произвођача система да бисте укључили подршку за тандерболт"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "Нема повезаних тандерболт уређаја"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Plug in a Thunderbolt device"
+msgstr "Утакните тандерболт уређај"
+
+#: ui/main.qml:85
+#, kde-format
+msgid "Thunderbolt subsystem is disabled or unavailable"
+msgstr "Тандерболт подсистем је искључен или недоступан"
+
+#: ui/main.qml:86
+#, kde-format
+msgid ""
+"If the device supports Thunderbolt, try plugging in a Thunderbolt device"
+msgstr ""
+"Ако уређај подржава тандерболт, покушајте да утакнете тандерболт уређај"
+
+#: ui/utils.js:18
+msgid "Disconnected"
+msgstr "Неповезан"
+
+#: ui/utils.js:21
+msgid "Connecting"
+msgstr "Повезује се"
+
+#: ui/utils.js:24
+msgid "Connected"
+msgstr "Повезан"
+
+#: ui/utils.js:28
+msgid "Authorization Error"
+msgstr "Грешка овлашћивања"
+
+#: ui/utils.js:31
+msgid "Authorizing"
+msgstr "Овлашћује се"
+
+#: ui/utils.js:36
+msgid "Reduced Functionality"
+msgstr "Смањене могућности"
+
+#: ui/utils.js:38
+msgid "Connected & Authorized"
+msgstr "Повезан и овлашћен"
+
+#: ui/utils.js:46
+msgid "Trusted"
+msgstr "поуздан"
