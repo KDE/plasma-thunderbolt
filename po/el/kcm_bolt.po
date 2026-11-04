@@ -1,0 +1,192 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-thunderbolt package.
+#
+# SPDX-FileCopyrightText: 2026 SPDX-FileCopyrightText :
+# SPDX-FileCopyrightText: 2026 SPDX-FileCopyrightText :
+# SPDX-FileCopyrightText: 2026 SPDX-FileCopyrightText :
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-thunderbolt\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
+"PO-Revision-Date: 2026-10-24 17:33+0300\n"
+"Last-Translator: Λευτέρης Τ. <tripoleft@protonmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 26.08.1\n"
+
+#: ui/DeviceView.qml:56
+#, kde-format
+msgid "Vendor:"
+msgstr "Προμηθευτής:"
+
+#: ui/DeviceView.qml:60
+#, kde-format
+msgid "UID:"
+msgstr "UID:"
+
+#: ui/DeviceView.qml:64
+#, kde-format
+msgid "Status:"
+msgstr "Κατάσταση:"
+
+#: ui/DeviceView.qml:69
+#, kde-format
+msgid "Authorized at:"
+msgstr "Εξουσιοδοτήθηκε στις:"
+
+#: ui/DeviceView.qml:74
+#, kde-format
+msgid "Connected at:"
+msgstr "Συνδέθηκε στις:"
+
+#: ui/DeviceView.qml:79
+#, kde-format
+msgid "Enrolled at:"
+msgstr "Εγγράφηκε στις:"
+
+#: ui/DeviceView.qml:83
+#, kde-format
+msgid "Yes"
+msgstr "Ναι"
+
+#: ui/DeviceView.qml:83
+#, kde-format
+msgid "No"
+msgstr "Όχι"
+
+#: ui/DeviceView.qml:84
+#, kde-format
+msgid "Trusted:"
+msgstr "Έγινε έμπιστο:"
+
+#: ui/DeviceView.qml:94
+#, kde-format
+msgid "Authorizing…"
+msgstr "Εξουσιοδοτείται..."
+
+#: ui/DeviceView.qml:94
+#, kde-format
+msgid "Authorize"
+msgstr "Εξουσιοδότηση"
+
+#: ui/DeviceView.qml:105 ui/DeviceView.qml:125
+#, kde-format
+msgid "Failed to enroll device <b>%1</b>: %2"
+msgstr "Αποτυχία εγγραφής συσκευής <b>%1</b>: %2"
+
+#: ui/DeviceView.qml:112
+#, kde-format
+msgid "Trust this Device"
+msgstr "Εμπιστευτείτε τη συσκευή"
+
+#: ui/DeviceView.qml:133
+#, kde-format
+msgid "Revoke Trust"
+msgstr "Ανάκληση εμπιστοσύνης"
+
+#: ui/DeviceView.qml:145
+#, kde-format
+msgid "Error changing device trust: <b>%1</b>: %2"
+msgstr "Σφάλμα κατά την αλλαγή εμπιστοσύνης συσκευής: <b>%1</b>: %2"
+
+#: ui/DeviceView.qml:161
+#, kde-format
+msgid ""
+"Hint: trusted device will be automatically authorized the next time it is "
+"connected to the computer."
+msgstr ""
+"Υπόδειξη: η έμπιστη συσκευή θα εξουσιοδοτείται αυτόματα την επόμενη φορά που "
+"θα συνδεθεί στον υπολογιστή."
+
+#: ui/DeviceView.qml:162
+#, kde-format
+msgid ""
+"Hint: an untrusted device needs to be manually authorized each time it is "
+"connected to the computer."
+msgstr ""
+"Υπόδειξη: μία μη έμπιστη συσκευή θα πρέπει να εξουσιοδοτείται χειροκίνητα "
+"κάθεφορά που θα συνδέεται στον υπολογιστή."
+
+#: ui/main.qml:31
+#, kde-format
+msgctxt "@option:check Enable Thunderbolt subsystem"
+msgid "Enable"
+msgstr "Ενεργοποίηση"
+
+#: ui/main.qml:32
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable Thunderbolt subsystem"
+msgstr "Ενεργοποίηση υποσυστήματος Thunderbolt"
+
+#: ui/main.qml:63
+#, kde-format
+msgid "Thunderbolt support has been disabled in BIOS"
+msgstr "Η υποστήριξη Thunderbolt έχει απενεργοποιηθεί στο BIOS"
+
+#: ui/main.qml:64
+#, kde-format
+msgid "Follow your system manufacturer's guide to enable Thunderbolt support"
+msgstr ""
+"Ακολουθήστε τις οδηγίες του κατασκευαστή σας για να ενεργοποιήσετε την "
+"υποστήριξη Thunderbolt"
+
+#: ui/main.qml:70
+#, kde-format
+msgid "No Thunderbolt devices connected"
+msgstr "Δε συνδέθηκαν συσκευές Thunderbolt"
+
+#: ui/main.qml:71
+#, kde-format
+msgid "Plug in a Thunderbolt device"
+msgstr "Συνδέστε μία συσκευή Thunderbolt"
+
+#: ui/main.qml:85
+#, kde-format
+msgid "Thunderbolt subsystem is disabled or unavailable"
+msgstr "Το υποσύστημα Thunderbolt είναι ανενεργό ή μη διαθέσιμο"
+
+#: ui/main.qml:86
+#, kde-format
+msgid ""
+"If the device supports Thunderbolt, try plugging in a Thunderbolt device"
+msgstr ""
+"Αν η συσκευή σας υποστηρίζει Thunderbolt, δοκιμάστε να συνδέσετε μία "
+"Thunderbolt συσκευή"
+
+#: ui/utils.js:18
+msgid "Disconnected"
+msgstr "Αποσυνδέθηκε"
+
+#: ui/utils.js:21
+msgid "Connecting"
+msgstr "Συνδέεται"
+
+#: ui/utils.js:24
+msgid "Connected"
+msgstr "Συνδέθηκε"
+
+#: ui/utils.js:28
+msgid "Authorization Error"
+msgstr "Σφάλμα εξουσιοδότησης"
+
+#: ui/utils.js:31
+msgid "Authorizing"
+msgstr "Εξουσιοδοτείται"
+
+#: ui/utils.js:36
+msgid "Reduced Functionality"
+msgstr "Μειωμένη λειτουργικότητα"
+
+#: ui/utils.js:38
+msgid "Connected & Authorized"
+msgstr "Συνδέθηκε & Εξουσιοδοτήθηκε"
+
+#: ui/utils.js:46
+msgid "Trusted"
+msgstr "Έμπιστο"
